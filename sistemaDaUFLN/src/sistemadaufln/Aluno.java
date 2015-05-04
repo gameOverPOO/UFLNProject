@@ -10,5 +10,6 @@ package sistemadaufln;
  * @author Natália
  */
 public class Aluno {
+    private String nomeAluno;
     
 }

@@ -23,6 +23,8 @@ public class MenuPrincipal {
         Scanner leituraMenu = new Scanner(System.in);
         int escolha=leituraMenu.nextInt();
         
+        AlunoView alunoView = new AlunoView();
+        
         System.out.println("Lista de opcoes: ");
         System.out.println("1. Cadastrar aluno");
         System.out.println("2. Cadastrar professor");
@@ -32,10 +34,9 @@ public class MenuPrincipal {
         System.out.println("6. Lançar nota");
         System.out.println("7. Lançar faltas");
         
-        //fazer entrada scanf
         switch(escolha){
             case 1:{
-                System.out.println("entrar em AlunoView");
+                alunoView.subMenu();
                 break;
             }
             case 2:{

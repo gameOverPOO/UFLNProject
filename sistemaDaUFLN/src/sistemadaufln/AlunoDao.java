@@ -11,6 +11,7 @@ import java.util.List;
  */
 public interface AlunoDao {
     
+
     //metodos CRUD
     public void salvar(Object bean);
     public void atualizar(Object bean);

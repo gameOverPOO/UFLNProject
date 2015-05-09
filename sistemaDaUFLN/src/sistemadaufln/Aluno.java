@@ -11,5 +11,15 @@ package sistemadaufln;
  */
 public class Aluno {
     private String nomeAluno;
-    
+    private String cpf;
+
+
+public Aluno(String nomeAluno, String cpf) {
+    this.nomeAluno = nomeAluno;
+    this.cpf=cpf;
+}
+
+
+
+
 }

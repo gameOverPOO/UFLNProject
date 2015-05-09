@@ -31,13 +31,13 @@ public class AlunoView {
                 List<Aluno> listaAlunos = new ArrayList<>();
                 
                 Aluno alunoteste = new Aluno("Leandro","146.384.17-80");                               
-                
+                Aluno alunoteste2 = new Aluno("João","534.604.662-35");  
                 listaAlunos.add(alunoteste);
+                listaAlunos.add(alunoteste2);
                 
-               // listaAluno.adiciona("bethoven");
-                //listaAluno.adiciona("eu mesmo");
+               for (Aluno s:listaAlunos)
+                        System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s.getCpf());  
                 
-                System.out.println("Lista de alunos: " + listaAluno);
                 break;
             }
             case 2:{

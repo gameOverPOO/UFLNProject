@@ -23,5 +23,5 @@ public interface AlunoDao {
     public String getNomeAluno();
     public String getCPFAluno();
     public void setNomeAluno(String nomeAluno);
-    public boolean validarCPF();
+    public boolean validarCPF(String CPF);
 }

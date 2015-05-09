@@ -54,9 +54,9 @@ public class AlunoDaoImpl implements AlunoDao{
     public void setNomeAluno(String nomeAluno){
         
     }
-    
-  public static boolean isCPF(String CPF) {
-// considera-se erro CPF's formados por uma sequencia de numeros iguais
+    @Override
+  public boolean validarCPF(String CPF) {
+     // considera-se erro CPF's formados por uma sequencia de numeros iguais
     if (CPF.equals("00000000000") || CPF.equals("11111111111") ||
         CPF.equals("22222222222") || CPF.equals("33333333333") ||
         CPF.equals("44444444444") || CPF.equals("55555555555") ||
@@ -114,6 +114,11 @@ public class AlunoDaoImpl implements AlunoDao{
     return(CPF.substring(0, 3) + "." + CPF.substring(3, 6) + "." +
       CPF.substring(6, 9) + "-" + CPF.substring(9, 11));
   }
+
+    //@Override
+   // public boolean validarCPF() {
+   //     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   // }
 }
 
     

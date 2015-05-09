@@ -22,10 +22,12 @@ public class TADDaoImpl implements TADDao{
         this.primeira = nova;
     
         if(this.totalDeElementos == 0){
-            System.out.println("lista vazia");
+            //System.out.println("lista vazia");
             this.ultima = this.primeira;
         }
+        System.out.println(nova.getElemento()); //Aqui imprime a lista depois de add
         this.totalDeElementos++;
+                
     }
     
     @Override

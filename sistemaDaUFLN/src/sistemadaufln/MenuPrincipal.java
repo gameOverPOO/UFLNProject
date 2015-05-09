@@ -20,8 +20,7 @@ public class MenuPrincipal {
     public static void main(String[] args) {
         
         
-        Scanner leituraMenu = new Scanner(System.in);
-        int escolha=leituraMenu.nextInt();
+   
         
         AlunoView alunoView = new AlunoView();
         
@@ -34,6 +33,8 @@ public class MenuPrincipal {
         System.out.println("6. Lançar nota");
         System.out.println("7. Lançar faltas");
         
+        Scanner leituraMenu = new Scanner(System.in);
+        int escolha=leituraMenu.nextInt();
         switch(escolha){
             case 1:{
                 alunoView.subMenu();

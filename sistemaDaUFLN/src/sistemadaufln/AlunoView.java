@@ -5,6 +5,7 @@
  */
 package sistemadaufln;
 import java.util.Scanner;
+import java.util.*;
 /**
  *
  * @author poney
@@ -27,8 +28,15 @@ public class AlunoView {
         switch(escolha){
             case 1:{
                 System.out.println("Adicionando um aluno");
-                listaAluno.adiciona("bethoven");
-                listaAluno.adiciona("eu mesmo");
+                List<Aluno> listaAlunos = new ArrayList<>();
+                
+                Aluno alunoteste = new Aluno("Leandro","146.384.17-80");                               
+                
+                listaAlunos.add(alunoteste);
+                
+               // listaAluno.adiciona("bethoven");
+                //listaAluno.adiciona("eu mesmo");
+                
                 System.out.println("Lista de alunos: " + listaAluno);
                 break;
             }

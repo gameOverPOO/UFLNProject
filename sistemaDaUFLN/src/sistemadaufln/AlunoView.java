@@ -42,10 +42,11 @@ public class AlunoView {
                      Scanner leituraCpf= new Scanner(System.in);
                      System.out.println("Digite o cpf do Aluno: ");
                      String cpf = new String();                
-                     nomeP = leituraCpf.nextLine();
+                     cpf = leituraCpf.nextLine();
                      
                    
                     //Como verifica o cpf antes de criar o aluno??? 
+                    //System.out.println("Peguei: " + cpf);
                     Aluno alunoteste = new Aluno(nomeP,cpf);                               
                      //Aluno alunoteste2 = new Aluno("João","53460466235");  
                     if ((alunoteste.getNomeAluno() != null))listaAlunos.add(alunoteste);//testar se é null antes de add

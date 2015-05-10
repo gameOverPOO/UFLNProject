@@ -33,7 +33,7 @@ public class Aluno {
 
 
 public Aluno(String nomeAluno, String cpf) {
-    if(validarCPF(cpf))
+    if(validarCPF(cpf)) //Só cria um aluno se o cpf for valido...mas tá dando merda aqui
     {
         this.nomeAluno = nomeAluno;
         this.cpf=cpf;

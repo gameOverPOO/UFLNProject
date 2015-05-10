@@ -30,10 +30,11 @@ public class AlunoView {
                 System.out.println("Adicionando um aluno");
                 List<Aluno> listaAlunos = new ArrayList<>();
                 
-                Aluno alunoteste = new Aluno("Leandro","146.384.17-80");                               
-                Aluno alunoteste2 = new Aluno("João","534.604.662-35");  
+                Aluno alunoteste = new Aluno("Leandro","14638431780");                               
+                Aluno alunoteste2 = new Aluno("João","53460466235");  
                 listaAlunos.add(alunoteste);
                 listaAlunos.add(alunoteste2);
+                
                 
                for (Aluno s:listaAlunos)
                         System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s.getCpf());  

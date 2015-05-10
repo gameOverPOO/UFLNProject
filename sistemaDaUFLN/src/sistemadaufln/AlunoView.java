@@ -16,10 +16,9 @@ public class AlunoView {
     
     public void subMenu(){
         
-        Scanner leituraMenu= new Scanner(System.in);
+        Scanner leituraMenu= new Scanner(System.in);        
         
-        
-        TADDaoImpl listaAluno=new TADDaoImpl();
+       
         
         System.out.println("1. Adicionar um aluno");
         System.out.println("2. Alterar um aluno");
@@ -31,24 +30,35 @@ public class AlunoView {
                 System.out.println("Adicionando um aluno");
                 List<Aluno> listaAlunos = new ArrayList<>();
                 
-                Aluno alunoteste = new Aluno("Leandro","14638431780");                               
-                Aluno alunoteste2 = new Aluno("João","53460466235");  
-                listaAlunos.add(alunoteste);//testar se é null antes de add
-                listaAlunos.add(alunoteste2);
-              
-               // if (alunoteste.validarCPF(alunoteste.getCpf()))
-                //    listaAlunos.add(alunoteste);
+                int adicionar = 1;
+                while(adicionar==1){
                     
-               // else 
-               //     System.out.println("CPF INVALIDO :'( ");
-                    
-                /*
-                if (alunoteste2.validarCPF(alunoteste2.getNomeAluno()))
-                   ;
-                else 
-                    System.out.println("CPF INVALIDO :'( ");
+                     Scanner leituraNome= new Scanner(System.in);
+                     System.out.println("Digite o Nome do Aluno: ");
                 
-                */
+                     String nomeP = new String();                
+                     nomeP = leituraNome.nextLine();
+                     
+                     Scanner leituraCpf= new Scanner(System.in);
+                     System.out.println("Digite o cpf do Aluno: ");
+                     String cpf = new String();                
+                     nomeP = leituraCpf.nextLine();
+                     
+                   
+                    //Como verifica o cpf antes de criar o aluno??? 
+                    Aluno alunoteste = new Aluno(nomeP,cpf);                               
+                     //Aluno alunoteste2 = new Aluno("João","53460466235");  
+                    if ((alunoteste.getNomeAluno() != null))listaAlunos.add(alunoteste);//testar se é null antes de add
+                    //listaAlunos.add(alunoteste2);
+              
+                   Scanner leitura= new Scanner(System.in);
+                   System.out.println("Deseja adicionar outro aluno? S ou N");
+                   String opcao = new String();
+                   opcao = leituraNome.nextLine();
+                   if (opcao.equals("N")) adicionar = 0;
+                
+                    
+                }  
                for (Aluno s:listaAlunos)
                         System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s. getCpfAluno());  
                 

@@ -15,7 +15,9 @@ public class AlunoView {
     
     
     public void subMenu(){
+        List<Aluno> listaAlunos = new ArrayList<>();
         
+        while(true){
         Scanner leituraMenu= new Scanner(System.in);        
         
        
@@ -23,12 +25,12 @@ public class AlunoView {
         System.out.println("1. Adicionar um aluno");
         System.out.println("2. Alterar um aluno");
         System.out.println("3. Remover um aluno");
-
+        
         int escolha = leituraMenu.nextInt();
         switch(escolha){
             case 1:{
                 System.out.println("Adicionando um aluno");
-                List<Aluno> listaAlunos = new ArrayList<>();
+                
                 
                 int adicionar = 1;
                 while(adicionar==1){
@@ -46,12 +48,11 @@ public class AlunoView {
                      
                    
                     //Como verifica o cpf antes de criar o aluno??? 
-                    //System.out.println("Peguei: " + cpf);
+                    
                     Aluno alunoteste = new Aluno(nomeP,cpf);                               
-                     //Aluno alunoteste2 = new Aluno("João","53460466235");  
+                     
                     if ((alunoteste.getNomeAluno() != null))listaAlunos.add(alunoteste);//testar se é null antes de add
-                    //listaAlunos.add(alunoteste2);
-              
+                    
                    Scanner leitura= new Scanner(System.in);
                    System.out.println("Deseja adicionar outro aluno? S ou N");
                    String opcao = new String();
@@ -67,11 +68,46 @@ public class AlunoView {
             }
             case 2:{
                 System.out.println("Alterando um aluno");
+                 System.out.println("Digite o Nome do Aluno: ");
+                 Scanner leituraNome= new Scanner(System.in);
+                 String nomeP = new String();                
+                 nomeP = leituraNome.nextLine();
+                 
+            /*      
+            for (Endereco end : enderecos) {  
+                if (end.getId().intValue() == endereco.getId()) {  
+                    enderecos.remove(end);  
+                    enderecos.add(endereco);  
+                }   
+            }  */ /// Usar SET AQUI
+                 
+                 
+                 
+                 
+                 for (Aluno s:listaAlunos)
+                        System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s. getCpfAluno());  
                 break;
+               
             }
             case 3:{
-                System.out.println("Removendo um aluno");
-                break;
+                /*
+                for (Aluno f:listaAlunos)
+                        System.out.println("Aluno: " + f.getNomeAluno() + " CPF: " + f. getCpfAluno());
+                
+                 System.out.println("Digite o Nome do Aluno: ");
+                 
+                 Scanner leituraNome= new Scanner(System.in);
+                 String nomeP = new String();                
+                 nomeP = leituraNome.nextLine();
+                 
+                   System.out.println("Excluir: "+ nomeP);
+                 for (Aluno s: listaAlunos)
+                     if (s.getNomeAluno().equals(nomeP)) listaAlunos.remove(s);
+                  
+                 
+                 
+                 //System.out.println("Excluido");
+                break;*/
             }
             default:{
                 System.out.println("Opção Inválida");
@@ -79,7 +115,7 @@ public class AlunoView {
             }
             
         }
-        
+        }
     }
     
 }

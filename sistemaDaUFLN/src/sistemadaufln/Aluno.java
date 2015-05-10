@@ -33,7 +33,7 @@ public class Aluno {
 
 
 public Aluno(String nomeAluno, String cpf) {
-    if(validarCPF(cpf)) //Só cria um aluno se o cpf for valido...mas tá dando merda aqui
+    if(validarCPF(cpf)) //Só cria um aluno se o cpf for valido...mas tá dando merda
     {
         this.nomeAluno = nomeAluno;
         this.cpf=cpf;
@@ -52,9 +52,8 @@ public boolean validarCPF(String CPF) {
         CPF.equals("22222222222") || CPF.equals("33333333333") ||
         CPF.equals("44444444444") || CPF.equals("55555555555") ||
         CPF.equals("66666666666") || CPF.equals("77777777777") ||
-        CPF.equals("88888888888") || CPF.equals("99999999999"))
-       //(CPF.length() != 11))
-        
+        CPF.equals("88888888888") || CPF.equals("99999999999") ||
+       (CPF.length() != 11))        
        return(false); 
 
     char dig10, dig11;

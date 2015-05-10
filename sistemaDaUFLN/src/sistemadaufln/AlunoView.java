@@ -31,9 +31,9 @@ public class AlunoView {
                 System.out.println("Adicionando um aluno");
                 List<Aluno> listaAlunos = new ArrayList<>();
                 
-                Aluno alunoteste = new Aluno("Leandro","00000000000");                               
+                Aluno alunoteste = new Aluno("Leandro","14638431780");                               
                 Aluno alunoteste2 = new Aluno("João","53460466235");  
-                
+                listaAlunos.add(alunoteste);//testar se é null antes de add
                 listaAlunos.add(alunoteste2);
               
                // if (alunoteste.validarCPF(alunoteste.getCpf()))

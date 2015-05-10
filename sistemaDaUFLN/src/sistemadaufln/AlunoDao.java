@@ -19,9 +19,11 @@ public interface AlunoDao {
     public Object getById(int id);
     public List<Object> getAll();
     
+    //Acho que Isso não é aqui
+    //Achei um exemplo:  https://github.com/edveloso/academica-complete/blob/master/src/modelo/persistencia/AlunoDAO.java
     //metodos para aluno
-    public String getNomeAluno();
+   /* public String getNomeAluno();
     public String getCPFAluno();
     public void setNomeAluno(String nomeAluno);
-    public boolean validarCPF(String CPF);
+    public boolean validarCPF(String CPF);*/
 }

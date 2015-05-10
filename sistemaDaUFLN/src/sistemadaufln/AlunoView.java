@@ -31,12 +31,24 @@ public class AlunoView {
                 System.out.println("Adicionando um aluno");
                 List<Aluno> listaAlunos = new ArrayList<>();
                 
-                Aluno alunoteste = new Aluno("Leandro","14638431780");                               
+                Aluno alunoteste = new Aluno("Leandro","00000000000");                               
                 Aluno alunoteste2 = new Aluno("João","53460466235");  
-                listaAlunos.add(alunoteste);
+                
                 listaAlunos.add(alunoteste2);
+              
+               // if (alunoteste.validarCPF(alunoteste.getCpf()))
+                //    listaAlunos.add(alunoteste);
+                    
+               // else 
+               //     System.out.println("CPF INVALIDO :'( ");
+                    
+                /*
+                if (alunoteste2.validarCPF(alunoteste2.getNomeAluno()))
+                   ;
+                else 
+                    System.out.println("CPF INVALIDO :'( ");
                 
-                
+                */
                for (Aluno s:listaAlunos)
                         System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s.getCpf());  
                 

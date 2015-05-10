@@ -4,15 +4,16 @@
  * and open the template in the editor.
  */
 package sistemadaufln;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-import java.util.*;
+
 /**
  *
- *
- * @author poney
+ * @author leandronog
  */
-public class AlunoView {
-    
+public class ProfessorView {
     
     public void subMenu(){
         
@@ -21,20 +22,20 @@ public class AlunoView {
         
         TADDaoImpl listaAluno=new TADDaoImpl();
         
-        System.out.println("1. Adicionar um aluno");
-        System.out.println("2. Alterar um aluno");
-        System.out.println("3. Remover um aluno");
+        System.out.println("1. Adicionar um professor");
+        System.out.println("2. Alterar um professor");
+        System.out.println("3. Remover um professor");
 
         int escolha = leituraMenu.nextInt();
         switch(escolha){
             case 1:{
-                System.out.println("Adicionando um aluno");
-                List<Aluno> listaAlunos = new ArrayList<>();
+                System.out.println("Adicionando um professor");
+                List<Professor> listaProfessores = new ArrayList<>();
                 
-                Aluno alunoteste = new Aluno("Leandro","14638431780");                               
-                Aluno alunoteste2 = new Aluno("João","53460466235");  
-                listaAlunos.add(alunoteste);//testar se é null antes de add
-                listaAlunos.add(alunoteste2);
+                Professor professorteste = new Professor("Leandro Prof","14638431780","DCEL");                               
+                Professor professorteste2 = new Professor("João Prof","53460466235","DCEL");  
+                listaProfessores.add(professorteste);//testar se é null antes de add
+                listaProfessores.add(professorteste2);
               
                // if (alunoteste.validarCPF(alunoteste.getCpf()))
                 //    listaAlunos.add(alunoteste);
@@ -49,8 +50,8 @@ public class AlunoView {
                     System.out.println("CPF INVALIDO :'( ");
                 
                 */
-               for (Aluno s:listaAlunos)
-                        System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s. getCpfAluno());  
+               for (Professor s: listaProfessores)
+                        System.out.println("Professor: " + s.getNomeProfessor() + " CPF: " + s.getCpfProfessor());  
                 
                 break;
             }
@@ -68,7 +69,5 @@ public class AlunoView {
             }
             
         }
-        
     }
-    
 }

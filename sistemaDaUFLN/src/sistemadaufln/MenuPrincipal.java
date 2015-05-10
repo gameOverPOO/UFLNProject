@@ -20,9 +20,6 @@ public class MenuPrincipal {
     public static void main(String[] args) {
         
         
-   
-        
-        AlunoView alunoView = new AlunoView();
         
         System.out.println("Lista de opcoes: ");
         System.out.println("1. Cadastrar aluno");
@@ -37,11 +34,14 @@ public class MenuPrincipal {
         int escolha=leituraMenu.nextInt();
         switch(escolha){
             case 1:{
+                AlunoView alunoView = new AlunoView();
                 alunoView.subMenu();
                 break;
             }
             case 2:{
-                System.out.println("entrar em ProfessorView");
+                ProfessorView professorView = new ProfessorView();
+                professorView.subMenu();
+                
                 break;
             }
             case 3:{

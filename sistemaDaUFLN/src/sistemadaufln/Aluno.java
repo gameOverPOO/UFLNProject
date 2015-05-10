@@ -12,6 +12,8 @@ import java.util.InputMismatchException;
  * @author Natália
  */
 public class Aluno {
+    private String nomeAluno;
+    private String cpfAluno;
 
     public String getNomeAluno() {
         return nomeAluno;
@@ -21,22 +23,22 @@ public class Aluno {
         this.nomeAluno = nomeAluno;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfAluno() {
+        return cpfAluno;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfAluno(String cpfAluno) {
+        this.cpfAluno = cpfAluno;
     }
-    private String nomeAluno;
-    private String cpf;
 
 
-public Aluno(String nomeAluno, String cpf) {
-    if(validarCPF(cpf)) //Só cria um aluno se o cpf for valido...mas tá dando merda
+
+
+public Aluno(String nomeAluno, String cpfAluno) {
+    if(validarCPF(cpfAluno)) //Só cria um aluno se o cpf for valido...mas tá dando merda
     {
         this.nomeAluno = nomeAluno;
-        this.cpf=cpf;
+        this.cpfAluno=cpfAluno;
     }
     else 
         System.out.println("CPF INVALIDO!! :( ");

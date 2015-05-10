@@ -107,9 +107,6 @@ public boolean validarCPF(String CPF) {
       CPF.substring(6, 9) + "-" + CPF.substring(9, 11));
   }
 
-    //@Override
-   // public boolean validarCPF() {
-   //     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-   // }
+   
 }
 

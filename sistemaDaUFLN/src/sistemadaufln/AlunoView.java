@@ -17,8 +17,8 @@ public class AlunoView {
     
     public void subMenu() throws IOException{
         List<Aluno> listaAlunos = new ArrayList<>();
-        
-        while(true){
+        int sair = 0;
+        while(sair==0){
         Scanner leituraMenu= new Scanner(System.in);        
         
        
@@ -26,6 +26,7 @@ public class AlunoView {
         System.out.println("1. Adicionar um aluno");
         System.out.println("2. Alterar um aluno");
         System.out.println("3. Remover um aluno");
+        System.out.println("4. Sair");
         
         int escolha = leituraMenu.nextInt();
         switch(escolha){
@@ -115,6 +116,11 @@ public class AlunoView {
                  
                  //System.out.println("Excluido");
                 break;*/
+            }
+            case 4:
+            {
+                sair = 1;
+                break;
             }
             default:{
                 System.out.println("Opção Inválida");

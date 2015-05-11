@@ -40,8 +40,6 @@ public class Arquivo {
             System.out.println("Salvo No Arquivo!");        
                     
                     
-              
-        
         }
     }
         

@@ -5,6 +5,7 @@
  */
 package sistemadaufln;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,13 +17,13 @@ import java.util.Scanner;
 public class ProfessorView {
     List<Professor> listaProfessor = new ArrayList<>();
     
-    public void subMenu(){
+    public void subMenu() throws IOException{
         
         
         Scanner leituraMenu= new Scanner(System.in);
         
         
-        TADDaoImpl listaAluno=new TADDaoImpl();
+        //TADDaoImpl listaAluno=new TADDaoImpl();
         
         System.out.println("1. Adicionar um professor");
         System.out.println("2. Alterar um professor");
@@ -47,7 +48,7 @@ public class ProfessorView {
                      cpf = leituraCpf.nextLine();
                      
                      Scanner leituraDep= new Scanner(System.in);
-                     System.out.println("Digite o cpf do Professor: ");
+                     System.out.println("Digite o departamento do Professor: ");
                      String dep = new String();                
                      dep = leituraDep.nextLine();
                      
@@ -66,19 +67,20 @@ public class ProfessorView {
                 
                     
                 }  
-               for (Professor s:listaProfessores)
-                        System.out.println("Aluno: " + s.getNomeProfessor() + " CPF: " + s. getCpfProfessor());  
+               for (Professor s:listaProfessor)
+                        System.out.println("Professor: " + s.getNomeProfessor() + " CPF: " 
+                                + s. getCpfProfessor() + " Dep: "+ s.getDepartamentoProfessor());  
                   
                 Arquivo arquivo = new Arquivo();
-                arquivo.salvarAluno(listaAlunos);
+                arquivo.salvarProfessor(listaProfessor);
                 break;
             }
             case 2:{
-                System.out.println("Alterando um aluno");
+                System.out.println("Alterando um professor");
                 break;
             }
             case 3:{
-                System.out.println("Removendo um aluno");
+                System.out.println("Removendo um professor");
                 break;
             }
             default:{

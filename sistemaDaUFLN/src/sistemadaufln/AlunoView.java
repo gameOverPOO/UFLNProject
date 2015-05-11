@@ -83,7 +83,7 @@ public class AlunoView {
                     enderecos.remove(end);  
                     enderecos.add(endereco);  
                 }   
-            }  */ /// Usar SET AQUI
+            }  */ /// Usar SET AQUI PARA ATUALIZAR
                  
                  
                  

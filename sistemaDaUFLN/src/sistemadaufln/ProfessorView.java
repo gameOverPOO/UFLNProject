@@ -32,6 +32,9 @@ public class ProfessorView {
                 System.out.println("Adicionando um professor");
                 List<Professor> listaProfessores = new ArrayList<>();
                 
+                
+                
+                
                 Professor professorteste = new Professor("Leandro Prof","14638431780","DCEL");                               
                 Professor professorteste2 = new Professor("João Prof","53460466235","DCEL");  
                 listaProfessores.add(professorteste);//testar se é null antes de add

@@ -70,52 +70,44 @@ public class AlunoView {
                 arquivo.salvarAluno(listaAlunos);
                 break;
             }
-            case 2:{
+             case 2:{
                 System.out.println("Alterando um aluno");
                  System.out.println("Digite o Nome do Aluno: ");
                  Scanner leituraNome= new Scanner(System.in);
                  String nomeP = new String();                
                  nomeP = leituraNome.nextLine();
                  
-            /*      
-            for (Endereco end : enderecos) {  
-                if (end.getId().intValue() == endereco.getId()) {  
-                    enderecos.remove(end);  
-                    enderecos.add(endereco);  
-                }   
-            }  */ /// Usar SET AQUI PARA ATUALIZAR
-                 
-                 
-                 
-                 
-                 for (Aluno s:listaAlunos)
-                 
-                        System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s. getCpfAluno());  
-               
-                
-                
-                break;
-               
-            }
-            case 3:{
-                /*
-                for (Aluno f:listaAlunos)
-                        System.out.println("Aluno: " + f.getNomeAluno() + " CPF: " + f. getCpfAluno());
-                
-                 System.out.println("Digite o Nome do Aluno: ");
-                 
-                 Scanner leituraNome= new Scanner(System.in);
-                 String nomeP = new String();                
-                 nomeP = leituraNome.nextLine();
-                 
-                   System.out.println("Excluir: "+ nomeP);
+                 System.out.println("Digite o  Novo Nome do Aluno: ");
+                 Scanner leituraNomeA= new Scanner(System.in);
+                 String nomeA = new String();                
+                 nomeA = leituraNomeA.nextLine();
                  for (Aluno s: listaAlunos)
-                     if (s.getNomeAluno().equals(nomeP)) listaAlunos.remove(s);
-                  
+                     if (s.getNomeAluno().equals(nomeP)) s.setNomeAluno(nomeA);
                  
-                 
-                 //System.out.println("Excluido");
-                break;*/
+
+
+            case 3:{
+                 System.out.println("Digite o Nome do Aluno a ser deletado: ");
+                 Scanner leituraNomeD= new Scanner(System.in);
+                 String nomeD = new String();                
+                 nomeD = leituraNomeD.nextLine();
+                  for(int i = 0; i < listaAlunos.size(); i++)
+                    {
+                            Aluno p = listaAlunos.get(i);
+
+                            if(p.getNomeAluno().equals(nomeD))
+                            {
+                         // Encontrou uma pessoa cadastrada com nome "Pedro".
+
+                        // Remove.
+                            listaAlunos.remove(p);
+
+                            // Sai do loop.
+                     
+                            }
+                    }
+                break;
+
             }
             case 4:
             {
@@ -131,4 +123,5 @@ public class AlunoView {
         }
     }
     
+}
 }

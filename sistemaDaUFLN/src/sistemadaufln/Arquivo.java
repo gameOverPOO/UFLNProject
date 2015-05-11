@@ -16,25 +16,29 @@ import java.util.Scanner;
 
 public class Arquivo {
 
+    public Arquivo() {
+    }
+
     /**
      * @param listaAlunos
      * @throws java.io.IOException
      */
 
-    public static void SalvarAluno(List<Aluno> listaAlunos, String Tipo) throws IOException {
+    public void salvarAluno(List<Aluno> listaAlunos) throws IOException {
         
-       try (FileWriter arq = new FileWriter("tabuada.txt")) {
+        
+       try (FileWriter arq = new FileWriter("teste arquivo.txt")) {
             PrintWriter gravarArq = new PrintWriter(arq);
             
             gravarArq.printf("+--Resultado--+%n");
             for (Aluno s:listaAlunos) {
-                gravarArq.printf("Nana" + s.getNomeAluno() );
+                gravarArq.printf("Nome: " + s.getNomeAluno()+ " CPF: " + s.getCpfAluno() + "\n");
             }
             gravarArq.printf("+-------------+%n");
             
             arq.close();
                            
-                    
+            System.out.println("Salvo No Arquivo!");        
                     
                     
               
@@ -45,7 +49,7 @@ public class Arquivo {
         
         
         
-        
+        /*
         int i, n = 20;
        
         try (FileWriter arq = new FileWriter("tabuada.txt")) {
@@ -57,10 +61,10 @@ public class Arquivo {
             }
             gravarArq.printf("+-------------+%n");
             
-            arq.close();
+            arq.close();*/
             
 //Leia mais em: Criando e Gravando dados em Txt com Java http://www.devmedia.com.br/criando-e-gravando-dados-em-txt-com-java/23060#ixzz3ZmahPZdD
         }
 
-    }
-}
+ }
+

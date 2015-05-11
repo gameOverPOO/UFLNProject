@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package sistemadaufln;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.*;
 /**
@@ -14,7 +15,7 @@ import java.util.*;
 public class AlunoView {
     
     
-    public void subMenu(){
+    public void subMenu() throws IOException{
         List<Aluno> listaAlunos = new ArrayList<>();
         
         while(true){
@@ -63,7 +64,9 @@ public class AlunoView {
                 }  
                for (Aluno s:listaAlunos)
                         System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s. getCpfAluno());  
-                
+                  
+                Arquivo arquivo = new Arquivo();
+                arquivo.salvarAluno(listaAlunos);
                 break;
             }
             case 2:{
@@ -85,7 +88,11 @@ public class AlunoView {
                  
                  
                  for (Aluno s:listaAlunos)
+                 
                         System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s. getCpfAluno());  
+               
+                
+                
                 break;
                
             }

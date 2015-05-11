@@ -14,8 +14,10 @@ import java.util.Scanner;
  * @author leandronog
  */
 public class ProfessorView {
+    List<Professor> listaProfessor = new ArrayList<>();
     
     public void subMenu(){
+        
         
         Scanner leituraMenu= new Scanner(System.in);
         
@@ -30,32 +32,45 @@ public class ProfessorView {
         switch(escolha){
             case 1:{
                 System.out.println("Adicionando um professor");
-                List<Professor> listaProfessores = new ArrayList<>();
-                
-                
-                
-                
-                Professor professorteste = new Professor("Leandro Prof","14638431780","DCEL");                               
-                Professor professorteste2 = new Professor("João Prof","53460466235","DCEL");  
-                listaProfessores.add(professorteste);//testar se é null antes de add
-                listaProfessores.add(professorteste2);
-              
-               // if (alunoteste.validarCPF(alunoteste.getCpf()))
-                //    listaAlunos.add(alunoteste);
+                int adicionar = 1;
+                while(adicionar==1){
                     
-               // else 
-               //     System.out.println("CPF INVALIDO :'( ");
+                     Scanner leituraNome= new Scanner(System.in);
+                     System.out.println("Digite o Nome do Professor: ");
+                
+                     String nomeP = new String();                
+                     nomeP = leituraNome.nextLine();
+                     
+                     Scanner leituraCpf= new Scanner(System.in);
+                     System.out.println("Digite o cpf do Professor: ");
+                     String cpf = new String();                
+                     cpf = leituraCpf.nextLine();
+                     
+                     Scanner leituraDep= new Scanner(System.in);
+                     System.out.println("Digite o cpf do Professor: ");
+                     String dep = new String();                
+                     dep = leituraDep.nextLine();
+                     
+                   
+                    //Como verifica o cpf antes de criar o aluno??? 
                     
-                /*
-                if (alunoteste2.validarCPF(alunoteste2.getNomeAluno()))
-                   ;
-                else 
-                    System.out.println("CPF INVALIDO :'( ");
+                    Professor professorteste = new Professor(nomeP,cpf,dep);                               
+                     
+                    if ((professorteste.getNomeProfessor() != null))listaProfessor.add(professorteste);//testar se é null antes de add
+                    
+                   Scanner leitura= new Scanner(System.in);
+                   System.out.println("Deseja adicionar outro Professor? S ou N");
+                   String opcao = new String();
+                   opcao = leituraNome.nextLine();
+                   if (opcao.equals("N")) adicionar = 0;
                 
-                */
-               for (Professor s: listaProfessores)
-                        System.out.println("Professor: " + s.getNomeProfessor() + " CPF: " + s.getCpfProfessor());  
-                
+                    
+                }  
+               for (Professor s:listaProfessores)
+                        System.out.println("Aluno: " + s.getNomeProfessor() + " CPF: " + s. getCpfProfessor());  
+                  
+                Arquivo arquivo = new Arquivo();
+                arquivo.salvarAluno(listaAlunos);
                 break;
             }
             case 2:{

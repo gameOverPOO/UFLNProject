@@ -21,25 +21,23 @@ public class Arquivo {
      * @throws java.io.IOException
      */
 
-    public static void Salvar(List<Object> listaAlunos, String Tipo) throws IOException {
+    public static void SalvarAluno(List<Aluno> listaAlunos, String Tipo) throws IOException {
         
-        
-        switch(Tipo)
-        {
-            case ("Aluno"):
-                {
-                    
-                    
-                    
-                  break;  
-                }
-            case ("Professor"):
-            {
-                
-                
-                 break;  
+       try (FileWriter arq = new FileWriter("tabuada.txt")) {
+            PrintWriter gravarArq = new PrintWriter(arq);
             
+            gravarArq.printf("+--Resultado--+%n");
+            for (Aluno s:listaAlunos) {
+                gravarArq.printf("Nana" + s.getNomeAluno() );
             }
+            gravarArq.printf("+-------------+%n");
+            
+            arq.close();
+                           
+                    
+                    
+                    
+              
         
         }
         

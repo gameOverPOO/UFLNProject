@@ -44,8 +44,29 @@ public class Arquivo {
               
         
         }
+    }
+        
+        public void salvarProfessor(List<Professor> listaProfessores) throws IOException {
         
         
+       try (FileWriter arq = new FileWriter("teste arquivo.txt")) {
+            PrintWriter gravarArq = new PrintWriter(arq);
+            
+            gravarArq.printf("+--Resultado--+%n");
+            for (Professor s:listaProfessores) {
+                gravarArq.printf("Nome: " + s.getNomeProfessor()+ " CPF: " + s.getCpfProfessor() +
+                        " Departamento: " +s.getDepartamentoProfessor() + "\n");
+            }
+            gravarArq.printf("+-------------+%n");
+            
+            arq.close();
+                           
+            System.out.println("Salvo No Arquivo!");        
+                    
+                    
+              
+        
+        }
         
         
         

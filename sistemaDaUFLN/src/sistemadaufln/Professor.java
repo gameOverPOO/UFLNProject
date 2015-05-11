@@ -14,11 +14,7 @@ public class Professor {
     private String cpfProfessor;
     private String departamentoProfessor;
 
-    public Professor(String nomeProfessor, String cpfProfessor) {
-        this.nomeProfessor = nomeProfessor;
-        this.cpfProfessor = cpfProfessor;
-    }
-
+    
     public String getNomeProfessor() {
         return nomeProfessor;
     } 

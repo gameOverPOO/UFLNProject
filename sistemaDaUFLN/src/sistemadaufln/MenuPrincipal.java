@@ -46,7 +46,8 @@ public class MenuPrincipal {
                 break;
             }
             case 3:{
-                System.out.println("entrar em DisciplinaView");
+                DisciplinaView disciplinaView = new DisciplinaView();
+                disciplinaView.subMenu();                
                 break;
             }
             case 4:{

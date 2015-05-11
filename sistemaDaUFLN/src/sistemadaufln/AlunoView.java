@@ -84,7 +84,7 @@ public class AlunoView {
                  for (Aluno s: listaAlunos)
                      if (s.getNomeAluno().equals(nomeP)) s.setNomeAluno(nomeA);
                  
-
+             }
 
             case 3:{
                  System.out.println("Digite o Nome do Aluno a ser deletado: ");
@@ -124,4 +124,4 @@ public class AlunoView {
     }
     
 }
-}
+

@@ -8,9 +8,8 @@ package sistemadaufln;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 
 //Leia mais em: Criando e Gravando dados em Txt com Java http://www.devmedia.com.br/criando-e-gravando-dados-em-txt-com-java/23060#ixzz3ZmaRAJIh
 
@@ -49,7 +48,7 @@ public class Arquivo {
         public void salvarProfessor(List<Professor> listaProfessores) throws IOException {
         
         
-       try (FileWriter arq = new FileWriter("teste arquivo.txt")) {
+       try (FileWriter arq = new FileWriter("teste arquivo.txt",true)) {//Esse true faz com q nao apague o q tava antes
             PrintWriter gravarArq = new PrintWriter(arq);
             
             gravarArq.printf("+--Resultado--+%n");
@@ -69,22 +68,7 @@ public class Arquivo {
         }
         
         
-        
-        /*
-        int i, n = 20;
-       
-        try (FileWriter arq = new FileWriter("tabuada.txt")) {
-            PrintWriter gravarArq = new PrintWriter(arq);
-            
-            gravarArq.printf("+--Resultado--+%n");
-            for (i=1; i<=10; i++) {
-                gravarArq.printf("| %2d X %d = %2d |%n", i, n, (i*n));
-            }
-            gravarArq.printf("+-------------+%n");
-            
-            arq.close();*/
-            
-//Leia mais em: Criando e Gravando dados em Txt com Java http://www.devmedia.com.br/criando-e-gravando-dados-em-txt-com-java/23060#ixzz3ZmahPZdD
+      
         }
 
  }

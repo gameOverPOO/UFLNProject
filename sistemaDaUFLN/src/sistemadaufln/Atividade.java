@@ -5,10 +5,56 @@
  */
 package sistemadaufln;
 
+import java.util.Date;
+
 /**
  *
  * @author Natália
  */
 public class Atividade {
+    private String nomeAtividade;
+    private String tipoAtividade;
+    private Date dataAtividade;
+    private double valorAtividade;
+
+    
+    public String getNomeAtividade() {
+        return nomeAtividade;
+    }
+
+   
+    public void setNomeAtividade(String nomeAtividade) {
+        this.nomeAtividade = nomeAtividade;
+    }
+
+   
+    public String getTipoAtividade() {
+        return tipoAtividade;
+    }
+
+   
+    public void setTipoAtividade(String tipoAtividade) {
+        this.tipoAtividade = tipoAtividade;
+    }
+
+    
+    public Date getDataAtividade() {
+        return dataAtividade;
+    }
+
+   
+    public void setDataAtividade(Date dataAtividade) {
+        this.dataAtividade = dataAtividade;
+    }
+
+    
+    public double getValorAtividade() {
+        return valorAtividade;
+    }
+
+   
+    public void setValorAtividade(double valorAtividade) {
+        this.valorAtividade = valorAtividade;
+    }
     
 }

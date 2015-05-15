@@ -11,6 +11,10 @@ import java.util.List;
  *
  * @author poney
  */
+ 
+ //CADASTRAR UMA DISCIPLINA
+ //ATUALIZAR UMA DISCIPLINA
+ //EXCLUIR UMA DISCIPLINA
 public class DisciplinaDaoImpl implements DisciplinaDao{
     
         //metodos CRUD

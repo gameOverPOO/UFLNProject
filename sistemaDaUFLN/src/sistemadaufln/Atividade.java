@@ -11,6 +11,8 @@ import java.util.Date;
  *
  * @author Natália
  */
+ 
+ /*CRIAR CONTRUTOR*/
 public class Atividade {
     private String nomeAtividade;
     private String tipoAtividade;

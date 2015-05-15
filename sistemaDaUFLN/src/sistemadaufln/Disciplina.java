@@ -11,9 +11,7 @@ package sistemadaufln;
  */
  
  //CRIAR CONSTRUTOR (DEPENDENDO DAS CONDIÇÕES IMPOSTAS NO DIGRAMA) 
- //CADASTRAR UMA DISCIPLINA
- //ATUALIZAR UMA DISCIPLINA
- //EXCLUIR UMA DISCIPLINA
+ 
 public class Disciplina {
     private String nomeDisciplina;
    private String ementa;

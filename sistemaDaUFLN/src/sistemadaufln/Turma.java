@@ -9,6 +9,8 @@ package sistemadaufln;
  *
  * @author Natália
  */
+ 
+ /*CRIAR CONSTRUTOR DEPENDENDO DE PROFESSOR*/
 public class Turma {
     
 }

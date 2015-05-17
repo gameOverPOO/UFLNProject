@@ -57,7 +57,7 @@ public class ProfessorView {
                     
                     Professor professorteste = new Professor(nomeP,cpf,dep);                               
                      
-                    if ((professorteste.getNomeProfessor() != null))listaProfessor.add(professorteste);//testar se é null antes de add
+                    if ((professorteste.getNome()!= null))listaProfessor.add(professorteste);//testar se é null antes de add
                     
                    Scanner leitura= new Scanner(System.in);
                    System.out.println("Deseja adicionar outro Professor? S ou N");
@@ -68,8 +68,8 @@ public class ProfessorView {
                     
                 }  
                for (Professor s:listaProfessor)
-                        System.out.println("Professor: " + s.getNomeProfessor() + " CPF: " 
-                                + s. getCpfProfessor() + " Dep: "+ s.getDepartamentoProfessor());  
+                        System.out.println("Professor: " + s.getNome() + " CPF: " 
+                                + s. getCpf() + " Dep: "+ s.getDepartamento());  
                   
                 Arquivo arquivo = new Arquivo();
                 arquivo.salvarProfessor(listaProfessor);

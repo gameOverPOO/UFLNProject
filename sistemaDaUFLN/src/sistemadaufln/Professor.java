@@ -10,46 +10,39 @@ package sistemadaufln;
  * @author Natália
  */
 public class Professor {
-    private String nomeProfessor;
-    private String cpfProfessor;
-    private String departamentoProfessor;
 
-    
-    public String getNomeProfessor() {
-        return nomeProfessor;
-    } 
+    private String nome;
+    private String cpf;
+    private String departamento;
 
-    public void setNomeProfessor(String nomeProfessor) {
-        this.nomeProfessor = nomeProfessor;
+    public String getNome() {
+        return nome;
     }
 
-    public String getCpfProfessor() {
-        return cpfProfessor;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getDepartamentoProfessor() {
-        return departamentoProfessor;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setCpfProfessor(String cpfProfessor) {
-        this.cpfProfessor = cpfProfessor;
+    public String getDepartamento() {
+        return departamento;
     }
 
-    public void setDepartamentoProfessor(String departamentoProfessor) {
-        this.departamentoProfessor = departamentoProfessor;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
-    public Professor(String nomeProfessor, String cpfProfessor, String departamentoProfessor) {
-        this.nomeProfessor = nomeProfessor;
-        this.cpfProfessor = cpfProfessor;
-        this.departamentoProfessor = departamentoProfessor;
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
     }
-    
-    
 
-   
-    
-    
+    public Professor(String nome, String cpf, String departamento) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.departamento = departamento;
+    }
 
-   
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sistemadaufln;
 
 import java.util.InputMismatchException;
@@ -15,6 +10,8 @@ import java.util.InputMismatchException;
 public class Aluno {
     private String nome;
     private String cpf;
+    private Turma turma;
+    
 
     public String getNome() {
         return nome;
@@ -49,8 +46,9 @@ public Aluno(String nomeAluno, String cpfAluno) {
         
 }
 
+//PQ O COMPILADOR PEDIU P SER FINAL NA CHAMADA DO CONTRUTOR?
 
-public boolean validarCPF(String CPF) {
+public final boolean validarCPF(String CPF) {
     
      // considera-se erro CPF's formados por uma sequencia de numeros iguais
     if (CPF.equals("00000000000") || CPF.equals("11111111111") ||
@@ -107,7 +105,7 @@ public boolean validarCPF(String CPF) {
   }
   
 
-  public static String imprimeCPF(String CPF) {
+  public static String imprimirCPF(String CPF) {
     return(CPF.substring(0, 3) + "." + CPF.substring(3, 6) + "." +
       CPF.substring(6, 9) + "-" + CPF.substring(9, 11));
   }

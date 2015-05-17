@@ -7,6 +7,7 @@ package sistemadaufln;
 
 import java.util.InputMismatchException;
 
+/*CORRIGIR NOMES DOS ATRIBUTOS*/
 /**
  *
  * @author Natália
@@ -42,6 +43,7 @@ public Aluno(String nomeAluno, String cpfAluno) {
     }
     else 
         System.out.println("CPF INVALIDO!! :( ");
+        //NAO HÁ INTERAÇÃO COM USUARIO/USAR EXCEÇÃO
         
         
         
@@ -103,6 +105,7 @@ public boolean validarCPF(String CPF) {
         return(false);
     }
   }
+  
 
   public static String imprimeCPF(String CPF) {
     return(CPF.substring(0, 3) + "." + CPF.substring(3, 6) + "." +

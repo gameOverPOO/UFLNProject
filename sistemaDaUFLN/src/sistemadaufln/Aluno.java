@@ -7,29 +7,29 @@ package sistemadaufln;
 
 import java.util.InputMismatchException;
 
-/*CORRIGIR NOMES DOS ATRIBUTOS*/
+
 /**
  *
  * @author Natália
  */
 public class Aluno {
-    private String nomeAluno;
-    private String cpfAluno;
+    private String nome;
+    private String cpf;
 
-    public String getNomeAluno() {
-        return nomeAluno;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeAluno(String nomeAluno) {
-        this.nomeAluno = nomeAluno;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getCpfAluno() {
-        return cpfAluno;
+    public String getCpf() {
+        return cpf;
     }
 
     public void setCpfAluno(String cpfAluno) {
-        this.cpfAluno = cpfAluno;
+        this.cpf = cpfAluno;
     }
 
 
@@ -38,8 +38,8 @@ public class Aluno {
 public Aluno(String nomeAluno, String cpfAluno) {
     if(validarCPF(cpfAluno)) //Só cria um aluno se o cpf for valido...mas tá dando merda
     {
-        this.nomeAluno = nomeAluno;
-        this.cpfAluno=cpfAluno;
+        this.nome = nomeAluno;
+        this.cpf=cpfAluno;
     }
     else 
         System.out.println("CPF INVALIDO!! :( ");

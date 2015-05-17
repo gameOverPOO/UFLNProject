@@ -57,7 +57,7 @@ public class AlunoView {
                     
                     Aluno alunoteste = new Aluno(nomeP,cpf);                               
                      
-                    if ((alunoteste.getNomeAluno() != null))listaAlunos.add(alunoteste);//testar se é null antes de add
+                    if ((alunoteste.getNome() != null))listaAlunos.add(alunoteste);//testar se é null antes de add
                     
                    Scanner leitura= new Scanner(System.in);
                    System.out.println("Deseja adicionar outro aluno? S ou N");
@@ -68,7 +68,7 @@ public class AlunoView {
                     
                 }  
                for (Aluno s:listaAlunos)
-                        System.out.println("Aluno: " + s.getNomeAluno() + " CPF: " + s. getCpfAluno());  
+                        System.out.println("Aluno: " + s.getNome() + " CPF: " + s. getCpf());  
                   
                 Arquivo arquivo = new Arquivo();
                 arquivo.salvarAluno(listaAlunos);
@@ -86,7 +86,7 @@ public class AlunoView {
                  String nomeA = new String();                
                  nomeA = leituraNomeA.nextLine();
                  for (Aluno s: listaAlunos)
-                     if (s.getNomeAluno().equals(nomeP)) s.setNomeAluno(nomeA);
+                     if (s.getNome().equals(nomeP)) s.setNome(nomeA);
                  
              }
 
@@ -99,7 +99,7 @@ public class AlunoView {
                     {
                             Aluno p = listaAlunos.get(i);
 
-                            if(p.getNomeAluno().equals(nomeD))
+                            if(p.getNome().equals(nomeD))
                             {
                          // Encontrou uma pessoa cadastrada com nome "Pedro".
 

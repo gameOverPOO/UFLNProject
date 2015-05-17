@@ -47,11 +47,11 @@ public class DisciplinaView {
                      Scanner leituraCpf= new Scanner(System.in);
                      System.out.println("Digite a ementa: ");
                      String ementa = new String();                
-                     ementa = leituraEmenta.nextLine();
+                    // ementa = leituraEmenta.nextLine();
                                          
-                    Disciplina disciplinaTeste = new Disciplina(nomeD,ementa);                               
+                    //Disciplina disciplinaTeste = new Disciplina(nomeD,ementa);                               
                      
-                    if ((disciplinateste.getNomeDisciplina() != null))listaDisciplina.add(disciplinateste);
+                  //  if ((disciplinateste.getNomeDisciplina() != null))listaDisciplina.add(disciplinateste);
                     
                    Scanner leitura= new Scanner(System.in);
                    System.out.println("Deseja adicionar outra disciplina? S ou N");
@@ -65,7 +65,7 @@ public class DisciplinaView {
                         System.out.println("Disciplina: " + s.getNomeDisciplina() + " ementa: " + s.getEmenta());  
                   
                 Arquivo arquivo = new Arquivo();
-                arquivo.salvarDisciplina(listaDisciplina);
+               // arquivo.salvarDisciplina(listaDisciplina);
                 break;
             }
             case 2:{

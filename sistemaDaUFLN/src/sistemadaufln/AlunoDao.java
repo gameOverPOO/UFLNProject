@@ -9,6 +9,7 @@ import java.util.List;
  *
  * @author poney
  */
+ /*Receber alunos*/
 public interface AlunoDao {
     
 

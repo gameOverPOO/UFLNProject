@@ -1,7 +1,8 @@
 package sistemadaufln;
 
 import java.util.InputMismatchException;
-
+import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -9,8 +10,19 @@ import java.util.InputMismatchException;
  */
 public class Aluno {
     private String nome;
-    private String cpf;
-    private Turma turma;
+    private String cpf;    
+    public List<Atividade> atividades = new ArrayList<>();
+    public List<Turma> turma = new ArrayList<>();
+    
+    
+    
+    
+    
+    
+    
+    
+
+    //CONTINUAR TRATANDO RELACIONAMENTOS
     
 
     public String getNome() {

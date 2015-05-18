@@ -1,16 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sistemadaufln;
 
-/**
- *
- * @author Natália
- */
+
  
  /*CRIAR CONSTRUTOR DEPENDENDO DE PROFESSOR*/
 public class Turma {
+    private int ano;
+    private int periodo;
+    private Horario horario;
+    //Local??
+    private int vagas;
+    public Professor professor;
+    
     
 }

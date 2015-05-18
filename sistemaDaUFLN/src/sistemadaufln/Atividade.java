@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package sistemadaufln;
 
-import java.util.Date;
+package sistemadaufln;
+import java.util.*;
+
 
 /**
  *
@@ -15,14 +11,26 @@ import java.util.Date;
  /*CRIAR CLASSES ATIVIDADEVIEW, ATIVIDADEADO E ATIVIDADEDAO IMPL*/
  
  
- /*CRIAR CONTRUTOR*/
+ 
 public class Atividade {
+
+      
+    //Atributos
     private String nomeAtividade;
     private String tipoAtividade;
     private Date dataAtividade;
-    private double valorAtividade;
+    private double valorAtividade;   
+    public List<Aluno> alunos = new ArrayList<>(); //Relacionamento
 
     
+   
+    //Métodos
+     public Atividade(String nomeAtividade, String tipoAtividade, Date dataAtividade, double valorAtividade) {
+        this.nomeAtividade = nomeAtividade;
+        this.tipoAtividade = tipoAtividade;
+        this.dataAtividade = dataAtividade;
+        this.valorAtividade = valorAtividade;
+    }
     public String getNomeAtividade() {
         return nomeAtividade;
     }

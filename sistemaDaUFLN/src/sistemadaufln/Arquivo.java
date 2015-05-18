@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sistemadaufln;
 
 import java.io.FileWriter;
@@ -31,7 +27,7 @@ public class Arquivo {
             
             gravarArq.printf("+--Resultado--+%n");
             for (Aluno s:listaAlunos) {
-                gravarArq.printf("Nome: " + s.getNomeAluno()+ " CPF: " + s.getCpfAluno() + "\n");
+                gravarArq.printf("Nome: " + s.getNome()+ " CPF: " + s.getCpf() + "\n");
             }
             gravarArq.printf("+-------------+%n");
             
@@ -51,8 +47,8 @@ public class Arquivo {
             
             gravarArq.printf("+--Resultado--+%n");
             for (Professor s:listaProfessores) {
-                gravarArq.printf("Nome: " + s.getNomeProfessor()+ " CPF: " + s.getCpfProfessor() +
-                        " Departamento: " +s.getDepartamentoProfessor() + "\n");
+                gravarArq.printf("Nome: " + s.getNome()+ " CPF: " + s.getCpf() +
+                        " Departamento: " +s.getDepartamento() + "\n");
             }
             gravarArq.printf("+-------------+%n");
             

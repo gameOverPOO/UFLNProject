@@ -1,73 +1,66 @@
-
 package sistemadaufln;
+
 import java.util.*;
 
+ 
 
-/**
- *
- * @author Natália
- */
- 
- /*CRIAR CLASSES ATIVIDADEVIEW, ATIVIDADEADO E ATIVIDADEDAO IMPL*/
- 
- 
- 
 public class Atividade {
 
       
     //Atributos
-    private String nomeAtividade;
-    private String tipoAtividade;
-    private Date dataAtividade;
-    private double valorAtividade;   
+    private String nome;
+    private String tipo;
+    private Date data;
+    private double valor;   
     public List<Aluno> alunos = new ArrayList<>(); //Relacionamento
-
+    private Turma turma;
     
    
     //Métodos
-     public Atividade(String nomeAtividade, String tipoAtividade, Date dataAtividade, double valorAtividade) {
-        this.nomeAtividade = nomeAtividade;
-        this.tipoAtividade = tipoAtividade;
-        this.dataAtividade = dataAtividade;
-        this.valorAtividade = valorAtividade;
+     public Atividade(String nome, String tipo, Date data, double valor, Turma turma) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.data = data;
+        this.valor = valor;
+        this.turma = turma;
     }
-    public String getNomeAtividade() {
-        return nomeAtividade;
-    }
-
-   
-    public void setNomeAtividade(String nomeAtividade) {
-        this.nomeAtividade = nomeAtividade;
+    public String getNome() {
+        return nome;
     }
 
    
-    public String getTipoAtividade() {
-        return tipoAtividade;
+    public void setNomee(String nome) {
+        this.nome = nome;
     }
 
    
-    public void setTipoAtividade(String tipoAtividade) {
-        this.tipoAtividade = tipoAtividade;
+    public String getTipo() {
+        return tipo;
+    }
+
+   
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     
-    public Date getDataAtividade() {
-        return dataAtividade;
+    public Date getData() {
+        return data;
     }
 
    
-    public void setDataAtividade(Date dataAtividade) {
-        this.dataAtividade = dataAtividade;
+    public void setData(Date data) {
+        this.data = data;
     }
 
     
-    public double getValorAtividade() {
-        return valorAtividade;
+    public double getValor() {
+        return valor;
     }
 
    
-    public void setValorAtividade(double valorAtividade) {
-        this.valorAtividade = valorAtividade;
+    public void setValorAtividade(double valor) {
+        this.valor = valor;
     }
     
 }

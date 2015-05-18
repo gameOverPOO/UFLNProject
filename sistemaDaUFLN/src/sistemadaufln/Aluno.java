@@ -1,14 +1,13 @@
 package sistemadaufln;
 
-import java.util.InputMismatchException;
-import java.util.List;
 import java.util.*;
 
-/**
- *
- * @author Natália
- */
+
+
 public class Aluno {
+    
+    
+    //Atributos
     private String nome;
     private String cpf;    
     public List<Atividade> atividades = new ArrayList<>();
@@ -16,15 +15,7 @@ public class Aluno {
     
     
     
-    
-    
-    
-    
-    
-
-    //CONTINUAR TRATANDO RELACIONAMENTOS
-    
-
+    //Métodos 
     public String getNome() {
         return nome;
     }
@@ -37,18 +28,18 @@ public class Aluno {
         return cpf;
     }
 
-    public void setCpfAluno(String cpfAluno) {
-        this.cpf = cpfAluno;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
 
 
 
-public Aluno(String nomeAluno, String cpfAluno) {
-    if(validarCPF(cpfAluno)) //Só cria um aluno se o cpf for valido...mas tá dando merda
+public Aluno(String nome, String cpf) {
+    if(validarCPF(cpf)) //Só cria um aluno se o cpf for valido...mas tá dando merda
     {
-        this.nome = nomeAluno;
-        this.cpf=cpfAluno;
+        this.nome = nome;
+        this.cpf=cpf;
     }
     else 
         System.out.println("CPF INVALIDO!! :( ");
@@ -60,7 +51,7 @@ public Aluno(String nomeAluno, String cpfAluno) {
 
 //PQ O COMPILADOR PEDIU P SER FINAL NA CHAMADA DO CONTRUTOR?
 
-public final boolean validarCPF(String CPF) {
+public boolean validarCPF(String CPF) {
     
      // considera-se erro CPF's formados por uma sequencia de numeros iguais
     if (CPF.equals("00000000000") || CPF.equals("11111111111") ||

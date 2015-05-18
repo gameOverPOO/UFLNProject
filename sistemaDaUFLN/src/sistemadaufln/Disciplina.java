@@ -1,30 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sistemadaufln;
 
-/**
- *
- * @author Natália
- */
- 
- //CRIAR CONSTRUTOR (DEPENDENDO DAS CONDIÇÕES IMPOSTAS NO DIGRAMA) 
- 
-public class Disciplina {
-    private String nomeDisciplina;
-   private String ementa;
-   private int cargaHorariaDisciplina;
 
+import java.util.*;
+
+
+
+public class Disciplina {
+   //Atributos
+   private String nome;
+   private String ementa;
+   private int cargaHoraria;
+   public List<Turma> turmas = new ArrayList<>();
+   public List<Professor> professores = new ArrayList<>();
   
-    public String getNomeDisciplina() {
-        return nomeDisciplina;
+   
+   
+   //Métodos
+    public String getNome() {
+        return nome;
     }
 
    
-    public void setNomeDisciplina(String nomeDisciplina) {
-        this.nomeDisciplina = nomeDisciplina;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     
@@ -39,11 +37,11 @@ public class Disciplina {
 
    
     public int getCargaHorariaDisciplina() {
-        return cargaHorariaDisciplina;
+        return cargaHoraria;
     }
 
     
-    public void setCargaHorariaDisciplina(int cargaHorariaDisciplina) {
-        this.cargaHorariaDisciplina = cargaHorariaDisciplina;
+    public void setCargaHorariaDisciplina(int cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
     }
 }

@@ -62,7 +62,7 @@ public class DisciplinaView {
                     
                 }  
                for (Disciplina s:listaDisciplina)
-                        System.out.println("Disciplina: " + s.getNomeDisciplina() + " ementa: " + s.getEmenta());  
+                        System.out.println("Disciplina: " + s.getNome() + " ementa: " + s.getEmenta());  
                   
                 Arquivo arquivo = new Arquivo();
                // arquivo.salvarDisciplina(listaDisciplina);
@@ -79,7 +79,7 @@ public class DisciplinaView {
                  
                  for (Disciplina s:listaDisciplina)
                  
-                        System.out.println("Disciplina: " + s.getNomeDisciplina() + " Ementa: " + s. getEmenta());  
+                        System.out.println("Disciplina: " + s.getNome() + " Ementa: " + s. getEmenta());  
                
                 break;
                

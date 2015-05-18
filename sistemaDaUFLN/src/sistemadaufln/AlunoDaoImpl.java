@@ -8,28 +8,29 @@ import java.util.*;
 public class AlunoDaoImpl implements AlunoDao{
    
     
-    public List<Aluno> alunos = new ArrayList<>();
+    public List<Aluno> alunosl = new ArrayList<>();
     
     @Override
     public void salvar(Aluno aluno) {
                
-        alunos.add(aluno);
+        alunosl.add(aluno);
+        System.out.println("size::: "+alunosl.size());
+        
+        
+        
         
         
     }
 
     @Override
     public void atualizar(String nomeA, String nomeN) {
-       //System.out.println("vexkkkhgzxzeeeeeeeeer ");
+       System.out.println("size::: "+alunosl.size());
         //Sobrescrever equals//fazer o outro for?
        
-        /*for(int i = 0; i < alunos.size(); i++)
-            if ()
-            {
+        for(int i = 0; i < alunosl.size()+1; i++)
+            System.out.println("\nbumdasida ");
+        
                 
-            
-            }
-            */    
                 
         
         //imprimirLista();
@@ -63,7 +64,7 @@ public class AlunoDaoImpl implements AlunoDao{
 
     @Override
     public void imprimirLista() {
-        for (Aluno s:alunos)
+        for (Aluno s:alunosl)
                         System.out.println("Aluno: " + s.getNome() + " CPF: " + s. getCpf());  
                   
                 

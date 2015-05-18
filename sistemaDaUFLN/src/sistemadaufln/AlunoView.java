@@ -78,13 +78,11 @@ public class AlunoView {
                  String nomeA = new String();                
                  nomeA = leitura.nextLine();
                  
-                 System.out.println("Digite o  Novo Nome do Aluno: ");
-                 
-                 //Scanner leitura= new Scanner(System.in);
+                 System.out.println("Digite o  Novo Nome do Aluno: ");                 
                  String nomeN = new String();                
                  nomeN = leitura.nextLine();
                  
-                  AlunoDao b = new AlunoDaoImpl();
+                 AlunoDao b = new AlunoDaoImpl();
                  
                 
                   

@@ -4,6 +4,8 @@ package sistemadaufln;
 import java.util.*;
 
 public class Turma {
+    
+    //Atributos
     private int ano;
     private int periodo;
     public Horario horario;
@@ -14,6 +16,7 @@ public class Turma {
     public List<Atividade> atividades = new ArrayList<>();
 
     
+    //Métodos
     public Disciplina getDisciplina() {
         return disciplina;
     }

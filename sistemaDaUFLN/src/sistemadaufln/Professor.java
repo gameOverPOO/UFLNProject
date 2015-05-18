@@ -4,12 +4,15 @@ import java.util.*;
 
 public class Professor {
 
+    //Atributos
     private String nome;
     private String cpf;
     private String departamento;
     public List<Turma> turmas = new ArrayList<>();
     public List<Disciplina> disciplinas = new ArrayList<>();
 
+    
+    //Métodos
     public String getNome() {
         return nome;
     }

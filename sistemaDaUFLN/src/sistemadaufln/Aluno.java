@@ -49,7 +49,7 @@ public Aluno(String nome, String cpf) {
         
 }
 
-//PQ O COMPILADOR PEDIU P SER FINAL NA CHAMADA DO CONTRUTOR?
+//PQ O COMPILADOR PEDE P SER FINAL NA CHAMADA DO CONTRUTOR?
 
 public boolean validarCPF(String CPF) {
     

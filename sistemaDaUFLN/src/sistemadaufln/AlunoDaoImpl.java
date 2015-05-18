@@ -8,7 +8,7 @@ import java.util.*;
 public class AlunoDaoImpl implements AlunoDao{
    
     
-    public List<Aluno> alunosl = new ArrayList<>();
+    public List<Aluno> alunosl = new ArrayList<Aluno>();
     
     @Override
     public void salvar(Aluno aluno) {
@@ -22,18 +22,25 @@ public class AlunoDaoImpl implements AlunoDao{
         
     }
 
+    /*@Override
+    public boolean equals(Object obj)
+    {
+        //Dois alunos sao iguais se as matriculas forem iguais
+       return false;
+    }*/
     @Override
     public void atualizar(String nomeA, String nomeN) {
-       System.out.println("size::: "+alunosl.size());
-        //Sobrescrever equals//fazer o outro for?
+       for(int i = 0; i < alunosl.size(); i++){
+          Aluno p = alunosl.get(i);
+          if(p.getNome().equals(nomeA)) p.setNome(nomeN);
+                            
+           
        
-        for(int i = 0; i < alunosl.size()+1; i++)
-            System.out.println("\nbumdasida ");
-        
-                
+       }
+       this.imprimirLista();         
                 
         
-        //imprimirLista();
+        
     }
 
     @Override

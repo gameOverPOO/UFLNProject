@@ -7,10 +7,10 @@ import java.util.*;
 
  
 public class AlunoView {
-    
+     AlunoDao a = new AlunoDaoImpl();
     
     public void subMenu() throws IOException{
-       
+      
         int sair = 0;
         while(sair==0){
         Scanner leituraMenu= new Scanner(System.in);        
@@ -26,7 +26,8 @@ public class AlunoView {
         switch(escolha){
             case 1:{
                 
-                //CADASTRO OK!
+                //CADASTRO OK! //COLOCAR OS OUTROS ATRIBUTOS DE ALUNO TBM
+                
                 System.out.println("Adicionando um aluno");
                 
                 
@@ -50,7 +51,7 @@ public class AlunoView {
                      
                     if ((alunoteste.getNome() != null)) 
                     {
-                        AlunoDao a = new AlunoDaoImpl();
+                        
                         a.salvar(alunoteste);
                         a.imprimirLista();
                         
@@ -69,7 +70,7 @@ public class AlunoView {
                 //arquivo.salvarAluno(listaAlunos);
                 break;
             }
-            //FALTA ATUALIZAR
+            //ATUALIZAÇÃO OK! //COLOCAR OS OUTROS ATRIBUTOS DE ALUNO TBM
              case 2:{
                 System.out.println("Alterando um aluno");
                 
@@ -82,11 +83,11 @@ public class AlunoView {
                  String nomeN = new String();                
                  nomeN = leitura.nextLine();
                  
-                 AlunoDao b = new AlunoDaoImpl();
+                 
                  
                 
                   
-                  b.atualizar(nomeA,nomeN);
+                  a.atualizar(nomeA,nomeN);
                  
                  
                          
@@ -99,10 +100,12 @@ public class AlunoView {
                  Scanner leitura= new Scanner(System.in);
                  String nomeD = new String();                
                  nomeD = leitura.nextLine();
+          
+                    
                  
                 break;
-
             }
+           
             case 4:
             {
                 sair = 1;

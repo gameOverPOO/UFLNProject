@@ -54,7 +54,7 @@ public class AlunoView {
                         a.salvar(alunoteste);
                         a.imprimirLista();
                         
-                    };
+                    }
                    
                    
                    System.out.println("Deseja adicionar outro aluno? (S/N)");
@@ -63,8 +63,6 @@ public class AlunoView {
                    
                    if (opcao.equals("N")) adicionar = 0;
                    
-                
-                    
                 }  
                 
                 //Arquivo arquivo = new Arquivo();
@@ -73,6 +71,7 @@ public class AlunoView {
             }
              case 2:{
                 System.out.println("Alterando um aluno");
+                
                  System.out.println("Digite o Nome do Aluno: ");
                  Scanner leitura= new Scanner(System.in);
                  String nomeA = new String();                
@@ -80,15 +79,15 @@ public class AlunoView {
                  
                  System.out.println("Digite o  Novo Nome do Aluno: ");
                  
-                 Scanner leituras= new Scanner(System.in);
+                 //Scanner leitura= new Scanner(System.in);
                  String nomeN = new String();                
-                 nomeN = leituras.nextLine();
+                 nomeN = leitura.nextLine();
                  
-                  AlunoDao a = new AlunoDaoImpl();
+                  AlunoDao b = new AlunoDaoImpl();
                  
                 
                   
-                  a.atualizar(nomeA,nomeN);
+                  b.atualizar(nomeA,nomeN);
                  
                  
                          

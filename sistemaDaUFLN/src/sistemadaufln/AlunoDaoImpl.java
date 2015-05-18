@@ -13,8 +13,7 @@ public class AlunoDaoImpl implements AlunoDao{
     
     @Override
     public void salvar(Aluno aluno) {
-       
-        
+               
         alunos.add(aluno);
         
         
@@ -22,12 +21,19 @@ public class AlunoDaoImpl implements AlunoDao{
 
     @Override
     public void atualizar(String nomeA, String nomeN) {
-       System.out.println("veeeeeeeeeer ");
-        //Sobrescrever equals//fazer o outro for
-        for (Aluno s: alunos)
-                    if (s.getNome().equals(nomeA)) s.setNome(nomeA);
-        this.imprimirLista();
+       //System.out.println("vexkkkhgzxzeeeeeeeeer ");
+        //Sobrescrever equals//fazer o outro for?
+       
+        /*for(int i = 0; i < alunos.size(); i++)
+            if ()
+            {
+                
+            
+            }
+            */    
+                
         
+        //imprimirLista();
     }
 
     @Override
@@ -44,7 +50,7 @@ public class AlunoDaoImpl implements AlunoDao{
                         // Remove.
                             listaAlunos.remove(p);
 
-                            // Sai do loop.
+                            
                      
                             }
                     }*/

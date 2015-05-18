@@ -69,6 +69,7 @@ public class AlunoView {
                 //arquivo.salvarAluno(listaAlunos);
                 break;
             }
+            //FALTA ATUALIZAR
              case 2:{
                 System.out.println("Alterando um aluno");
                 
@@ -94,7 +95,7 @@ public class AlunoView {
                          
                  break;
              }
-
+            //FALTA DELETAR
             case 3:{
                  System.out.println("Digite o Nome do Aluno a ser deletado: ");
                  Scanner leitura= new Scanner(System.in);

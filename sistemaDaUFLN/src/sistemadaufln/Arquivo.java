@@ -14,11 +14,7 @@ public class Arquivo {
     public Arquivo() {
     }
 
-    /**
-     * @param listaAlunos
-     * @throws java.io.IOException
-     */
-
+    
     public void salvarAluno(List<Aluno> listaAlunos) throws IOException {
         
         

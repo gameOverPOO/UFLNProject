@@ -6,8 +6,7 @@ import java.util.*;
 
  
 public class AlunoDaoImpl implements AlunoDao{
-
-    
+   
     
     public List<Aluno> alunos = new ArrayList<>();
     

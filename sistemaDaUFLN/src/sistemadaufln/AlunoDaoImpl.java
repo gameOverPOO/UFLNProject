@@ -1,49 +1,70 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sistemadaufln;
 
-import java.util.List;
+import java.util.*;
 
 
-/**
- *
- * @author poney
- */
- /*CADASTRO DEVE SER FEITO AQUI! ESTÁ SENDO FEITO NO ALUNOVIEW*/
- 
  
 public class AlunoDaoImpl implements AlunoDao{
+
     
     
+    public List<Aluno> alunos = new ArrayList<>();
     
-    //CRUD
     @Override
-    public void salvar(Object bean){
+    public void salvar(Aluno aluno) {
+       
+        
+        alunos.add(aluno);
+        
         
     }
-    
+
     @Override
-    public void atualizar(Object bean){
+    public void atualizar(String nomeA, String nomeN) {
+       System.out.println("veeeeeeeeeer ");
+        //Sobrescrever equals//fazer o outro for
+        for (Aluno s: alunos)
+                    if (s.getNome().equals(nomeA)) s.setNome(nomeA);
+        this.imprimirLista();
         
     }
+
+    @Override
+    public void deletar(Aluno aluno) {
+        /*
+         for(int i = 0; i < alunos.size(); i++)
+                    {
+                            Aluno p = alunos.get(i);
+
+                            if(p.getNome().equals(nomeD))
+                            {
+                         // Encontrou uma pessoa cadastrada com nome "Pedro".
+
+                        // Remove.
+                            listaAlunos.remove(p);
+
+                            // Sai do loop.
+                     
+                            }
+                    }*/
+    }
     
     @Override
-    public void deletar(int id){
+    public void imprimir(Aluno aluno)
+    {
+    
+    }
+
+    @Override
+    public void imprimirLista() {
+        for (Aluno s:alunos)
+                        System.out.println("Aluno: " + s.getNome() + " CPF: " + s. getCpf());  
+                  
+                
         
     }
-    
-    @Override
-    public Object getById(int id){
-        return null;
-    }
-    
-    @Override
-    public List<Object> getAll(){
-        return null;
-    }
+ 
     
 }
 

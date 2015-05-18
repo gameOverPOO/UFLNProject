@@ -1,27 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sistemadaufln;
-import java.util.List;
-/**
- *
- * @author poney
- */
- /*Receber alunos*/
+import java.util.*;
+
+
+
 public interface AlunoDao {
+    
     
 
     //metodos CRUD
-    public void salvar(Object bean);
-    public void atualizar(Object bean);
-    public void deletar(int id);
-    public Object getById(int id);
-    public List<Object> getAll();
+    public void salvar(Aluno aluno);
+    public void atualizar(String nomeA, String nomeN);
+    public void deletar(Aluno aluno);
+    public void imprimir(Aluno aluno);
+    public void imprimirLista();
+    
+    
+    }
+    
     
     
     //Achei um exemplo:  https://github.com/edveloso/academica-complete/blob/master/src/modelo/persistencia/AlunoDAO.java
     //metodos para aluno
    
-}
+

@@ -6,6 +6,8 @@ import java.util.*;
 
 public class Aluno {
     
+    /* Consultar a situac~ao de um aluno em uma disciplina - exibir nota e faltas, e se foi aprovado ou n~ao, sabendo
+que e necessario ter nota maior ou igual a 6,0, alem de 75% de frequ^encia para aprovac~ao;*/
     
     //Atributos
     private String nome;

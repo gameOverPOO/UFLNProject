@@ -52,7 +52,7 @@ public Aluno(String nome, String cpf) {
 }
 
 //PQ O COMPILADOR PEDE P SER FINAL NA CHAMADA DO CONTRUTOR?
-
+//ONDE COLOCAR ISTO?
 public boolean validarCPF(String CPF) {
     
      // considera-se erro CPF's formados por uma sequencia de numeros iguais

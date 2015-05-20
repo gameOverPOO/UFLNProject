@@ -2,7 +2,9 @@ package sistemadaufln;
 
 import java.util.*;
 
-
+/**Todos os dados devem, evidentemente, ser persistidos. Utilize arquivos para isso. Procure tornar seu codigo
+\de negocio" independente das operac~oes que envolvem arquivos (pergunte-se sempre: \o que eu precisaria de
+fazer se, de repente, o cliente pedisse para utilizar banco de dados em vez de arquivos?").*/
 
 public class Aluno {
     

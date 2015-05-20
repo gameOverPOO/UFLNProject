@@ -7,7 +7,7 @@ import java.util.*;
 
  
 public class AlunoView {
-     AlunoDao a = new AlunoDaoImpl();
+     AlunoDao a = new AlunoDaoImpl(); //TÁ ERRADO ISSO
     
     public void subMenu() throws IOException{
       
@@ -20,7 +20,8 @@ public class AlunoView {
         System.out.println("1. Adicionar um aluno");
         System.out.println("2. Alterar um aluno");
         System.out.println("3. Remover um aluno");
-        System.out.println("4. Sair");
+        System.out.println("4. Buscar dados de um aluno");
+        System.out.println("5. Sair");
         
         int escolha = leituraMenu.nextInt();
         switch(escolha){
@@ -108,6 +109,7 @@ public class AlunoView {
            
             case 4:
             {
+             //IMPLEMENTAR BUSCA DE ALUNO AQUI
                 sair = 1;
                 break;
             }

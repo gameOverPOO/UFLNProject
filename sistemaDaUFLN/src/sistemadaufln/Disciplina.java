@@ -3,7 +3,8 @@ package sistemadaufln;
 
 import java.util.*;
 
-
+/*Consultar o numero de turmas ja oferecidas (historicamente) para uma determinada disciplina;*/ 
+//Ter que implementar o historico de turmas
 
 public class Disciplina {
    //Atributos

@@ -8,11 +8,13 @@ import java.util.*;
 public class AlunoDaoImpl implements AlunoDao{
    
     
-    public List<Aluno> alunosl = new ArrayList<Aluno>();
+    public List<Aluno> alunosl = new ArrayList<Aluno>(); //TIRAR ISSO
     
     @Override
     public void salvar(Aluno aluno) {
-               
+       //VERIFICAR SE O ALUNO/CPF JÁ EXISTE NA LISTA
+       //VERIFICAR SE OS DADOS OBRIGATÓRIOS ESTÃO PREENCHIDOS
+       
         alunosl.add(aluno);
         System.out.println("size::: "+alunosl.size());
         
@@ -30,11 +32,12 @@ public class AlunoDaoImpl implements AlunoDao{
     }*/
     @Override
     public void atualizar(String nomeA, String nomeN) {
+     
        for(int i = 0; i < alunosl.size(); i++){
           Aluno p = alunosl.get(i);
           if(p.getNome().equals(nomeA)) p.setNome(nomeN);
                             
-           
+           //RETORNAR ALGO SE O ALUNO NÃO FOR ENCONTRADO!
        
        }
        this.imprimirLista();         

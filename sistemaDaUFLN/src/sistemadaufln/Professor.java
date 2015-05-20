@@ -3,6 +3,12 @@ package sistemadaufln;
 import java.util.*;
 
 public class Professor {
+    
+    
+    /* Consultar o numero de disciplinas ja lecionadas por um determinado professor.*/
+    //CRIAR HISTORICO DO PROFESSOR
+    
+    
 
     //Atributos
     private String nome;

@@ -33,13 +33,10 @@ public class AlunoDaoImpl implements AlunoDao{
     @Override
     public void atualizar(String nomeA, String nomeN) {
      
-       for(int i = 0; i < alunosl.size(); i++){
-          Aluno p = alunosl.get(i);
-          if(p.getNome().equals(nomeA)) p.setNome(nomeN);
-                            
-           //RETORNAR ALGO SE O ALUNO NÃO FOR ENCONTRADO!
-       
-       }
+        for (Iterator<Aluno> it = alunosl.iterator(); it.hasNext();) {
+            Aluno p = it.next();
+            if(p.getNome().equals(nomeA)) p.setNome(nomeN);
+        }
        this.imprimirLista();         
                 
         

@@ -9,6 +9,31 @@ package sistemadaufln;
  *
  * @author Natália
  */
-public class TurmaDaoImpl {
+public class TurmaDaoImpl implements TurmaDao{
+    
+    @Override
+    public void salvar(Aluno aluno){
+        
+    }
+    
+    @Override
+    public void atualizar(String nomeA, String nomeN){
+        
+    }
+    
+    @Override
+    public void deletar(String nome){
+        
+    }
+    
+    @Override
+    public void imprimir(Aluno aluno){
+        
+    }
+    
+    @Override
+    public void imprimirLista(){
+        
+    }
     
 }

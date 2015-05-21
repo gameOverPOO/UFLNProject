@@ -64,7 +64,7 @@ public class AlunoView {
                    String opcao = new String();
                    opcao = leitura.nextLine();                   
                    
-                   if (opcao.equals("N")) adicionar = 0;
+                   if (opcao.equals("N")||opcao.equals("n")) adicionar = 0;
                    
                 }  
                 

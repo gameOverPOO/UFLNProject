@@ -35,12 +35,12 @@ public class DisciplinaView {
                      String nomeD = new String();                
                      nomeD = leituraNome.nextLine();
                      
-                     Scanner leituraCpf= new Scanner(System.in);
+                     Scanner leituraEmenta= new Scanner(System.in);
                      System.out.println("Digite a ementa: ");
                      String ementa = new String();                
-                    // ementa = leituraEmenta.nextLine();
+                     ementa = leituraEmenta.nextLine();
                                          
-                    //Disciplina disciplinaTeste = new Disciplina(nomeD,ementa);                               
+                    Disciplina disciplinaTeste = new Disciplina(nomeD,ementa);                               
                      
                   //  if ((disciplinateste.getNomeDisciplina() != null))listaDisciplina.add(disciplinateste);
                     

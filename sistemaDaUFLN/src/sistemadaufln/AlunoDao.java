@@ -11,7 +11,7 @@ public interface AlunoDao {
     //metodos CRUD
     public void salvar(Aluno aluno);
     public void atualizar(String nomeA, String nomeN);
-    public void deletar(Aluno aluno);
+    public void deletar(String nome);
     public void imprimir(Aluno aluno);
     public void imprimirLista();
     

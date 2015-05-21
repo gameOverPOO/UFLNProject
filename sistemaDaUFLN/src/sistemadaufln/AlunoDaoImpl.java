@@ -46,24 +46,14 @@ public class AlunoDaoImpl implements AlunoDao{
         
     }
 
-    @Override
-    public void deletar(Aluno aluno) {
-        /*
-         for(int i = 0; i < alunos.size(); i++)
-                    {
-                            Aluno p = alunos.get(i);
-
-                            if(p.getNome().equals(nomeD))
-                            {
-                         // Encontrou uma pessoa cadastrada com nome "Pedro".
-
-                        // Remove.
-                            listaAlunos.remove(p);
-
-                            
-                     
-                            }
-                    }*/
+    @Override //É o aluno que procuro se tiverem o mesmo cpf!
+    public void deletar(String nome) {
+        for(int i = 0; i < alunosl.size(); i++){
+          Aluno p = alunosl.get(i);
+          if(p.getNome().equals(nome)) alunosl.remove(p);
+        }
+         this.imprimirLista();  
+          
     }
     
     @Override

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import java.util.*;
 
-
+    //USAR NOMES MELHORES NAS VARIAVES/OBJETOS!!
  
 public class AlunoView {
      AlunoDao a = new AlunoDaoImpl(); //TÁ ERRADO ISSO
@@ -20,14 +20,15 @@ public class AlunoView {
         System.out.println("1. Adicionar um aluno");
         System.out.println("2. Alterar um aluno");
         System.out.println("3. Remover um aluno");
-        System.out.println("4. Buscar dados de um aluno");
-        System.out.println("5. Sair");
+        //System.out.println("4. Buscar dados de um aluno");
+        System.out.println("4. Sair");
         
         int escolha = leituraMenu.nextInt();
         switch(escolha){
             case 1:{
                 
-                //CADASTRO OK! //COLOCAR OS OUTROS ATRIBUTOS DE ALUNO TBM
+                //CADASTRO OK! FALTA NÃO DEIXAR REPETIR O CPF!
+                //MAS PARA FACILITAR OS TESTES, FAZER ISSO DEPOIS
                 
                 System.out.println("Adicionando um aluno");
                 
@@ -71,7 +72,7 @@ public class AlunoView {
                 //arquivo.salvarAluno(listaAlunos);
                 break;
             }
-            //ATUALIZAÇÃO OK! //COLOCAR OS OUTROS ATRIBUTOS DE ALUNO TBM
+            //ATUALIZAÇÃO OK! //TEM QUE SER POR CPF E MANDAR O ALUNO!
              case 2:{
                 System.out.println("Alterando um aluno");
                 
@@ -95,13 +96,13 @@ public class AlunoView {
                          
                  break;
              }
-            //FALTA DELETAR
+            //DELETAR OK! FALTA MANDAR SER PELO CPF!
             case 3:{
                  System.out.println("Digite o Nome do Aluno a ser deletado: ");
                  Scanner leitura= new Scanner(System.in);
                  String nomeD = new String();                
                  nomeD = leitura.nextLine();
-          
+                 a.deletar(nomeD);
                     
                  
                 break;

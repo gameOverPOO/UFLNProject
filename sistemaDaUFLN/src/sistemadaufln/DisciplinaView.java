@@ -42,7 +42,11 @@ public class DisciplinaView {
                                          
                     Disciplina disciplinaTeste = new Disciplina(nomeD,ementa);                               
                      
-                  //  if ((disciplinateste.getNomeDisciplina() != null))listaDisciplina.add(disciplinateste);
+                  if ((disciplinaTeste.getNome() != null))
+                  {
+                      
+                  }
+                  
                     
                    Scanner leitura= new Scanner(System.in);
                    System.out.println("Deseja adicionar outra disciplina? S ou N");

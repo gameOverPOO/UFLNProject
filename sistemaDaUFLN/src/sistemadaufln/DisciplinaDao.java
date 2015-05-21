@@ -5,9 +5,9 @@ package sistemadaufln;
 public interface DisciplinaDao {
     
         //metodos CRUD
-    public void salvar(Object bean);
-    public void atualizar(Object bean);
-    public void deletar(int id);
+    public void salvar(Disciplina disciplina);
+    public void atualizar(String nomeA, String nomeB);
+    public void deletar(String nome);
    
 
     

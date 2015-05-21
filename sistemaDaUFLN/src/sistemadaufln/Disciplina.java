@@ -45,4 +45,10 @@ public class Disciplina {
     public void setCargaHorariaDisciplina(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
+    
+    public Disciplina(String nome, String ementa){
+        
+            this.nome = nome;
+            this.ementa=ementa;
+    }
 }

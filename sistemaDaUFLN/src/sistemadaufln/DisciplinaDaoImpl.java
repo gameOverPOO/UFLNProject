@@ -1,10 +1,12 @@
 
 package sistemadaufln;
 
-import java.util.List;
+import java.util.*;
 
 
 public class DisciplinaDaoImpl implements DisciplinaDao{
+    
+    public List<Disciplina> disciplinal = new ArrayList<>(); 
    
     
     @Override

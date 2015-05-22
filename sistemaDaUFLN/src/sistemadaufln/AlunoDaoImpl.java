@@ -12,7 +12,7 @@ public class AlunoDaoImpl implements AlunoDao{
     
     @Override
     public void salvar(Aluno aluno) {
-       //VERIFICAR SE O ALUNO/CPF JÁ EXISTE NA LISTA  - OK
+       //VERIFICAR SE O ALUNO/CPF JÁ EXISTE NA LISTA  - OK 
        //VERIFICAR SE OS DADOS OBRIGATÓRIOS ESTÃO PREENCHIDOS
  
         for(int i=0;i<alunosl.size();i++){
@@ -22,19 +22,11 @@ public class AlunoDaoImpl implements AlunoDao{
                 return ;
             }
         }
+        
         alunosl.add(aluno);
         System.out.println("size::: "+alunosl.size());
         
-        
-        /*for(int i=0;i<disciplinal.size();i++){  //Adicionei um comparador se para conferir se a discplina
-                                                //ja existe na hora de salvar            
-            Disciplina d = disciplinal.get(i);
-            if(d.getNome().equals(disciplina.getNome())){
-                System.out.println("Essa disciplina ja existe!");
-                return;
-            }    
-        }*/
-        
+
         
     }
 

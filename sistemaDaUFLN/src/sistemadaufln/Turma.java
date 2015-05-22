@@ -13,10 +13,13 @@ suas notas e faltas;*/
     
     
     
+    
+    
+    
     //Atributos
     private int ano;
     private int periodo;
-    public Horario horario;
+    public String horario;
     //Local??
     private int vagas;
     private Professor professor;
@@ -33,7 +36,7 @@ suas notas e faltas;*/
         this.disciplina = disciplina;
     }
     
-    public Turma(int ano, int periodo, Horario horario, int vagas, Professor professor, Disciplina disciplina) {
+    public Turma(int ano, int periodo, String horario, int vagas, Professor professor, Disciplina disciplina) {
         this.ano = ano;
         this.periodo = periodo;
         this.horario = horario;
@@ -58,11 +61,11 @@ suas notas e faltas;*/
         this.periodo = periodo;
     }
 
-    public Horario getHorario() {
+    public String getHorario() {
         return horario;
     }
 
-    public void setHorario(Horario horario) {
+    public void setHorario(String horario) {
         this.horario = horario;
     }
 

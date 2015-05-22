@@ -1,33 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sistemadaufln;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
-/**
- *
- * @author leandronog
- */
+
 public class ProfessorView {
-    List<Professor> listaProfessor = new ArrayList<>();
+    //List<Professor> listaProfessor = new ArrayList<>();
+    ProfessorDao p = new ProfessorDaoImpl();
     
     public void subMenu() throws IOException{
         
         
-        Scanner leituraMenu= new Scanner(System.in);
-        
-        
-        //TADDaoImpl listaAluno=new TADDaoImpl();
-        
-        System.out.println("1. Adicionar um professor");
-        System.out.println("2. Alterar um professor");
-        System.out.println("3. Remover um professor");
+        int sair = 0;
+        while(sair==0){
+            Scanner leituraMenu= new Scanner(System.in);        
+            
+            
+            
+            System.out.println("1. Adicionar um Professor");
+            System.out.println("2. Alterar um Professor");
+            System.out.println("3. Remover um Professor");
+            //System.out.println("4. Buscar dados de um aluno");
+            System.out.println("5. Mostrar todos os Professores");
+            System.out.println("6. Voltar ao Menu Principal");
+            System.out.println("4. Sair");
+            
 
         int escolha = leituraMenu.nextInt();
         switch(escolha){
@@ -36,58 +34,82 @@ public class ProfessorView {
                 int adicionar = 1;
                 while(adicionar==1){
                     
-                     Scanner leituraNome= new Scanner(System.in);
+                     Scanner leitura= new Scanner(System.in);
                      System.out.println("Digite o Nome do Professor: ");
                 
                      String nomeP = new String();                
-                     nomeP = leituraNome.nextLine();
+                     nomeP = leitura.nextLine();
                      
-                     Scanner leituraCpf= new Scanner(System.in);
+                     
                      System.out.println("Digite o cpf do Professor: ");
                      String cpf = new String();                
-                     cpf = leituraCpf.nextLine();
+                     cpf = leitura.nextLine();
                      
-                     Scanner leituraDep= new Scanner(System.in);
+              
                      System.out.println("Digite o departamento do Professor: ");
                      String dep = new String();                
-                     dep = leituraDep.nextLine();
-                     
+                     dep = leitura.nextLine();
+                     Professor professorteste = new Professor(nomeP,cpf,dep);
                    
                     //Como verifica o cpf antes de criar o aluno??? 
                     
-                    Professor professorteste = new Professor(nomeP,cpf,dep);                               
+                                                   
                      
-                    if ((professorteste.getNome()!= null))listaProfessor.add(professorteste);//testar se é null antes de add
+                    if ((professorteste.getNome()!= null))p.salvar(professorteste);//testar se é null antes de add
                     
-                   Scanner leitura= new Scanner(System.in);
+                  
                    System.out.println("Deseja adicionar outro Professor? S ou N");
                    String opcao = new String();
-                   opcao = leituraNome.nextLine();
+                   opcao = leitura.nextLine();
                    if (opcao.equals("N")) adicionar = 0;
                 
                     
                 }  
-               for (Professor s:listaProfessor)
-                        System.out.println("Professor: " + s.getNome() + " CPF: " 
-                                + s. getCpf() + " Dep: "+ s.getDepartamento());  
-                  
-                Arquivo arquivo = new Arquivo();
-                arquivo.salvarProfessor(listaProfessor);
+               //
+                //Arquivo arquivo = new Arquivo();
+                //arquivo.salvarProfessor(listaProfessor);
                 break;
             }
             case 2:{
                 System.out.println("Alterando um professor");
+                  
+                    
+                    System.out.println("Digite o Nome do Professor: ");
+                    Scanner leitura= new Scanner(System.in);
+                    String nomeA = new String();                
+                    nomeA = leitura.nextLine();
+                    
+                    System.out.println("Digite o  novo Nome do Professor: ");                 
+                    String nomeN = new String();                
+                    nomeN = leitura.nextLine();
+                    p.atualizar(nomeA, nomeN);
                 break;
             }
             case 3:{
                 System.out.println("Removendo um professor");
+                System.out.println("Digite o Nome do Professor a ser deletado: ");
+                     Scanner leitura= new Scanner(System.in);
+                     String nomeD = new String();                
+                     nomeD = leitura.nextLine();
+                     p.deletar(nomeD);
                 break;
             }
+             case 4:{
+                
+                    sair = 1;
+                    break;
+                }
+             case 5:{
+                    System.out.println("Lista de Professores:");
+                    p.imprimirLista();
+                    break;
+                }
             default:{
                 System.out.println("Opção Inválida");
                 break;
             }
             
         }
+    }
     }
 }

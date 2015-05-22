@@ -1,20 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sistemadaufln;
 
 import java.util.*;
 
-/**
- *
- * @author leandronog
- */
+
 public class ProfessorDaoImpl implements ProfessorDao{
     
     
-    public List<Professor> professorl = new ArrayList<>();
+    public List<Professor> professorl = new ArrayList<>(); //A lista de todos está publica...
+                                                           //CORRIGIR
     
     //CRUD
     @Override
@@ -57,14 +51,11 @@ public class ProfessorDaoImpl implements ProfessorDao{
     
     
     @Override
-    public Object getById(int id){
-        return null;
+    public void imprimirLista() {
+        for (Professor s:professorl)
+                        System.out.println("Professor: " + s.getNome() + " CPF: " + s. getCpf());  
     }
-    
-    @Override
-    public List<Object> getAll(){
-        return null;
-    }
+                  
     
     
     

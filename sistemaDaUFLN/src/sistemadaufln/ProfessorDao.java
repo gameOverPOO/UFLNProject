@@ -14,9 +14,9 @@ import java.util.List;
 public interface ProfessorDao {
     
     
-    public void salvar(Object bean);
-    public void atualizar(Object bean);
-    public void deletar(int id);
+    public void salvar(Professor professor);
+    public void atualizar(String nomeA, String nomeN);
+    public void deletar(String nome);
     public Object getById(int id);
     public List<Object> getAll();
     

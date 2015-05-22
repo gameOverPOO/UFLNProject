@@ -29,8 +29,6 @@ public class AlunoView {
             switch(escolha){
                 case 1:{
                     
-                    //CADASTRO OK! FALTA NÃO DEIXAR REPETIR O CPF!
-                    //MAS PARA FACILITAR OS TESTES, FAZER ISSO DEPOIS
                     
                     System.out.println("Adicionando um aluno");
                     

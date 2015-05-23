@@ -6,9 +6,11 @@ import java.util.*;
 
 
 public class DisciplinaView {
+    DisciplinaDao d = new DisciplinaDaoImpl(); //Se acessar a classe e sair a list muda????
     
       public void subMenu() throws IOException{
-        List<Disciplina> listaDisciplina = new ArrayList<>();
+       // List<Disciplina> listaDisciplina = new ArrayList<>();
+          
         int sair = 0;
         while(sair==0){
         Scanner leituraMenu= new Scanner(System.in);        
@@ -56,30 +58,35 @@ public class DisciplinaView {
                 
                     
                 }  
-               for (Disciplina s:listaDisciplina)
-                        System.out.println("Disciplina: " + s.getNome() + " ementa: " + s.getEmenta());  
+               
                   
-                Arquivo arquivo = new Arquivo();
+                //Arquivo arquivo = new Arquivo();
                // arquivo.salvarDisciplina(listaDisciplina);
                 break;
             }
             case 2:{
                 System.out.println("Alterando uma disciplina");
                  System.out.println("Digite o Nome da disciplina: ");
-                 Scanner leituraNome= new Scanner(System.in);
+                 Scanner leitura= new Scanner(System.in);
                  String nomeD = new String();                
-                 nomeD = leituraNome.nextLine();
+                 nomeD = leitura.nextLine();
+                 
+                 System.out.println("Digite o  Novo Nome da Disciplina: ");                 
+                    String nomeN = new String();                
+                    nomeN = leitura.nextLine();
+                   d.atualizar(nomeD,nomeN);
                  
                  
-                 
-                 for (Disciplina s:listaDisciplina)
-                 
-                        System.out.println("Disciplina: " + s.getNome() + " Ementa: " + s. getEmenta());  
                
                 break;
                
             }
             case 3:{
+                 System.out.println("Digite o Nome da Disiclina a ser deletado: ");
+                     Scanner leitura= new Scanner(System.in);
+                     String nomeD = new String();                
+                     nomeD = leitura.nextLine();
+                     d.deletar(nomeD);
                
                 break;
             }

@@ -33,10 +33,6 @@ public class Arquivo {
     
     
     
-    
-    
-    
-    
     */
 
     public Arquivo() {

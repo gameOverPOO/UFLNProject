@@ -45,7 +45,45 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
             if(d.getNome().equals(nome))
                 disciplinal.remove(d);
         }
+    }
+    
+    public void cadastrarProfessor(String cpf, String nomeD){
         
+        for(int i=0;i<disciplinal.size();i++){
+                Disciplina d = disciplinal.get(i);
+               if(d.getNome().equals(nomeD)){
+                   d.professoresCpf.add(cpf);
+                   return;
+               }
+        }   
+        System.out.println("Disciplina não encontrada!");
+    }
+        
+    public void excluirProfessor(String cpf, String nomeD){
+        
+        for(int i=0;i<disciplinal.size();i++){
+                Disciplina d = disciplinal.get(i);
+               if(d.getNome().equals(nomeD)){
+                   d.professoresCpf.remove(i);
+                   return;
+               }                 
+        }
+        System.out.println("Disciplina não encontrada!");
+    }
+    
+    public void imprimirListaProfessor(String nomeD){
+        
+        for(int i=0;i<disciplinal.size();i++){
+            Disciplina d = disciplinal.get(i); 
+            if(d.getNome().equals(nomeD)){
+                for(String s:d.professoresCpf){
+                System.out.println("Profesores:\nCPF: " + d.professoresCpf.get(i)); 
+                }
+                   return;
+            }
+        }
+          System.out.println("Disciplina não encontrada!");
     }
     
 }
+

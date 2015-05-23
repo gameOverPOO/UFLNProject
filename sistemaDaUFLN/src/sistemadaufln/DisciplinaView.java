@@ -20,7 +20,8 @@ public class DisciplinaView {
         System.out.println("1. Adicionar uma disciplina");
         System.out.println("2. Alterar uma disciplina");
         System.out.println("3. Remover uma disciplina");
-        System.out.println("4. Sair");
+        System.out.println("4. Adicionar um professor");
+        System.out.println("5. Sair");
         
         int escolha = leituraMenu.nextInt();
         switch(escolha){
@@ -92,6 +93,22 @@ public class DisciplinaView {
             }
             case 4:
             {
+                System.out.println("Adicionando um professor:");
+                
+                
+                System.out.println("Digite o cpf do Professor: ");
+                     Scanner leitura= new Scanner(System.in); 
+                     String cpf = new String();                
+                     cpf = leitura.nextLine();
+                     
+                //Chamar metodo para adicionar professor na lista de professores em discilina
+                 
+                System.out.println("Digite o cpf do Professor: ");
+                
+                break;
+            }
+            case 5:
+            {                
                 sair = 1;
                 break;
             }

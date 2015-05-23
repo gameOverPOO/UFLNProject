@@ -14,7 +14,7 @@ public class MenuPrincipal {
     public static void main(String[] args) throws IOException {
       //  static
        // {
-            FileReader ler = new FileReader("Arquivos/Alunos.txt");
+           /* FileReader ler = new FileReader("Arquivos/Alunos.txt");
              //BufferredReader n = new BufferredReader(ler);
             BufferedReader lerl = new BufferedReader(ler);
         
@@ -28,7 +28,7 @@ public class MenuPrincipal {
         
              }
         //}
-        
+        */
         
         
         

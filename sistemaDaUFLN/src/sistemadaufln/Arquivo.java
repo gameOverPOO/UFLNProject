@@ -47,9 +47,15 @@ public class Arquivo {
             
             gravarArq.printf("@%n");
             for (Aluno s:listaAlunos) {
-                gravarArq.printf("#" + s.getNome()+ "&" + s.getCpf() + "\n");
+                gravarArq.printf("#" + s.getNome()+ "\n"+ "&" + s.getCpf() + "\n");
             }
             //gravarArq.printf("%n");
+            
+            
+            
+            
+            //
+            
             
             arq.close();
                            

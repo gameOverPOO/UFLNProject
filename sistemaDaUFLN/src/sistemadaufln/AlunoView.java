@@ -1,8 +1,11 @@
 
 package sistemadaufln;
+import files.Arquivo;
 import java.io.IOException;
 
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
     //USAR NOMES MELHORES NAS VARIAVES/OBJETOS!!
  
@@ -104,6 +107,18 @@ public class AlunoView {
                 
                 case 4:{
                 //IMPLEMENTAR BUSCA DE ALUNO AQUI
+                    
+                    
+                    
+                    
+                    Arquivo arquivo = new Arquivo();
+                    try {
+                           arquivo.salvarAluno(AlunoDaoImpl.alunosl);
+                     } catch (IOException ex) {
+                         System.out.println("MORRI:");
+                         Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+                    
+                     }
                     sair = 1;
                     break;
                 }

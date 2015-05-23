@@ -6,6 +6,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class MenuPrincipal {
@@ -17,7 +19,7 @@ public class MenuPrincipal {
         
         
             try{
-            FileReader ler = new FileReader("src/arquivos/Arquivos/Alunos.txt");
+            FileReader ler = new FileReader("src/files/Alunos.txt");
             //BufferredReader n = new BufferredReader(ler);
             BufferedReader lerl = new BufferedReader(ler);
         
@@ -29,7 +31,7 @@ public class MenuPrincipal {
             
             while(linha!=null)
              {
-                 System.out.println("TURN DOWN FOR WHAT??");
+                 
                  
                  if ("@{".equals(linha))
                {
@@ -42,8 +44,12 @@ public class MenuPrincipal {
                         String cpf = lerl.readLine();                     
                         aluno.setCpf(cpf);
                
-                        System.out.println("NOME CARALEOS: " + aluno.getNome()+ " " + 
+                        System.out.println("Aluno: " + aluno.getNome()+ " " + 
                                  aluno.getCpf());
+                        
+                        
+                        AlunoDaoImpl a = new AlunoDaoImpl();
+                        a.salvar(aluno);
                
                  
                  
@@ -147,6 +153,13 @@ public class MenuPrincipal {
                 }
                 case 8:{
                     System.out.println("Saindo...");
+                    /* Arquivo arquivo = new Arquivo();
+                    try {
+                           arquivo.salvarAluno(AlunoDaoImpl.alunosl);
+                     } catch (IOException ex) {
+                         System.out.println("MORRI:");
+                         Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
                     return;
                 }
                 default:{

@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class AlunoDaoImpl implements AlunoDao{
    
     
-    public List<Aluno> alunosl = new ArrayList<Aluno>(); //TIRAR ISSO
+    public static List<Aluno> alunosl = new ArrayList<Aluno>(); //TIRAR ISSO
     
     @Override
     public void salvar(Aluno aluno) {
@@ -29,13 +29,10 @@ public class AlunoDaoImpl implements AlunoDao{
         alunosl.add(aluno);
         System.out.println("size::: "+alunosl.size());
         
-                Arquivo arquivo = new Arquivo();
-        try {
-            arquivo.salvarAluno(alunosl);
-        } catch (IOException ex) {
-             System.out.println("MORRI:");
-            Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
+        //FAZER ISTO AO FECHAR O PROGRAM!!!
+        
+       
         
         
         

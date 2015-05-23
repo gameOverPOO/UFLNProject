@@ -12,10 +12,9 @@ public class Disciplina {
    private String ementa;
    private int cargaHoraria;
    public List<Turma> turmas = new ArrayList<>();
-   public List<Professor> professores = new ArrayList<>();
+   public List<String> professoresCpf = new ArrayList<>();
   
-   
-   
+     
    //Métodos
     public String getNome() {
         return nome;

@@ -26,7 +26,7 @@ public class AlunoView {
             System.out.println("4. Sair");
             
             int escolha = leituraMenu.nextInt();
-            switch(escolha){
+            switch(escolha){ //TRATAR ENTRADA DE STRING INVES DE NUMB
                 case 1:{
                     
                     
@@ -66,8 +66,7 @@ public class AlunoView {
                         if (opcao.equals("N")||opcao.equals("n")) adicionar = 0;
                         
                     }
-                    //Arquivo arquivo = new Arquivo();
-                    //arquivo.salvarAluno(listaAlunos);
+                    
                     break;
                 }
                 //ATUALIZAÇÃO OK! //TEM QUE SER POR CPF E MANDAR O ALUNO!

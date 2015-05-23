@@ -2,6 +2,14 @@ package sistemadaufln;
 
 import java.util.*;
 
+
+//TUDO NO MESMO PACOTE?????
+
+
+//AO SAIR, SALVAR TUDO NO ARQUIVO
+//CRIAR PASTA "ARQUIVOS"
+
+
 /**Todos os dados devem, evidentemente, ser persistidos. Utilize arquivos para isso. Procure tornar seu codigo
 \de negocio" independente das operac~oes que envolvem arquivos (pergunte-se sempre: \o que eu precisaria de
 fazer se, de repente, o cliente pedisse para utilizar banco de dados em vez de arquivos?").*/

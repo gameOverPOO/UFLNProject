@@ -1,7 +1,10 @@
 
 package sistemadaufln;
 
+import java.io.IOException;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
  
@@ -26,16 +29,15 @@ public class AlunoDaoImpl implements AlunoDao{
         alunosl.add(aluno);
         System.out.println("size::: "+alunosl.size());
         
-
+                Arquivo arquivo = new Arquivo();
+        try {
+            arquivo.salvarAluno(alunosl);
+        } catch (IOException ex) {
+            Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }
 
-    /*@Override
-    public boolean equals(Object obj)
-    {
-        //Dois alunos sao iguais se as matriculas forem iguais
-       return false;
-    }*/
     @Override
     public void atualizar(String nomeA, String nomeN) {
      

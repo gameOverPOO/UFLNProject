@@ -2,6 +2,8 @@
 package sistemadaufln;
 
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -10,6 +12,24 @@ public class MenuPrincipal {
 
    
     public static void main(String[] args) throws IOException {
+      //  static
+       // {
+            FileReader ler = new FileReader("Arquivos/Alunos.txt");
+             //BufferredReader n = new BufferredReader(ler);
+            BufferedReader lerl = new BufferedReader(ler);
+        
+            String linha = lerl.readLine();
+        
+            while(linha!=null)
+             {
+                  System.out.println("Wait: " + linha);
+                    linha = lerl.readLine();
+            
+        
+             }
+        //}
+        
+        
         
         
         

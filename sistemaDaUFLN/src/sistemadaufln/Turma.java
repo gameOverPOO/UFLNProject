@@ -4,11 +4,17 @@ package sistemadaufln;
 import java.util.*;
 
 public class Turma {
-    
-    
-    
+
+    public int getCodigo() {
+        return codigo;
+    }
+
     /*Consultar turmas (informando disciplina, ano e perodo) - deve ser exibida uma listagem de alunos com
-suas notas e faltas;*/
+    suas notas e faltas;*/
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
     
     
     
@@ -17,6 +23,7 @@ suas notas e faltas;*/
     
     
     //Atributos
+    private int codigo;
     private int ano;
     private int periodo;
     public String horario;

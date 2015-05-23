@@ -16,21 +16,85 @@ public class MenuPrincipal {
        // {
         
         
-            
+            try{
             FileReader ler = new FileReader("src/arquivos/Arquivos/Alunos.txt");
-             //BufferredReader n = new BufferredReader(ler);
+            //BufferredReader n = new BufferredReader(ler);
             BufferedReader lerl = new BufferedReader(ler);
         
             String linha = lerl.readLine();
-        
+            
+            /*atividade1#atividade2#atividade3 -> dá um split e separa*/
+            /*disciplina1#disciplina2#disciplina3*/
+            
+            
             while(linha!=null)
              {
-                  System.out.println("Wait: " + linha);
-                   linha = lerl.readLine();
+                 System.out.println("TURN DOWN FOR WHAT??");
+                 
+                 if ("@{".equals(linha))
+               {
+                        Aluno aluno = new Aluno();
+               
+               
+                        String nome = lerl.readLine();                     
+                        aluno.setNome(nome);
+                            
+                        String cpf = lerl.readLine();                     
+                        aluno.setCpf(cpf);
+               
+                        System.out.println("NOME CARALEOS: " + aluno.getNome()+ " " + 
+                                 aluno.getCpf());
+               
+                 
+                 
+                 
+                 
+               }
+                 linha = lerl.readLine();
+                
+             
+                 
+                 System.out.println("Wait: " + linha);
+                  
+                  linha = lerl.readLine();
+                  
+            
+             }
+                }
+            catch(Exception exception)
+                {
+                    System.err.println("ferrou");
+                
+                }
+           
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               /*String tar="ouro.diamante.prata";  
+                 String s[] = tar.split("\.");  
+                 System.out.println(s[0]);  
+                 System.out.println(s[1]);  
+                 System.out.println(s[2]);*/
+               
+               
+               
+               //começa um aluno
+                //if (linha=="}") termina o aluno, volta
             
         
-             }
+            
+            
         //}
+            
+            
         
         
         System.out.println("Lista de opcoes: ");

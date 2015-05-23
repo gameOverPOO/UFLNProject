@@ -24,6 +24,10 @@ que e necessario ter nota maior ou igual a 6,0, alem de 75% de frequ^encia pa
     private String cpf;    
     public List<Atividade> atividades = new ArrayList<>();
     public List<Turma> turma = new ArrayList<>();
+
+    Aluno() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

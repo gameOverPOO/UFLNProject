@@ -45,10 +45,12 @@ public class Arquivo {
        try (FileWriter arq = new FileWriter("src/arquivos/Arquivos/Alunos.txt",true)) {
             PrintWriter gravarArq = new PrintWriter(arq);
             
-            gravarArq.printf("@%n");
+            gravarArq.printf("@{%n");
             for (Aluno s:listaAlunos) {
-                gravarArq.printf("#" + s.getNome()+ "\n"+ "&" + s.getCpf() + "\n");
+                gravarArq.printf(s.getNome()+ "\n" + s.getCpf() + "\n");
             }
+            gravarArq.printf("}%n");
+            
             //gravarArq.printf("%n");
             
             

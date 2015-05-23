@@ -121,6 +121,7 @@ public class AlunoView {
                     System.out.println("Opção Inválida");
                     break;
                 }
+                
             }
         }
     }

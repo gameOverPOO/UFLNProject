@@ -33,8 +33,14 @@ public class AlunoDaoImpl implements AlunoDao{
         try {
             arquivo.salvarAluno(alunosl);
         } catch (IOException ex) {
+             System.out.println("MORRI:");
             Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
+        
+        
+        
         
     }
 

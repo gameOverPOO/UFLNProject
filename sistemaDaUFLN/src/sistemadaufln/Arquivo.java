@@ -42,7 +42,7 @@ public class Arquivo {
     public void salvarAluno(List<Aluno> listaAlunos) throws IOException {
         
         
-       try (FileWriter arq = new FileWriter("Arquivos/Alunos.txt")) {
+       try (FileWriter arq = new FileWriter("src/arquivos/Arquivos/Alunos.txt",true)) {
             PrintWriter gravarArq = new PrintWriter(arq);
             
             gravarArq.printf("@%n");

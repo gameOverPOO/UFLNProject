@@ -17,7 +17,7 @@ public class MenuPrincipal {
         
         
             
-            FileReader ler = new FileReader("Arquivos/Alunos.txt");
+            FileReader ler = new FileReader("src/arquivos/Arquivos/Alunos.txt");
              //BufferredReader n = new BufferredReader(ler);
             BufferedReader lerl = new BufferedReader(ler);
         

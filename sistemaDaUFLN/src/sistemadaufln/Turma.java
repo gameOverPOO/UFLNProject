@@ -5,13 +5,13 @@ import java.util.*;
 
 public class Turma {
 
-    public int getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
     /*Consultar turmas (informando disciplina, ano e perodo) - deve ser exibida uma listagem de alunos com
     suas notas e faltas;*/
-    public void setCodigo(int codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 
@@ -43,13 +43,12 @@ public class Turma {
         this.disciplina = disciplina;
     }
     
-    public Turma(int ano, int periodo, String horario, int vagas, Professor professor, Disciplina disciplina) {
+    public Turma(Integer codigo, int ano, int periodo, String horario, int vagas) {
+        this.codigo = codigo;
         this.ano = ano;
         this.periodo = periodo;
         this.horario = horario;
         this.vagas = vagas;
-        this.professor = professor;
-        this.disciplina = disciplina;
     }
 
     public int getAno() {

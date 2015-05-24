@@ -56,15 +56,14 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                     for(int j=0;j<p.professorl.size();j++){
                         if(p.professorl.get(i).getCpf().equals(cpf)){ 
                             d.professoresCpf.add(cpf);
+                            p.professorl.get(i).disciplinas.add(d);
                             return;
                         }
-                        else
-                           System.out.println("Professor nao encontrado!");
                     }
                    
                }
         }
-        System.out.println("Disciplina não encontrada!");
+        System.out.println("Erro ao adicionar Professor!");
     }
         
     public void excluirProfessor(String cpf, String nomeD){
@@ -100,4 +99,40 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         }
         System.out.println("Disciplina não encontrada!");
     }
+    
+    //não esta dando para testar as 3 anteriores funcoes porque precisa ter algo salva na lista de professores
+    
+    public void cadastrarTurma(Integer codigoT, String nomeD){
+        
+        TurmaDaoImpl turma = new TurmaDaoImpl();
+        for(int i=0;i<disciplinal.size();i++){
+            Disciplina d = disciplinal.get(i);
+            if(d.equals(nomeD)){
+                for(int j=0;j<turma.turmasl.size();j++){
+                    if(codigoT.equals(turma.turmasl.get(j).getCodigo())){
+                        d.turmas.add(codigoT);
+                        turma.turmasl.get(j).setDisciplina(d);
+                        return;
+                    }
+                }              
+                
+            }
+        }
+        System.out.println("Erro disciplina não encontrada!");
     }
+    
+    public void ImprimirTurmas(String nome){
+        
+        for(int i=0;i<disciplinal.size();i++){
+            Disciplina d = disciplinal.get(i);
+            if(d.equals(nome)){
+                for(int j=0;j<d.turmas.size();j++){
+                    System.out.println("Turmas: " + d.turmas.get(j));
+                }
+            }
+        
+        }
+        System.out.println("Erro disciplina não encontrada!");
+    }
+    
+}

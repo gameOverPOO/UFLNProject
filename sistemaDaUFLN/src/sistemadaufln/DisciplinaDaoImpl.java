@@ -73,11 +73,14 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     
     public void imprimirListaProfessor(String nomeD){
         
+        ProfessorDaoImpl p = new ProfessorDaoImpl();
+        
         for(int i=0;i<disciplinal.size();i++){
             Disciplina d = disciplinal.get(i); 
             if(d.getNome().equals(nomeD)){
                 for(String s:d.professoresCpf){
-                System.out.println("Profesores:\nCPF: " + d.professoresCpf.get(i)); 
+                if(p.professorl.equals(s)) 
+                    System.out.println("Profesores:\nNome: " + p.professorl.get(i).getNome()); 
                 }
                    return;
             }

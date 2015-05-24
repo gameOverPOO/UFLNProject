@@ -135,6 +135,8 @@ public class MenuPrincipal {
                     }
                     case 4:{
                         System.out.println("entrar em TurmaView");
+                        TurmaView turmaView = new TurmaView();
+                        turmaView.subMenu();
                         break;
                     }
                     case 5:{

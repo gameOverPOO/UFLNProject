@@ -23,7 +23,9 @@ public class DisciplinaView {
         System.out.println("4. Cadastrar um professor em uma disciplina");
         System.out.println("5. Excluir um professor de uma disciplina");
         System.out.println("6. Imprimir lista de professores");
-        System.out.println("7. Sair");
+        System.out.println("7. Adicionar turma em uma disciplina");
+        System.out.println("8. Imprimir turma de uma disciplina");
+        System.out.println("9. Sair");
         
         int escolha = leituraMenu.nextInt();
         switch(escolha){
@@ -143,7 +145,36 @@ public class DisciplinaView {
                 d.imprimirListaProfessor(nome);
                 break;
             }
-            case 7:
+            case 7:{
+                
+                System.out.println("Adicionando turma em uma disciplina");
+                
+                Scanner leitura= new Scanner(System.in);
+                System.out.println("Digite o codigo da turma:");
+                String codigoTurma = new String();
+                codigoTurma = leitura.nextLine();
+                
+                Integer codigo = Integer.valueOf(codigoTurma);
+                
+                System.out.println("Digite o nome da disciplina:");
+                String nomeDisciplina = new String();
+                nomeDisciplina = leitura.nextLine();
+                
+                d.cadastrarTurma(codigo, nomeDisciplina);
+            }
+            case 8:{
+                
+                System.out.println("Imprimindo turma de uma disciplina");
+                
+                Scanner leitura= new Scanner(System.in);
+                System.out.println("Digite o nome da disciplina:");
+                String nomeDisciplina = new String();
+                nomeDisciplina = leitura.nextLine();
+                
+                d.ImprimirTurmas(nomeDisciplina);
+                
+            }
+            case 9:
             {                
                 sair = 1;
                 break;

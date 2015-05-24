@@ -29,6 +29,14 @@ public class MenuPrincipal {
             /*disciplina1#disciplina2#disciplina3*/
             
             
+             /*Como usar o split:
+            String tar="ouro.diamante.prata";  
+                 String s[] = tar.split("\.");  
+                 System.out.println(s[0]);  
+                 System.out.println(s[1]);  
+                 System.out.println(s[2]);*/
+               
+            
             
             //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
             while(linha!=null)
@@ -78,20 +86,7 @@ public class MenuPrincipal {
                
                
                
-               
-               
-               
-               
-               
-               
-               
-               
-               /*String tar="ouro.diamante.prata";  
-                 String s[] = tar.split("\.");  
-                 System.out.println(s[0]);  
-                 System.out.println(s[1]);  
-                 System.out.println(s[2]);*/
-               
+              
                
                
                //começa um aluno

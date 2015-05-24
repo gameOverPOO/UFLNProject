@@ -97,7 +97,15 @@ public class MenuPrincipal {
                                arquivo.salvarProfessor(ProfessorDaoImpl.professorl);
                          } catch (IOException ex) {
                              System.out.println("MORRI:");
-                             Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+                             Logger.getLogger(ProfessorDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        
+                         
+                        try {
+                               arquivo.salvarDisciplina(DisciplinaDaoImpl.disciplinal);
+                         } catch (IOException ex) {
+                             System.out.println("MORRI:");
+                             Logger.getLogger(DisciplinaDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         
                         

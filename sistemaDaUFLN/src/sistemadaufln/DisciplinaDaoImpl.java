@@ -6,7 +6,7 @@ import java.util.*;
 
 public class DisciplinaDaoImpl implements DisciplinaDao{
     
-    public List<Disciplina> disciplinal = new ArrayList<Disciplina>(); 
+    public static List<Disciplina> disciplinal = new ArrayList<Disciplina>(); 
    
     
     @Override
@@ -58,10 +58,10 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                         if(p.professorl.get(i).getCpf().equals(cpf)){ 
                             d.professoresCpf.add(cpf);
                             p.professorl.get(i).disciplinas.add(d);
-                            return;
+                            
                         }
                     }
-                   
+                   return;
                }
         }
         System.out.println("Erro ao adicionar Professor!");

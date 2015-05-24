@@ -46,8 +46,13 @@ public class DisciplinaView {
                      System.out.println("Digite a ementa: ");
                      String ementa = new String();                
                      ementa = leituraEmenta.nextLine();
+                     
+                     Scanner leituraCarga= new Scanner(System.in);
+                     System.out.println("Digite a carga horaria: ");
+                     int carga = 0;                
+                     carga = leituraCarga.nextInt();
                                          
-                    Disciplina disciplinaTeste = new Disciplina(nomeD,ementa);                               
+                    Disciplina disciplinaTeste = new Disciplina(nomeD,ementa, carga);                               
                      
                   if ((disciplinaTeste.getNome() != null))
                   {

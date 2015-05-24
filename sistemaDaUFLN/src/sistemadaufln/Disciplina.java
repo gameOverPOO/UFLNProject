@@ -12,7 +12,7 @@ public class Disciplina {
    private String ementa;
    private int cargaHoraria;
    public List<Integer> turmas = new ArrayList<>();
-   public List<String> professoresCpf = new ArrayList<>();
+   public static List<String> professoresCpf = new ArrayList<>();
   
      
    //Métodos
@@ -45,9 +45,10 @@ public class Disciplina {
         this.cargaHoraria = cargaHoraria;
     }
     
-    public Disciplina(String nome, String ementa){
+    public Disciplina(String nome, String ementa, int cargaHoraria){
         
             this.nome = nome;
             this.ementa=ementa;
+            this.cargaHoraria = cargaHoraria;
     }
 }

@@ -7,9 +7,13 @@ import sistemadaufln.*;
 
 
 public class CarregaDados {
-    
+    static
+    {
+         System.out.println("Carregado do arquivo:");
+    }
     
     public boolean carregarAlunos(){
+        
         
         
         
@@ -51,12 +55,6 @@ public class CarregaDados {
                }
                  linha = lerl.readLine();
                 
-             
-                 
-                 System.out.println("Wait: " + linha);
-                  
-                  linha = lerl.readLine();
-                  
             
              }
                 }
@@ -66,15 +64,7 @@ public class CarregaDados {
                 
                 }
            
-               
-        
-        
-        
-        
-        
-        
-        
-        
+             
         
         return false;
         
@@ -125,12 +115,7 @@ public class CarregaDados {
                }
                  linha = lerl.readLine();
                 
-             
-                 
-                 System.out.println("Wait: " + linha);
-                  
-                  linha = lerl.readLine();
-                  
+                            
             
              }
                 }

@@ -11,7 +11,7 @@ public interface DisciplinaDao {
     public void cadastrarProfessor(String cpf, String nomeD);
     public void excluirProfessor(String cpf, String nomeD);
     public void imprimirListaProfessor(String nomeD);
-   
-
+    public void cadastrarTurma(Integer nomeT, String nomeD);
+    public void ImprimirTurmas(String nome);
     
 }

@@ -149,7 +149,7 @@ public class CarregaDados {
                  
                  if ("D{".equals(linha))
                {
-                   System.out.println("passou");
+                   
                         Disciplina disciplina = new Disciplina();
                
                
@@ -171,7 +171,7 @@ public class CarregaDados {
                         String s[] = professorescpfs.split("&");
                         
                         List<String> listacpfs = new ArrayList<>();
-                        for(int i = 0; i<s.length;i++){
+                        for(int i = 0; i<s.length-1;i++){
                                 System.out.println(s[i]);
                                 System.out.println("foi");
                                 listacpfs.set(i, s[i]);
@@ -181,9 +181,6 @@ public class CarregaDados {
                         Disciplina.professoresCpf = listacpfs;
                      
         
-                        
-                        
-                        
                         
                         System.out.println("..Disciplina: " + disciplina.getNome()+ " " + 
                                  disciplina.getEmenta());
@@ -208,7 +205,7 @@ public class CarregaDados {
                 
             catch(Exception exception)
                 {
-                    System.err.println("ferrouDDD");
+                    System.err.println("ferrouDDD"+exception);
                 
                 }
            

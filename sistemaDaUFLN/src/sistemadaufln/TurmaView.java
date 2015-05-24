@@ -18,10 +18,14 @@ public class TurmaView {
             
             
             System.out.println("1. Adicionar Turma");
-            System.out.println("2. Alterar Turma");
-            System.out.println("3. Remover Turma");
-            System.out.println("4. Mostrar todos as Turmas");
-            System.out.println("5. Sair");
+            System.out.println("2. Remover Turma");
+            System.out.println("3. Mostrar todos as Turmas");
+            System.out.println("4. Cadastrar Aluno");
+            System.out.println("5. Cadastrar Professor");
+            System.out.println("6. Lista de Aluno");
+            System.out.println("7. Lista de Professres");
+            System.out.println("8. Adicionar Atividade");
+            System.out.println("9. Sair");
             
 
         int escolha = leituraMenu.nextInt();
@@ -83,10 +87,6 @@ public class TurmaView {
                 break;
             }
             case 2:{
-          
-                break;
-            }
-            case 3:{
                 System.out.println("Removendo uma turma");
                 System.out.println("Digite o codigo da turma a ser deletado: ");
                      Scanner leitura= new Scanner(System.in);
@@ -98,12 +98,94 @@ public class TurmaView {
                     t.deletar(codigo);
                 break;
             }
-             case 4:{
+             case 3:{
                     System.out.println("Lista de Turmas:");
                     t.imprimirLista();
                     break;
                 }
+             case 4:{
+                 System.out.println("Cadastrando Aluno:");
+                 
+                 System.out.println("Digite o cpf do aluno:");
+                 Scanner leitura= new Scanner(System.in);
+                 String cpf = new String();                
+                 cpf = leitura.nextLine();
+                 
+                 System.out.println("Digite o codigo da Turma: ");
+                
+                 String codigoTurma = new String();                
+                 codigoTurma = leitura.nextLine();
+                     
+                 Integer codigo = Integer.valueOf(codigoTurma);
+                 
+                 t.cadastrarAluno(cpf, codigo);
+                 
+                 break;
+             }
              case 5:{
+                 System.out.println("Cadastrando Professor:");
+                 
+                 System.out.println("Digite o cpf do professor:");
+                 Scanner leitura= new Scanner(System.in);
+                 String cpf = new String();                
+                 cpf = leitura.nextLine();
+                 
+                  System.out.println("Digite o codigo da Turma: ");
+                
+                 String codigoTurma = new String();                
+                 codigoTurma = leitura.nextLine();
+                     
+                 Integer codigo = Integer.valueOf(codigoTurma);
+                 
+                 t.cadastrarProfessor(cpf, codigo);
+                 
+                 break;
+             }
+             case 6:{
+                 
+                 Scanner leitura= new Scanner(System.in);
+                  System.out.println("Digite o codigo da Turma: ");
+                
+                 String codigoTurma = new String();                
+                 codigoTurma = leitura.nextLine();
+                     
+                 Integer codigo = Integer.valueOf(codigoTurma);
+                 
+                 t.imprimirAlunos(codigo);
+                 
+                 break;
+                 
+             }
+             case 7:{
+                 
+                 Scanner leitura= new Scanner(System.in);
+                  System.out.println("Digite o codigo da Turma: ");
+                
+                 String codigoTurma = new String();                
+                 codigoTurma = leitura.nextLine();
+                     
+                 Integer codigo = Integer.valueOf(codigoTurma);
+                 
+                 t.imprimirProfessores(codigo);
+                 
+             }
+             case 8:{
+                 
+                 Scanner leitura= new Scanner(System.in);
+                  System.out.println("Digite o codigo da Turma: ");
+                
+                 String codigoTurma = new String();                
+                 codigoTurma = leitura.nextLine();
+                     
+                 Integer codigo = Integer.valueOf(codigoTurma);
+                 
+                 System.out.println("Digite o nome da atividade: ");
+                 String nome = new String();                
+                 nome = leitura.nextLine();
+                 
+                 
+             }
+             case 9:{
                  sair=1;
                  break;
              }

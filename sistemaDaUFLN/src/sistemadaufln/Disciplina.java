@@ -11,7 +11,7 @@ public class Disciplina {
    private String nome;
    private String ementa;
    private int cargaHoraria;
-   public List<Turma> turmas = new ArrayList<>();
+   public List<Integer> turmas = new ArrayList<>();
    public List<String> professoresCpf = new ArrayList<>();
   
      

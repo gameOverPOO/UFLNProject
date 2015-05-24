@@ -140,7 +140,8 @@ public class MenuPrincipal {
                         break;
                     }
                     case 5:{
-                        System.out.println("entrar em AtividadeView");
+                        AtividadeView atividadeView = new AtividadeView();
+                        atividadeView.subMenu();
                         break;
                     }
                     case 6:{

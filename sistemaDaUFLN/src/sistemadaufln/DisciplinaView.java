@@ -20,8 +20,10 @@ public class DisciplinaView {
         System.out.println("1. Adicionar uma disciplina");
         System.out.println("2. Alterar uma disciplina");
         System.out.println("3. Remover uma disciplina");
-        System.out.println("4. Adicionar um professor");
-        System.out.println("5. Sair");
+        System.out.println("4. Cadastrar um professor em uma disciplina");
+        System.out.println("5. Excluir um professor de uma disciplina");
+        System.out.println("6. Imprimir lista de professores");
+        System.out.println("7. Sair");
         
         int escolha = leituraMenu.nextInt();
         switch(escolha){
@@ -47,6 +49,7 @@ public class DisciplinaView {
                      
                   if ((disciplinaTeste.getNome() != null))
                   {
+                      d.salvar(disciplinaTeste);
                       
                   }
                   
@@ -93,7 +96,7 @@ public class DisciplinaView {
             }
             case 4:
             {
-                System.out.println("Adicionando um professor:");
+                System.out.println("Adicionando um professor na disciplina:");
                 
                 
                 System.out.println("Digite o cpf do Professor: ");
@@ -101,13 +104,46 @@ public class DisciplinaView {
                      String cpf = new String();                
                      cpf = leitura.nextLine();
                      
-                //Chamar metodo para adicionar professor na lista de professores em discilina
                  
-                System.out.println("Digite o cpf do Professor: ");
+                System.out.println("Digite a disciplina: ");
+                     String nome = new String();                
+                     nome = leitura.nextLine();
                 
+                d.cadastrarProfessor(cpf, nome);
                 break;
             }
             case 5:
+            {
+                System.out.println("Excluindo professor:");
+                
+                
+                System.out.println("Digite o cpf do Professor: ");
+                     Scanner leitura= new Scanner(System.in); 
+                     String cpf = new String();                
+                     cpf = leitura.nextLine();
+                     
+                 
+                System.out.println("Digite a disciplina: ");
+                     String nome = new String();                
+                     nome = leitura.nextLine();
+                
+                d.excluirProfessor(cpf, nome);
+                break;
+            }
+            case 6:
+            {
+                System.out.println("Imprimindo lista de professores");
+                
+                 Scanner leitura= new Scanner(System.in);    
+                 
+                System.out.println("Digite a disciplina: ");
+                     String nome = new String();                
+                     nome = leitura.nextLine();
+                
+                d.imprimirListaProfessor(nome);
+                break;
+            }
+            case 7:
             {                
                 sair = 1;
                 break;

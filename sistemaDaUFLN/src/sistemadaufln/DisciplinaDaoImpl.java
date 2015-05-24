@@ -47,6 +47,7 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         }
     }
     
+    @Override
     public void cadastrarProfessor(String cpf, String nomeD){
         
         for(int i=0;i<disciplinal.size();i++){
@@ -65,7 +66,8 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         }
         System.out.println("Erro ao adicionar Professor!");
     }
-        
+    
+    @Override
     public void excluirProfessor(String cpf, String nomeD){
         
         for(int i=0;i<disciplinal.size();i++){
@@ -78,6 +80,7 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         System.out.println("Disciplina não encontrada!");
     }
     
+    @Override
     public void imprimirListaProfessor(String nomeD){
         
         for(int i=0;i<disciplinal.size();i++){ 
@@ -98,7 +101,7 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         System.out.println("Disciplina não encontrada!");
     }
     
-    
+    @Override
     public void cadastrarTurma(Integer codigoT, String nomeD){
         
         TurmaDaoImpl turma = new TurmaDaoImpl();
@@ -118,6 +121,7 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         System.out.println("Erro disciplina não encontrada!");
     }
     
+    @Override
     public void ImprimirTurmas(String nome){
         
         for(int i=0;i<disciplinal.size();i++){

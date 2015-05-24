@@ -22,8 +22,8 @@ que e necessario ter nota maior ou igual a 6,0, alem de 75% de frequ^encia pa
     //Atributos
     private String nome;
     private String cpf;    
-    public List<Atividade> atividades = new ArrayList<>();
-    public List<Turma> turma = new ArrayList<>();
+    public List<String> atividades = new ArrayList<>();
+    public List<Integer> codigoTurma = new ArrayList<>();
 
     
 

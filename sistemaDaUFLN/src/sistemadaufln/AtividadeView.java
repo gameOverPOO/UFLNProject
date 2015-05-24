@@ -49,7 +49,7 @@ public class AtividadeView {
                      String tipo = new String();                
                      tipo = leitura.nextLine();
                      
-                     System.out.println("Digite a Data: ");
+                     System.out.println("Digite a Data (dd/MM/yyy): ");
                      //String tipo = new String();                
                      //tipo = leitura.nextLine();
                      String mm = new String();
@@ -65,6 +65,9 @@ public class AtividadeView {
                     } catch (ParseException e) {
                     System.out.println("Data Inválida.");
                     }
+                     
+                     
+                     
                      
                      
                      
@@ -87,14 +90,29 @@ public class AtividadeView {
                      */
                      
                      
-                     System.out.println("Digite o tipo: ");
+                     System.out.println("Digite o valor: ");
                                      
-                     double valor = leitura.nextInt();
+                     double valor = leitura.nextDouble();
+                     
+                     System.out.println("Digite o codigo da turma: ");
+                     
+                     
+                     Integer codigoTurma =leitura.nextInt() ;
                      
                      
                      
                      
-                     int codigoTurma;
+                     System.out.println("Deseja adicionar outra atividade? (S/N)");
+                     String opcao = new String();
+                     opcao = leitura.nextLine();                   
+                        
+                     if (opcao.equals("N")||opcao.equals("n")) adicionar = 0;
+                     
+                     
+                     
+                     
+                     
+                     
                      
                      
                 }

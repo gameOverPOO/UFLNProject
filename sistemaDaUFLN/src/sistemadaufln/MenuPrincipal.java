@@ -85,18 +85,7 @@ public class MenuPrincipal {
            
                
                
-               
-              
-               
-               
-               //começa um aluno
-                //if (linha=="}") termina o aluno, volta
-            
-        
-            
-            
-        //}
-            
+       
        int sair=0;     
         
         while(sair==0){

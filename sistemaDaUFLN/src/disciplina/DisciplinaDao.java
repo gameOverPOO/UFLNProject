@@ -1,5 +1,7 @@
 
-package sistemadaufln;
+package disciplina;
+
+import disciplina.Disciplina;
 
 
 public interface DisciplinaDao {

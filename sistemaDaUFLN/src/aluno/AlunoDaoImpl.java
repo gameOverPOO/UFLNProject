@@ -1,6 +1,8 @@
 
-package sistemadaufln;
+package aluno;
 
+import aluno.AlunoDao;
+import aluno.Aluno;
 import java.io.IOException;
 import java.util.*;
 import java.util.logging.Level;

@@ -1,5 +1,5 @@
 
-package sistemadaufln;
+package turma;
 
 import java.io.IOException;
 import java.util.*;

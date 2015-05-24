@@ -1,6 +1,8 @@
 
-package sistemadaufln;
+package turma;
 
+import professor.Professor;
+import disciplina.Disciplina;
 import java.util.*;
 
 public class Turma {

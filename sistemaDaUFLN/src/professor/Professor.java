@@ -1,5 +1,6 @@
 
-package sistemadaufln;
+package professor;
+import disciplina.Disciplina;
 import java.util.*;
 
 public class Professor {

@@ -1,5 +1,7 @@
 
-package sistemadaufln;
+package aluno;
+
+import aluno.Aluno;
 
 
 

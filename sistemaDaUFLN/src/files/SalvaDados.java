@@ -3,6 +3,7 @@ package files;
 
 
 
+import professor.Professor;
 import java.io.File;
 
 import java.io.FileWriter;
@@ -10,8 +11,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import sistemadaufln.Aluno;
-import sistemadaufln.Disciplina;
+import aluno.Aluno;
+import disciplina.Disciplina;
 import sistemadaufln.*;
 
 /*SALVAR TODO O OBJETO...ALUNOS COM DISCIPLINAS, PROFESSOREES, ETC*/

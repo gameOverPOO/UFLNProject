@@ -1,6 +1,8 @@
 
-package sistemadaufln;
+package professor;
 
+import professor.ProfessorDao;
+import professor.Professor;
 import java.util.*;
 
 

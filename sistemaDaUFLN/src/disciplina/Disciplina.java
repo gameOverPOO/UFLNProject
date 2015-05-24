@@ -1,4 +1,4 @@
-package sistemadaufln;
+package disciplina;
 
 
 import java.util.*;

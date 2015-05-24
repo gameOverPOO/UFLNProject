@@ -1,5 +1,5 @@
 
-package sistemadaufln;
+package turma;
 import java.util.*;
 
 public interface TurmaDao {

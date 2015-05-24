@@ -1,6 +1,12 @@
 
 package files;
 
+import professor.ProfessorDaoImpl;
+import professor.Professor;
+import disciplina.DisciplinaDaoImpl;
+import disciplina.Disciplina;
+import aluno.AlunoDaoImpl;
+import aluno.Aluno;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;

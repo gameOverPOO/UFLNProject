@@ -1,6 +1,9 @@
 
-package sistemadaufln;
+package professor;
 
+import professor.ProfessorDaoImpl;
+import professor.ProfessorDao;
+import professor.Professor;
 import java.io.IOException;
 import java.util.*;
 

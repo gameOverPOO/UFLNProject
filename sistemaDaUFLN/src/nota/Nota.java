@@ -1,5 +1,8 @@
 
-package sistemadaufln;
+package nota;
+
+import atividade.Atividade;
+import aluno.Aluno;
 
 
 public class Nota {

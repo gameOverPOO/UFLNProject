@@ -1,7 +1,11 @@
 
-package sistemadaufln;
+package disciplina;
 
+import disciplina.DisciplinaDao;
+import disciplina.Disciplina;
 import java.util.*;
+import professor.ProfessorDaoImpl;
+import turma.TurmaDaoImpl;
 
 
 public class DisciplinaDaoImpl implements DisciplinaDao{

@@ -1,4 +1,7 @@
-package sistemadaufln;
+package falta;
+
+import turma.Turma;
+import aluno.Aluno;
 
 public class Falta {
     

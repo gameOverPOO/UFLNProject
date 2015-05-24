@@ -1,4 +1,4 @@
-package sistemadaufln;
+package aluno;
 
 import java.util.*;
 
@@ -40,6 +40,7 @@ que e necessario ter nota maior ou igual a 6,0, alem de 75% de frequ^encia pa
 
     public void setNome(String nome) {
         this.nome = nome;
+       
     }
 
     public String getCpf() {

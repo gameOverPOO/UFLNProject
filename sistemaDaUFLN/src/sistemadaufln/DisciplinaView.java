@@ -154,7 +154,7 @@ public class DisciplinaView {
                 String codigoTurma = new String();
                 codigoTurma = leitura.nextLine();
                 
-                int codigo = Integer.parseInt(codigoTurma);
+                Integer codigo = Integer.valueOf(codigoTurma);
                 
                 System.out.println("Digite o nome da disciplina:");
                 String nomeDisciplina = new String();

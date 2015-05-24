@@ -5,7 +5,7 @@ import java.util.*;
 public class Professor {
     
     
-    /* Consultar o numero de disciplinas ja lecionadas por um determinado professor.*/
+    /* Consultar o numero de disciplinas ja lecionadas por um determinado professor.*/
     //CRIAR HISTORICO DO PROFESSOR E SALVAR NUM ARQUIVO, MAS NAO UM P CADA PROFESSOR
     //ACHO QUE FACILITA UM ARQUIVO PARA CADA CLASSE
     

@@ -27,6 +27,9 @@ public class MenuPrincipal {
 
         boolean b = begin.carregarProfessores();
         if (b) System.out.println("NAOOOO!!! ");
+        
+        boolean c = begin.carregarDisciplinas();
+        if (c) System.out.println("NAOOOO!!! ");
        
        int sair=0;     
         

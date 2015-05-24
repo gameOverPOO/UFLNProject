@@ -107,6 +107,16 @@ public class SalvaDados {
             for (Disciplina s:listaDisciplinas) {
                 gravarArq.printf("D{%n");
                 gravarArq.printf(s.getNome()+ "\n" + s.getEmenta() + "\n" + s.getCargaHorariaDisciplina() + "\n");
+                for(String a: s.professoresCpf){                     
+                      gravarArq.printf(a);
+                      gravarArq.printf("&");
+                    
+                    
+                }
+                gravarArq.printf("\n");
+                
+                    
+                    
                 gravarArq.printf("}%n");
                 //salvar listass
             }

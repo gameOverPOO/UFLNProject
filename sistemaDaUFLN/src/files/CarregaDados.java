@@ -3,6 +3,8 @@ package files;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 import sistemadaufln.*;
 
 
@@ -109,9 +111,6 @@ public class CarregaDados {
                         p.salvar(professor);
                
                  
-                 
-                 
-                 
                }
                  linha = lerl.readLine();
                 
@@ -125,15 +124,94 @@ public class CarregaDados {
                 
                 }
            
+        
+        return false;
+        
+    
+    }
+    
+    public boolean carregarDisciplinas(){
+        
+        
+        
+        try{
+            FileReader ler = new FileReader("src/files/Disciplinas.txt");
+            //BufferredReader n = new BufferredReader(ler);
+            BufferedReader lerl = new BufferedReader(ler);
+        
+            String linha = lerl.readLine();
+            
+             
+            //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
+            while(linha!=null)
+             {
+                 
+                 
+                 if ("D{".equals(linha))
+               {
+                   System.out.println("passou");
+                        Disciplina disciplina = new Disciplina();
                
+               
+                        String nome = lerl.readLine();                     
+                        disciplina.setNome(nome);
+                            
+                        String ementa = lerl.readLine();                     
+                        disciplina.setEmenta(ementa);
+                        
+                        int carga = Integer.parseInt( lerl.readLine());                         
+                        disciplina.setCargaHorariaDisciplina(carga);
+                        
+                            /*String tar=""ouro.diamante.prata"";  
+                                String s[] = tar.split(".\s*");  
+                                System.out.println(s[0]);  */
+                        
+                        String professorescpfs = new String();
+                        professorescpfs = lerl.readLine();
+                        String s[] = professorescpfs.split("&");
+                        
+                        List<String> listacpfs = new ArrayList<>();
+                        for(int i = 0; i<s.length;i++){
+                                System.out.println(s[i]);
+                                System.out.println("foi");
+                                listacpfs.set(i, s[i]);
+                        }
+                                
+                        
+                        Disciplina.professoresCpf = listacpfs;
+                     
         
-        
-        
-        
-        
-        
-        
-        
+                        
+                        
+                        
+                        
+                        System.out.println("..Disciplina: " + disciplina.getNome()+ " " + 
+                                 disciplina.getEmenta());
+                        
+                        
+                        
+                        
+                        DisciplinaDaoImpl p = new DisciplinaDaoImpl();
+                        p.salvar(disciplina);
+               
+                 
+                 
+                 
+                 
+               }
+                 linha = lerl.readLine();
+                
+                            
+            
+             }
+        }
+                
+            catch(Exception exception)
+                {
+                    System.err.println("ferrouDDD");
+                
+                }
+           
         
         return false;
         
@@ -141,24 +219,7 @@ public class CarregaDados {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    }   
     
     
     
@@ -176,4 +237,4 @@ public class CarregaDados {
     
     
     }   
-}
+

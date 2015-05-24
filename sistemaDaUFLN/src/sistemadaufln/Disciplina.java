@@ -13,6 +13,10 @@ public class Disciplina {
    private int cargaHoraria;
    public List<Integer> turmas = new ArrayList<>();
    public static List<String> professoresCpf = new ArrayList<>();
+
+    public Disciplina() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   
      
    //Métodos

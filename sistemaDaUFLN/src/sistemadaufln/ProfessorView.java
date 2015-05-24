@@ -21,10 +21,8 @@ public class ProfessorView {
             System.out.println("1. Adicionar um Professor");
             System.out.println("2. Alterar um Professor");
             System.out.println("3. Remover um Professor");
-            //System.out.println("4. Buscar dados de um aluno");
-            System.out.println("5. Mostrar todos os Professores");
-            System.out.println("6. Voltar ao Menu Principal");
-            System.out.println("4. Sair");
+            System.out.println("4. Mostrar todos os Professores");
+            System.out.println("5. Sair");
             
 
         int escolha = leituraMenu.nextInt();
@@ -95,15 +93,14 @@ public class ProfessorView {
                 break;
             }
              case 4:{
-                
-                    sair = 1;
-                    break;
-                }
-             case 5:{
                     System.out.println("Lista de Professores:");
                     p.imprimirLista();
                     break;
                 }
+             case 5:{
+                 sair=1;
+                 break;
+             }
             default:{
                 System.out.println("Opção Inválida");
                 break;

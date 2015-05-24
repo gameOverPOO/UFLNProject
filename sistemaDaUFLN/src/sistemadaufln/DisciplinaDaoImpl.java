@@ -80,15 +80,13 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     
     public void imprimirListaProfessor(String nomeD){
         
-        ProfessorDaoImpl p = new ProfessorDaoImpl();
-        
         for(int i=0;i<disciplinal.size();i++){ 
             Disciplina d = disciplinal.get(i);
             if(d.getNome().equals(nomeD)){
                 for(int k=0;k<d.professoresCpf.size();k++)
                 {
                     ProfessorDaoImpl professores = new ProfessorDaoImpl();                
-                    for(int j=0;j<p.professorl.size();j++){
+                    for(int j=0;j<professores.professorl.size();j++){
                         if(professores.professorl.get(i).getCpf().equals(d.professoresCpf.get(i))){ 
                             System.out.println("Profesores:\nNome: " + professores.professorl.get(i).getNome()); 
                         }                        
@@ -100,7 +98,6 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         System.out.println("Disciplina não encontrada!");
     }
     
-    //não esta dando para testar as 3 anteriores funcoes porque precisa ter algo salva na lista de professores
     
     public void cadastrarTurma(Integer codigoT, String nomeD){
         

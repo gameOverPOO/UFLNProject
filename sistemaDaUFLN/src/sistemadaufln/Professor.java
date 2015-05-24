@@ -18,6 +18,10 @@ public class Professor {
     public List<Turma> turmas = new ArrayList<>();
     public List<Disciplina> disciplinas = new ArrayList<>();
 
+    public Professor() {
+       //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     //Métodos
     public String getNome() {

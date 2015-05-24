@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import sistemadaufln.Aluno;
 import sistemadaufln.AlunoDaoImpl;
+import sistemadaufln.Professor;
+import sistemadaufln.*;
 
 
 public class CarregaDados {
@@ -84,4 +86,112 @@ public class CarregaDados {
     }
     
     
+    public boolean carregarProfessores(){
+        
+        
+        
+        try{
+            FileReader ler = new FileReader("src/files/Professores.txt");
+            //BufferredReader n = new BufferredReader(ler);
+            BufferedReader lerl = new BufferedReader(ler);
+        
+            String linha = lerl.readLine();
+          
+            
+            //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
+            while(linha!=null)
+             {
+                 
+                 
+                 if ("P{".equals(linha))
+               {
+                        Professor professor = new Professor();
+               
+               
+                        String nome = lerl.readLine();                     
+                        professor.setNome(nome);
+                            
+                        String cpf = lerl.readLine();                     
+                        professor.setCpf(cpf);
+               
+                        System.out.println("Professor: " + professor.getNome()+ " " + 
+                                 professor.getCpf());
+                        
+                        
+                        ProfessorDaoImpl p = new ProfessorDaoImpl();
+                        p.salvar(professor);
+               
+                 
+                 
+                 
+                 
+               }
+                 linha = lerl.readLine();
+                
+             
+                 
+                 System.out.println("Wait: " + linha);
+                  
+                  linha = lerl.readLine();
+                  
+            
+             }
+                }
+            catch(Exception exception)
+                {
+                    System.err.println("ferrou");
+                
+                }
+           
+               
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        return false;
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }   
 }

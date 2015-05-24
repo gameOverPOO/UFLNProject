@@ -52,10 +52,18 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         for(int i=0;i<disciplinal.size();i++){
                 Disciplina d = disciplinal.get(i);
                if(d.getNome().equals(nomeD)){
-                   d.professoresCpf.add(cpf);
-                   return;
+                    ProfessorDaoImpl p = new ProfessorDaoImpl();
+                    for(int j=0;j<p.professorl.size();j++){
+                        if(p.professorl.get(i).getCpf().equals(cpf)){ 
+                            d.professoresCpf.add(cpf);
+                            return;
+                        }
+                        else
+                           System.out.println("Professor nao encontrado!");
+                    }
+                   
                }
-        }   
+        }
         System.out.println("Disciplina não encontrada!");
     }
         
@@ -75,18 +83,21 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         
         ProfessorDaoImpl p = new ProfessorDaoImpl();
         
-        for(int i=0;i<disciplinal.size();i++){
-            Disciplina d = disciplinal.get(i); 
+        for(int i=0;i<disciplinal.size();i++){ 
+            Disciplina d = disciplinal.get(i);
             if(d.getNome().equals(nomeD)){
-                for(String s:d.professoresCpf){
-                if(p.professorl.equals(s)) 
-                    System.out.println("Profesores:\nNome: " + p.professorl.get(i).getNome()); 
+                for(int k=0;k<d.professoresCpf.size();k++)
+                {
+                    ProfessorDaoImpl professores = new ProfessorDaoImpl();                
+                    for(int j=0;j<p.professorl.size();j++){
+                        if(professores.professorl.get(i).getCpf().equals(d.professoresCpf.get(i))){ 
+                            System.out.println("Profesores:\nNome: " + professores.professorl.get(i).getNome()); 
+                        }                        
+                    }
                 }
-                   return;
+                return;
             }
         }
-          System.out.println("Disciplina não encontrada!");
+        System.out.println("Disciplina não encontrada!");
     }
-    
-}
-
+    }

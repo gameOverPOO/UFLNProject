@@ -27,17 +27,20 @@ public class AlunoView {
             System.out.println("5. Mostrar todos os alunos");
             System.out.println("6. Voltar ao Menu Principal");
             System.out.println("4. Sair");
-            
+            //mais um
             int escolha = leituraMenu.nextInt();
+            int adicionar = 1;
             switch(escolha){ //TRATAR ENTRADA DE STRING INVES DE NUMB
+                
                 case 1:{
                     
                     
                     System.out.println("Adicionando um aluno");
                     
                     
-                    int adicionar = 1;
+                    
                     while(adicionar==1){
+                        
                         
                         Scanner leitura= new Scanner(System.in);
                         
@@ -74,23 +77,29 @@ public class AlunoView {
                 }
                 //ATUALIZAÇÃO OK! //TEM QUE SER POR CPF E MANDAR O ALUNO!
                 case 2:{
-                    System.out.println("Alterando um aluno");
+                    System.out.println("1. Alterar um aluno\n2. Alterar um cpf");
+                    Scanner opAltera= new Scanner(System.in);
+                    int opcaoAltera= opAltera.nextInt();
                     
                     System.out.println("Digite o Nome do Aluno: ");
                     Scanner leitura= new Scanner(System.in);
                     String nomeA = new String();                
                     nomeA = leitura.nextLine();
                     
-                    System.out.println("Digite o  Novo Nome do Aluno: ");                 
-                    String nomeN = new String();                
-                    nomeN = leitura.nextLine();
-                    
-                    
-                    
-                    
-                    
-                    a.atualizar(nomeA,nomeN);
-                   
+                    if(opcaoAltera==1){
+                        System.out.println("Digite o  Novo Nome do Aluno: ");                 
+                        String nomeN = new String();                
+                        nomeN = leitura.nextLine();
+                        a.atualizar(nomeA,nomeN, 1);
+                    }
+                    else{
+                        System.out.println("Digite o  Novo CPF do Aluno: ");                 
+                        String cpfN = new String();
+                        cpfN = leitura.nextLine();
+                        a.atualizar(nomeA, cpfN, 2);
+                        //String nomeN = new String();                
+                        //nomeN = leitura.nextLine();
+                    }                                       
                     break;
                 }
                 //DELETAR OK! FALTA MANDAR SER PELO CPF!
@@ -130,6 +139,7 @@ public class AlunoView {
                 case 6:{
                     //fazer voltar ao MenuPrincipal
                     // acho que só dá certo se a classe retornar alguma coisa
+                    adicionar = 0;
                     break;
                 }
                 default:{

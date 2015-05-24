@@ -17,13 +17,16 @@ public class AlunoDaoImpl implements AlunoDao{
     public void salvar(Aluno aluno) {
        //VERIFICAR SE O ALUNO/CPF JÁ EXISTE NA LISTA  - OK 
        //VERIFICAR SE OS DADOS OBRIGATÓRIOS ESTÃO PREENCHIDOS
- 
+
+        
+        
         for(int i=0;i<alunosl.size();i++){
             Aluno a = alunosl.get(i);
             if(a.getCpf().equals(aluno.getCpf())){
                 System.out.println("Aluno ja existente:");
-                return ;
+                return ;//mais um
             }
+            
         }
         
         alunosl.add(aluno);
@@ -42,16 +45,27 @@ public class AlunoDaoImpl implements AlunoDao{
     }
 
     @Override
-    public void atualizar(String nomeA, String nomeN) {
+    public void atualizar(String nomeA, String nomeN, int opcaoDeAtualizacao) {
      
-        for (Iterator<Aluno> it = alunosl.iterator(); it.hasNext();) {
-            Aluno p = it.next();
-            if(p.getNome().equals(nomeA)) p.setNome(nomeN);
+        if(opcaoDeAtualizacao==1){
+            for (Iterator<Aluno> it = alunosl.iterator(); it.hasNext();) {
+                Aluno p = it.next();
+                if(p.getNome().equals(nomeA)) p.setNome(nomeN);
+            }
         }
+        else{
+            for (Iterator<Aluno> it = alunosl.iterator(); it.hasNext();) {
+                Aluno p = it.next();
+                
+                if(p.getCpf().equals(nomeA)){
+                    //problema: nao ta comparando um cpf com o outro.
+                    p.setCpf(nomeN);
+                }
+            }
+        }
+        
        this.imprimirLista();         
                 
-        
-        
     }
 
     @Override //É o aluno que procuro se tiverem o mesmo cpf!

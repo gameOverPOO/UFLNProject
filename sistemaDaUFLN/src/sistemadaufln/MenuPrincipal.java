@@ -2,6 +2,7 @@
 package sistemadaufln;
 
 
+import files.Arquivo;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import files.CarregaDados;
 
 public class MenuPrincipal {
 
@@ -18,72 +20,11 @@ public class MenuPrincipal {
        // {
         
         
-            try{
-            FileReader ler = new FileReader("src/files/Alunos.txt");
-            //BufferredReader n = new BufferredReader(ler);
-            BufferedReader lerl = new BufferedReader(ler);
+        CarregaDados begin = new CarregaDados();
         
-            String linha = lerl.readLine();
-            
-            /*atividade1#atividade2#atividade3 -> dá um split e separa*/
-            /*disciplina1#disciplina2#disciplina3*/
-            
-            
-             /*Como usar o split:
-            String tar="ouro.diamante.prata";  
-                 String s[] = tar.split("\.");  
-                 System.out.println(s[0]);  
-                 System.out.println(s[1]);  
-                 System.out.println(s[2]);*/
-               
-            
-            
-            //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
-            while(linha!=null)
-             {
-                 
-                 
-                 if ("@{".equals(linha))
-               {
-                        Aluno aluno = new Aluno();
-               
-               
-                        String nome = lerl.readLine();                     
-                        aluno.setNome(nome);
-                            
-                        String cpf = lerl.readLine();                     
-                        aluno.setCpf(cpf);
-               
-                        System.out.println("Aluno: " + aluno.getNome()+ " " + 
-                                 aluno.getCpf());
-                        
-                        
-                        AlunoDaoImpl a = new AlunoDaoImpl();
-                        a.salvar(aluno);
-               
-                 
-                 
-                 
-                 
-               }
-                 linha = lerl.readLine();
-                
-             
-                 
-                 System.out.println("Wait: " + linha);
-                  
-                  linha = lerl.readLine();
-                  
-            
-             }
-                }
-            catch(Exception exception)
-                {
-                    System.err.println("ferrou");
-                
-                }
-           
-               
+         boolean a = begin.carregarAlunos();   
+         if (a) System.out.println("NAOOOO!!! ");
+
                
        
        int sair=0;     
@@ -97,8 +38,8 @@ public class MenuPrincipal {
             System.out.println("4. Turma");
             System.out.println("5. Atividade");
             System.out.println("6. Nota");
-                System.out.println("7. Lançar faltas");
-                System.out.println("8. Sair");
+            System.out.println("7. Lançar faltas");
+            System.out.println("8. Sair");
 
             Scanner leituraMenu = new Scanner(System.in);
             int escolha;
@@ -143,13 +84,25 @@ public class MenuPrincipal {
                     }
                     case 8:{
                         System.out.println("Saindo...");
-                        /* Arquivo arquivo = new Arquivo();
+                         Arquivo arquivo = new Arquivo();
                         try {
                                arquivo.salvarAluno(AlunoDaoImpl.alunosl);
                          } catch (IOException ex) {
                              System.out.println("MORRI:");
                              Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
-                        }*/
+                        }
+                        
+                        try {
+                               arquivo.salvarProfessor(ProfessorDaoImpl.professorl);
+                         } catch (IOException ex) {
+                             System.out.println("MORRI:");
+                             Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        
+                        
+                        
+                        
+                        
                         return;
                     }
                     default:{

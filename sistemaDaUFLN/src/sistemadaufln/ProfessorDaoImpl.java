@@ -7,7 +7,7 @@ import java.util.*;
 public class ProfessorDaoImpl implements ProfessorDao{
     
     
-    public List<Professor> professorl = new ArrayList<>(); //A lista de todos está publica...
+    public static List<Professor> professorl = new ArrayList<>(); //A lista de todos está publica...
                                                            //CORRIGIR
     
     //CRUD

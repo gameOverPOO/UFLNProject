@@ -119,7 +119,7 @@ public class AlunoView {
                     
                     
                     
-                    
+                    /*
                     Arquivo arquivo = new Arquivo();
                     try {
                            arquivo.salvarAluno(AlunoDaoImpl.alunosl);
@@ -127,7 +127,7 @@ public class AlunoView {
                          System.out.println("MORRI:");
                          Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
                     
-                     }
+                     }*/
                     sair = 1;
                     break;
                 }

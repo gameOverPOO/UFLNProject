@@ -74,23 +74,22 @@ public class Arquivo {
         public void salvarProfessor(List<Professor> listaProfessores) throws IOException {
         
         
-       try (FileWriter arq = new FileWriter("teste arquivo.txt",true)) {//Esse true faz com q nao apague o q tava antes
+        try (FileWriter arq = new FileWriter("src/files/Professores.txt")) {
             PrintWriter gravarArq = new PrintWriter(arq);
             
-            gravarArq.printf("+--Resultado--+%n");
+            
             for (Professor s:listaProfessores) {
-                gravarArq.printf("Nome: " + s.getNome()+ " CPF: " + s.getCpf() +
-                        " Departamento: " +s.getDepartamento() + "\n");
+                gravarArq.printf("P{%n");
+                gravarArq.printf(s.getNome()+ "\n" + s.getCpf() + "\n");
+                gravarArq.printf("}%n");
             }
-            gravarArq.printf("+-------------+%n");
+            
             
             arq.close();
                            
             System.out.println("Salvo No Arquivo!");        
                     
                     
-              
-        
         }
         
         

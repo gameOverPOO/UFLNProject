@@ -3,9 +3,6 @@ package files;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import sistemadaufln.Aluno;
-import sistemadaufln.AlunoDaoImpl;
-import sistemadaufln.Professor;
 import sistemadaufln.*;
 
 

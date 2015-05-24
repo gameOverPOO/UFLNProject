@@ -1,6 +1,6 @@
 
 package sistemadaufln;
-import files.Arquivo;
+import files.SalvaDados;
 import java.io.IOException;
 
 import java.util.*;

@@ -2,7 +2,7 @@
 package sistemadaufln;
 
 
-import files.Arquivo;
+import files.SalvaDados;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -85,7 +85,7 @@ public class MenuPrincipal {
                     }
                     case 8:{
                         System.out.println("Saindo...");
-                         Arquivo arquivo = new Arquivo();
+                         SalvaDados arquivo = new SalvaDados();
                         try {
                                arquivo.salvarAluno(AlunoDaoImpl.alunosl);
                          } catch (IOException ex) {

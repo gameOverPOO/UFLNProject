@@ -97,76 +97,77 @@ public class MenuPrincipal {
             
         //}
             
+       int sair=0;     
+        
+        while(sair==0){
             
-        
-        
-        System.out.println("Lista de opcoes: ");
-        System.out.println("1. Aluno");
-        System.out.println("2. Professor");
-        System.out.println("3. Disciplina");
-        System.out.println("4. Turma");
-        System.out.println("5. Atividade");
-        System.out.println("6. Nota");
-        System.out.println("7. Lançar faltas");
-        System.out.println("8. Sair");
-        
-        Scanner leituraMenu = new Scanner(System.in);
-        int escolha;
-        
-        do{
-            escolha=leituraMenu.nextInt();
-            switch(escolha){
-                case 1:{
-                    AlunoView alunoView = new AlunoView();
-                    alunoView.subMenu();
-                    break;
+            System.out.println("Lista de opcoes: ");
+            System.out.println("1. Aluno");
+            System.out.println("2. Professor");
+            System.out.println("3. Disciplina");
+            System.out.println("4. Turma");
+            System.out.println("5. Atividade");
+            System.out.println("6. Nota");
+                System.out.println("7. Lançar faltas");
+                System.out.println("8. Sair");
+
+            Scanner leituraMenu = new Scanner(System.in);
+            int escolha;
+
+            do{
+                escolha=leituraMenu.nextInt();
+                switch(escolha){
+                    case 1:{
+                        AlunoView alunoView = new AlunoView();
+                        alunoView.subMenu();
+                        break;
+                    }
+                    case 2:{
+                        ProfessorView professorView = new ProfessorView();
+                        professorView.subMenu();
+
+                        break;
+                    }
+                    case 3:{
+                        DisciplinaView disciplinaView = new DisciplinaView();
+                        disciplinaView.subMenu();                
+                        break;
+                    }
+                    case 4:{
+                        System.out.println("entrar em TurmaView");
+                        break;
+                    }
+                    case 5:{
+                        System.out.println("entrar em AtividadeView");
+                        break;
+                    }
+                    case 6:{
+                        System.out.println("entrar em NotaView");
+                        break;
+                    }
+                    case 7:{
+                        System.out.println("entrar em FaltaView");
+                        break;
+                    }
+                    case 8:{
+                        System.out.println("Saindo...");
+                        /* Arquivo arquivo = new Arquivo();
+                        try {
+                               arquivo.salvarAluno(AlunoDaoImpl.alunosl);
+                         } catch (IOException ex) {
+                             System.out.println("MORRI:");
+                             Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+                        }*/
+                        return;
+                    }
+                    default:{
+                        System.out.println("Opção Inválida");
+                        break;
+                    }
                 }
-                case 2:{
-                    ProfessorView professorView = new ProfessorView();
-                    professorView.subMenu();
-                    
-                    break;
-                }
-                case 3:{
-                    DisciplinaView disciplinaView = new DisciplinaView();
-                    disciplinaView.subMenu();                
-                    break;
-                }
-                case 4:{
-                    System.out.println("entrar em TurmaView");
-                    break;
-                }
-                case 5:{
-                    System.out.println("entrar em AtividadeView");
-                    break;
-                }
-                case 6:{
-                    System.out.println("entrar em NotaView");
-                    break;
-                }
-                case 7:{
-                    System.out.println("entrar em FaltaView");
-                    break;
-                }
-                case 8:{
-                    System.out.println("Saindo...");
-                    /* Arquivo arquivo = new Arquivo();
-                    try {
-                           arquivo.salvarAluno(AlunoDaoImpl.alunosl);
-                     } catch (IOException ex) {
-                         System.out.println("MORRI:");
-                         Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-                    return;
-                }
-                default:{
-                    System.out.println("Opção Inválida");
-                    break;
-                }
-            }
-            
-        }while(escolha<1 || escolha>8);
-        
+
+            }while(escolha<1 || escolha>8);
+        }
         
     }
     

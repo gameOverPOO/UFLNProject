@@ -29,6 +29,8 @@ public class MenuPrincipal {
             /*disciplina1#disciplina2#disciplina3*/
             
             
+            
+            //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
             while(linha!=null)
              {
                  

@@ -19,21 +19,23 @@ import sistemadaufln.Professor;
 public class Arquivo {
     boolean file = new File("Arquivos").mkdir();
     
-    
-    
-    
-    /*
-    @ ->> alunos
-    # -> nome
-    & -> cpf
-    $ -> turmas    
-    ? -> atividades
-    
-    
-    
-    
-    
+    /*Salva assim:
+       @{   //Começa aluno
+        Leandro
+        14638431780
+        
+        atividade1#atividade2#atividade3 -> dá um split e separa
+        disciplina1#disciplina2#disciplina3
+        }   //termina aluno
     */
+    
+    
+    
+    
+    /*  @{
+        Leandro
+        14638431780
+        }*/
 
     public Arquivo() {
     }

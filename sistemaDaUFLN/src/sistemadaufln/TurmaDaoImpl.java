@@ -28,14 +28,20 @@ public class TurmaDaoImpl implements TurmaDao{
     }
     
     @Override
-    public void deletar(String nome){
+    public void deletar(Integer codigo){
         
+        for(int i=0;i<turmasl.size();i++){
+            if(turmasl.get(i).getCodigo().equals(codigo)){
+                turmasl.remove(i);
+            }
+        }
     }
    
-    
     @Override
     public void imprimirLista(){
         
+        for (Turma t:turmasl)
+                        System.out.println("Codigo: " + t.getCodigo() + " Periodo: " + t.getPeriodo() + " Horario: " + t.getHorario() + " Vagas: " + t.getVagas());  
     }
     
 }

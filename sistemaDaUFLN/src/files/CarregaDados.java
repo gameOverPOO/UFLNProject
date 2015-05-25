@@ -57,9 +57,6 @@ public class CarregaDados {
                         a.salvar(aluno);
                
                  
-                 
-                 
-                 
                }
                  linha = lerl.readLine();
                 
@@ -175,14 +172,17 @@ public class CarregaDados {
                         String professorescpfs = new String();
                         professorescpfs = lerl.readLine();
                         String s[] = professorescpfs.split("&");
-                        
+                         System.out.println(s.length);
                         List<String> listacpfs = new ArrayList<>();
-                        for(int i = 0; i<s.length-1;i++){
+                        for(int i = 0; i<s.length;i++){
                                 System.out.println(s[i]);
                                 System.out.println("foi");
-                                listacpfs.set(i, s[i]);
+                                listacpfs.add(s[i]);
+                                System.out.println("tantad: "+ listacpfs.get(i));
                         }
-                                
+                        
+                        
+                        
                         
                         Disciplina.professoresCpf = listacpfs;
                      

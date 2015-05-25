@@ -116,6 +116,11 @@ public class SalvaDados {
                 }
                 gravarArq.printf("\n");
                 
+                for(int b: s.turmas ){   
+                    gravarArq.print(b);                      
+                    gravarArq.printf("#");
+                    
+                }
                     
                     
                 gravarArq.printf("}%n");

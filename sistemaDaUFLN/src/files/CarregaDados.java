@@ -169,10 +169,10 @@ public class CarregaDados {
                         String professorescpfs = new String();
                         professorescpfs = lerl.readLine();
                         String s[] = professorescpfs.split("&");
-                         System.out.println(s.length);
+                        
                         List<String> listacpfs = new ArrayList<>();
                         for(int i = 0; i<s.length;i++){
-                                System.out.println(s[i]);
+                                
                                 
                                 listacpfs.add(s[i]);
                                 

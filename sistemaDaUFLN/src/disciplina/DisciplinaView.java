@@ -169,6 +169,7 @@ public class DisciplinaView {
                 nomeDisciplina = leitura.nextLine();
                 
                 d.cadastrarTurma(codigo, nomeDisciplina);
+                break;
             }
             case 8:{
                 
@@ -180,6 +181,7 @@ public class DisciplinaView {
                 nomeDisciplina = leitura.nextLine();
                 
                 d.ImprimirTurmas(nomeDisciplina);
+                break;
                 
             }
             case 9:

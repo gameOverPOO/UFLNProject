@@ -40,6 +40,9 @@ public class MenuPrincipal {
         boolean c = begin.carregarDisciplinas();
         if (c) System.out.println("NAOOOO!!! ");
        
+         boolean d = begin.carregarTurmas();
+         if (d) System.out.println("NAOOOO!!! ");
+         
        int sair=0;     
         
         while(sair==0){

@@ -7,6 +7,10 @@ import java.util.*;
 
 public class Turma {
 
+    public Turma() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public Integer getCodigo() {
         return codigo;
     }
@@ -17,11 +21,6 @@ public class Turma {
         this.codigo = codigo;
     }
 
-    
-    
-    
-    
-    
     
     
     //Atributos

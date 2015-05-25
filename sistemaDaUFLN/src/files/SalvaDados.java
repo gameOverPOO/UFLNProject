@@ -156,10 +156,20 @@ public void salvarTurma(List<Turma> listaTurmas) throws IOException {
             for (Turma s:listaTurmas) {
                 gravarArq.printf("T{%n");
                 gravarArq.printf( s.getCodigo() + "\n"+ s.getAno()+"\n"+  s.getPeriodo() + "\n" + s.getHorario() + "\n" );
+                
+                
+                for(String b: s.atividades ){   
+                    gravarArq.print(b);                      
+                    gravarArq.printf("#");
+                    
+                }
+                
                 gravarArq.printf("}%n");
             }
             
-          
+           arq.close();
+                           
+            System.out.println("Salvo No Arquivo! Turma");    
         }
     }
 

@@ -25,7 +25,7 @@ public class ProfessorDaoImpl implements ProfessorDao{
         }
         
         professorl.add(professor);
-        System.out.println("size::: "+professorl.size());
+        
         
     }
     

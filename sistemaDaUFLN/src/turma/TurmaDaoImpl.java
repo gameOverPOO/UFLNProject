@@ -112,18 +112,4 @@ public class TurmaDaoImpl implements TurmaDao{
         }
     }
     
-    @Override
-    public void imprimirAtividade(Integer codigo){
-        
-        System.out.println("Lista Atividades: ");
-                    
-        for(int i=0;i<turmasl.size();i++){
-            if(turmasl.get(i).getCodigo().equals(codigo)){
-                for(int k=0;k<turmasl.get(i).atividades.size();k++){
-                    System.out.println("Nome: " + turmasl.get(i).atividades.get(k));
-                }
-            }
-        }
-    }
-    
 }

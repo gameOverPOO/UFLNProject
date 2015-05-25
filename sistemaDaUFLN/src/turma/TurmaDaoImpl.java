@@ -14,9 +14,9 @@ public class TurmaDaoImpl implements TurmaDao{
     @Override
     public void salvar(Turma turma){
         
-        //Como verificar se a turma já existe? pelo disci, periodo?
+      
         turmasl.add(turma);
-        System.out.println("size::: "+turmasl.size());
+        
         
     }
         

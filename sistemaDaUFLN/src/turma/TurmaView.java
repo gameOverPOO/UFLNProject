@@ -182,6 +182,8 @@ public class TurmaView {
                  System.out.println("Digite o nome da atividade: ");
                  String nome = new String();                
                  nome = leitura.nextLine();
+                 
+                 t.atividade(nome, codigo);
                  break;
                  
                  

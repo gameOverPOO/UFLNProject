@@ -67,7 +67,7 @@ public class CarregaDados {
                 }
             catch(Exception exception)
                 {
-                    System.err.println("ferrou");
+                    System.err.println("Erro!");
                 
                 }
            
@@ -124,7 +124,7 @@ public class CarregaDados {
                 }
             catch(Exception exception)
                 {
-                    System.err.println("ferrou");
+                    System.err.println("Erro");
                 
                 }
            
@@ -173,9 +173,9 @@ public class CarregaDados {
                         List<String> listacpfs = new ArrayList<>();
                         for(int i = 0; i<s.length;i++){
                                 System.out.println(s[i]);
-                                System.out.println("foi");
+                                
                                 listacpfs.add(s[i]);
-                                System.out.println("tantad: "+ listacpfs.get(i));
+                                
                         }
                         
                         

@@ -14,6 +14,7 @@ import java.util.List;
 import aluno.Aluno;
 import disciplina.Disciplina;
 import sistemadaufln.*;
+import turma.Turma;
 
 /*SALVAR TODO O OBJETO...ALUNOS COM DISCIPLINAS, PROFESSOREES, ETC*/
 //Leia mais em: Criando e Gravando dados em Txt com Java http://www.devmedia.com.br/criando-e-gravando-dados-em-txt-com-java/23060#ixzz3ZmaRAJIh
@@ -143,8 +144,36 @@ public class SalvaDados {
         
         
         
+
+public void salvarTurma(List<Turma> listaTurmas) throws IOException {
         
+            if (listaTurmas==null)  System.out.println("NULOOOOOOOOOOOO");
+        
+        try (FileWriter arq = new FileWriter("src/files/Turmas.txt")) {
+            PrintWriter gravarArq = new PrintWriter(arq);
+            
+            
+            for (Turma s:listaTurmas) {
+                gravarArq.printf("T{%n");
+                gravarArq.printf( s.getCodigo() + "\n"+ s.getAno()+"\n"+  s.getPeriodo() + "\n" + s.getHorario() + "\n" );
+                gravarArq.printf("}%n");
+            }
+            
+            
+            /* private int codigo;
+            private int ano;
+                private int periodo;
+                public String horario;
+                //Local??
+                private int vagas;
+                private Professor professor;
+             private Disciplina disciplina;
+                public List<String> atividades = new ArrayList<>();
+            */
+        }
+    }
+
         
 
- }
+}
 

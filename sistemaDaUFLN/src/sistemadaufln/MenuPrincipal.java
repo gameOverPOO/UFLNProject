@@ -19,6 +19,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import files.CarregaDados;
+import turma.TurmaDaoImpl;
 
 public class MenuPrincipal {
 
@@ -119,7 +120,14 @@ public class MenuPrincipal {
                              Logger.getLogger(DisciplinaDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         
+                        try {
+                              arquivo.salvarTurma(TurmaDaoImpl.turmasl); // salvarTurma(List<Turma> listaTurmas
+                         } catch (IOException ex) {
+                             System.err.println("Erro:" + ex);
+                             Logger.getLogger(TurmaDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         
+
                         
                         
                         

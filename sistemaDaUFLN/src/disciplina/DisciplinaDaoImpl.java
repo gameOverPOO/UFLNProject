@@ -39,7 +39,7 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     
     
     
-    @Override //mudar depois para ID
+    @Override 
     public void deletar(String nome){
         
         for(int i=0;i<disciplinal.size();i++){

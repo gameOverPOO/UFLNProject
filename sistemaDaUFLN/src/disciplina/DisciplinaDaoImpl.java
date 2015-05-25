@@ -24,7 +24,7 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
             }    
         }
         disciplinal.add(disciplina);
-        System.out.println("size::: "+disciplinal.size());
+        
     }
 
     @Override

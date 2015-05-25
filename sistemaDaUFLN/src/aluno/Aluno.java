@@ -48,9 +48,6 @@ public Aluno(String nome, String cpf) {
         this.cpf=cpf;
     }
     else 
-        System.out.println("CPF INVALIDO!! :( ");
-        //NAO HÁ INTERAÇÃO COM USUARIO/USAR EXCEÇÃO
-        
         
         
 }

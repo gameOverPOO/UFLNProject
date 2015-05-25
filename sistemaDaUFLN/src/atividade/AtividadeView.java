@@ -50,7 +50,7 @@ public class AtividadeView {
                          String tipo = new String();                
                          tipo = leitura.nextLine();
 
-                         System.out.println("Digite a Data (dd/MM/yyy): ");
+                         System.out.println("Digite a Data (dd/MM/yyyy): ");
                          String data = new String();
                          data = leitura.nextLine();
 

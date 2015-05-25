@@ -3,8 +3,7 @@ package disciplina;
 
 import java.util.*;
 
-/*Consultar o numero de turmas ja oferecidas (historicamente) para uma determinada disciplina;*/ 
-//Ter que implementar o historico de turmas
+
 
 public class Disciplina {
    //Atributos
@@ -15,7 +14,7 @@ public class Disciplina {
    public static List<String> professoresCpf = new ArrayList<>();
 
     public Disciplina() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
   
      

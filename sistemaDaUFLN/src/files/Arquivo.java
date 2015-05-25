@@ -13,29 +13,11 @@ import java.util.List;
 import aluno.Aluno;
 import professor.Professor;
 
-/*SALVAR TODO O OBJETO...ALUNOS COM DISCIPLINAS, PROFESSOREES, ETC*/
-//Leia mais em: Criando e Gravando dados em Txt com Java http://www.devmedia.com.br/criando-e-gravando-dados-em-txt-com-java/23060#ixzz3ZmaRAJIh
 
 public class Arquivo {
     boolean file = new File("Arquivos").mkdir();
     
-    /*Salva assim:
-       @{   //Começa aluno
-        Leandro
-        14638431780
-        
-        atividade1#atividade2#atividade3 -> dá um split e separa
-        disciplina1#disciplina2#disciplina3
-        }   //termina aluno
-    */
-    
-    
-    
-    
-    /*  @{
-        Leandro
-        14638431780
-        }*/
+   
 
     public Arquivo() {
     }
@@ -53,15 +35,7 @@ public class Arquivo {
                 gravarArq.printf(s.getNome()+ "\n" + s.getCpf() + "\n");
                 gravarArq.printf("}%n");
             }
-            
-            
-            //gravarArq.printf("%n");
-            
-            
-            
-            
-            //
-            
+       
             
             arq.close();
                            

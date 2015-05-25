@@ -9,7 +9,7 @@ import java.util.*;
 
 
 public class ProfessorView {
-    //List<Professor> listaProfessor = new ArrayList<>();
+    
     ProfessorDao p = new ProfessorDaoImpl();
     
     public void subMenu() throws IOException{
@@ -52,7 +52,7 @@ public class ProfessorView {
                      dep = leitura.nextLine();
                      Professor professorteste = new Professor(nomeP,cpf,dep);
                    
-                    //Como verifica o cpf antes de criar o aluno??? 
+                    
                     
                                                    
                      
@@ -66,9 +66,7 @@ public class ProfessorView {
                 
                     
                 }  
-               //
-                //Arquivo arquivo = new Arquivo();
-                //arquivo.salvarProfessor(listaProfessor);
+              
                 break;
             }
             case 2:{

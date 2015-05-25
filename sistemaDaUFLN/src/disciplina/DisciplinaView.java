@@ -9,10 +9,10 @@ import java.util.*;
 
 
 public class DisciplinaView {
-    DisciplinaDao d = new DisciplinaDaoImpl(); //Se acessar a classe e sair a list muda????
+    DisciplinaDao d = new DisciplinaDaoImpl(); 
     
       public void subMenu() throws IOException{
-       // List<Disciplina> listaDisciplina = new ArrayList<>();
+       
           
         int sair = 0;
         while(sair==0){
@@ -74,8 +74,7 @@ public class DisciplinaView {
                 }  
                
                   
-                //Arquivo arquivo = new Arquivo();
-               // arquivo.salvarDisciplina(listaDisciplina);
+                
                 break;
             }
             case 2:{

@@ -16,29 +16,13 @@ import disciplina.Disciplina;
 import sistemadaufln.*;
 import turma.Turma;
 
-/*SALVAR TODO O OBJETO...ALUNOS COM DISCIPLINAS, PROFESSOREES, ETC*/
-//Leia mais em: Criando e Gravando dados em Txt com Java http://www.devmedia.com.br/criando-e-gravando-dados-em-txt-com-java/23060#ixzz3ZmaRAJIh
 
 public class SalvaDados {
     boolean file = new File("Arquivos").mkdir();
-    
-    /*Salva assim:
-       @{   //Começa aluno
-        Leandro
-        14638431780
-        
-        atividade1#atividade2#atividade3 -> dá um split e separa
-        disciplina1#disciplina2#disciplina3
-        }   //termina aluno
-    */
+   
     
     
     
-    
-    /*  @{
-        Leandro
-        14638431780
-        }*/
 
     public SalvaDados() {
     }
@@ -57,13 +41,6 @@ public class SalvaDados {
                 gravarArq.printf("}%n");
             }
             
-            
-            //gravarArq.printf("%n");
-            
-            
-            
-            
-            //
             
             
             arq.close();
@@ -125,7 +102,6 @@ public class SalvaDados {
                     
                     
                 gravarArq.printf("}%n");
-                //salvar listass
             }
             
             
@@ -135,7 +111,6 @@ public class SalvaDados {
                     
                     
         }
-        //return false;
         
         
       

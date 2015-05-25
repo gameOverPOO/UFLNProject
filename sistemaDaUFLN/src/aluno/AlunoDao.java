@@ -3,9 +3,6 @@ package aluno;
 
 import aluno.Aluno;
 
-
-
-
 public interface AlunoDao {
     
     
@@ -18,10 +15,4 @@ public interface AlunoDao {
     public void imprimirLista();
     
     }
-    
-    
-    
-    //Achei um exemplo:  https://github.com/edveloso/academica-complete/blob/master/src/modelo/persistencia/AlunoDAO.java
-    //metodos para aluno
-   
 

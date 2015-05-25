@@ -5,13 +5,7 @@ import java.util.*;
 
 public class Professor {
     
-    
-    /* Consultar o numero de disciplinas ja lecionadas por um determinado professor.*/
-    //CRIAR HISTORICO DO PROFESSOR E SALVAR NUM ARQUIVO, MAS NAO UM P CADA PROFESSOR
-    //ACHO QUE FACILITA UM ARQUIVO PARA CADA CLASSE
-    
-    
-
+   
     //Atributos
     private String nome;
     private String cpf;
@@ -20,7 +14,6 @@ public class Professor {
     public List<Disciplina> disciplinas = new ArrayList<>();
 
     public Professor() {
-       //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

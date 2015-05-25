@@ -9,8 +9,8 @@ import java.util.*;
 public class ProfessorDaoImpl implements ProfessorDao{
     
     
-    public static List<Professor> professorl = new ArrayList<>(); //A lista de todos está publica...
-                                                           //CORRIGIR
+    public static List<Professor> professorl = new ArrayList<>(); 
+                                                           
     
     //CRUD
     @Override

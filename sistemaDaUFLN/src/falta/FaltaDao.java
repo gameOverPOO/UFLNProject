@@ -5,10 +5,6 @@
  */
 package falta;
 
-/**
- *
- * @author Poney
- */
 public interface FaltaDao {
     
 }

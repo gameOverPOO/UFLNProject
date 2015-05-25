@@ -12,10 +12,10 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-    //USAR NOMES MELHORES NAS VARIAVES/OBJETOS!!
+   
  
 public class AlunoView {
-     AlunoDao a = new AlunoDaoImpl(); //TÁ ERRADO ISSO
+     AlunoDao a = new AlunoDaoImpl(); 
     
     public void subMenu() throws IOException{
       
@@ -28,14 +28,13 @@ public class AlunoView {
             System.out.println("1. Adicionar um aluno");
             System.out.println("2. Alterar um aluno");
             System.out.println("3. Remover um aluno");
-            //System.out.println("4. Buscar dados de um aluno");
             System.out.println("5. Mostrar todos os alunos");
             System.out.println("6. Voltar ao Menu Principal");
             System.out.println("4. Sair");
             //mais um
             int escolha = leituraMenu.nextInt();
             int adicionar = 1;
-            switch(escolha){ //TRATAR ENTRADA DE STRING INVES DE NUMB
+            switch(escolha){ 
                 
                 case 1:{
                     
@@ -80,7 +79,6 @@ public class AlunoView {
                     
                     break;
                 }
-                //ATUALIZAÇÃO OK! //TEM QUE SER POR CPF E MANDAR O ALUNO!
                 case 2:{
                     System.out.println("1. Alterar um aluno\n2. Alterar um cpf");
                     Scanner opAltera= new Scanner(System.in);
@@ -102,12 +100,10 @@ public class AlunoView {
                         String cpfN = new String();
                         cpfN = leitura.nextLine();
                         a.atualizar(nomeA, cpfN, 2);
-                        //String nomeN = new String();                
-                        //nomeN = leitura.nextLine();
+                        
                     }                                       
                     break;
                 }
-                //DELETAR OK! FALTA MANDAR SER PELO CPF!
                 case 3:{
                      System.out.println("Digite o Nome do Aluno a ser deletado: ");
                      Scanner leitura= new Scanner(System.in);
@@ -120,19 +116,7 @@ public class AlunoView {
                 }
                 
                 case 4:{
-                //IMPLEMENTAR BUSCA DE ALUNO AQUI
-                    
-                    
-                    
-                    /*
-                    Arquivo arquivo = new Arquivo();
-                    try {
-                           arquivo.salvarAluno(AlunoDaoImpl.alunosl);
-                     } catch (IOException ex) {
-                         System.out.println("MORRI:");
-                         Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
-                    
-                     }*/
+                
                     sair = 1;
                     break;
                 }
@@ -142,8 +126,7 @@ public class AlunoView {
                     break;
                 }
                 case 6:{
-                    //fazer voltar ao MenuPrincipal
-                    // acho que só dá certo se a classe retornar alguma coisa
+                    
                     adicionar = 0;
                     break;
                 }

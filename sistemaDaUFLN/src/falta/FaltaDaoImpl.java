@@ -5,10 +5,7 @@
  */
 package falta;
 
-/**
- *
- * @author Poney
- */
+
 public class FaltaDaoImpl implements FaltaDao{
     
 }

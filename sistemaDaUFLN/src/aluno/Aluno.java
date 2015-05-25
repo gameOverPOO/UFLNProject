@@ -3,22 +3,10 @@ package aluno;
 import java.util.*;
 
 
-//TUDO NO MESMO PACOTE?????
-
-
-//AO SAIR, SALVAR TUDO NO ARQUIVO
-//CRIAR PASTA "ARQUIVOS"
-
-
-/**Todos os dados devem, evidentemente, ser persistidos. Utilize arquivos para isso. Procure tornar seu codigo
-\de negocio" independente das operac~oes que envolvem arquivos (pergunte-se sempre: \o que eu precisaria de
-fazer se, de repente, o cliente pedisse para utilizar banco de dados em vez de arquivos?").*/
 
 public class Aluno {
     
-    /* Consultar a situac~ao de um aluno em uma disciplina - exibir nota e faltas, e se foi aprovado ou n~ao, sabendo
-que e necessario ter nota maior ou igual a 6,0, alem de 75% de frequ^encia para aprovac~ao;*/
-    //mais um
+  
     //Atributos
     private String nome;
     private String cpf;    
@@ -28,7 +16,6 @@ que e necessario ter nota maior ou igual a 6,0, alem de 75% de frequ^encia pa
     
 
     public Aluno() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
@@ -55,7 +42,7 @@ que e necessario ter nota maior ou igual a 6,0, alem de 75% de frequ^encia pa
 
 
 public Aluno(String nome, String cpf) {
-    if(validarCPF(cpf)) //Só cria um aluno se o cpf for valido...mas tá dando merda
+    if(validarCPF(cpf)) //Só cria um aluno se o cpf for valido.
     {
         this.nome = nome;
         this.cpf=cpf;
@@ -68,8 +55,7 @@ public Aluno(String nome, String cpf) {
         
 }
 
-//PQ O COMPILADOR PEDE P SER FINAL NA CHAMADA DO CONTRUTOR?
-//ONDE COLOCAR ISTO?
+
 public boolean validarCPF(String CPF) {
     
      // considera-se erro CPF's formados por uma sequencia de numeros iguais

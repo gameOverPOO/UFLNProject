@@ -35,7 +35,7 @@ public class CarregaDados {
             String linha = lerl.readLine();
           
             
-            //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
+           
             while(linha!=null)
              {
                  
@@ -86,13 +86,12 @@ public class CarregaDados {
         
         try{
             FileReader ler = new FileReader("src/files/Professores.txt");
-            //BufferredReader n = new BufferredReader(ler);
+            
             BufferedReader lerl = new BufferedReader(ler);
         
             String linha = lerl.readLine();
           
             
-            //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
             while(linha!=null)
              {
                  
@@ -141,13 +140,11 @@ public class CarregaDados {
         
         try{
             FileReader ler = new FileReader("src/files/Disciplinas.txt");
-            //BufferredReader n = new BufferredReader(ler);
             BufferedReader lerl = new BufferedReader(ler);
         
             String linha = lerl.readLine();
             
              
-            //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
             while(linha!=null)
              {
                  
@@ -167,9 +164,7 @@ public class CarregaDados {
                         int carga = Integer.parseInt( lerl.readLine());                         
                         disciplina.setCargaHorariaDisciplina(carga);
                         
-                            /*String tar=""ouro.diamante.prata"";  
-                                String s[] = tar.split(".\s*");  
-                                System.out.println(s[0]);  */
+                         
                         
                         String professorescpfs = new String();
                         professorescpfs = lerl.readLine();
@@ -245,13 +240,11 @@ public boolean carregarTurmas(){
         
         try{
             FileReader ler = new FileReader("src/files/Turmas.txt");
-            //BufferredReader n = new BufferredReader(ler);
             BufferedReader lerl = new BufferedReader(ler);
         
             String linha = lerl.readLine();
             
              
-            //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
             while(linha!=null)
              {
                  
@@ -278,23 +271,6 @@ public boolean carregarTurmas(){
                         turma.setHorario(horario);
                             
                         
-                        /*String professorescpfs = new String();
-                        professorescpfs = lerl.readLine();
-                        String s[] = professorescpfs.split("&");
-                         System.out.println(s.length);
-                        List<String> listacpfs = new ArrayList<>();
-                        for(int i = 0; i<s.length;i++){
-                                System.out.println(s[i]);
-                                System.out.println("foi");
-                                listacpfs.add(s[i]);
-                                System.out.println("tantad: "+ listacpfs.get(i));
-                        }
-                        */
-                        
-                        
-                        
-                       
-                     
         
                         
                         System.out.println("..Turma: " + turma.getCodigo()+ " " + 

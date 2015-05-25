@@ -28,7 +28,7 @@ public class AlunoDaoImpl implements AlunoDao{
         }
         
         alunosl.add(aluno);
-        System.out.println("size::: "+alunosl.size());
+        
         
         
     }

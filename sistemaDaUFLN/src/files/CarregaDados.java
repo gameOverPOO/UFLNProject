@@ -51,8 +51,8 @@ public class CarregaDados {
                         String cpf = lerl.readLine();                     
                         aluno.setCpf(cpf);
                
-                        System.out.println("Aluno: " + aluno.getNome()+ " " + 
-                                 aluno.getCpf());
+                        /*System.out.println("Aluno: " + aluno.getNome()+ " " + 
+                                 aluno.getCpf());*/
                         
                         
                         AlunoDaoImpl a = new AlunoDaoImpl();
@@ -107,8 +107,8 @@ public class CarregaDados {
                         String cpf = lerl.readLine();                     
                         professor.setCpf(cpf);
                
-                        System.out.println("Professor: " + professor.getNome()+ " " + 
-                                 professor.getCpf());
+                        /*System.out.println("Professor: " + professor.getNome()+ " " + 
+                                 professor.getCpf());*/
                         
                         
                         ProfessorDaoImpl p = new ProfessorDaoImpl();
@@ -185,8 +185,8 @@ public class CarregaDados {
                      
         
                         
-                        System.out.println("Disciplina: " + disciplina.getNome()+ " " + 
-                                 disciplina.getEmenta());
+                        /*System.out.println("Disciplina: " + disciplina.getNome()+ " " + 
+                                 disciplina.getEmenta());*/
                         
                         
                         
@@ -273,8 +273,8 @@ public boolean carregarTurmas(){
                         
         
                         
-                        System.out.println("Turma: " + turma.getCodigo()+ " " + 
-                                 turma.getHorario());
+                        /*System.out.println("Turma: " + turma.getCodigo()+ " " + 
+                                 turma.getHorario());*/
                         
                         
                         

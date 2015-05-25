@@ -29,16 +29,16 @@ public class MenuPrincipal {
         CarregaDados begin = new CarregaDados();
         
          boolean a = begin.carregarAlunos();   
-         if (a) System.out.println("NAOOOO!!! ");
+         if (a) System.err.println("Erro! ");
 
         boolean b = begin.carregarProfessores();
-        if (b) System.out.println("NAOOOO!!! ");
+        if (b) System.err.println("Erro! ");
         
         boolean c = begin.carregarDisciplinas();
-        if (c) System.out.println("NAOOOO!!! ");
+        if (c) System.err.println("Erro! ");
        
          boolean d = begin.carregarTurmas();
-         if (d) System.out.println("NAOOOO!!! ");
+         if (d) System.err.println("Erro! ");
          
        int sair=0;     
         
@@ -77,7 +77,7 @@ public class MenuPrincipal {
                         break;
                     }
                     case 4:{
-                        System.out.println("entrar em TurmaView");
+                        
                         TurmaView turmaView = new TurmaView();
                         turmaView.subMenu();
                         break;
@@ -101,14 +101,14 @@ public class MenuPrincipal {
                         try {
                                arquivo.salvarAluno(AlunoDaoImpl.alunosl);
                          } catch (IOException ex) {
-                             System.out.println("MORRI:");
+                             System.err.println("Erro! ");
                              Logger.getLogger(AlunoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         
                         try {
                                arquivo.salvarProfessor(ProfessorDaoImpl.professorl);
                          } catch (IOException ex) {
-                             System.out.println("MORRI:");
+                             System.err.println("Erro! ");
                              Logger.getLogger(ProfessorDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         
@@ -116,7 +116,7 @@ public class MenuPrincipal {
                         try {
                                arquivo.salvarDisciplina(DisciplinaDaoImpl.disciplinal);
                          } catch (IOException ex) {
-                             System.out.println("MORRI:");
+                             System.err.println("Erro! ");
                              Logger.getLogger(DisciplinaDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         

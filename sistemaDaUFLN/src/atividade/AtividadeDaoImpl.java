@@ -25,7 +25,7 @@ public class AtividadeDaoImpl implements AtividadeDao{
             }    
         }
         atividadel.add(atividade);
-        System.out.println("size::: "+atividadel.size());
+       
         
         
     }

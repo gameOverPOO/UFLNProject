@@ -19,7 +19,7 @@ import turma.TurmaDaoImpl;
 public class CarregaDados {
     static
     {
-         System.out.println("Carregado do arquivo:");
+         System.out.println("Carregado do arquivo!");
     }
     
     public boolean carregarAlunos(){

@@ -59,9 +59,9 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                if(d.getNome().equals(nomeD)){
                     ProfessorDaoImpl p = new ProfessorDaoImpl();
                     for(int j=0;j<p.professorl.size();j++){
-                        if(p.professorl.get(i).getCpf().equals(cpf)){ 
+                        if(p.professorl.get(j).getCpf().equals(cpf)){ 
                             d.professoresCpf.add(cpf);
-                            p.professorl.get(i).disciplinas.add(d);
+                            p.professorl.get(j).disciplinas.add(d);
                             
                         }
                     }
@@ -94,8 +94,8 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                 {
                     ProfessorDaoImpl professores = new ProfessorDaoImpl();                
                     for(int j=0;j<professores.professorl.size();j++){
-                        if(professores.professorl.get(i).getCpf().equals(d.professoresCpf.get(i))){ 
-                            System.out.println("Profesores:\nNome: " + professores.professorl.get(i).getNome()); 
+                        if(professores.professorl.get(j).getCpf().equals(d.professoresCpf.get(i))){ 
+                            System.out.println("Profesores:\nNome: " + professores.professorl.get(j).getNome()); 
                         }                        
                     }
                 }

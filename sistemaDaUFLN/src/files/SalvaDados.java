@@ -159,17 +159,7 @@ public void salvarTurma(List<Turma> listaTurmas) throws IOException {
                 gravarArq.printf("}%n");
             }
             
-            
-            /* private int codigo;
-            private int ano;
-                private int periodo;
-                public String horario;
-                //Local??
-                private int vagas;
-                private Professor professor;
-             private Disciplina disciplina;
-                public List<String> atividades = new ArrayList<>();
-            */
+          
         }
     }
 

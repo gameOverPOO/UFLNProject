@@ -12,6 +12,8 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import sistemadaufln.*;
+import turma.Turma;
+import turma.TurmaDaoImpl;
 
 
 public class CarregaDados {
@@ -219,10 +221,122 @@ public class CarregaDados {
         return false;
         
     
+    }
+
+      
+    
+    
+
     
     
     
-    }   
+
+
+
+
+
+
+
+
+
+public boolean carregarTurmas(){
+        
+        
+        
+        try{
+            FileReader ler = new FileReader("src/files/Turmas.txt");
+            //BufferredReader n = new BufferredReader(ler);
+            BufferedReader lerl = new BufferedReader(ler);
+        
+            String linha = lerl.readLine();
+            
+             
+            //FAZER ISSO NA CLASSE CARREGAARQUIVO! //COM OUTROS DADOS
+            while(linha!=null)
+             {
+                 
+                 
+                 if ("T{".equals(linha))
+               {
+                   
+                        Turma turma = new Turma();
+               
+               
+                        String codigos = lerl.readLine();
+                        int codigo = Integer.parseInt(codigos);
+                        turma.setCodigo(codigo);
+                            
+                        String anos = lerl.readLine();
+                        int ano = Integer.parseInt(anos);
+                        turma.setAno(ano);
+                        
+                        String periodos = lerl.readLine();
+                        int periodo = Integer.parseInt(periodos);
+                        turma.setPeriodo(periodo);
+                        
+                        String horario = lerl.readLine();
+                        turma.setHorario(horario);
+                            
+                        
+                        /*String professorescpfs = new String();
+                        professorescpfs = lerl.readLine();
+                        String s[] = professorescpfs.split("&");
+                         System.out.println(s.length);
+                        List<String> listacpfs = new ArrayList<>();
+                        for(int i = 0; i<s.length;i++){
+                                System.out.println(s[i]);
+                                System.out.println("foi");
+                                listacpfs.add(s[i]);
+                                System.out.println("tantad: "+ listacpfs.get(i));
+                        }
+                        */
+                        
+                        
+                        
+                       
+                     
+        
+                        
+                        System.out.println("..Turma: " + turma.getCodigo()+ " " + 
+                                 turma.getHorario());
+                        
+                        
+                        
+                        TurmaDaoImpl p = new TurmaDaoImpl();
+                        p.salvar(turma);
+               
+                 
+                 
+                 
+                 
+               }
+                 linha = lerl.readLine();
+                
+                            
+            
+             }
+        }
+                
+            catch(Exception exception)
+                {
+                    System.err.println("Erro: "+exception);
+                
+                }
+           
+        
+        return false;
+        
+    
+    }
+
+      
+    
+    
+}
+    
+
+
+
     
     
     
@@ -231,13 +345,5 @@ public class CarregaDados {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    }   
+     
 

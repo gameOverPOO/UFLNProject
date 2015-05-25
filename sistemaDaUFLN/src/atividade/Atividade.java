@@ -12,26 +12,26 @@ public class Atividade {
     //Atributos
     private String nome;
     private String tipo;
-    private Date data;
-    private double valor;   
-    public List<Aluno> alunos = new ArrayList<>(); //Relacionamento
-    private Turma turma;
+    private String data;
+    private Double valor;   
+    public List<String> alunos = new ArrayList<>(); //Relacionamento
     
    
     //Métodos
-     public Atividade(String nome, String tipo, Date data, double valor, Turma turma) {
+     public Atividade(String nome, String tipo, String data, Double valor) {
         this.nome = nome;
         this.tipo = tipo;
         this.data = data;
         this.valor = valor;
-        this.turma = turma;
     }
+
+    
     public String getNome() {
         return nome;
     }
 
    
-    public void setNomee(String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -46,12 +46,12 @@ public class Atividade {
     }
 
     
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
    
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 

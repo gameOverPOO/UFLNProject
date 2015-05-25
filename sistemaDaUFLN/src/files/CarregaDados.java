@@ -185,7 +185,7 @@ public class CarregaDados {
                      
         
                         
-                        System.out.println("..Disciplina: " + disciplina.getNome()+ " " + 
+                        System.out.println("Disciplina: " + disciplina.getNome()+ " " + 
                                  disciplina.getEmenta());
                         
                         
@@ -273,7 +273,7 @@ public boolean carregarTurmas(){
                         
         
                         
-                        System.out.println("..Turma: " + turma.getCodigo()+ " " + 
+                        System.out.println("Turma: " + turma.getCodigo()+ " " + 
                                  turma.getHorario());
                         
                         

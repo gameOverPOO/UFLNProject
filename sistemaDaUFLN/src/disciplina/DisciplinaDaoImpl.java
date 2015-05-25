@@ -105,13 +105,13 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         System.out.println("Disciplina não encontrada!");
     }
     
-    @Override
+        @Override
     public void cadastrarTurma(Integer codigoT, String nomeD){
         
         TurmaDaoImpl turma = new TurmaDaoImpl();
         for(int i=0;i<disciplinal.size();i++){
             Disciplina d = disciplinal.get(i);
-            if(d.equals(nomeD)){
+            if(d.getNome().equals(nomeD)){
                 for(int j=0;j<turma.turmasl.size();j++){
                     if(codigoT.equals(turma.turmasl.get(j).getCodigo())){
                         d.turmas.add(codigoT);
@@ -130,14 +130,12 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         
         for(int i=0;i<disciplinal.size();i++){
             Disciplina d = disciplinal.get(i);
-            if(d.equals(nome)){
+            if(d.getNome().equals(nome)){
                 for(int j=0;j<d.turmas.size();j++){
                     System.out.println("Turmas: " + d.turmas.get(j));
                 }
             }
         
         }
-        System.out.println("Erro disciplina não encontrada!");
     }
-    
 }

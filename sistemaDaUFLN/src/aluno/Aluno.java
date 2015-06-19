@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Aluno {
     
-  
+    //TIRAR LISTAS PUBLICAS, fazer get lista
     //Atributos
     private String nome;
     private String cpf;    

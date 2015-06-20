@@ -1,11 +1,12 @@
 
-package disciplina;
+package DAOsImpl;
 
-import disciplina.DisciplinaDao;
+import DAOs.DisciplinaDao;
+import disciplina.Disciplina;
 import disciplina.Disciplina;
 import java.util.*;
-import professor.ProfessorDaoImpl;
-import turma.TurmaDaoImpl;
+import DAOsImpl.ProfessorDaoImpl;
+import DAOsImpl.TurmaDaoImpl;
 
 
 public class DisciplinaDaoImpl implements DisciplinaDao{

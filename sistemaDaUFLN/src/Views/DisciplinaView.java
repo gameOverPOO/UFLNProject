@@ -1,7 +1,8 @@
-package disciplina;
+package Views;
 
-import disciplina.DisciplinaDaoImpl;
-import disciplina.DisciplinaDao;
+import DAOsImpl.DisciplinaDaoImpl;
+import DAOs.DisciplinaDao;
+import disciplina.Disciplina;
 import disciplina.Disciplina;
 import java.io.IOException;
 import java.util.*;

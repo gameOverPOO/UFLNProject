@@ -1,6 +1,7 @@
 
-package disciplina;
+package DAOs;
 
+import disciplina.Disciplina;
 import disciplina.Disciplina;
 
 

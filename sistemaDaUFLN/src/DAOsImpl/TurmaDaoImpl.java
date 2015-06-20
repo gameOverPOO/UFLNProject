@@ -1,10 +1,12 @@
 
-package turma;
+package DAOsImpl;
 
 
-import professor.ProfessorDaoImpl;
-import aluno.AlunoDaoImpl;
+import DAOs.TurmaDao;
+import DAOsImpl.ProfessorDaoImpl;
+import DAOsImpl.AlunoDaoImpl;
 import java.util.*;
+import turma.Turma;
 
 
 public class TurmaDaoImpl implements TurmaDao{

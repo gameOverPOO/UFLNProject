@@ -1,11 +1,12 @@
 
-package professor;
+package Views;
 
-import professor.ProfessorDaoImpl;
-import professor.ProfessorDao;
+import DAOsImpl.ProfessorDaoImpl;
+import DAOs.ProfessorDao;
 import professor.Professor;
 import java.io.IOException;
 import java.util.*;
+import professor.Professor;
 
 
 public class ProfessorView {

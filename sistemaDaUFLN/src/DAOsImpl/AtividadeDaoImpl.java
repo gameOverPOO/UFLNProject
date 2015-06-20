@@ -1,10 +1,11 @@
 
-package atividade;
+package DAOsImpl;
 
-import aluno.AlunoDaoImpl;
+import DAOsImpl.AlunoDaoImpl;
 import atividade.Atividade;
-import atividade.AtividadeDao;
-import static atividade.AtividadeDaoImpl.atividadel;
+import DAOs.AtividadeDao;
+import atividade.Atividade;
+import static DAOsImpl.AtividadeDaoImpl.atividadel;
 
 import java.util.*;
 

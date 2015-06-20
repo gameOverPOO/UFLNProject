@@ -1,9 +1,10 @@
 
-package professor;
+package DAOsImpl;
 
-import professor.ProfessorDao;
+import DAOs.ProfessorDao;
 import professor.Professor;
 import java.util.*;
+import professor.Professor;
 
 
 public class ProfessorDaoImpl implements ProfessorDao{

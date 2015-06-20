@@ -1,6 +1,7 @@
 
-package aluno;
+package DAOs;
 
+import aluno.Aluno;
 import aluno.Aluno;
 
 public interface AlunoDao {

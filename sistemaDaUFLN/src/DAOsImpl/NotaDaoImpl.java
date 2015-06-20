@@ -3,8 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package falta;
+package DAOsImpl;
 
-public interface FaltaDao {
+import DAOs.NotaDao;
+
+/**
+ *
+ * @author Poney
+ */
+public class NotaDaoImpl implements NotaDao{
     
 }

@@ -2,14 +2,14 @@
 package sistemadaufln;
 
 
-import turma.TurmaView;
-import professor.ProfessorView;
-import professor.ProfessorDaoImpl;
-import atividade.AtividadeView;
-import disciplina.DisciplinaView;
-import disciplina.DisciplinaDaoImpl;
-import aluno.AlunoView;
-import aluno.AlunoDaoImpl;
+import Views.TurmaView;
+import Views.ProfessorView;
+import DAOsImpl.ProfessorDaoImpl;
+import Views.AtividadeView;
+import Views.DisciplinaView;
+import DAOsImpl.DisciplinaDaoImpl;
+import Views.AlunoView;
+import DAOsImpl.AlunoDaoImpl;
 import files.SalvaDados;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,7 +19,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import files.CarregaDados;
-import turma.TurmaDaoImpl;
+import DAOsImpl.TurmaDaoImpl;
 
 public class MenuPrincipal {
 

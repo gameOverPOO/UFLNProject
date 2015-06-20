@@ -1,11 +1,11 @@
 
 package files;
 
-import professor.ProfessorDaoImpl;
+import DAOsImpl.ProfessorDaoImpl;
 import professor.Professor;
-import disciplina.DisciplinaDaoImpl;
+import DAOsImpl.DisciplinaDaoImpl;
 import disciplina.Disciplina;
-import aluno.AlunoDaoImpl;
+import DAOsImpl.AlunoDaoImpl;
 import aluno.Aluno;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import sistemadaufln.*;
 import turma.Turma;
-import turma.TurmaDaoImpl;
+import DAOsImpl.TurmaDaoImpl;
 
 
 public class CarregaDados {

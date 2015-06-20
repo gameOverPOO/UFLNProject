@@ -1,8 +1,9 @@
-package atividade;
+package Views;
 
 
-import atividade.AtividadeDaoImpl;
-import atividade.AtividadeDao;
+import DAOsImpl.AtividadeDaoImpl;
+import DAOs.AtividadeDao;
+import atividade.Atividade;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

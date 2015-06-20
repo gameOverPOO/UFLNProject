@@ -1,6 +1,7 @@
 
-package atividade;
+package DAOs;
 
+import atividade.Atividade;
 import atividade.Atividade;
 
 

@@ -32,66 +32,15 @@ public class ProfessorView {
         int escolha = leituraMenu.nextInt();
         switch(escolha){
             case 1:{
-                System.out.println("Adicionando um professor");
-                int adicionar = 1;
-                while(adicionar==1){
-                    
-                     Scanner leitura= new Scanner(System.in);
-                     System.out.println("Digite o Nome do Professor: ");
-                
-                     String nomeP = new String();                
-                     nomeP = leitura.nextLine();
-                     
-                     
-                     System.out.println("Digite o cpf do Professor: ");
-                     String cpf = new String();                
-                     cpf = leitura.nextLine();
-                     
-              
-                     System.out.println("Digite o departamento do Professor: ");
-                     String dep = new String();                
-                     dep = leitura.nextLine();
-                     Professor professorteste = new Professor(nomeP,cpf,dep);
-                   
-                    
-                    
-                                                   
-                     
-                    if ((professorteste.getNome()!= null))p.salvar(professorteste);//testar se é null antes de add
-                    
-                  
-                   System.out.println("Deseja adicionar outro Professor? S ou N");
-                   String opcao = new String();
-                   opcao = leitura.nextLine();
-                   if (opcao.equals("N")) adicionar = 0;
-                
-                    
-                }  
-              
+                while(adicionarProfessor()==1);
                 break;
             }
             case 2:{
-                System.out.println("Alterando um professor");
-                  
-                    
-                    System.out.println("Digite o Nome do Professor: ");
-                    Scanner leitura= new Scanner(System.in);
-                    String nomeA = new String();                
-                    nomeA = leitura.nextLine();
-                    
-                    System.out.println("Digite o  novo Nome do Professor: ");                 
-                    String nomeN = new String();                
-                    nomeN = leitura.nextLine();
-                    p.atualizar(nomeA, nomeN);
+                alterarProfessor();
                 break;
             }
             case 3:{
-                System.out.println("Removendo um professor");
-                System.out.println("Digite o Nome do Professor a ser deletado: ");
-                     Scanner leitura= new Scanner(System.in);
-                     String nomeD = new String();                
-                     nomeD = leitura.nextLine();
-                     p.deletar(nomeD);
+                removerProfessor();
                 break;
             }
              case 4:{
@@ -110,5 +59,62 @@ public class ProfessorView {
             
         }
     }
+    }
+    public int adicionarProfessor(){
+        System.out.println("Adicionando um professor");
+        int adicionar = 1;
+                
+                    
+        Scanner leitura= new Scanner(System.in);
+        System.out.println("Digite o Nome do Professor: ");
+                
+        String nomeP = new String();                
+        nomeP = leitura.nextLine();
+                     
+                     
+        System.out.println("Digite o cpf do Professor: ");
+        String cpf = new String();                
+        cpf = leitura.nextLine();
+                     
+              
+        System.out.println("Digite o departamento do Professor: ");
+        String dep = new String();                
+        dep = leitura.nextLine();
+        Professor professorteste = new Professor(nomeP,cpf,dep);
+                     
+        if ((professorteste.getNome()!= null))p.salvar(professorteste);//testar se é null antes de add
+                    
+                  
+        System.out.println("Deseja adicionar outro Professor? S ou N");
+        String opcao = new String();
+        opcao = leitura.nextLine();
+        if (opcao.equals("N")||opcao.equals("n")) adicionar = 0;
+                
+        return adicionar;
+    }
+    
+    public void alterarProfessor(){
+        
+        System.out.println("Alterando um professor");
+                  
+                    
+        System.out.println("Digite o Nome do Professor: ");
+        Scanner leitura= new Scanner(System.in);
+        String nomeA = new String();                
+        nomeA = leitura.nextLine();
+                    
+        System.out.println("Digite o  novo Nome do Professor: ");                 
+        String nomeN = new String();                
+        nomeN = leitura.nextLine();
+        p.atualizar(nomeA, nomeN);
+    }
+    public void removerProfessor(){
+        
+        System.out.println("Removendo um professor");
+        System.out.println("Digite o Nome do Professor a ser Removido: ");
+        Scanner leitura= new Scanner(System.in);
+        String nomeD = new String();                
+        nomeD = leitura.nextLine();
+        p.deletar(nomeD);
     }
 }

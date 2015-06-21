@@ -30,10 +30,14 @@ public class DisciplinaView {
         System.out.println("6. Imprimir lista de professores");
         System.out.println("7. Adicionar turma em uma disciplina");
         System.out.println("8. Imprimir turma de uma disciplina");
-        System.out.println("9. Sair");
+        System.out.println("9. Voltar");
         
         int escolha = leituraMenu.nextInt();
         switch(escolha){
+            case 0:{                
+                sair = 1;
+                break;
+            }
             case 1:{
                 while(adicionarDisciplina()==1);                
                 break;
@@ -68,10 +72,7 @@ public class DisciplinaView {
                 break;
                 
             }
-            case 9:{                
-                sair = 1;
-                break;
-            }
+            
             default:{
                 System.out.println("Opção Inválida");
                 break;

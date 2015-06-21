@@ -26,11 +26,15 @@ public class ProfessorView {
             System.out.println("2. Alterar um Professor");
             System.out.println("3. Remover um Professor");
             System.out.println("4. Mostrar todos os Professores");
-            System.out.println("5. Sair");
+            System.out.println("0. Voltar");
             
 
         int escolha = leituraMenu.nextInt();
         switch(escolha){
+            case 0:{
+                 sair=1;
+                 break;
+             }
             case 1:{
                 while(adicionarProfessor()==1);
                 break;
@@ -48,10 +52,7 @@ public class ProfessorView {
                     p.imprimirLista();
                     break;
                 }
-             case 5:{
-                 sair=1;
-                 break;
-             }
+             
             default:{
                 System.out.println("Opção Inválida");
                 break;

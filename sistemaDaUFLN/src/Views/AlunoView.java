@@ -30,12 +30,15 @@ public class AlunoView {
             System.out.println("2. Alterar um aluno");
             System.out.println("3. Remover um aluno");
             System.out.println("4. Mostrar todos os alunos");
-            System.out.println("5. Voltar");
+            System.out.println("0. Voltar");
             
             int escolha = leituraMenu.nextInt();
             int adicionar = 1;
             switch(escolha){ 
-                
+                case 0:{
+                    sair = 1;
+                    break;
+                }
                 case 1:{                    
                     while(adicionarAluno()==1);                      
                     break;
@@ -54,11 +57,7 @@ public class AlunoView {
                     a.imprimirLista();
                     break;
                 }
-                case 5:{
-                    
-                    sair = 1;
-                    break;
-                }
+                
                 default:{
                     System.out.println("Opção Inválida");
                     break;

@@ -26,10 +26,14 @@ public class AtividadeView {
             System.out.println("3. Cadastrar um Aluno em uma Atividade");
             System.out.println("4. Remover um Aluno de uma Atividade");
             System.out.println("5. Imprimir lista de Aluno");
-            System.out.println("6. Sair");
+            System.out.println("0. Voltar");
 
             int escolha = leituraMenu.nextInt();
             switch(escolha){
+                case 0:{
+                    sair = 1;
+                    break;
+                }
                 case 1:{
                     while(adicionarAtividade()==1);
                     break;
@@ -53,10 +57,7 @@ public class AtividadeView {
                     imprimirAlunoAtividade();
                     break;
                 }
-                case 6:{
-                    sair = 1;
-                    break;
-                }
+                
                 default:{
                     System.out.println("Opção Inválida");
                     break;

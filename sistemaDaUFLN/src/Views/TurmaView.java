@@ -28,11 +28,15 @@ public class TurmaView {
             System.out.println("6. Lista de Aluno");
             System.out.println("7. Lista de Professres");
             System.out.println("8. Adicionar Atividade");
-            System.out.println("9. Sair");
+            System.out.println("0. Voltar");
             
 
         int escolha = leituraMenu.nextInt();
         switch(escolha){
+            case 0:{
+                 sair=1;
+                 break;
+            }
             case 1:{
                 while(adicionarTurma()==1);
                
@@ -73,10 +77,6 @@ public class TurmaView {
                  break;
                  
                  
-             }
-             case 9:{
-                 sair=1;
-                 break;
              }
             default:{
                 System.out.println("Opção Inválida");

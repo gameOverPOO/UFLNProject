@@ -54,8 +54,9 @@ public class TurmaDaoImpl implements TurmaDao{
     }
     
     @Override
-    public void imprimirAlunos(Integer codigo){
+    public void imprimirAlunos(Integer codigo){ //Nao tá imprimindo
         Aluno aluno = new Aluno();
+        System.out.println("camoosao");
         for(int i=0;i<turmasl.size();i++){
                 if(turmasl.get(i).getCodigo().equals(codigo)){
                     AlunoDaoImpl a = new AlunoDaoImpl();

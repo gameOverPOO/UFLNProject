@@ -24,6 +24,10 @@ public class Atividade {
         this.valor = valor;
     }
 
+    public Atividade() {
+        
+    }
+
     
     public String getNome() {
         return nome;

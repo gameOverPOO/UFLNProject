@@ -1,8 +1,6 @@
 
 package DAOsImpl;
 
-import DAOsImpl.AlunoDaoImpl;
-import POJOs.Atividade;
 import DAOs.AtividadeDao;
 import POJOs.Atividade;
 import static DAOsImpl.AtividadeDaoImpl.atividadel;
@@ -28,15 +26,14 @@ public class AtividadeDaoImpl implements AtividadeDao{
         }
         atividadel.add(atividade);
        
-        
-        
     }
 
-   
     
     @Override
     public void deletar(Atividade atividade){
         String nome = atividade.getNome();
+        
+        
         for(int i=0;i<atividadel.size();i++){
             
             Atividade a = atividadel.get(i);
@@ -47,9 +44,9 @@ public class AtividadeDaoImpl implements AtividadeDao{
     }
     
     @Override
-    public void cadastrarAluno(Aluno alunob){
+    public void cadastrarAluno(Aluno alunob,Atividade atividade){
         String cpf = alunob.getCpf();
-        String nomeA = alunob.getNome();
+        String nomeA = atividade.getNome();
         for(int i=0;i<atividadel.size();i++){
                 Atividade a = atividadel.get(i);
                if(nomeA.equals(a.getNome())){
@@ -67,8 +64,8 @@ public class AtividadeDaoImpl implements AtividadeDao{
         
     }
     
-    @Override
-    public void excluirAluno(Aluno alunod){
+    @Override //VERIFICAR
+    public void excluirAluno(Aluno alunod,Atividade atividaded){
        String cpf = alunod.getCpf();
        for(int i=0;i<atividadel.size();i++){
                 Atividade a = atividadel.get(i);

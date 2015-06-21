@@ -3,6 +3,7 @@ package Views;
 
 import DAOsImpl.AtividadeDaoImpl;
 import DAOs.AtividadeDao;
+import POJOs.Aluno;
 import POJOs.Atividade;
 import java.io.IOException;
 import java.util.*;
@@ -19,8 +20,6 @@ public class AtividadeView {
         while(sair==0){
             
             Scanner leituraMenu= new Scanner(System.in);        
-
-
 
             System.out.println("1. Adicionar uma Atividade");
             System.out.println("2. Remover uma Atividade");
@@ -80,7 +79,12 @@ public class AtividadeView {
                          Scanner leitura= new Scanner(System.in);
                          String nome = new String();                
                          nome = leitura.nextLine();
-                         a.deletar(nome);
+                         
+                         Atividade atividaded = new Atividade();
+                        
+                         atividaded.setNome(nome);
+                         
+                         a.deletar(atividaded);
 
                     break;
                 }
@@ -93,13 +97,18 @@ public class AtividadeView {
                          Scanner leitura= new Scanner(System.in); 
                          String cpf = new String();                
                          cpf = leitura.nextLine();
-
+                         Aluno aluno = new Aluno();
+                         aluno.setCpf(cpf);
 
                     System.out.println("Digite a atividade: ");
                          String nome = new String();                
                          nome = leitura.nextLine();
-
-                    a.cadastrarAluno(cpf, nome);
+                         
+                         
+                    Atividade atividade = new Atividade();
+                    atividade.setNome(nome);
+                    
+                    a.cadastrarAluno(aluno, atividade);
                     break;
                 }
                 case 4:
@@ -111,13 +120,17 @@ public class AtividadeView {
                          Scanner leitura= new Scanner(System.in); 
                          String cpf = new String();                
                          cpf = leitura.nextLine();
+                         Aluno aluno = new Aluno();
+                         aluno.setCpf(cpf);
 
 
                     System.out.println("Digite o nome da atividade: ");
                          String nome = new String();                
                          nome = leitura.nextLine();
+                         Atividade atividade = new Atividade();
+                         atividade.setNome(nome);
 
-                    a.excluirAluno(cpf, nome);
+                    a.excluirAluno(aluno, atividade);
                     break;
                 }
                 case 5:
@@ -129,8 +142,10 @@ public class AtividadeView {
                     System.out.println("Digite o nome da atividade: ");
                          String nome = new String();                
                          nome = leitura.nextLine();
+                         Atividade atividade = new Atividade();
+                         atividade.setNome(nome);
 
-                    a.imprimirAlunos(nome);
+                    a.imprimirAlunos(atividade);
                     break;
                 }
                 case 6:{

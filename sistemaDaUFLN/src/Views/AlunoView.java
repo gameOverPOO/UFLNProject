@@ -29,32 +29,58 @@ public class AlunoView {
             System.out.println("1. Adicionar um aluno");
             System.out.println("2. Alterar um aluno");
             System.out.println("3. Remover um aluno");
-            System.out.println("5. Mostrar todos os alunos");
-            System.out.println("6. Voltar ao Menu Principal");
-            System.out.println("4. Sair");
-            //mais um
+            System.out.println("4. Mostrar todos os alunos");
+            System.out.println("5. Voltar");
+            
             int escolha = leituraMenu.nextInt();
             int adicionar = 1;
             switch(escolha){ 
                 
-                case 1:{
+                case 1:{                    
+                    while(adicionarAluno()==1);                      
+                    break;
+                }
+                case 2:{
+                    alterarAluno();              
+                    break;
+                }
+                case 3:{                    
+                    removerAluno();                     
+                    break;
+                }
+                
+                case 4:{
+                    System.out.println("Lista de alunos:");
+                    a.imprimirLista();
+                    break;
+                }
+                case 5:{
                     
-                    
-                    System.out.println("Adicionando um aluno");
-                    
-                    
-                    
-                    while(adicionar==1){
-                        
-                        
-                        Scanner leitura= new Scanner(System.in);
+                    sair = 1;
+                    break;
+                }
+                default:{
+                    System.out.println("Opção Inválida");
+                    break;
+                }
+                
+            }
+
+            
+
+        }
+    }
+    public int adicionarAluno(){
+        System.out.println("Adicionando um aluno");
+        int adicionar=1;
+        Scanner leitura= new Scanner(System.in);
                         
                         System.out.println("Digite o Nome do Aluno: ");                
                         String nomeP = new String();                
                         nomeP = leitura.nextLine();
                         
                         
-                        System.out.println("Digite o cpf do Aluno: ");
+                        System.out.println("Digite o CPF do Aluno: ");                        
                         String cpf = new String();                
                         cpf = leitura.nextLine();
                         
@@ -75,13 +101,13 @@ public class AlunoView {
                         opcao = leitura.nextLine();                   
                         
                         if (opcao.equals("N")||opcao.equals("n")) adicionar = 0;
-                        
-                    }
-                    
-                    break;
-                }
-                case 2:{
-                    System.out.println("1. Alterar um aluno\n2. Alterar um cpf");
+                     
+        return adicionar;
+
+    }
+    
+    public void alterarAluno(){
+         System.out.println("1. Alterar um aluno\n2. Alterar um cpf");
                     Scanner opAltera= new Scanner(System.in);
                     int opcaoAltera= opAltera.nextInt();
                     
@@ -102,6 +128,9 @@ public class AlunoView {
                         a.atualizar(alunoA,alunoN, 1);
                     }
                     else{
+                        
+                        //alterar o CPF nao funciona
+                        
                         System.out.println("Digite o  Novo CPF do Aluno: ");                 
                         String cpfN = new String();
                         cpfN = leitura.nextLine();
@@ -110,44 +139,15 @@ public class AlunoView {
                                                
                         a.atualizar(alunoA,alunod, 2);
                         
-                    }                                       
-                    break;
-                }
-                case 3:{
-                     System.out.println("Digite o Nome do Aluno a ser deletado: ");
-                     Scanner leitura= new Scanner(System.in);
-                     String nomeD = new String();                
-                     nomeD = leitura.nextLine();
-                     Aluno alunod = new Aluno();
-                     alunod.setNome(nomeD);
-                     a.deletar(alunod);
-                     
-                     
-                    break;
-                }
-                
-                case 4:{
-                
-                    sair = 1;
-                    break;
-                }
-                case 5:{
-                    System.out.println("Lista de alunos:");
-                    a.imprimirLista();
-                    break;
-                }
-                case 6:{
-                    
-                    adicionar = 0;
-                    break;
-                }
-                default:{
-                    System.out.println("Opção Inválida");
-                    break;
-                }
-                
-            }
-        }
+                    }  
+    }
+    public void removerAluno(){
+        System.out.println("Digite o Nome do Aluno a ser removido: ");
+        Scanner leitura= new Scanner(System.in);
+        String nomeD = new String();                
+        nomeD = leitura.nextLine();
+        Aluno alunod = new Aluno();
+        alunod.setNome(nomeD);
+        a.deletar(alunod);
     }
 }
-

@@ -1,7 +1,7 @@
 
 package DAOs;
 import java.util.*;
-import turma.Turma;
+import POJOs.Turma;
 
 public interface TurmaDao {
     

@@ -2,8 +2,8 @@
 package DAOsImpl;
 
 import DAOs.DisciplinaDao;
-import disciplina.Disciplina;
-import disciplina.Disciplina;
+import POJOs.Disciplina;
+import POJOs.Disciplina;
 import java.util.*;
 import DAOsImpl.ProfessorDaoImpl;
 import DAOsImpl.TurmaDaoImpl;

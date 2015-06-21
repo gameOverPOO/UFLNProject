@@ -1,6 +1,5 @@
 
-package professor;
-import disciplina.Disciplina;
+package POJOs;
 import java.util.*;
 
 public class Professor {

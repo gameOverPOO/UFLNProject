@@ -2,8 +2,8 @@ package Views;
 
 import DAOsImpl.DisciplinaDaoImpl;
 import DAOs.DisciplinaDao;
-import disciplina.Disciplina;
-import disciplina.Disciplina;
+import POJOs.Disciplina;
+import POJOs.Disciplina;
 import java.io.IOException;
 import java.util.*;
 

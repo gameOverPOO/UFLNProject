@@ -1,9 +1,9 @@
 
 package DAOs;
 
-import professor.Professor;
+import POJOs.Professor;
 import java.util.List;
-import professor.Professor;
+import POJOs.Professor;
 
 
 public interface ProfessorDao {

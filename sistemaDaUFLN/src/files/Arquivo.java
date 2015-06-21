@@ -10,8 +10,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import aluno.Aluno;
-import professor.Professor;
+import POJOs.Aluno;
+import POJOs.Professor;
 
 
 public class Arquivo {

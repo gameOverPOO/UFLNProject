@@ -5,7 +5,7 @@ import DAOsImpl.TurmaDaoImpl;
 import DAOs.TurmaDao;
 import java.io.IOException;
 import java.util.*;
-import turma.Turma;
+import POJOs.Turma;
 
 public class TurmaView {
     

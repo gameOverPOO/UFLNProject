@@ -2,8 +2,8 @@
 package DAOsImpl;
 
 import DAOs.AlunoDao;
-import aluno.Aluno;
-import aluno.Aluno;
+import POJOs.Aluno;
+import POJOs.Aluno;
 import java.io.IOException;
 import java.util.*;
 import java.util.logging.Level;

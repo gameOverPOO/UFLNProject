@@ -1,8 +1,7 @@
-package atividade;
+package POJOs;
 
-import aluno.Aluno;
 import java.util.*;
-import turma.Turma;
+import POJOs.Turma;
 
  
 

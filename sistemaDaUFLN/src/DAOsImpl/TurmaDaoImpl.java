@@ -6,7 +6,7 @@ import DAOs.TurmaDao;
 import DAOsImpl.ProfessorDaoImpl;
 import DAOsImpl.AlunoDaoImpl;
 import java.util.*;
-import turma.Turma;
+import POJOs.Turma;
 
 
 public class TurmaDaoImpl implements TurmaDao{

@@ -1,8 +1,8 @@
 
 package DAOs;
 
-import disciplina.Disciplina;
-import disciplina.Disciplina;
+import POJOs.Disciplina;
+import POJOs.Disciplina;
 
 
 public interface DisciplinaDao {

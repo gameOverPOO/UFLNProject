@@ -1,8 +1,5 @@
 
-package nota;
-
-import atividade.Atividade;
-import aluno.Aluno;
+package POJOs;
 
 
 public class Nota {

@@ -2,9 +2,9 @@
 package DAOsImpl;
 
 import DAOsImpl.AlunoDaoImpl;
-import atividade.Atividade;
+import POJOs.Atividade;
 import DAOs.AtividadeDao;
-import atividade.Atividade;
+import POJOs.Atividade;
 import static DAOsImpl.AtividadeDaoImpl.atividadel;
 
 import java.util.*;

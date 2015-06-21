@@ -4,8 +4,8 @@ package Views;
 
 import DAOsImpl.AlunoDaoImpl;
 import DAOs.AlunoDao;
-import aluno.Aluno;
-import aluno.Aluno;
+import POJOs.Aluno;
+import POJOs.Aluno;
 import files.SalvaDados;
 import java.io.IOException;
 

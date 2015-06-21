@@ -1,8 +1,8 @@
 
 package DAOs;
 
-import aluno.Aluno;
-import aluno.Aluno;
+import POJOs.Aluno;
+import POJOs.Aluno;
 
 public interface AlunoDao {
     

@@ -2,17 +2,17 @@
 package files;
 
 import DAOsImpl.ProfessorDaoImpl;
-import professor.Professor;
+import POJOs.Professor;
 import DAOsImpl.DisciplinaDaoImpl;
-import disciplina.Disciplina;
+import POJOs.Disciplina;
 import DAOsImpl.AlunoDaoImpl;
-import aluno.Aluno;
+import POJOs.Aluno;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import sistemadaufln.*;
-import turma.Turma;
+import POJOs.Turma;
 import DAOsImpl.TurmaDaoImpl;
 
 

@@ -1,7 +1,6 @@
-package falta;
+package POJOs;
 
-import turma.Turma;
-import aluno.Aluno;
+import POJOs.Turma;
 
 public class Falta {
     

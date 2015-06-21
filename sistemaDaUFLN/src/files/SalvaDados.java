@@ -3,7 +3,7 @@ package files;
 
 
 
-import professor.Professor;
+import POJOs.Professor;
 import java.io.File;
 
 import java.io.FileWriter;
@@ -11,10 +11,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import aluno.Aluno;
-import disciplina.Disciplina;
+import POJOs.Aluno;
+import POJOs.Disciplina;
 import sistemadaufln.*;
-import turma.Turma;
+import POJOs.Turma;
 
 
 public class SalvaDados {

@@ -1,8 +1,8 @@
 
 package DAOs;
 
-import atividade.Atividade;
-import atividade.Atividade;
+import POJOs.Atividade;
+import POJOs.Atividade;
 
 
 public interface AtividadeDao {

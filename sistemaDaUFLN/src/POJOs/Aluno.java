@@ -1,4 +1,4 @@
-package aluno;
+package POJOs;
 
 import java.util.*;
 

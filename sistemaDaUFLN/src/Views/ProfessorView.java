@@ -3,10 +3,10 @@ package Views;
 
 import DAOsImpl.ProfessorDaoImpl;
 import DAOs.ProfessorDao;
-import professor.Professor;
+import POJOs.Professor;
 import java.io.IOException;
 import java.util.*;
-import professor.Professor;
+import POJOs.Professor;
 
 
 public class ProfessorView {

@@ -1,8 +1,6 @@
 
-package turma;
+package POJOs;
 
-import professor.Professor;
-import disciplina.Disciplina;
 import java.util.*;
 
 public class Turma {

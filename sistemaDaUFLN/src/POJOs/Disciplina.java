@@ -10,8 +10,8 @@ public class Disciplina {
    private String nome;
    private String ementa;
    private int cargaHoraria;
-   public List<Turma> turmas = new ArrayList<>();
-   public List<Professor> professores = new ArrayList<>();
+   private List<Turma> turmas = new ArrayList<>();
+   private List<Professor> professores = new ArrayList<>();
 
     public Disciplina() {
         

@@ -9,7 +9,7 @@ import POJOs.Turma;
 
 public class TurmaView {
     
-    TurmaDao t = new TurmaDaoImpl();
+    TurmaDao turmaDao = new TurmaDaoImpl();
     
     public void subMenu() throws IOException{
         
@@ -50,7 +50,7 @@ public class TurmaView {
             }
              case 3:{
                 System.out.println("Lista de Turmas:");
-                t.imprimirLista();
+                turmaDao.imprimirLista();
                 break;
                 }
              case 4:{
@@ -128,7 +128,7 @@ public class TurmaView {
         Turma turmateste = new Turma(codigo, ano, periodo, horarioT, vagas);
                      
         if ((turmateste.getCodigo() != null))
-            t.salvar(turmateste); //testar se é null antes de add
+            turmaDao.salvar(turmateste); //testar se é null antes de add
                     
                   
         System.out.println("Deseja adicionar outra Turma? S ou N");
@@ -146,7 +146,7 @@ public class TurmaView {
                      
         Integer codigo = Integer.valueOf(codigoT);
                      
-        t.deletar(codigo);
+        turmaDao.deletar(codigo);
     }
     
     public void adicionarAlunoTurma(){
@@ -165,7 +165,7 @@ public class TurmaView {
                      
         Integer codigo = Integer.valueOf(codigoTurma);
                  
-        t.cadastrarAluno(cpf, codigo);
+        turmaDao.cadastrarAluno(cpf, codigo);
                      
     }
     public void adicionarProfessorTurma(){
@@ -184,7 +184,7 @@ public class TurmaView {
                      
         Integer codigo = Integer.valueOf(codigoTurma);
                  
-        t.cadastrarProfessor(cpf, codigo);        
+        turmaDao.cadastrarProfessor(cpf, codigo);        
     }
     public void imprimirAlunoTurma(){
         Scanner leitura= new Scanner(System.in);
@@ -195,7 +195,7 @@ public class TurmaView {
                      
         Integer codigo = Integer.valueOf(codigoTurma);
                  
-        t.imprimirAlunos(codigo);         
+        turmaDao.imprimirAlunos(codigo);         
     }
     public void imprimirProfessorTurma(){
         Scanner leitura= new Scanner(System.in);
@@ -206,7 +206,7 @@ public class TurmaView {
                      
         Integer codigo = Integer.valueOf(codigoTurma);
                  
-        t.imprimirProfessores(codigo);
+        turmaDao.imprimirProfessores(codigo);
     }
     public void adicionarAtividadeTurma(){
         Scanner leitura= new Scanner(System.in);
@@ -221,7 +221,7 @@ public class TurmaView {
         String nome = new String();                
         nome = leitura.nextLine();
                  
-        t.atividade(nome, codigo);
+        turmaDao.atividade(nome, codigo);
     }
     
 

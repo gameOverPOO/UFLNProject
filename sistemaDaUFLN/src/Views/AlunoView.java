@@ -89,18 +89,26 @@ public class AlunoView {
                     Scanner leitura= new Scanner(System.in);
                     String nomeA = new String();                
                     nomeA = leitura.nextLine();
+                    Aluno alunoA = new Aluno();
+                    alunoA.setNome(nomeA);
                     
                     if(opcaoAltera==1){
                         System.out.println("Digite o  Novo Nome do Aluno: ");                 
                         String nomeN = new String();                
                         nomeN = leitura.nextLine();
-                        a.atualizar(nomeA,nomeN, 1);
+                        Aluno alunoN = new Aluno();
+                        alunoN.setNome(nomeN);
+                        
+                        a.atualizar(alunoA,alunoN, 1);
                     }
                     else{
                         System.out.println("Digite o  Novo CPF do Aluno: ");                 
                         String cpfN = new String();
                         cpfN = leitura.nextLine();
-                        a.atualizar(nomeA, cpfN, 2);
+                        Aluno alunod = new Aluno();
+                        alunod.setCpf(cpfN);
+                                               
+                        a.atualizar(alunoA,alunod, 2);
                         
                     }                                       
                     break;
@@ -110,7 +118,9 @@ public class AlunoView {
                      Scanner leitura= new Scanner(System.in);
                      String nomeD = new String();                
                      nomeD = leitura.nextLine();
-                     a.deletar(nomeD);
+                     Aluno alunod = new Aluno();
+                     alunod.setNome(nomeD);
+                     a.deletar(alunod);
                      
                      
                     break;

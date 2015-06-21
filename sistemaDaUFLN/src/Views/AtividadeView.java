@@ -5,8 +5,6 @@ import DAOsImpl.AtividadeDaoImpl;
 import DAOs.AtividadeDao;
 import POJOs.Atividade;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 

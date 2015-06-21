@@ -47,7 +47,7 @@ public class TurmaDaoImpl implements TurmaDao{
                 AlunoDaoImpl a = new AlunoDaoImpl();
                 for(int j=0;j<a.alunosl.size();j++){
                     if(a.alunosl.get(j).getCpf().equals(cpf)){
-                        a.alunosl.get(j).codigoTurma.add(codigo);
+                      //  a.alunosl.get(j).codigoTurma.add(codigo);
                     }
                 }
             }

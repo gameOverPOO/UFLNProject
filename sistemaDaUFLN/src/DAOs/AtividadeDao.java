@@ -1,17 +1,17 @@
 
 package DAOs;
 
-import POJOs.Atividade;
+import POJOs.Aluno;
 import POJOs.Atividade;
 
 
 public interface AtividadeDao {
     
     public void salvar(Atividade atividade);
-    public void deletar(String nome);
-    public void cadastrarAluno(String cpf, String nomeA);
-    public void excluirAluno(String cpf, String nomeA);
-    public void imprimirAlunos(String nomeA);
+    public void deletar(Atividade atividade);
+    public void cadastrarAluno(Aluno aluno);
+    public void excluirAluno(Aluno aluno);
+    public void imprimirAlunos(Atividade atividade);
     
 }
 

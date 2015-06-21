@@ -6,6 +6,7 @@ import POJOs.Atividade;
 import DAOs.AtividadeDao;
 import POJOs.Atividade;
 import static DAOsImpl.AtividadeDaoImpl.atividadel;
+import POJOs.Aluno;
 
 import java.util.*;
 
@@ -34,8 +35,8 @@ public class AtividadeDaoImpl implements AtividadeDao{
    
     
     @Override
-    public void deletar(String nome){
-        
+    public void deletar(Atividade atividade){
+        String nome = atividade.getNome();
         for(int i=0;i<atividadel.size();i++){
             
             Atividade a = atividadel.get(i);
@@ -46,8 +47,9 @@ public class AtividadeDaoImpl implements AtividadeDao{
     }
     
     @Override
-    public void cadastrarAluno(String cpf, String nomeA){
-        
+    public void cadastrarAluno(Aluno alunob){
+        String cpf = alunob.getCpf();
+        String nomeA = alunob.getNome();
         for(int i=0;i<atividadel.size();i++){
                 Atividade a = atividadel.get(i);
                if(nomeA.equals(a.getNome())){
@@ -55,7 +57,7 @@ public class AtividadeDaoImpl implements AtividadeDao{
                     for(int j=0;j<aluno.alunosl.size() ;j++){
                         if(aluno.alunosl.get(j).getCpf().equals(cpf)){ 
                             a.alunos.add(cpf);
-                            aluno.alunosl.get(j).atividades.add(nomeA);
+                            aluno.alunosl.get(j).atividades.add(a);
                         }
                     }
                    return;
@@ -66,23 +68,23 @@ public class AtividadeDaoImpl implements AtividadeDao{
     }
     
     @Override
-    public void excluirAluno(String cpf, String nomeA){
-        
+    public void excluirAluno(Aluno alunod){
+       String cpf = alunod.getCpf();
        for(int i=0;i<atividadel.size();i++){
                 Atividade a = atividadel.get(i);
                 if(a.alunos.get(i).equals(cpf)){
                     a.alunos.remove(cpf);
                     AlunoDaoImpl aluno = new AlunoDaoImpl();
                     for(int j=0;j<aluno.alunosl.size();j++)
-                        aluno.alunosl.get(j).atividades.remove(nomeA);
+                        aluno.alunosl.get(j).atividades.remove(a);
                 }
                 
     }
     }
     
     @Override
-    public void imprimirAlunos(String nomeA){
-        
+    public void imprimirAlunos(Atividade atividade){
+        String nomeA = atividade.getNome();
         for(int i=0;i<atividadel.size();i++){ 
             Atividade a = atividadel.get(i);
             if(a.getNome().equals(nomeA)){

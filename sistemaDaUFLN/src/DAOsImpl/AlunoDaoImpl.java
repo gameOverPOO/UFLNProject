@@ -3,19 +3,14 @@ package DAOsImpl;
 
 import DAOs.AlunoDao;
 import POJOs.Aluno;
-import POJOs.Aluno;
-import java.io.IOException;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 
  
 public class AlunoDaoImpl implements AlunoDao{
    
     
     public static List<Aluno> alunosl = new ArrayList<Aluno>(); 
-    
+   
     @Override
     public void salvar(Aluno aluno) {
        
@@ -35,7 +30,9 @@ public class AlunoDaoImpl implements AlunoDao{
     }
 
     @Override
-    public void atualizar(String nomeA, String nomeN, int opcaoDeAtualizacao) {
+    public void atualizar(Aluno alunoA, Aluno alunoN, int opcaoDeAtualizacao) {
+     String nomeA=alunoA.getNome();
+     String nomeN=alunoN.getNome();
      
         if(opcaoDeAtualizacao==1){
             for (Iterator<Aluno> it = alunosl.iterator(); it.hasNext();) {
@@ -58,7 +55,8 @@ public class AlunoDaoImpl implements AlunoDao{
     }
 
     @Override
-    public void deletar(String nome) {
+    public void deletar(Aluno aluno) {
+        String nome=aluno.getNome();
         for(int i = 0; i < alunosl.size(); i++){
           Aluno p = alunosl.get(i);
           if(p.getNome().equals(nome)) alunosl.remove(p);

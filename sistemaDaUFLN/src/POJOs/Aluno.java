@@ -11,14 +11,14 @@ public class Aluno {
     private String nome;
     private String cpf;    
     private List<Atividade> atividades = new ArrayList<>();
-    private List<Turma> codigoTurma = new ArrayList<>();
+    private List<Turma> turmas = new ArrayList<>();
 
     public List<Atividade> getAtividades() {
         return atividades;
     }
 
-    public List<Turma> getCodigoTurma() {
-        return codigoTurma;
+    public List<Turma> getTurmas() {
+        return turmas;
     }
 
     

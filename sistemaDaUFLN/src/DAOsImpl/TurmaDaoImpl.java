@@ -3,8 +3,7 @@ package DAOsImpl;
 
 
 import DAOs.TurmaDao;
-import DAOsImpl.ProfessorDaoImpl;
-import DAOsImpl.AlunoDaoImpl;
+import POJOs.Aluno;
 import java.util.*;
 import POJOs.Turma;
 
@@ -56,13 +55,14 @@ public class TurmaDaoImpl implements TurmaDao{
     
     @Override
     public void imprimirAlunos(Integer codigo){
-        
+        Aluno aluno = new Aluno();
         for(int i=0;i<turmasl.size();i++){
                 if(turmasl.get(i).getCodigo().equals(codigo)){
                     AlunoDaoImpl a = new AlunoDaoImpl();
                     for(int j=0;j<a.alunosl.size();j++){
-                        for(int k=0;k<a.alunosl.get(j).codigoTurma.size();k++)
-                        if(a.alunosl.get(j).codigoTurma.get(k).equals(codigo)){
+                       
+                        for(int k=0;k<a.alunosl.get(j).getTurmas().size();k++)
+                        if(a.alunosl.get(j).getTurmas().get(k).equals(codigo)){
                             System.out.println("Aluno: " + a.alunosl.get(j).getNome());
                         }
                     }

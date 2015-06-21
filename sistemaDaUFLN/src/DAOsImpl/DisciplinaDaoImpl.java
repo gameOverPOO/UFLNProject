@@ -3,10 +3,10 @@ package DAOsImpl;
 
 import DAOs.DisciplinaDao;
 import POJOs.Disciplina;
-import POJOs.Disciplina;
+import POJOs.Professor;
+import POJOs.Turma;
 import java.util.*;
-import DAOsImpl.ProfessorDaoImpl;
-import DAOsImpl.TurmaDaoImpl;
+
 
 
 public class DisciplinaDaoImpl implements DisciplinaDao{
@@ -29,20 +29,23 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     }
 
     @Override
-    public void atualizar(String nomeA, String nomeB){
+    public void atualizar(Disciplina disciplinaA, Disciplina disciplinaN){
      
         for(int i=0;i<disciplinal.size();i++)
         {
             Disciplina d=disciplinal.get(i);
-            if(d.getNome().equals(nomeB));
+            if(d.getNome().equals(disciplinaA.getNome()))
+            {
+                d.setNome(disciplinaN.getNome());
+            }
         }
     }
     
     
     
     @Override 
-    public void deletar(String nome){
-        
+    public void deletar(Disciplina disciplina){
+        String nome = disciplina.getNome();
         for(int i=0;i<disciplinal.size();i++){
             
             Disciplina d = disciplinal.get(i);
@@ -52,8 +55,9 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     }
     
     @Override
-    public void cadastrarProfessor(String cpf, String nomeD){
-        
+    public void cadastrarProfessor(Professor professor){
+        String cpf = professor.getCpf();
+        String nomeD = professor.getNome();
         for(int i=0;i<disciplinal.size();i++){
                 Disciplina d = disciplinal.get(i);
                if(d.getNome().equals(nomeD)){
@@ -72,8 +76,9 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     }
     
     @Override
-    public void excluirProfessor(String cpf, String nomeD){
-        
+    public void excluirProfessor(Professor professor,Disciplina disciplina){
+        String cpf = professor.getCpf();
+        String nomeD = disciplina.getNome();
         for(int i=0;i<disciplinal.size();i++){
                 Disciplina d = disciplinal.get(i);
                if(d.getNome().equals(nomeD)){
@@ -85,8 +90,8 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     }
     
     @Override
-    public void imprimirListaProfessor(String nomeD){
-        
+    public void imprimirListaProfessor(Disciplina disciplina){
+        String nomeD = disciplina.getNome();
         for(int i=0;i<disciplinal.size();i++){ 
             Disciplina d = disciplinal.get(i);
             if(d.getNome().equals(nomeD)){
@@ -106,16 +111,18 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     }
     
         @Override
-    public void cadastrarTurma(Integer codigoT, String nomeD){
+    public void cadastrarTurma(Turma turma, Disciplina disciplina){
         
-        TurmaDaoImpl turma = new TurmaDaoImpl();
+        Integer codigoT = turma.getCodigo();
+        String nomeD = disciplina.getNome();
+        TurmaDaoImpl turmadao = new TurmaDaoImpl();
         for(int i=0;i<disciplinal.size();i++){
             Disciplina d = disciplinal.get(i);
             if(d.getNome().equals(nomeD)){
-                for(int j=0;j<turma.turmasl.size();j++){
-                    if(codigoT.equals(turma.turmasl.get(j).getCodigo())){
+                for(int j=0;j<turmadao.turmasl.size();j++){
+                    if(codigoT.equals(turmadao.turmasl.get(j).getCodigo())){
                         d.turmas.add(codigoT);
-                        turma.turmasl.get(j).setDisciplina(d);
+                        turmadao.turmasl.get(j).setDisciplina(d);
                         return;
                     }
                 }              
@@ -126,8 +133,8 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     }
     
    @Override
-    public void ImprimirTurmas(String nome){
-        
+    public void ImprimirTurmas(Disciplina disciplina){
+        String nome = disciplina.getNome();
         for(int i=0;i<disciplinal.size();i++){
             Disciplina d = disciplinal.get(i);
             if(d.getNome().equals(nome)){

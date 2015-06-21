@@ -3,7 +3,8 @@ package Views;
 import DAOsImpl.DisciplinaDaoImpl;
 import DAOs.DisciplinaDao;
 import POJOs.Disciplina;
-import POJOs.Disciplina;
+import POJOs.Professor;
+import POJOs.Turma;
 import java.io.IOException;
 import java.util.*;
 
@@ -88,7 +89,12 @@ public class DisciplinaView {
                  System.out.println("Digite o  Novo Nome da Disciplina: ");                 
                     String nomeN = new String();                
                     nomeN = leitura.nextLine();
-                   d.atualizar(nomeD,nomeN);
+                   Disciplina disciplinaD = new Disciplina();
+                   Disciplina disciplinaN = new Disciplina();
+                   disciplinaD.setNome(nomeD);
+                   disciplinaN.setNome(nomeN);
+                   
+                   d.atualizar(disciplinaD,disciplinaN);
                  
                  
                
@@ -100,7 +106,9 @@ public class DisciplinaView {
                      Scanner leitura= new Scanner(System.in);
                      String nomeD = new String();                
                      nomeD = leitura.nextLine();
-                     d.deletar(nomeD);
+                     Disciplina disciplinaD = new Disciplina();
+                     disciplinaD.setNome(nomeD);
+                     d.deletar(disciplinaD);
                
                 break;
             }
@@ -118,8 +126,10 @@ public class DisciplinaView {
                 System.out.println("Digite a disciplina: ");
                      String nome = new String();                
                      nome = leitura.nextLine();
-                
-                d.cadastrarProfessor(cpf, nome);
+                     Professor professord = new Professor();
+                     professord.setCpf(cpf);
+                     professord.setNome(nome);
+                d.cadastrarProfessor(professord);
                 break;
             }
             case 5:
@@ -131,13 +141,14 @@ public class DisciplinaView {
                      Scanner leitura= new Scanner(System.in); 
                      String cpf = new String();                
                      cpf = leitura.nextLine();
-                     
-                 
+                     Professor professorD = new Professor();
+                     professorD.setCpf(cpf);
                 System.out.println("Digite a disciplina: ");
                      String nome = new String();                
                      nome = leitura.nextLine();
-                
-                d.excluirProfessor(cpf, nome);
+                     Disciplina disciplinaD = new Disciplina();
+                     disciplinaD.setNome(nome);
+                d.excluirProfessor(professorD, disciplinaD);
                 break;
             }
             case 6:
@@ -149,8 +160,9 @@ public class DisciplinaView {
                 System.out.println("Digite a disciplina: ");
                      String nome = new String();                
                      nome = leitura.nextLine();
+                     Disciplina disciplina = new Disciplina();
                 
-                d.imprimirListaProfessor(nome);
+                d.imprimirListaProfessor(disciplina);
                 break;
             }
             case 7:{
@@ -163,12 +175,14 @@ public class DisciplinaView {
                 codigoTurma = leitura.nextLine();
                 
                 Integer codigo = Integer.valueOf(codigoTurma);
-                
+                Turma turma = new Turma();
+                turma.setCodigo(codigo);
                 System.out.println("Digite o nome da disciplina:");
                 String nomeDisciplina = new String();
                 nomeDisciplina = leitura.nextLine();
-                
-                d.cadastrarTurma(codigo, nomeDisciplina);
+                Disciplina disciplina = new Disciplina();
+                disciplina.setNome(nomeDisciplina);
+                d.cadastrarTurma(turma, disciplina);
                 break;
             }
             case 8:{
@@ -180,7 +194,8 @@ public class DisciplinaView {
                 String nomeDisciplina = new String();
                 nomeDisciplina = leitura.nextLine();
                 
-                d.ImprimirTurmas(nomeDisciplina);
+                Disciplina disciplina = new Disciplina();
+                d.ImprimirTurmas(disciplina);
                 break;
                 
             }

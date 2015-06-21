@@ -10,8 +10,16 @@ public class Aluno {
     //Atributos
     private String nome;
     private String cpf;    
-    public List<Atividade> atividades = new ArrayList<>();
-    public List<Turma> codigoTurma = new ArrayList<>();
+    private List<Atividade> atividades = new ArrayList<>();
+    private List<Turma> codigoTurma = new ArrayList<>();
+
+    public List<Atividade> getAtividades() {
+        return atividades;
+    }
+
+    public List<Turma> getCodigoTurma() {
+        return codigoTurma;
+    }
 
     
 

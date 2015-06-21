@@ -53,8 +53,10 @@ public class AtividadeDaoImpl implements AtividadeDao{
                     AlunoDaoImpl aluno = new AlunoDaoImpl();
                     for(int j=0;j<aluno.alunosl.size() ;j++){
                         if(aluno.alunosl.get(j).getCpf().equals(cpf)){ 
-                            a.alunos.add(cpf);
-                            aluno.alunosl.get(j).atividades.add(a);
+                            Aluno aluno2 = new Aluno();
+                            aluno2.setCpf(cpf);
+                            a.getAlunos().add(aluno2);
+                            aluno.alunosl.get(j).getAtividades().add(a);
                         }
                     }
                    return;
@@ -69,11 +71,11 @@ public class AtividadeDaoImpl implements AtividadeDao{
        String cpf = alunod.getCpf();
        for(int i=0;i<atividadel.size();i++){
                 Atividade a = atividadel.get(i);
-                if(a.alunos.get(i).equals(cpf)){
-                    a.alunos.remove(cpf);
+                if(a.getAlunos().get(i).equals(cpf)){
+                    a.getAlunos().remove(cpf);
                     AlunoDaoImpl aluno = new AlunoDaoImpl();
                     for(int j=0;j<aluno.alunosl.size();j++)
-                        aluno.alunosl.get(j).atividades.remove(a);
+                        aluno.alunosl.get(j).getAtividades().remove(a);
                 }
                 
     }
@@ -85,11 +87,11 @@ public class AtividadeDaoImpl implements AtividadeDao{
         for(int i=0;i<atividadel.size();i++){ 
             Atividade a = atividadel.get(i);
             if(a.getNome().equals(nomeA)){
-                for(int k=0;k<a.alunos.size();k++)
+                for(int k=0;k< a.getAlunos().size();k++)
                 {
                     AlunoDaoImpl aluno = new AlunoDaoImpl();                
                     for(int j=0;j<aluno.alunosl.size();j++){
-                        if(aluno.alunosl.get(j).getCpf().equals(a.alunos.get(i))){ 
+                        if(aluno.alunosl.get(j).getCpf().equals(a.getAlunos().get(i))){ 
                             System.out.println("Alunos:\nNome: " + aluno.alunosl.get(j).getNome()); 
                         }                        
                     }

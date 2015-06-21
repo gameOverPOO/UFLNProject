@@ -13,7 +13,15 @@ public class Atividade {
     private String tipo;
     private String data;
     private Double valor;   
-    public List<String> alunos = new ArrayList<>(); //Relacionamento
+    private List<Aluno> alunos = new ArrayList<>(); //Relacionamento
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
     
    
     //Métodos
@@ -59,11 +67,6 @@ public class Atividade {
     }
 
     
-    public double getValor() {
-        return valor;
-    }
-
-   
     public void setValorAtividade(double valor) {
         this.valor = valor;
     }

@@ -10,11 +10,23 @@ public class Disciplina {
    private String nome;
    private String ementa;
    private int cargaHoraria;
-   public static List<Integer> turmas = new ArrayList<>();
-   public static List<String> professoresCpf = new ArrayList<>();
+   public List<Turma> turmas = new ArrayList<>();
+   public List<Professor> professores = new ArrayList<>();
 
     public Disciplina() {
         
+    }
+
+    public int getCargaHoraria() {
+        return cargaHoraria;
+    }
+
+    public List<Turma> getTurmas() {
+        return turmas;
+    }
+
+    public List<Professor> getProfessores() {
+        return professores;
     }
   
      

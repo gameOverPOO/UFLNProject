@@ -26,7 +26,7 @@ public class MenuPrincipal {
    
     public static void main(String[] args) throws IOException {
      
-        CarregaDados begin = new CarregaDados();
+        /*CarregaDados begin = new CarregaDados();
         
          boolean a = begin.carregarAlunos();   
          if (a) System.err.println("Erro! ");
@@ -39,7 +39,7 @@ public class MenuPrincipal {
        
          boolean d = begin.carregarTurmas();
          if (d) System.err.println("Erro! ");
-         
+         */
        int sair=0;     
         
         while(sair==0){
@@ -97,7 +97,7 @@ public class MenuPrincipal {
                     }
                     case 8:{
                         System.out.println("Saindo...");
-                         SalvaDados arquivo = new SalvaDados();
+                        /* SalvaDados arquivo = new SalvaDados();
                         try {
                                arquivo.salvarAluno(AlunoDaoImpl.alunosl);
                          } catch (IOException ex) {
@@ -125,7 +125,7 @@ public class MenuPrincipal {
                          } catch (IOException ex) {
                              System.err.println("Erro:" + ex);
                              Logger.getLogger(TurmaDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
-                        }
+                        }*/
                         
 
                         

@@ -64,7 +64,9 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                     ProfessorDaoImpl p = new ProfessorDaoImpl();
                     for(int j=0;j<p.professorl.size();j++){
                         if(p.professorl.get(j).getCpf().equals(cpf)){ 
-                            d.professoresCpf.add(cpf);
+                            Professor professor2 = new Professor();
+                            professor2.setCpf(cpf);
+                            d.getProfessores().add(professor2);
                             p.professorl.get(j).disciplinas.add(d);
                             
                         }
@@ -82,7 +84,8 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         for(int i=0;i<disciplinal.size();i++){
                 Disciplina d = disciplinal.get(i);
                if(d.getNome().equals(nomeD)){
-                   d.professoresCpf.remove(i);
+                   
+                   d.getProfessores().remove(i);
                    return;
                }                 
         }
@@ -95,11 +98,11 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         for(int i=0;i<disciplinal.size();i++){ 
             Disciplina d = disciplinal.get(i);
             if(d.getNome().equals(nomeD)){
-                for(int k=0;k<d.professoresCpf.size();k++)
+                for(int k=0;k<d.getProfessores().size();k++)
                 {
                     ProfessorDaoImpl professores = new ProfessorDaoImpl();                
                     for(int j=0;j<professores.professorl.size();j++){
-                        if(professores.professorl.get(j).getCpf().equals(d.professoresCpf.get(i))){ 
+                        if(professores.professorl.get(j).getCpf().equals(d.getProfessores().get(i))){ 
                             System.out.println("Profesores:\nNome: " + professores.professorl.get(j).getNome()); 
                         }                        
                     }
@@ -121,7 +124,10 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
             if(d.getNome().equals(nomeD)){
                 for(int j=0;j<turmadao.turmasl.size();j++){
                     if(codigoT.equals(turmadao.turmasl.get(j).getCodigo())){
-                        d.turmas.add(codigoT);
+                        Turma turma2 = new Turma();
+                        turma2.setCodigo(codigoT);
+                        
+                        d.getTurmas().add(turma2);
                         turmadao.turmasl.get(j).setDisciplina(d);
                         return;
                     }

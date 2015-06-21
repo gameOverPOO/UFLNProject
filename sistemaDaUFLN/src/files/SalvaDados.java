@@ -18,7 +18,7 @@ import POJOs.Turma;
 
 
 public class SalvaDados {
-    boolean file = new File("Arquivos").mkdir();
+    /*boolean file = new File("Arquivos").mkdir();
    
     
     
@@ -147,7 +147,7 @@ public void salvarTurma(List<Turma> listaTurmas) throws IOException {
             System.out.println("Salvo No Arquivo! Turma");    
         }
     }
-
+*/
         
 
 }

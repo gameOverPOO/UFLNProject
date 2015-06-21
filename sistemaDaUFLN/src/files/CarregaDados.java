@@ -11,13 +11,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
-import sistemadaufln.*;
+
 import POJOs.Turma;
 import DAOsImpl.TurmaDaoImpl;
 
 
 public class CarregaDados {
-    static
+    /*static
     {
          System.out.println("Carregado do arquivo!");
     }
@@ -55,7 +55,7 @@ public class CarregaDados {
                                  aluno.getCpf());*/
                         
                         
-                        AlunoDaoImpl a = new AlunoDaoImpl();
+        /*                AlunoDaoImpl a = new AlunoDaoImpl();
                         a.salvar(aluno);
                
                  
@@ -111,7 +111,7 @@ public class CarregaDados {
                                  professor.getCpf());*/
                         
                         
-                        ProfessorDaoImpl p = new ProfessorDaoImpl();
+          /*              ProfessorDaoImpl p = new ProfessorDaoImpl();
                         p.salvar(professor);
                
                  
@@ -191,7 +191,7 @@ public class CarregaDados {
                         
                         
                         
-                        DisciplinaDaoImpl p = new DisciplinaDaoImpl();
+         /*               DisciplinaDaoImpl p = new DisciplinaDaoImpl();
                         p.salvar(disciplina);
                
                  
@@ -278,7 +278,7 @@ public boolean carregarTurmas(){
                         
                         
                         
-                        TurmaDaoImpl p = new TurmaDaoImpl();
+             /*           TurmaDaoImpl p = new TurmaDaoImpl();
                         p.salvar(turma);
                
                  
@@ -301,9 +301,9 @@ public boolean carregarTurmas(){
            
         
         return false;
-        
+        */
     
-    }
+    
 
       
     

@@ -52,7 +52,7 @@ public class MenuPrincipal {
             System.out.println("5. Atividade");
             System.out.println("6. Nota");
             System.out.println("7. Lançar faltas");
-            System.out.println("8. Sair");
+            System.out.println("0. Sair");
 
             Scanner leituraMenu = new Scanner(System.in);
             int escolha;
@@ -95,7 +95,7 @@ public class MenuPrincipal {
                         System.out.println("entrar em FaltaView");
                         break;
                     }
-                    case 8:{
+                    case 0:{
                         System.out.println("Saindo...");
                         /* SalvaDados arquivo = new SalvaDados();
                         try {

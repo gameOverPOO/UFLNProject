@@ -30,7 +30,7 @@ public class Turma {
     private int vagas;
     private Professor professor;
     private Disciplina disciplina;
-    private List<String> atividades = new ArrayList<>();
+    public List<String> atividades = new ArrayList<>();
 
     
     //Métodos

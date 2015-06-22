@@ -7,10 +7,10 @@ import POJOs.Atividade;
 
 public interface AtividadeDao {
     
-    public void salvar(Atividade atividade);
-    public void deletar(Atividade atividade);
-    public void cadastrarAluno(Aluno aluno,Atividade atividade);
-    public void excluirAluno(Aluno aluno, Atividade atividade);
+    public boolean salvar(Atividade atividade);
+    public boolean deletar(Atividade atividade);
+    public boolean cadastrarAluno(Aluno aluno,Atividade atividade);
+    public boolean excluirAluno(Aluno aluno, Atividade atividade);
     public void imprimirAlunos(Atividade atividade);
     
 }

@@ -12,25 +12,25 @@ public class AlunoDaoImpl implements AlunoDao{
     public static List<Aluno> alunosl = new ArrayList<Aluno>(); 
    
     @Override
-    public void salvar(Aluno aluno) {
+    public boolean salvar(Aluno aluno) {
        
         for(int i=0;i<alunosl.size();i++){
             Aluno a = alunosl.get(i);
             if(a.getCpf().equals(aluno.getCpf())){
                 System.out.println("Aluno ja existente:");
-                return ;
+                return false;
             }
             
         }
         
         alunosl.add(aluno);
         
-        
+       return true; 
         
     }
 
     @Override
-    public void atualizar(Aluno alunoA, Aluno alunoN, int opcaoDeAtualizacao) {
+    public boolean atualizar(Aluno alunoA, Aluno alunoN, int opcaoDeAtualizacao) {
      String nomeA=alunoA.getNome();
      String nomeN=alunoN.getNome();
      
@@ -38,6 +38,7 @@ public class AlunoDaoImpl implements AlunoDao{
             for (Iterator<Aluno> it = alunosl.iterator(); it.hasNext();) {
                 Aluno p = it.next();
                 if(p.getNome().equals(nomeA)) p.setNome(nomeN);
+                return true;
             }
         }
         else{
@@ -46,23 +47,30 @@ public class AlunoDaoImpl implements AlunoDao{
                 
                 if(p.getCpf().equals(nomeA)){                    
                     p.setCpf(nomeN);
+                    return true;
                 }
             }
         }
-        
-       this.imprimirLista();         
+       
+       this.imprimirLista();  
+       return false; 
                 
     }
 
     @Override
-    public void deletar(Aluno aluno) {
+    public boolean deletar(Aluno aluno) {
         String nome=aluno.getNome();
         for(int i = 0; i < alunosl.size(); i++){
           Aluno p = alunosl.get(i);
-          if(p.getNome().equals(nome)) alunosl.remove(p);
-        }
-         this.imprimirLista();  
+          if(p.getNome().equals(nome)){
+              alunosl.remove(p);
+              this.imprimirLista(); 
+          }     return true;
           
+          
+        }
+          
+         return false;   
     }
     
     @Override
@@ -71,7 +79,7 @@ public class AlunoDaoImpl implements AlunoDao{
     
     }
 
-    @Override
+    @Override //Prints na daoimpl? deixar?
     public void imprimirLista() {
         for (Aluno s:alunosl)
                         System.out.println("Aluno: " + s.getNome() + " CPF: " + s. getCpf());  

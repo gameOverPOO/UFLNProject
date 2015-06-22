@@ -9,9 +9,9 @@ import POJOs.Professor;
 public interface ProfessorDao {
     
     
-    public void salvar(Professor professor);
-    public void atualizar(String nomeA, String nomeN);
-    public void deletar(String nome);
+    public boolean salvar(Professor professor);
+    public boolean atualizar(String nomeA, String nomeN);
+    public boolean deletar(String nome);
     public void imprimirLista();
         
         

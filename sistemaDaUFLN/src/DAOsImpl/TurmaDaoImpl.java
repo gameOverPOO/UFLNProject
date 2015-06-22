@@ -13,22 +13,25 @@ public class TurmaDaoImpl implements TurmaDao{
      public static List<Turma> turmasl = new ArrayList<Turma>();
      
     @Override
-    public void salvar(Turma turma){
+    public boolean salvar(Turma turma){
         
       
-        turmasl.add(turma);
+        turmasl.add(turma); //Q é isso? 
+        return true;
         
         
     }
         
     @Override
-    public void deletar(Integer codigo){
+    public boolean deletar(Integer codigo){
         
         for(int i=0;i<turmasl.size();i++){
             if(turmasl.get(i).getCodigo().equals(codigo)){
                 turmasl.remove(i);
+                return true;
             }
         }
+        return false;
     }
    
     @Override
@@ -39,7 +42,7 @@ public class TurmaDaoImpl implements TurmaDao{
     }
     
     @Override
-    public void cadastrarAluno(String cpf, Integer codigo){
+    public boolean cadastrarAluno(String cpf, Integer codigo){
         
         for(int i=0;i<turmasl.size();i++){
             if(turmasl.get(i).getCodigo().equals(codigo)){
@@ -47,16 +50,19 @@ public class TurmaDaoImpl implements TurmaDao{
                 for(int j=0;j<a.alunosl.size();j++){
                     if(a.alunosl.get(j).getCpf().equals(cpf)){
                       //  a.alunosl.get(j).codigoTurma.add(codigo);
+                        return true;
                     }
                 }
             }
+     
         }
+        return false;
     }
     
     @Override
     public void imprimirAlunos(Integer codigo){ //Nao tá imprimindo
         Aluno aluno = new Aluno();
-        System.out.println("camoosao");
+        
         for(int i=0;i<turmasl.size();i++){
                 if(turmasl.get(i).getCodigo().equals(codigo)){
                     AlunoDaoImpl a = new AlunoDaoImpl();
@@ -72,7 +78,7 @@ public class TurmaDaoImpl implements TurmaDao{
     }
     
     @Override
-    public void cadastrarProfessor(String cpf, Integer codigo){
+    public boolean cadastrarProfessor(String cpf, Integer codigo){
         
         for(int i=0;i<turmasl.size();i++){
             if(turmasl.get(i).getCodigo().equals(codigo)){
@@ -82,10 +88,10 @@ public class TurmaDaoImpl implements TurmaDao{
                         p.professorl.get(j).codigoTurma.add(codigo);
                     }
                 }
-                return;
+                return true;
             }
         }
-        System.out.println("Turma nao encontrado");
+        return false;
         
     }
     
@@ -107,13 +113,15 @@ public class TurmaDaoImpl implements TurmaDao{
     
  /*PRA QUE ISSO SERVE????????*/
      @Override
-    public void atividade(String nome, Integer codigo){
+    public boolean atividade(String nome, Integer codigo){
         
         for(int i=0;i<turmasl.size();i++){
             if(turmasl.get(i).getCodigo().equals(codigo)){
                 turmasl.get(i).atividades.add(nome);
+                return true;
             }
         }
+        return false;
     }
     
 }

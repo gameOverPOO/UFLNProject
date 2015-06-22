@@ -10,13 +10,13 @@ import POJOs.Turma;
 public interface DisciplinaDao {
     
         //metodos CRUD
-    public void salvar(Disciplina disciplina);
-    public void atualizar(Disciplina disciplinaA, Disciplina disciplinaN);
-    public void deletar(Disciplina disciplina);
-    public void cadastrarProfessor(Professor professor);
-    public void excluirProfessor(Professor professor, Disciplina disciplina);
+    public boolean salvar(Disciplina disciplina);
+    public boolean atualizar(Disciplina disciplinaA, Disciplina disciplinaN);
+    public boolean deletar(Disciplina disciplina);
+    public boolean cadastrarProfessor(Professor professor);
+    public boolean excluirProfessor(Professor professor, Disciplina disciplina);
     public void imprimirListaProfessor(Disciplina disciplina);
-    public void cadastrarTurma(Turma turma, Disciplina disciplina);
+    public boolean cadastrarTurma(Turma turma, Disciplina disciplina);
     public void ImprimirTurmas(Disciplina disciplina);
     
 }

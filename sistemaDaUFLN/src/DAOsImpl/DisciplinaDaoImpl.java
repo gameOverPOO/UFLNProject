@@ -15,21 +15,21 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
    
     
     @Override
-    public void salvar(Disciplina disciplina){
+    public boolean salvar(Disciplina disciplina){
         
         for(int i=0;i<disciplinal.size();i++){             
             Disciplina d = disciplinal.get(i);
             if(d.getNome().equals(disciplina.getNome())){
-                System.out.println("Essa disciplina ja existe:");
-                return;
+                
+                return false;
             }    
         }
         disciplinal.add(disciplina);
-        
+        return true;
     }
 
     @Override
-    public void atualizar(Disciplina disciplinaA, Disciplina disciplinaN){
+    public boolean atualizar(Disciplina disciplinaA, Disciplina disciplinaN){
      
         for(int i=0;i<disciplinal.size();i++)
         {
@@ -37,25 +37,31 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
             if(d.getNome().equals(disciplinaA.getNome()))
             {
                 d.setNome(disciplinaN.getNome());
+                return true;
             }
         }
+        return false;
     }
     
     
     
     @Override 
-    public void deletar(Disciplina disciplina){
+    public boolean deletar(Disciplina disciplina){
         String nome = disciplina.getNome();
         for(int i=0;i<disciplinal.size();i++){
             
             Disciplina d = disciplinal.get(i);
             if(d.getNome().equals(nome))
+            {
                 disciplinal.remove(d);
+                return true;
+            }
         }
+        return false;
     }
     
     @Override
-    public void cadastrarProfessor(Professor professor){
+    public boolean cadastrarProfessor(Professor professor){
         String cpf = professor.getCpf();
         String nomeD = professor.getNome();
         for(int i=0;i<disciplinal.size();i++){
@@ -71,14 +77,14 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                             
                         }
                     }
-                   return;
+                   return true;
                }
         }
-        System.out.println("Erro ao adicionar Professor!");
+        return false;
     }
     
     @Override
-    public void excluirProfessor(Professor professor,Disciplina disciplina){
+    public boolean excluirProfessor(Professor professor,Disciplina disciplina){
         String cpf = professor.getCpf();
         String nomeD = disciplina.getNome();
         for(int i=0;i<disciplinal.size();i++){
@@ -86,10 +92,10 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                if(d.getNome().equals(nomeD)){
                    
                    d.getProfessores().remove(i);
-                   return;
+                   return true;
                }                 
         }
-        System.out.println("Disciplina não encontrada!");
+        return false;
     }
     
     @Override
@@ -110,11 +116,11 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                 return;
             }
         }
-        System.out.println("Disciplina não encontrada!");
+        
     }
     
         @Override
-    public void cadastrarTurma(Turma turma, Disciplina disciplina){
+    public boolean cadastrarTurma(Turma turma, Disciplina disciplina){
         
         Integer codigoT = turma.getCodigo();
         String nomeD = disciplina.getNome();
@@ -129,13 +135,13 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                         
                         d.getTurmas().add(turma2);
                         turmadao.turmasl.get(j).setDisciplina(d);
-                        return;
+                        return true;
                     }
                 }              
                 
             }
         }
-        System.out.println("Erro disciplina não encontrada!");
+        return false;
     }
     
    @Override

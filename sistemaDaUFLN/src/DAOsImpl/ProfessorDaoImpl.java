@@ -15,40 +15,46 @@ public class ProfessorDaoImpl implements ProfessorDao{
     
     //CRUD
     @Override
-    public void salvar(Professor professor){
+    public boolean salvar(Professor professor){
         
         for(int i=0;i<professorl.size();i++){
             Professor p = professorl.get(i);
             if(p.getCpf().equals(professor.getCpf())){
-                System.out.println("Professor ja existente:");
-                return ;
+                
+                return false;
             }
         }
         
         professorl.add(professor);
-        
+        return true;
         
     }
     
     
     @Override
-    public void atualizar(String nomeA, String nomeN){
+    public boolean atualizar(String nomeA, String nomeN){
         
         for (Iterator<Professor> it = professorl.iterator(); it.hasNext();) {
             Professor p = it.next();
-            if(p.getNome().equals(nomeA)) p.setNome(nomeN);
-        }       
+            if(p.getNome().equals(nomeA)){
+             p.setNome(nomeN);
+            return true;
+            }
+        } 
+        return false;
     }
    
     
     @Override
-    public void deletar(String nome){
+    public boolean deletar(String nome){
         
         for(int i = 0; i < professorl.size(); i++){
           Professor p = professorl.get(i);
           if(p.getNome().equals(nome)) 
               professorl.remove(p);
+          return true;
         }
+        return false;
         
     }
     

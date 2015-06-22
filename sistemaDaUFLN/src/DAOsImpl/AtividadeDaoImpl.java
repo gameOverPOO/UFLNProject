@@ -15,22 +15,22 @@ public class AtividadeDaoImpl implements AtividadeDao{
     private Object atividade;
     
     @Override
-    public void salvar(Atividade atividade){
+    public boolean salvar(Atividade atividade){
         
         for(int i=0;i<atividadel.size();i++){              
             Atividade a = atividadel.get(i);
-            if(a.getNome().equals(atividade.getNome())){
-                System.out.println("Essa atividade ja existe!");
-                return;
+            if(a.getNome().equals(atividade.getNome())){                
+                return false;
             }    
         }
         atividadel.add(atividade);
+        return true;
        
     }
 
     
     @Override
-    public void deletar(Atividade atividade){
+    public boolean deletar(Atividade atividade){
         String nome = atividade.getNome();
         
         
@@ -39,12 +39,13 @@ public class AtividadeDaoImpl implements AtividadeDao{
             Atividade a = atividadel.get(i);
             if(a.getNome().equals(nome))
                 atividadel.remove(a);
+                return true;
         }
-        
+        return false;
     }
     
     @Override
-    public void cadastrarAluno(Aluno alunob,Atividade atividade){
+    public boolean cadastrarAluno(Aluno alunob,Atividade atividade){
         String cpf = alunob.getCpf();
         String nomeA = atividade.getNome();
         for(int i=0;i<atividadel.size();i++){
@@ -59,15 +60,16 @@ public class AtividadeDaoImpl implements AtividadeDao{
                             aluno.alunosl.get(j).getAtividades().add(a);
                         }
                     }
-                   return;
+                   return true;
                }
         }
-        System.out.println("Erro ao adicionar Aluno!");
+        return false;
+        
         
     }
     
     @Override //VERIFICAR
-    public void excluirAluno(Aluno alunod,Atividade atividaded){
+    public boolean excluirAluno(Aluno alunod,Atividade atividaded){
        String cpf = alunod.getCpf();
        for(int i=0;i<atividadel.size();i++){
                 Atividade a = atividadel.get(i);
@@ -76,9 +78,11 @@ public class AtividadeDaoImpl implements AtividadeDao{
                     AlunoDaoImpl aluno = new AlunoDaoImpl();
                     for(int j=0;j<aluno.alunosl.size();j++)
                         aluno.alunosl.get(j).getAtividades().remove(a);
+                    return true;
                 }
                 
     }
+      return false; 
     }
     
     @Override
@@ -99,7 +103,7 @@ public class AtividadeDaoImpl implements AtividadeDao{
                 
             }
         }
-        System.out.println("Atividade não encontrada!");
+        
     }
         
     }

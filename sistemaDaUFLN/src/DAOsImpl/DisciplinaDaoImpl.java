@@ -144,8 +144,8 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
         for(int i=0;i<disciplinal.size();i++){
             Disciplina d = disciplinal.get(i);
             if(d.getNome().equals(nome)){
-                for(int j=0;j<d.turmas.size();j++){
-                    System.out.println("Turmas: " + d.turmas.get(j));
+                for(int j=0;j<d.getTurmas().size();j++){
+                    System.out.println("Turmas: " + d.getTurmas().get(j));
                 }
             }
         

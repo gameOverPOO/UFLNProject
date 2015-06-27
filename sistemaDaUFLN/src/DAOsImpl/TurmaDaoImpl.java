@@ -80,17 +80,7 @@ public class TurmaDaoImpl implements TurmaDao{
     @Override
     public boolean cadastrarProfessor(String cpf, Integer codigo){
         
-        for(int i=0;i<turmasl.size();i++){
-            if(turmasl.get(i).getCodigo().equals(codigo)){
-                ProfessorDaoImpl p = new ProfessorDaoImpl();
-                for(int j=0;j<p.professorl.size();j++){
-                    if(p.professorl.get(j).getCpf().equals(cpf)){
-                        p.professorl.get(j).codigoTurma.add(codigo);
-                    }
-                }
-                return true;
-            }
-        }
+          
         return false;
         
     }
@@ -98,29 +88,15 @@ public class TurmaDaoImpl implements TurmaDao{
     @Override
     public void imprimirProfessores(Integer codigo){
         
-        for(int i=0;i<turmasl.size();i++){
-                if(turmasl.get(i).getCodigo().equals(codigo)){
-                    ProfessorDaoImpl p = new ProfessorDaoImpl();
-                    for(int j=0;j<p.professorl.size();j++){
-                        for(int k=0;k<p.professorl.get(j).codigoTurma.size();k++)
-                        if(p.professorl.get(j).codigoTurma.get(k).equals(codigo)){
-                            System.out.println("Professor: " + p.professorl.get(j).getNome());
-                        }
-                    }
-                }
-            }
+        
+            
     }
     
  /*PRA QUE ISSO SERVE????????*/
      @Override
     public boolean atividade(String nome, Integer codigo){
         
-        for(int i=0;i<turmasl.size();i++){
-            if(turmasl.get(i).getCodigo().equals(codigo)){
-                turmasl.get(i).atividades.add(nome);
-                return true;
-            }
-        }
+        
         return false;
     }
     

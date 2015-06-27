@@ -3,6 +3,8 @@ package POJOs;
 import java.util.*;
 import javax.persistence.Id;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 //simport org.hibernate.annotations.Entity;
 
 
@@ -14,8 +16,10 @@ public class Aluno {
     private int id;
     
     private String nome;
-    private String cpf;    
+    private String cpf;
+    @OneToMany
     private List<Atividade> atividades = new ArrayList<>();
+    @OneToMany
     private List<Turma> turmas = new ArrayList<>();
 
     public List<Atividade> getAtividades() {

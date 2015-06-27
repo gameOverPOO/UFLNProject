@@ -107,7 +107,7 @@ public class ProfessorView {
         System.out.println("Digite o  novo Nome do Professor: ");                 
         String nomeN = new String();                
         nomeN = leitura.nextLine();
-        p.atualizar(nomeA, nomeN);
+       // p.atualizar(nomeA, nomeN);
     }
     public void removerProfessor(){
         
@@ -116,6 +116,6 @@ public class ProfessorView {
         Scanner leitura= new Scanner(System.in);
         String nomeD = new String();                
         nomeD = leitura.nextLine();
-        p.deletar(nomeD);
+        //p.deletar(nomeD);
     }
 }

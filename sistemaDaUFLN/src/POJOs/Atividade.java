@@ -4,6 +4,8 @@ import java.util.*;
 import POJOs.Turma;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
  
 @Entity
@@ -16,7 +18,8 @@ public class Atividade {
     private String nome;
     private String tipo;
     private String data;
-    private Double valor;   
+    private Double valor;  
+    @OneToMany
     private List<Aluno> alunos = new ArrayList<>(); //Relacionamento
 
     public Double getValor() {

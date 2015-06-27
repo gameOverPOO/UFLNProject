@@ -10,8 +10,8 @@ public interface ProfessorDao {
     
     
     public boolean salvar(Professor professor);
-    public boolean atualizar(String nomeA, String nomeN);
-    public boolean deletar(String nome);
+    public boolean atualizar(Professor professorA,Professor professorN);
+    public boolean deletar(Professor professor);
     public void imprimirLista();
         
         

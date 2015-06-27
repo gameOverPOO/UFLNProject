@@ -1,9 +1,14 @@
 
 package POJOs;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Nota {
     //Atributos
+    @Id
+    private int id;
     private double nota;
     private Aluno aluno;
     private Atividade atividade;

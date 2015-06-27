@@ -19,12 +19,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import DAOsImpl.TurmaDaoImpl;
+import POJOs.Aluno;
 
 public class MenuPrincipal {
-
+    
    
     public static void main(String[] args) throws IOException {
      
+        Aluno alun = new Aluno();
+        AlunoDaoImpl ad = new AlunoDaoImpl();
+        alun.setCpf("14638431780");
+        alun.setNome("Leandro");
+        ad.insere(alun);
        int sair=0;     
         
         while(sair==0){

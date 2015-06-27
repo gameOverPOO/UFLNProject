@@ -2,7 +2,10 @@
 package POJOs;
 
 import java.util.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Turma {
 
     public Turma() {
@@ -22,6 +25,7 @@ public class Turma {
     
     
     //Atributos
+    @Id
     private int codigo;
     private int ano;
     private int periodo;

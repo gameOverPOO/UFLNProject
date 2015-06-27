@@ -1,10 +1,15 @@
 package POJOs;
 
 import POJOs.Turma;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Falta {
     
     //Atributos
+    @Id
+    private int id;
     private int falta;
     private Turma turma;
     private Aluno aluno;

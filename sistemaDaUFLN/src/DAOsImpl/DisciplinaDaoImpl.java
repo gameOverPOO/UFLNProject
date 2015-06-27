@@ -73,7 +73,7 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
                             Professor professor2 = new Professor();
                             professor2.setCpf(cpf);
                             d.getProfessores().add(professor2);
-                            p.professorl.get(j).disciplinas.add(d);
+                            p.professorl.get(j).getDisciplinas().add(d);
                             
                         }
                     }

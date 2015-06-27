@@ -4,10 +4,32 @@ package DAOsImpl;
 import DAOs.AlunoDao;
 import POJOs.Aluno;
 import java.util.*;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
  
 public class AlunoDaoImpl implements AlunoDao{
+    private SessionFactory conexao; 
+    
+    public AlunoDaoImpl(){
+        conexao = new Configuration().configure().buildSessionFactory();
+    }
    
+    
+    public void insere(Aluno aluno){
+        Session session;
+        session = conexao.openSession();
+        Transaction tx = session.beginTransaction();
+        session.save(aluno);
+        tx.commit();
+        session.close();
+    }
+    
+    
+    
+    
     
     public static List<Aluno> alunosl = new ArrayList<Aluno>(); 
    

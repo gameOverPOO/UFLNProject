@@ -1,13 +1,18 @@
 package POJOs;
 
 import java.util.*;
+import javax.persistence.Id;
+import javax.persistence.Entity;
+//simport org.hibernate.annotations.Entity;
 
 
 
+@Entity
 public class Aluno {
     
-    //TIRAR LISTAS PUBLICAS, fazer get lista
-    //Atributos
+    @Id
+    private int id;
+    
     private String nome;
     private String cpf;    
     private List<Atividade> atividades = new ArrayList<>();
@@ -19,6 +24,14 @@ public class Aluno {
 
     public List<Turma> getTurmas() {
         return turmas;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     

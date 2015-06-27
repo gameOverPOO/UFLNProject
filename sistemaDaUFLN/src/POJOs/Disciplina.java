@@ -2,11 +2,15 @@ package POJOs;
 
 
 import java.util.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 
-
+@Entity
 public class Disciplina {
    //Atributos
+   @Id
+   private int id;
    private String nome;
    private String ementa;
    private int cargaHoraria;

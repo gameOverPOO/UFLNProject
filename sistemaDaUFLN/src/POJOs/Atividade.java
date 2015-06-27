@@ -2,13 +2,17 @@ package POJOs;
 
 import java.util.*;
 import POJOs.Turma;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
  
-
+@Entity
 public class Atividade {
 
       
     //Atributos
+    @Id
+    private int id;
     private String nome;
     private String tipo;
     private String data;

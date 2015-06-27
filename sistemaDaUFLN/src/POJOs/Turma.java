@@ -97,6 +97,18 @@ public class Turma {
     public void setProfessor(Professor professor) {
         this.professor = professor;
     }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public List<Atividade> getAtividades() {
+        return atividades;
+    }
+
+    public void setAtividades(List<Atividade> atividades) {
+        this.atividades = atividades;
+    }
     
     
 }

@@ -13,8 +13,7 @@ import javax.persistence.OneToMany;
 public class Aluno {
     
     @Id
-    private int id;
-    
+    private int id;    
     private String nome;
     private String cpf;
     @OneToMany

@@ -48,5 +48,13 @@ public class Nota {
     public void setAtividade(Atividade atividade) {
         this.atividade = atividade;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     
 }

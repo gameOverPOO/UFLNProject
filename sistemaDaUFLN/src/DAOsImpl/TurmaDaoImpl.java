@@ -6,17 +6,21 @@ import DAOs.TurmaDao;
 import POJOs.Aluno;
 import java.util.*;
 import POJOs.Turma;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
 
 public class TurmaDaoImpl implements TurmaDao{
-    
-     public static List<Turma> turmasl = new ArrayList<Turma>();
-     
+    private SessionFactory conexao; 
+    public static Turma turmasl;
+    public TurmaDaoImpl(){
+        conexao = new Configuration().configure().buildSessionFactory();
+    }
     @Override
     public boolean salvar(Turma turma){
         
       
-        turmasl.add(turma); //Q é isso? 
+        //Q é isso? 
         return true;
         
         
@@ -24,21 +28,15 @@ public class TurmaDaoImpl implements TurmaDao{
         
     @Override
     public boolean deletar(Integer codigo){
-        
-        for(int i=0;i<turmasl.size();i++){
-            if(turmasl.get(i).getCodigo().equals(codigo)){
-                turmasl.remove(i);
-                return true;
-            }
-        }
+       
         return false;
     }
    
     @Override
     public void imprimirLista(){
         
-        for (Turma t:turmasl)
-                        System.out.println("Codigo: " + t.getCodigo() + " Periodo: " + t.getPeriodo() + " Horario: " + t.getHorario() + " Vagas: " + t.getVagas());  
+        
+                        
     }
     
     @Override

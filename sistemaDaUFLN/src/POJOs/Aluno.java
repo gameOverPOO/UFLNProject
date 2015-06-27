@@ -3,31 +3,37 @@ package POJOs;
 import java.util.*;
 import javax.persistence.Id;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-//simport org.hibernate.annotations.Entity;
-
+import javax.persistence.SequenceGenerator;
 
 
 @Entity
+
+@SequenceGenerator(name="local_seq", sequenceName="local_seq", allocationSize=1 , initialValue = 1)
+
 public class Aluno {
     
     @Id
+   @GeneratedValue
     private int id;    
     private String nome;
     private String cpf;
-    @OneToMany
+     //@OneToMany
+    //private List<Turma> turmas = new ArrayList<>();
+   @OneToMany
     private List<Atividade> atividades = new ArrayList<>();
-    @OneToMany
-    private List<Turma> turmas = new ArrayList<>();
+   
 
-    public List<Atividade> getAtividades() {
-        return atividades;
-    }
+   // public List<Atividade> getAtividades() {
+       // return atividades;
+    //}
 
-    public List<Turma> getTurmas() {
-        return turmas;
-    }
+   // public List<Turma> getTurmas() {
+       //return turmas;
+   // }
 
     public int getId() {
         return id;

@@ -9,5 +9,6 @@
     <property name="hibernate.connection.password">q1w2e3</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
     <mapping class="POJOs.Aluno"/>
+    <mapping class="POJOs.Atividade"/>
   </session-factory>
 </hibernate-configuration>

@@ -10,6 +10,7 @@ import Views.DisciplinaView;
 import DAOsImpl.DisciplinaDaoImpl;
 import Views.AlunoView;
 import DAOsImpl.AlunoDaoImpl;
+import DAOsImpl.AtividadeDaoImpl;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -20,17 +21,25 @@ import java.util.logging.Logger;
 
 import DAOsImpl.TurmaDaoImpl;
 import POJOs.Aluno;
+import POJOs.Atividade;
+import POJOs.Turma;
 
 public class MenuPrincipal {
     
    //teste commit
     public static void main(String[] args) throws IOException {
      
-        Aluno alun = new Aluno();
-        AlunoDaoImpl ad = new AlunoDaoImpl();
-        alun.setCpf("14638431780");
+       // Aluno alun = new Aluno();
+        //AlunoDaoImpl ad = new AlunoDaoImpl();
+        
+        Atividade attt = new Atividade();
+        AtividadeDaoImpl at = new AtividadeDaoImpl();
+        attt.setNome("h");
+        at.salvar(attt);
+        
+        /*alun.setCpf("14638431780");
         alun.setNome("Leandro");
-        ad.salvar(alun);
+        ad.salvar(alun);*/
        int sair=0;     
         
         while(sair==0){

@@ -3,6 +3,8 @@ package POJOs;
 import java.util.*;
 import POJOs.Turma;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -14,6 +16,7 @@ public class Atividade {
       
     //Atributos
     @Id
+    @GeneratedValue
     private int id;
     private String nome;
     private String tipo;
@@ -26,9 +29,9 @@ public class Atividade {
         return valor;
     }
 
-    public List<Aluno> getAlunos() {
+    /*public List<Aluno> getAlunos() {
         return alunos;
-    }
+    }*/
     
    
     //Métodos

@@ -5,8 +5,13 @@ import DAOs.AtividadeDao;
 import POJOs.Atividade;
 import static DAOsImpl.AtividadeDaoImpl.atividadel;
 import POJOs.Aluno;
+import POJOs.Turma;
 
 import java.util.*;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 
 public class AtividadeDaoImpl implements AtividadeDao{
@@ -14,16 +19,22 @@ public class AtividadeDaoImpl implements AtividadeDao{
     public static List<Atividade> atividadel = new ArrayList<>(); 
     private Object atividade;
     
+    
+     private SessionFactory conexao; 
+    public static Turma turmasl;
+    public AtividadeDaoImpl(){
+        conexao = new Configuration().configure().buildSessionFactory();
+    }
+    
     @Override
     public boolean salvar(Atividade atividade){
         
-        for(int i=0;i<atividadel.size();i++){              
-            Atividade a = atividadel.get(i);
-            if(a.getNome().equals(atividade.getNome())){                
-                return false;
-            }    
-        }
-        atividadel.add(atividade);
+        Session session;
+        session = conexao.openSession();
+        Transaction tx = session.beginTransaction();
+        session.save(atividade);
+        tx.commit();
+        session.close();
         return true;
        
     }

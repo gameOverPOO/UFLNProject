@@ -4,6 +4,7 @@ package POJOs;
 import java.util.*;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -14,7 +15,9 @@ public class Disciplina {
    private String nome;
    private String ementa;
    private int cargaHoraria;
+   @OneToMany
    private List<Turma> turmas = new ArrayList<>();
+   @OneToMany
    private List<Professor> professores = new ArrayList<>();
 
     public Disciplina() {

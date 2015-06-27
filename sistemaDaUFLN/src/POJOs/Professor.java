@@ -1,6 +1,7 @@
 
 package POJOs;
 import java.util.*;
+import javax.persistence.OneToMany;
 
 
 public class Professor {
@@ -10,7 +11,9 @@ public class Professor {
     private String nome;
     private String cpf;
     private String departamento;
+    @OneToMany
     private List<Turma> turmas = new ArrayList<>();
+    @OneToMany
     private List<Disciplina> disciplinas = new ArrayList<>();
 
     public Professor() {

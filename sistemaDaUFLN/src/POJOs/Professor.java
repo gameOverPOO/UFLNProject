@@ -10,8 +10,8 @@ public class Professor {
     private String nome;
     private String cpf;
     private String departamento;
-    public List<Integer> codigoTurma = new ArrayList<>();
-    public List<Disciplina> disciplinas = new ArrayList<>();
+    private List<Turma> turmas = new ArrayList<>();
+    private List<Disciplina> disciplinas = new ArrayList<>();
 
     public Professor() {
     }

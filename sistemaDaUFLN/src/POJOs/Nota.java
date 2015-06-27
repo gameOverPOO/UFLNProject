@@ -3,6 +3,7 @@ package POJOs;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Nota {
@@ -11,6 +12,7 @@ public class Nota {
     private int id;
     private double nota;
     private Aluno aluno;
+    @OneToOne
     private Atividade atividade;
 
     

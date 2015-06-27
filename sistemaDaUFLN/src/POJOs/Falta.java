@@ -3,6 +3,7 @@ package POJOs;
 import POJOs.Turma;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Falta {
@@ -11,7 +12,9 @@ public class Falta {
     @Id
     private int id;
     private int falta;
+    @OneToOne
     private Turma turma;
+    @OneToOne
     private Aluno aluno;
 
     

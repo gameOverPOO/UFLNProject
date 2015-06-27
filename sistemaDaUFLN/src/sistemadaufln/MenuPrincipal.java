@@ -30,7 +30,7 @@ public class MenuPrincipal {
         AlunoDaoImpl ad = new AlunoDaoImpl();
         alun.setCpf("14638431780");
         alun.setNome("Leandro");
-        ad.insere(alun);
+        ad.salvar(alun);
        int sair=0;     
         
         while(sair==0){

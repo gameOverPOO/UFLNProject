@@ -44,18 +44,9 @@ public class TurmaDaoImpl implements TurmaDao{
     @Override
     public boolean cadastrarAluno(String cpf, Integer codigo){
         
-        for(int i=0;i<turmasl.size();i++){
-            if(turmasl.get(i).getCodigo().equals(codigo)){
-                AlunoDaoImpl a = new AlunoDaoImpl();
-                for(int j=0;j<a.alunosl.size();j++){
-                    if(a.alunosl.get(j).getCpf().equals(cpf)){
-                      //  a.alunosl.get(j).codigoTurma.add(codigo);
-                        return true;
-                    }
-                }
-            }
+       
      
-        }
+        
         return false;
     }
     
@@ -63,18 +54,7 @@ public class TurmaDaoImpl implements TurmaDao{
     public void imprimirAlunos(Integer codigo){ //Nao tá imprimindo
         Aluno aluno = new Aluno();
         
-        for(int i=0;i<turmasl.size();i++){
-                if(turmasl.get(i).getCodigo().equals(codigo)){
-                    AlunoDaoImpl a = new AlunoDaoImpl();
-                    for(int j=0;j<a.alunosl.size();j++){
-                       
-                        for(int k=0;k<a.alunosl.get(j).getTurmas().size();k++)
-                        if(a.alunosl.get(j).getTurmas().get(k).equals(codigo)){
-                            System.out.println("Aluno: " + a.alunosl.get(j).getNome());
-                        }
-                    }
-                }
-            }
+        
     }
     
     @Override
@@ -92,7 +72,7 @@ public class TurmaDaoImpl implements TurmaDao{
             
     }
     
- /*PRA QUE ISSO SERVE????????*/
+ 
      @Override
     public boolean atividade(String nome, Integer codigo){
         

@@ -23,7 +23,7 @@ import POJOs.Aluno;
 
 public class MenuPrincipal {
     
-   
+   //teste commit
     public static void main(String[] args) throws IOException {
      
         Aluno alun = new Aluno();

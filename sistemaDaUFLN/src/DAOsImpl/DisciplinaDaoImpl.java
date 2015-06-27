@@ -6,6 +6,10 @@ import POJOs.Disciplina;
 import POJOs.Professor;
 import POJOs.Turma;
 import java.util.*;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 
 
@@ -13,12 +17,23 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     
     public static List<Disciplina> disciplinal = new ArrayList<Disciplina>(); 
    
+    private SessionFactory conexao; 
+    
+    public DisciplinaDaoImpl(){
+        conexao = new Configuration().configure().buildSessionFactory();
+    }
     
     @Override
     public boolean salvar(Disciplina disciplina){
-        
-       
+        Session session;
+        session = conexao.openSession();
+        Transaction tx = session.beginTransaction();
+        session.save(disciplina);
+        tx.commit();
+        session.close();
         return true;
+       
+        
     }
 
     @Override

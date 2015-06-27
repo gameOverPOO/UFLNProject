@@ -21,9 +21,9 @@ public class Aluno {
     private int id;    
     private String nome;
     private String cpf;
-     //@OneToMany
-    //private List<Turma> turmas = new ArrayList<>();
-   @OneToMany
+    @OneToMany
+    private List<Turma> turmas = new ArrayList<>();
+    @OneToMany
     private List<Atividade> atividades = new ArrayList<>();
    
 

@@ -5,7 +5,7 @@ import DAOs.AtividadeDao;
 import POJOs.Atividade;
 import static DAOsImpl.AtividadeDaoImpl.atividadel;
 import POJOs.Aluno;
-import POJOs.Turma;
+
 
 import java.util.*;
 import org.hibernate.Session;
@@ -21,7 +21,7 @@ public class AtividadeDaoImpl implements AtividadeDao{
     
     
      private SessionFactory conexao; 
-    public static Turma turmasl;
+    
     public AtividadeDaoImpl(){
         conexao = new Configuration().configure().buildSessionFactory();
     }

@@ -22,6 +22,8 @@ import java.util.logging.Logger;
 import DAOsImpl.TurmaDaoImpl;
 import POJOs.Aluno;
 import POJOs.Atividade;
+import POJOs.Disciplina;
+import POJOs.Professor;
 import POJOs.Turma;
 
 public class MenuPrincipal {
@@ -29,17 +31,35 @@ public class MenuPrincipal {
    //teste commit
     public static void main(String[] args) throws IOException {
      
-       // Aluno alun = new Aluno();
-        //AlunoDaoImpl ad = new AlunoDaoImpl();
+        Aluno alun = new Aluno();
+        AlunoDaoImpl ad = new AlunoDaoImpl();
         
         Atividade attt = new Atividade();
         AtividadeDaoImpl at = new AtividadeDaoImpl();
         attt.setNome("h");
         at.salvar(attt);
         
-        /*alun.setCpf("14638431780");
-        alun.setNome("Leandro");
-        ad.salvar(alun);*/
+        Turma turn = new Turma();
+        TurmaDaoImpl aturr = new TurmaDaoImpl();        
+        aturr.salvar(turn);
+        
+        
+        Disciplina disc = new Disciplina();
+        DisciplinaDaoImpl discd = new DisciplinaDaoImpl();        
+        discd.salvar(disc);
+        
+        
+        alun.setCpf("14638431780");
+        alun.setNome("Leandro2");
+        ad.salvar(alun);
+        
+        
+        
+        Professor profs = new Professor();
+        ProfessorDaoImpl profed = new ProfessorDaoImpl();        
+        profed.salvar(profs);
+        
+        
        int sair=0;     
         
         while(sair==0){

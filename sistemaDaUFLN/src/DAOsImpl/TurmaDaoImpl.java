@@ -6,7 +6,9 @@ import DAOs.TurmaDao;
 import POJOs.Aluno;
 import java.util.*;
 import POJOs.Turma;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 
@@ -19,8 +21,12 @@ public class TurmaDaoImpl implements TurmaDao{
     @Override
     public boolean salvar(Turma turma){
         
-      
-        //Q é isso? 
+      Session session;
+        session = conexao.openSession();
+        Transaction tx = session.beginTransaction();
+        session.save(turma);
+        tx.commit();
+        session.close();
         return true;
         
         

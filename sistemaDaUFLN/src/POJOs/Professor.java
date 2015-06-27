@@ -1,13 +1,19 @@
 
 package POJOs;
 import java.util.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-
+@Entity
 public class Professor {
     
    
     //Atributos
+    @Id
+    @GeneratedValue
+    private int id;
     private String nome;
     private String cpf;
     private String departamento;
@@ -65,6 +71,14 @@ public class Professor {
 
     public void setDisciplinas(List<Disciplina> disciplinas) {
         this.disciplinas = disciplinas;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
 }

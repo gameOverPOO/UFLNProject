@@ -34,6 +34,7 @@ public class Turma {
     public String horario;
     //Local??
     private int vagas;
+    @OneToOne
     private Professor professor;
     @OneToOne
     private Disciplina disciplina;

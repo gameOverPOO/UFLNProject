@@ -3,6 +3,7 @@ package POJOs;
 
 import java.util.*;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -11,6 +12,7 @@ import javax.persistence.OneToMany;
 public class Disciplina {
    //Atributos
    @Id
+   @GeneratedValue
    private int id;
    private String nome;
    private String ementa;

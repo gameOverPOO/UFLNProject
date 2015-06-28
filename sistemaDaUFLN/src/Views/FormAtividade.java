@@ -5,6 +5,10 @@
  */
 package Views;
 
+import DAOsImpl.AtividadeDaoImpl;
+import POJOs.Atividade;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author john
@@ -34,10 +38,10 @@ public class FormAtividade extends javax.swing.JDialog {
         abaInserirAtividade = new javax.swing.JPanel();
         labelNomeAtividade = new javax.swing.JLabel();
         labelTipoAtividade = new javax.swing.JLabel();
-        campoNomeDisciplina = new javax.swing.JTextField();
-        campoEmentaDisciplina = new javax.swing.JTextField();
+        campoNomeAtividade = new javax.swing.JTextField();
+        campoTipoAtividade = new javax.swing.JTextField();
         labelDataAtividade = new javax.swing.JLabel();
-        campoCargaDisciplina = new javax.swing.JTextField();
+        campoDataAtividade = new javax.swing.JTextField();
         labelValorAtividade = new javax.swing.JLabel();
         campoValorAtividade = new javax.swing.JTextField();
         buttonSalvarInserirAtividade = new javax.swing.JButton();
@@ -73,6 +77,11 @@ public class FormAtividade extends javax.swing.JDialog {
         labelValorAtividade.setText("Valor da Atividade:");
 
         buttonSalvarInserirAtividade.setText("Salvar");
+        buttonSalvarInserirAtividade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSalvarInserirAtividadeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaInserirAtividadeLayout = new javax.swing.GroupLayout(abaInserirAtividade);
         abaInserirAtividade.setLayout(abaInserirAtividadeLayout);
@@ -87,13 +96,13 @@ public class FormAtividade extends javax.swing.JDialog {
                 .addGap(4, 4, 4)
                 .addGroup(abaInserirAtividadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(abaInserirAtividadeLayout.createSequentialGroup()
-                        .addComponent(campoCargaDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(campoDataAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(labelValorAtividade)
                         .addGap(6, 6, 6)
                         .addComponent(campoValorAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(campoEmentaDisciplina)
-                    .addComponent(campoNomeDisciplina))
+                    .addComponent(campoTipoAtividade)
+                    .addComponent(campoNomeAtividade))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(buttonSalvarInserirAtividade))
         );
@@ -103,15 +112,15 @@ public class FormAtividade extends javax.swing.JDialog {
                 .addGap(42, 42, 42)
                 .addGroup(abaInserirAtividadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeAtividade)
-                    .addComponent(campoNomeDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoNomeAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(abaInserirAtividadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelTipoAtividade)
-                    .addComponent(campoEmentaDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoTipoAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(abaInserirAtividadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelDataAtividade)
-                    .addComponent(campoCargaDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoDataAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelValorAtividade)
                     .addComponent(campoValorAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -240,6 +249,30 @@ public class FormAtividade extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
 
+    private void buttonSalvarInserirAtividadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarInserirAtividadeActionPerformed
+       
+        
+        Atividade atividade = new Atividade();
+        
+        atividade.setNome(campoNomeAtividade.getText());
+        atividade.setData(campoDataAtividade.getText());
+        atividade.setTipo(campoTipoAtividade.getText());
+        try{
+            atividade.setValorAtividade(Double.parseDouble(campoValorAtividade.getText()));
+            AtividadeDaoImpl atividadedao = new AtividadeDaoImpl();
+            atividadedao.salvar(atividade);
+            dispose();
+            
+        }catch(Exception ex)
+        {
+                JOptionPane.showMessageDialog(null, "Parametro invalido!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+        }
+       
+       
+        
+        
+    }//GEN-LAST:event_buttonSalvarInserirAtividadeActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -292,11 +325,11 @@ public class FormAtividade extends javax.swing.JDialog {
     private javax.swing.JButton buttonSalvarInserirAlunoAtividade;
     private javax.swing.JButton buttonSalvarInserirAtividade;
     private javax.swing.JButton buttonSalvarRemoverAtividade;
-    private javax.swing.JTextField campoCargaDisciplina;
     private javax.swing.JTextField campoCpfAluno1;
-    private javax.swing.JTextField campoEmentaDisciplina;
+    private javax.swing.JTextField campoDataAtividade;
+    private javax.swing.JTextField campoNomeAtividade;
     private javax.swing.JTextField campoNomeAtividade1;
-    private javax.swing.JTextField campoNomeDisciplina;
+    private javax.swing.JTextField campoTipoAtividade;
     private javax.swing.JTextField campoValorAtividade;
     private javax.swing.JPanel janelaAtividade;
     private javax.swing.JLabel labelCodTurma;

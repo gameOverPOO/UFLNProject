@@ -111,14 +111,14 @@
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="campoCargaDisciplina" min="-2" pref="158" max="-2" attributes="0"/>
+                                  <Component id="campoDataAtividade" min="-2" pref="158" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="labelValorAtividade" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                   <Component id="campoValorAtividade" min="-2" pref="63" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="campoEmentaDisciplina" alignment="0" max="32767" attributes="0"/>
-                              <Component id="campoNomeDisciplina" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoTipoAtividade" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoNomeAtividade" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="28" max="32767" attributes="0"/>
                           <Component id="buttonSalvarInserirAtividade" min="-2" max="-2" attributes="0"/>
@@ -131,17 +131,17 @@
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelNomeAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoNomeDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNomeAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelTipoAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoEmentaDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoTipoAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelDataAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoCargaDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoDataAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labelValorAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoValorAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -165,16 +165,16 @@
                     <Property name="text" type="java.lang.String" value="Tipo:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoNomeDisciplina">
+                <Component class="javax.swing.JTextField" name="campoNomeAtividade">
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoEmentaDisciplina">
+                <Component class="javax.swing.JTextField" name="campoTipoAtividade">
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelDataAtividade">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Data da Atividade:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoCargaDisciplina">
+                <Component class="javax.swing.JTextField" name="campoDataAtividade">
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelValorAtividade">
                   <Properties>
@@ -187,6 +187,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Salvar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonSalvarInserirAtividadeActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

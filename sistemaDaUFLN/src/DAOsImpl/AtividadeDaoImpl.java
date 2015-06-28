@@ -26,20 +26,20 @@ public class AtividadeDaoImpl implements AtividadeDao{
     @Override
     public boolean salvar(Atividade atividade){
         
-        Aluno a = new Aluno();
-        a.setCpf(14638431780L);
+        //Aluno a = new Aluno();
+       // a.setCpf(14638431780L);
         
         Session session;
         session = conexao.openSession();
         Transaction tx = session.beginTransaction();
-        atividade.setNome("PROVA DE tele");
-        atividade.setValorAtividade(20);
-        atividade.setData("26/08k");
-        atividade.getAlunos().add(a);
+        //atividade.setNome("PROVA DE tele");
+        //atividade.setValorAtividade(20);
+       // atividade.setData("26/08k");
+        //atividade.getAlunos().add(a);
         
         
-        AlunoDaoImpl aaa = new AlunoDaoImpl();        
-        a.getAtividades().add(atividade);
+       // AlunoDaoImpl aaa = new AlunoDaoImpl();        
+        /////a.getAtividades().add(atividade);
        // aaa.salvar(a); //se salvar fica com dados duplicados       
         session.save(atividade);
         tx.commit();

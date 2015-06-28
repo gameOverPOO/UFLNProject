@@ -5,7 +5,9 @@
  */
 package Views;
 
+import javax.swing.JDialog;
 import javax.swing.JOptionPane;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -31,25 +33,25 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
 
         barraMenu = new javax.swing.JMenuBar();
         menuArquivo = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        MenuArquivoSair = new javax.swing.JMenuItem();
         menuInserir = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        menuInserirAluno = new javax.swing.JMenuItem();
+        menuInserirAtividade = new javax.swing.JMenuItem();
+        menuInserirDisciplina = new javax.swing.JMenuItem();
+        menuInserirProfessor = new javax.swing.JMenuItem();
+        menuInserirTurma = new javax.swing.JMenuItem();
         menuEditar = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
+        menuEditarAluno = new javax.swing.JMenuItem();
+        menuEditarAtividade = new javax.swing.JMenuItem();
+        MenuEditarDisciplina = new javax.swing.JMenuItem();
+        menuEditarProfessor = new javax.swing.JMenuItem();
+        menuEditarTurma = new javax.swing.JMenuItem();
         menuRemover = new javax.swing.JMenu();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
-        jMenuItem15 = new javax.swing.JMenuItem();
-        jMenuItem16 = new javax.swing.JMenuItem();
+        MenuRemoverAluno = new javax.swing.JMenuItem();
+        MenuRemoverAtividade = new javax.swing.JMenuItem();
+        MenuRemoverDisciplina = new javax.swing.JMenuItem();
+        MenuRemoverProfessor = new javax.swing.JMenuItem();
+        MenuRemoverTurma = new javax.swing.JMenuItem();
         menuAjuda = new javax.swing.JMenu();
         jMenuItem17 = new javax.swing.JMenuItem();
 
@@ -62,71 +64,86 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Sair");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        MenuArquivoSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_MASK));
+        MenuArquivoSair.setText("Sair");
+        MenuArquivoSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                MenuArquivoSairActionPerformed(evt);
             }
         });
-        menuArquivo.add(jMenuItem1);
+        menuArquivo.add(MenuArquivoSair);
 
         barraMenu.add(menuArquivo);
 
         menuInserir.setText("Inserir");
 
-        jMenuItem2.setText("Aluno");
-        menuInserir.add(jMenuItem2);
+        menuInserirAluno.setText("Aluno");
+        menuInserirAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuInserirAlunoActionPerformed(evt);
+            }
+        });
+        menuInserir.add(menuInserirAluno);
 
-        jMenuItem3.setText("Atividade");
-        menuInserir.add(jMenuItem3);
+        menuInserirAtividade.setText("Atividade");
+        menuInserir.add(menuInserirAtividade);
 
-        jMenuItem4.setText("Disciplina");
-        menuInserir.add(jMenuItem4);
+        menuInserirDisciplina.setText("Disciplina");
+        menuInserir.add(menuInserirDisciplina);
 
-        jMenuItem5.setText("Professor");
-        menuInserir.add(jMenuItem5);
+        menuInserirProfessor.setText("Professor");
+        menuInserir.add(menuInserirProfessor);
 
-        jMenuItem10.setText("Turma");
-        menuInserir.add(jMenuItem10);
+        menuInserirTurma.setText("Turma");
+        menuInserir.add(menuInserirTurma);
 
         barraMenu.add(menuInserir);
 
         menuEditar.setText("Editar");
 
-        jMenuItem6.setText("Aluno");
-        menuEditar.add(jMenuItem6);
+        menuEditarAluno.setText("Aluno");
+        menuEditarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuEditarAlunoActionPerformed(evt);
+            }
+        });
+        menuEditar.add(menuEditarAluno);
 
-        jMenuItem7.setText("Atividade");
-        menuEditar.add(jMenuItem7);
+        menuEditarAtividade.setText("Atividade");
+        menuEditar.add(menuEditarAtividade);
 
-        jMenuItem8.setText("Disciplina");
-        menuEditar.add(jMenuItem8);
+        MenuEditarDisciplina.setText("Disciplina");
+        menuEditar.add(MenuEditarDisciplina);
 
-        jMenuItem9.setText("Professor");
-        menuEditar.add(jMenuItem9);
+        menuEditarProfessor.setText("Professor");
+        menuEditar.add(menuEditarProfessor);
 
-        jMenuItem11.setText("Turma");
-        menuEditar.add(jMenuItem11);
+        menuEditarTurma.setText("Turma");
+        menuEditar.add(menuEditarTurma);
 
         barraMenu.add(menuEditar);
 
         menuRemover.setText("Remover");
 
-        jMenuItem12.setText("Aluno");
-        menuRemover.add(jMenuItem12);
+        MenuRemoverAluno.setText("Aluno");
+        MenuRemoverAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuRemoverAlunoActionPerformed(evt);
+            }
+        });
+        menuRemover.add(MenuRemoverAluno);
 
-        jMenuItem13.setText("Atividade");
-        menuRemover.add(jMenuItem13);
+        MenuRemoverAtividade.setText("Atividade");
+        menuRemover.add(MenuRemoverAtividade);
 
-        jMenuItem14.setText("Disciplina");
-        menuRemover.add(jMenuItem14);
+        MenuRemoverDisciplina.setText("Disciplina");
+        menuRemover.add(MenuRemoverDisciplina);
 
-        jMenuItem15.setText("Professor");
-        menuRemover.add(jMenuItem15);
+        MenuRemoverProfessor.setText("Professor");
+        menuRemover.add(MenuRemoverProfessor);
 
-        jMenuItem16.setText("Turma");
-        menuRemover.add(jMenuItem16);
+        MenuRemoverTurma.setText("Turma");
+        menuRemover.add(MenuRemoverTurma);
 
         barraMenu.add(menuRemover);
 
@@ -178,10 +195,40 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_menuArquivoActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void MenuArquivoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuArquivoSairActionPerformed
         // TODO add your handling code here:
         dispose();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_MenuArquivoSairActionPerformed
+
+    private void menuInserirAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuInserirAlunoActionPerformed
+        // TODO add your handling code here:
+        FormAluno form=new FormAluno(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Inserir Aluno");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_menuInserirAlunoActionPerformed
+
+    private void menuEditarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditarAlunoActionPerformed
+        // TODO add your handling code here:
+        FormAluno form=new FormAluno(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Inserir Aluno");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_menuEditarAlunoActionPerformed
+
+    private void MenuRemoverAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuRemoverAlunoActionPerformed
+        // TODO add your handling code here:
+        FormAluno form=new FormAluno(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Inserir Aluno");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_MenuRemoverAlunoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,28 +274,28 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem MenuArquivoSair;
+    private javax.swing.JMenuItem MenuEditarDisciplina;
+    private javax.swing.JMenuItem MenuRemoverAluno;
+    private javax.swing.JMenuItem MenuRemoverAtividade;
+    private javax.swing.JMenuItem MenuRemoverDisciplina;
+    private javax.swing.JMenuItem MenuRemoverProfessor;
+    private javax.swing.JMenuItem MenuRemoverTurma;
     private javax.swing.JMenuBar barraMenu;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JMenu menuAjuda;
     private javax.swing.JMenu menuArquivo;
     private javax.swing.JMenu menuEditar;
+    private javax.swing.JMenuItem menuEditarAluno;
+    private javax.swing.JMenuItem menuEditarAtividade;
+    private javax.swing.JMenuItem menuEditarProfessor;
+    private javax.swing.JMenuItem menuEditarTurma;
     private javax.swing.JMenu menuInserir;
+    private javax.swing.JMenuItem menuInserirAluno;
+    private javax.swing.JMenuItem menuInserirAtividade;
+    private javax.swing.JMenuItem menuInserirDisciplina;
+    private javax.swing.JMenuItem menuInserirProfessor;
+    private javax.swing.JMenuItem menuInserirTurma;
     private javax.swing.JMenu menuRemover;
     // End of variables declaration//GEN-END:variables
 }

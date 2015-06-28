@@ -29,9 +29,25 @@ public class AtividadeDaoImpl implements AtividadeDao{
     @Override
     public boolean salvar(Atividade atividade){
         
+        Aluno a = new Aluno();
+        a.setCpf("1234562712");
+        a.setNome("Tiago");
+        
+        
+       
         Session session;
         session = conexao.openSession();
         Transaction tx = session.beginTransaction();
+        atividade.setNome("trabaho");
+        atividade.setValorAtividade(20);
+        atividade.setData("27/08");
+        atividade.getAlunos().add(a);
+        
+        
+        AlunoDaoImpl aaa = new AlunoDaoImpl();
+        a.getAtividades().add(atividade);
+        aaa.salvar(a);
+       
         session.save(atividade);
         tx.commit();
         session.close();

@@ -2,7 +2,9 @@ package POJOs;
 
 import java.util.*;
 import POJOs.Turma;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +24,7 @@ public class Atividade {
     private String tipo;
     private String data;
     private Double valor;  
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Aluno> alunos = new ArrayList<>(); //Relacionamento
 
     public Double getValor() {
@@ -75,6 +77,22 @@ public class Atividade {
     
     public void setValorAtividade(double valor) {
         this.valor = valor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
     }
     
 }

@@ -21,11 +21,11 @@ public class AlunoDaoImpl implements AlunoDao{
     @Override
     public boolean salvar(Aluno aluno){
         Session session;
-        Atividade disc = new Atividade();
-        disc.setNome("poo dos infernos");
+       // Atividade disc = new Atividade();
+        //disc.setNome("poo dos infernos");
        
         
-        aluno.getAtividades().add(disc);
+        //aluno.getAtividades().add(disc);
         session = conexao.openSession();
         Transaction tx = session.beginTransaction();
         session.save(aluno);

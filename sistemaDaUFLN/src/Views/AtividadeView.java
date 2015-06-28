@@ -123,17 +123,7 @@ public class AtividadeView {
         Scanner leitura= new Scanner(System.in); 
         String cpf = new String();                
         cpf = leitura.nextLine();
-        Aluno aluno = new Aluno();
-        aluno.setCpf(cpf);
-
-        System.out.println("Digite a atividade: ");
-        String nome = new String();                
-        nome = leitura.nextLine();
-                         
-        Atividade atividade = new Atividade();
-        atividade.setNome(nome);
-                    
-        a.cadastrarAluno(aluno, atividade);
+       
     }
     public void removerAlunoAtividade(){
         System.out.println("Excluindo Aluno:");
@@ -143,7 +133,7 @@ public class AtividadeView {
         String cpf = new String();                
         cpf = leitura.nextLine();
         Aluno aluno = new Aluno();
-        aluno.setCpf(cpf);
+   
 
         System.out.println("Digite o nome da atividade: ");
         String nome = new String();                

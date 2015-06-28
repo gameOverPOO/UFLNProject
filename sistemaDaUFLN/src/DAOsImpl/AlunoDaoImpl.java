@@ -3,6 +3,11 @@ package DAOsImpl;
 
 import DAOs.AlunoDao;
 import POJOs.Aluno;
+import POJOs.Atividade;
+import java.util.ArrayList;
+import java.util.List;
+import net.sf.ehcache.hibernate.HibernateUtil;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -89,6 +94,17 @@ public class AlunoDaoImpl implements AlunoDao{
     
     @Override
     public void imprimir(Aluno aluno){
+         
+        Session session;
+        session = conexao.openSession();
+        Transaction tx = session.beginTransaction(); 
+        
+        Aluno alunoo = new Aluno();
+
+        Criteria criteria = session.createCriteria(Aluno.class); 
+
+         List<Aluno> alunol = new ArrayList<>();
+         alunol = criteria.list();
         
     }
     @Override

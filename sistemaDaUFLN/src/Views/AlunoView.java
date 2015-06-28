@@ -81,18 +81,6 @@ public class AlunoView {
                         
                         System.out.println("Digite o CPF do Aluno: ");                        
                         String cpf = new String();                
-                        cpf = leitura.nextLine();
-                        
-                        
-                        
-                        Aluno alunoteste = new Aluno(nomeP,cpf);                               
-                        
-                        if ((alunoteste.getNome() != null)){
-                            
-                            a.salvar(alunoteste);
-                            a.imprimirLista();
-                            
-                        }
                         
                         
                         System.out.println("Deseja adicionar outro aluno? (S/N)");
@@ -130,12 +118,7 @@ public class AlunoView {
                         
                         //alterar o CPF nao funciona
                         
-                        System.out.println("Digite o  Novo CPF do Aluno: ");                 
-                        String cpfN = new String();
-                        cpfN = leitura.nextLine();
-                        Aluno alunod = new Aluno();
-                        alunod.setCpf(cpfN);
-                                               
+                                           
                        // a.atualizar(alunoA,alunod, 2);
                         
                     }  

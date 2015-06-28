@@ -174,6 +174,11 @@ public class FormAluno extends javax.swing.JDialog {
         abaAluno.addTab("Remover", jPanel4);
 
         ButtonSalvarAluno.setText("Salvar");
+        ButtonSalvarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarAlunoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout janelaAlunoLayout = new javax.swing.GroupLayout(janelaAluno);
         janelaAluno.setLayout(janelaAlunoLayout);
@@ -209,6 +214,18 @@ public class FormAluno extends javax.swing.JDialog {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void ButtonSalvarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarAlunoActionPerformed
+       
+        //SALVAR ALUNO
+       // botaoVoltar.setText( campoCpfAluno.getText());
+        //VERIICAR CPF
+        //TENTAR SALVAR 
+        
+        
+        
+        
+    }//GEN-LAST:event_ButtonSalvarAlunoActionPerformed
 
     /**
      * @param args the command line arguments

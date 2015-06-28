@@ -75,6 +75,8 @@ public class MenuPrincipal {
         Aluno alunoN = new Aluno();
         AlunoDaoImpl ad = new AlunoDaoImpl();
         
+        alunoA.validarCPF(14638431780L);
+        
        //chamar atualizar
        /* alunoN.setNome("tiGOS");
         alunoN.setCpf(14638431784L);

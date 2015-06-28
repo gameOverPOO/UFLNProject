@@ -29,7 +29,7 @@ public class AlunoView {
             System.out.println("1. Adicionar um aluno");
             System.out.println("2. Alterar um aluno");
             
-            System.out.println("4. Mostrar todos os alunos");
+            
             System.out.println("0. Voltar");
             
             int escolha = leituraMenu.nextInt();

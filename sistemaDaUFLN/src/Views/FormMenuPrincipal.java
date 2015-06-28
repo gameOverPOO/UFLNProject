@@ -5,16 +5,18 @@
  */
 package Views;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author poney
  */
-public class sistemaGUI extends javax.swing.JFrame {
+public class FormMenuPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form sistemaGUI
      */
-    public sistemaGUI() {
+    public FormMenuPrincipal() {
         initComponents();
     }
 
@@ -27,105 +29,125 @@ public class sistemaGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        barraMenu = new javax.swing.JMenuBar();
+        menuArquivo = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        menuInserir = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
+        menuEditar = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
+        menuRemover = new javax.swing.JMenu();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem16 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
+        menuAjuda = new javax.swing.JMenu();
         jMenuItem17 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Arquivo");
+        menuArquivo.setText("Arquivo");
+        menuArquivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuArquivoActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setText("Sair");
-        jMenu1.add(jMenuItem1);
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        menuArquivo.add(jMenuItem1);
 
-        jMenuBar1.add(jMenu1);
+        barraMenu.add(menuArquivo);
 
-        jMenu2.setText("Inserir");
+        menuInserir.setText("Inserir");
 
         jMenuItem2.setText("Aluno");
-        jMenu2.add(jMenuItem2);
+        menuInserir.add(jMenuItem2);
 
         jMenuItem3.setText("Atividade");
-        jMenu2.add(jMenuItem3);
+        menuInserir.add(jMenuItem3);
 
         jMenuItem4.setText("Disciplina");
-        jMenu2.add(jMenuItem4);
+        menuInserir.add(jMenuItem4);
 
         jMenuItem5.setText("Professor");
-        jMenu2.add(jMenuItem5);
+        menuInserir.add(jMenuItem5);
 
         jMenuItem10.setText("Turma");
-        jMenu2.add(jMenuItem10);
+        menuInserir.add(jMenuItem10);
 
-        jMenuBar1.add(jMenu2);
+        barraMenu.add(menuInserir);
 
-        jMenu3.setText("Editar");
+        menuEditar.setText("Editar");
 
         jMenuItem6.setText("Aluno");
-        jMenu3.add(jMenuItem6);
+        menuEditar.add(jMenuItem6);
 
         jMenuItem7.setText("Atividade");
-        jMenu3.add(jMenuItem7);
+        menuEditar.add(jMenuItem7);
 
         jMenuItem8.setText("Disciplina");
-        jMenu3.add(jMenuItem8);
+        menuEditar.add(jMenuItem8);
 
         jMenuItem9.setText("Professor");
-        jMenu3.add(jMenuItem9);
+        menuEditar.add(jMenuItem9);
 
         jMenuItem11.setText("Turma");
-        jMenu3.add(jMenuItem11);
+        menuEditar.add(jMenuItem11);
 
-        jMenuBar1.add(jMenu3);
+        barraMenu.add(menuEditar);
 
-        jMenu4.setText("Remover");
+        menuRemover.setText("Remover");
 
         jMenuItem12.setText("Aluno");
-        jMenu4.add(jMenuItem12);
+        menuRemover.add(jMenuItem12);
 
         jMenuItem13.setText("Atividade");
-        jMenu4.add(jMenuItem13);
+        menuRemover.add(jMenuItem13);
 
         jMenuItem14.setText("Disciplina");
-        jMenu4.add(jMenuItem14);
+        menuRemover.add(jMenuItem14);
 
         jMenuItem15.setText("Professor");
-        jMenu4.add(jMenuItem15);
+        menuRemover.add(jMenuItem15);
 
         jMenuItem16.setText("Turma");
-        jMenu4.add(jMenuItem16);
+        menuRemover.add(jMenuItem16);
 
-        jMenuBar1.add(jMenu4);
+        barraMenu.add(menuRemover);
 
-        jMenu5.setText("Ajuda");
+        menuAjuda.setText("Ajuda");
+        menuAjuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuAjudaActionPerformed(evt);
+            }
+        });
 
         jMenuItem17.setText("Sobre");
-        jMenu5.add(jMenuItem17);
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        menuAjuda.add(jMenuItem17);
 
-        jMenuBar1.add(jMenu5);
+        barraMenu.add(menuAjuda);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(barraMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,6 +162,26 @@ public class sistemaGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void menuAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAjudaActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_menuAjudaActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"Todos os direitos reservados.\n\nLeandro Nogueira\nTiago Sardi\n\ncontato@gameoverpoo.com");
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void menuArquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuArquivoActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_menuArquivoActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,31 +200,34 @@ public class sistemaGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(sistemaGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormMenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(sistemaGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormMenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(sistemaGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormMenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(sistemaGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormMenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new sistemaGUI().setVisible(true);
+                //new sistemaGUI().setVisible(true);
+                //executa a janela no meio da tela
+                FormMenuPrincipal form = new FormMenuPrincipal();
+                form.setLocationRelativeTo(null);
+                form.setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar barraMenu;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
@@ -200,5 +245,10 @@ public class sistemaGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenu menuAjuda;
+    private javax.swing.JMenu menuArquivo;
+    private javax.swing.JMenu menuEditar;
+    private javax.swing.JMenu menuInserir;
+    private javax.swing.JMenu menuRemover;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,10 @@
  */
 package Views;
 
+import DAOsImpl.AlunoDaoImpl;
+import POJOs.Aluno;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author john
@@ -217,12 +221,46 @@ public class FormAluno extends javax.swing.JDialog {
 
     private void ButtonSalvarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarAlunoActionPerformed
        
+         
         //SALVAR ALUNO
        // botaoVoltar.setText( campoCpfAluno.getText());
         //VERIICAR CPF
         //TENTAR SALVAR 
         
         
+        Aluno aluno = new Aluno();
+        aluno.setNome(campoNomeAluno.getText());
+        String CPF = campoCpfAluno.getText();
+        try{
+            Long cpf = Long.parseLong(CPF);
+            aluno.setCpf(cpf);
+            if (aluno.validarCPF(aluno.getCpf())==false)
+            {
+              JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+            
+            }
+            
+            else{
+                         try{
+                        AlunoDaoImpl alunodao = new AlunoDaoImpl();
+                        alunodao.salvar(aluno);
+            
+            
+            
+                        }catch(Exception ex){
+            
+                       JOptionPane.showMessageDialog(null, "Aluno já existente!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+                    
+                    
+                 }
+           }
+            
+        }catch(Exception ex)
+        {
+            JOptionPane.showMessageDialog(null, "Parametro invalido!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+        }
+        dispose();
         
         
     }//GEN-LAST:event_ButtonSalvarAlunoActionPerformed

@@ -124,7 +124,7 @@ public class AlunoView {
                         Aluno alunoN = new Aluno();
                         alunoN.setNome(nomeN);
                         
-                        a.atualizar(alunoA,alunoN, 1);
+                        //a.atualizar(alunoA,alunoN, 1);
                     }
                     else{
                         
@@ -136,7 +136,7 @@ public class AlunoView {
                         Aluno alunod = new Aluno();
                         alunod.setCpf(cpfN);
                                                
-                        a.atualizar(alunoA,alunod, 2);
+                       // a.atualizar(alunoA,alunod, 2);
                         
                     }  
     }

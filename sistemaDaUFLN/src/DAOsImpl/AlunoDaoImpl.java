@@ -35,7 +35,7 @@ public class AlunoDaoImpl implements AlunoDao{
     }
     
     @Override
-    public boolean atualizar(Aluno alunoA,Aluno alunoN, int opcaoDeAtualizacao){
+    public boolean atualizar(Aluno alunoA,Aluno alunoN){
         return false;
     }
     

@@ -1,29 +1,25 @@
 package POJOs;
 
 import java.util.*;
+import javax.persistence.CascadeType;
 import javax.persistence.Id;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
-
 
 @Entity
-
-@SequenceGenerator(name="local_seq", sequenceName="local_seq", allocationSize=1 , initialValue = 1)
 
 public class Aluno {
     
     @Id
-   @GeneratedValue
-    private int id;    
+    @GeneratedValue
+    private int matricula;    
     private String nome;
     private String cpf;
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Turma> turmas = new ArrayList<>();
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Atividade> atividades = new ArrayList<>();
    
 
@@ -35,14 +31,13 @@ public class Aluno {
        return turmas;
     }
 
-    public int getId() {
-        return id;
+    public int getMatricula() {
+        return matricula;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
     }
-
     
 
     public Aluno() {

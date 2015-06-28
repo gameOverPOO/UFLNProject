@@ -3,7 +3,8 @@ package DAOsImpl;
 
 import DAOs.AlunoDao;
 import POJOs.Aluno;
-import java.util.*;
+import POJOs.Atividade;
+import POJOs.Disciplina;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,6 +21,11 @@ public class AlunoDaoImpl implements AlunoDao{
     @Override
     public boolean salvar(Aluno aluno){
         Session session;
+        Atividade disc = new Atividade();
+        disc.setNome("poo dos infernos");
+       
+        
+        aluno.getAtividades().add(disc);
         session = conexao.openSession();
         Transaction tx = session.beginTransaction();
         session.save(aluno);

@@ -27,13 +27,13 @@ public class Aluno {
     private List<Atividade> atividades = new ArrayList<>();
    
 
-   // public List<Atividade> getAtividades() {
-       // return atividades;
-    //}
+    public List<Atividade> getAtividades() {
+       return atividades;
+    }
 
-   // public List<Turma> getTurmas() {
-       //return turmas;
-   // }
+    public List<Turma> getTurmas() {
+       return turmas;
+    }
 
     public int getId() {
         return id;

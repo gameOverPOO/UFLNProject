@@ -8,8 +8,7 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Professor {
-    
-   
+       
     //Atributos
     @Id
     @GeneratedValue

@@ -29,10 +29,6 @@ public class Atividade {
         return valor;
     }
 
-    /*public List<Aluno> getAlunos() {
-        return alunos;
-    }*/
-    
    
     //Métodos
      public Atividade(String nome, String tipo, String data, Double valor) {

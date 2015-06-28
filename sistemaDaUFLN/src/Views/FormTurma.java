@@ -42,29 +42,35 @@ public class FormTurma extends javax.swing.JDialog {
         campoHorarioAulasTurma = new javax.swing.JTextField();
         labelNVagasTurma = new javax.swing.JLabel();
         campoNVagasTurma = new javax.swing.JTextField();
+        ButtonSalvarInserirTurma = new javax.swing.JButton();
         abaEditarTurma = new javax.swing.JPanel();
         labelNomeProfessorA = new javax.swing.JLabel();
         campoNomeProfessorA = new javax.swing.JTextField();
         labelNomeProfessorN = new javax.swing.JLabel();
         campoNomeProfessorN = new javax.swing.JTextField();
+        ButtonSalvarEditarTurma = new javax.swing.JButton();
         abaRemoverTurma = new javax.swing.JPanel();
         labelRemoverCodigoTurma = new javax.swing.JLabel();
         CampoRemoverNomeTurma = new javax.swing.JTextField();
+        ButtonSalvarRemoverTurma = new javax.swing.JButton();
         abaInserirAlunoTurma = new javax.swing.JPanel();
         labelCpfAluno = new javax.swing.JLabel();
         labelCodigoTurma = new javax.swing.JLabel();
         campoCpfAluno = new javax.swing.JTextField();
         CampoCodigoTurma = new javax.swing.JTextField();
+        ButtonSalvarInserirAlunoTurma = new javax.swing.JButton();
         abaInserirProfessorTurma = new javax.swing.JPanel();
         labelCpfProfessor = new javax.swing.JLabel();
         campoCpfProfessor = new javax.swing.JTextField();
         labelCodigoDaTurma = new javax.swing.JLabel();
         campoCodigoDaTurma = new javax.swing.JTextField();
+        ButtonSalvarInserirProfessorTurma = new javax.swing.JButton();
         abaInserirAtividadeTurma = new javax.swing.JPanel();
         labelCodigoDaTurm = new javax.swing.JLabel();
         labelNomeAtividade = new javax.swing.JLabel();
         campoCodigTurma = new javax.swing.JTextField();
         campoNomeAtividade = new javax.swing.JTextField();
+        ButtonSalvarInserirAtividadeTurma = new javax.swing.JButton();
         abaListarProfessoresTurma = new javax.swing.JPanel();
         paneTabelaListarProfTurma = new javax.swing.JScrollPane();
         tblProfessorTurma = new javax.swing.JTable();
@@ -77,7 +83,6 @@ public class FormTurma extends javax.swing.JDialog {
         labelCodTurma = new javax.swing.JLabel();
         campoCodTurma = new javax.swing.JTextField();
         buttonPesquisarAlunoTurma = new javax.swing.JButton();
-        ButtonSalvarTurma = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -100,6 +105,8 @@ public class FormTurma extends javax.swing.JDialog {
         labelHorarioAulasTurma.setText("Horário das Aulas:");
 
         labelNVagasTurma.setText("Número de Vagas:");
+
+        ButtonSalvarInserirTurma.setText("Salvar");
 
         javax.swing.GroupLayout abaInserirTurmaLayout = new javax.swing.GroupLayout(abaInserirTurma);
         abaInserirTurma.setLayout(abaInserirTurmaLayout);
@@ -131,6 +138,9 @@ public class FormTurma extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(campoPeriodoTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(397, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaInserirTurmaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirTurma))
         );
         abaInserirTurmaLayout.setVerticalGroup(
             abaInserirTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,7 +161,8 @@ public class FormTurma extends javax.swing.JDialog {
                 .addGroup(abaInserirTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(campoPeriodoTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelPeriodoTurma))
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 318, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirTurma))
         );
 
         abaTurma.addTab("Inserir", abaInserirTurma);
@@ -159,6 +170,8 @@ public class FormTurma extends javax.swing.JDialog {
         labelNomeProfessorA.setText("Nome do Professor:");
 
         labelNomeProfessorN.setText("Novo Nome:");
+
+        ButtonSalvarEditarTurma.setText("Salvar");
 
         javax.swing.GroupLayout abaEditarTurmaLayout = new javax.swing.GroupLayout(abaEditarTurma);
         abaEditarTurma.setLayout(abaEditarTurmaLayout);
@@ -174,6 +187,9 @@ public class FormTurma extends javax.swing.JDialog {
                     .addComponent(campoNomeProfessorA)
                     .addComponent(campoNomeProfessorN, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaEditarTurmaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarEditarTurma))
         );
         abaEditarTurmaLayout.setVerticalGroup(
             abaEditarTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,12 +202,15 @@ public class FormTurma extends javax.swing.JDialog {
                 .addGroup(abaEditarTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeProfessorN)
                     .addComponent(campoNomeProfessorN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(348, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 317, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarEditarTurma))
         );
 
         abaTurma.addTab("Editar", abaEditarTurma);
 
         labelRemoverCodigoTurma.setText("Código da Turma:");
+
+        ButtonSalvarRemoverTurma.setText("Salvar");
 
         javax.swing.GroupLayout abaRemoverTurmaLayout = new javax.swing.GroupLayout(abaRemoverTurma);
         abaRemoverTurma.setLayout(abaRemoverTurmaLayout);
@@ -203,6 +222,9 @@ public class FormTurma extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CampoRemoverNomeTurma, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaRemoverTurmaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarRemoverTurma))
         );
         abaRemoverTurmaLayout.setVerticalGroup(
             abaRemoverTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,7 +233,8 @@ public class FormTurma extends javax.swing.JDialog {
                 .addGroup(abaRemoverTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelRemoverCodigoTurma)
                     .addComponent(CampoRemoverNomeTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(390, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 359, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarRemoverTurma))
         );
 
         abaTurma.addTab("Remover", abaRemoverTurma);
@@ -219,6 +242,8 @@ public class FormTurma extends javax.swing.JDialog {
         labelCpfAluno.setText("CPF do Aluno:");
 
         labelCodigoTurma.setText("Código da Turma:");
+
+        ButtonSalvarInserirAlunoTurma.setText("Salvar");
 
         javax.swing.GroupLayout abaInserirAlunoTurmaLayout = new javax.swing.GroupLayout(abaInserirAlunoTurma);
         abaInserirAlunoTurma.setLayout(abaInserirAlunoTurmaLayout);
@@ -236,7 +261,10 @@ public class FormTurma extends javax.swing.JDialog {
                         .addComponent(labelCpfAluno)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
                         .addComponent(campoCpfAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(306, 306, 306))))
+                        .addGap(306, 306, 306))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaInserirAlunoTurmaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(ButtonSalvarInserirAlunoTurma))))
         );
         abaInserirAlunoTurmaLayout.setVerticalGroup(
             abaInserirAlunoTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,7 +277,8 @@ public class FormTurma extends javax.swing.JDialog {
                 .addGroup(abaInserirAlunoTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCodigoTurma)
                     .addComponent(CampoCodigoTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(358, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 327, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirAlunoTurma))
         );
 
         abaTurma.addTab("Inserir Aluno na Turma", abaInserirAlunoTurma);
@@ -257,6 +286,8 @@ public class FormTurma extends javax.swing.JDialog {
         labelCpfProfessor.setText("CPF do Professor:");
 
         labelCodigoDaTurma.setText("Código:");
+
+        ButtonSalvarInserirProfessorTurma.setText("Salvar");
 
         javax.swing.GroupLayout abaInserirProfessorTurmaLayout = new javax.swing.GroupLayout(abaInserirProfessorTurma);
         abaInserirProfessorTurma.setLayout(abaInserirProfessorTurmaLayout);
@@ -272,6 +303,9 @@ public class FormTurma extends javax.swing.JDialog {
                     .addComponent(campoCodigoDaTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoCpfProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(473, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaInserirProfessorTurmaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirProfessorTurma))
         );
         abaInserirProfessorTurmaLayout.setVerticalGroup(
             abaInserirProfessorTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,7 +318,8 @@ public class FormTurma extends javax.swing.JDialog {
                 .addGroup(abaInserirProfessorTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCodigoDaTurma)
                     .addComponent(campoCodigoDaTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(362, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 331, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirProfessorTurma))
         );
 
         abaTurma.addTab("Inserir Professor na Turma", abaInserirProfessorTurma);
@@ -292,6 +327,8 @@ public class FormTurma extends javax.swing.JDialog {
         labelCodigoDaTurm.setText("Código da Turma:");
 
         labelNomeAtividade.setText("Nome da Atividade:");
+
+        ButtonSalvarInserirAtividadeTurma.setText("Salvar");
 
         javax.swing.GroupLayout abaInserirAtividadeTurmaLayout = new javax.swing.GroupLayout(abaInserirAtividadeTurma);
         abaInserirAtividadeTurma.setLayout(abaInserirAtividadeTurmaLayout);
@@ -307,6 +344,9 @@ public class FormTurma extends javax.swing.JDialog {
                     .addComponent(campoNomeAtividade, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
                     .addComponent(campoCodigTurma))
                 .addContainerGap(446, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaInserirAtividadeTurmaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirAtividadeTurma))
         );
         abaInserirAtividadeTurmaLayout.setVerticalGroup(
             abaInserirAtividadeTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -319,7 +359,8 @@ public class FormTurma extends javax.swing.JDialog {
                 .addGroup(abaInserirAtividadeTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeAtividade)
                     .addComponent(campoNomeAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 256, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirAtividadeTurma))
         );
 
         abaTurma.addTab("Inserir Atividade na Turma", abaInserirAtividadeTurma);
@@ -422,16 +463,12 @@ public class FormTurma extends javax.swing.JDialog {
 
         abaTurma.addTab("Listar Alunos da Turma", abaListarAlunosTurma);
 
-        ButtonSalvarTurma.setText("Salvar");
-
         javax.swing.GroupLayout janelaTurmaLayout = new javax.swing.GroupLayout(janelaTurma);
         janelaTurma.setLayout(janelaTurmaLayout);
         janelaTurmaLayout.setHorizontalGroup(
             janelaTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, janelaTurmaLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(ButtonSalvarTurma)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botaoVoltar))
             .addGroup(janelaTurmaLayout.createSequentialGroup()
                 .addContainerGap()
@@ -444,9 +481,7 @@ public class FormTurma extends javax.swing.JDialog {
                 .addGap(14, 14, 14)
                 .addComponent(abaTurma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(janelaTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoVoltar)
-                    .addComponent(ButtonSalvarTurma)))
+                .addComponent(botaoVoltar))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -521,7 +556,12 @@ public class FormTurma extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonSalvarTurma;
+    private javax.swing.JButton ButtonSalvarEditarTurma;
+    private javax.swing.JButton ButtonSalvarInserirAlunoTurma;
+    private javax.swing.JButton ButtonSalvarInserirAtividadeTurma;
+    private javax.swing.JButton ButtonSalvarInserirProfessorTurma;
+    private javax.swing.JButton ButtonSalvarInserirTurma;
+    private javax.swing.JButton ButtonSalvarRemoverTurma;
     private javax.swing.JTextField CampoCodigoTurma;
     private javax.swing.JTextField CampoRemoverNomeTurma;
     private javax.swing.JPanel abaEditarTurma;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
@@ -56,8 +56,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="buttonSalvarDisciplina" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="botaoVoltar" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
@@ -73,20 +71,12 @@
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Component id="abaDisciplina" pref="208" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="botaoVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="buttonSalvarDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="botaoVoltar" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="buttonSalvarDisciplina">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Salvar"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="botaoVoltar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Voltar"/>
@@ -124,7 +114,8 @@
                               <Component id="campoEmentaDisciplina" max="32767" attributes="0"/>
                               <Component id="campoCargaDisciplina" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="68" max="32767" attributes="0"/>
+                          <EmptySpace pref="21" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarInserirDisciplina" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -147,6 +138,10 @@
                               <Component id="campoCargaDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarInserirDisciplina" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -172,6 +167,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoCargaDisciplina">
+                </Component>
+                <Component class="javax.swing.JButton" name="buttonSalvarInserirDisciplina">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -231,6 +231,10 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarEditarDisciplina" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -246,7 +250,8 @@
                               <Component id="labelNomeDisciplinaN" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoNomeDisciplinaN" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="59" max="32767" attributes="0"/>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarEditarDisciplina" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -265,6 +270,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoNomeDisciplinaN">
+                </Component>
+                <Component class="javax.swing.JButton" name="buttonSalvarEditarDisciplina">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -287,6 +297,10 @@
                           <Component id="CampoRemoverNomeDisciplina" pref="352" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarRemoverDisciplina" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -297,7 +311,8 @@
                               <Component id="labelRemoverNomeDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="CampoRemoverNomeDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="101" max="32767" attributes="0"/>
+                          <EmptySpace pref="70" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarRemoverDisciplina" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -309,6 +324,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="CampoRemoverNomeDisciplina">
+                </Component>
+                <Component class="javax.swing.JButton" name="buttonSalvarRemoverDisciplina">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>

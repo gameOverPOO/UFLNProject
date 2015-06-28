@@ -41,6 +41,7 @@ public class FormAluno extends javax.swing.JDialog {
         labelCpfAluno = new javax.swing.JLabel();
         campoNomeAluno = new javax.swing.JTextField();
         campoCpfAluno = new javax.swing.JTextField();
+        ButtonSalvarInserirAluno = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblObjetos = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
@@ -48,10 +49,11 @@ public class FormAluno extends javax.swing.JDialog {
         campoNomeAlunoA = new javax.swing.JTextField();
         labelNomeAlunoN = new javax.swing.JLabel();
         campoNomeAlunoN = new javax.swing.JTextField();
+        ButtonSalvarEditarAluno = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         labelRemoverNomeAluno = new javax.swing.JLabel();
         CampoRemoverNomeAluno = new javax.swing.JTextField();
-        ButtonSalvarAluno = new javax.swing.JButton();
+        ButtonSalvarRemoverAluno = new javax.swing.JButton();
 
         jTextField3.setText("jTextField3");
 
@@ -71,6 +73,13 @@ public class FormAluno extends javax.swing.JDialog {
 
         labelCpfAluno.setText("CPF do Aluno:");
 
+        ButtonSalvarInserirAluno.setText("Salvar");
+        ButtonSalvarInserirAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarInserirAlunoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -85,6 +94,9 @@ public class FormAluno extends javax.swing.JDialog {
                     .addComponent(campoCpfAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
                     .addComponent(campoNomeAluno))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirAluno))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +109,8 @@ public class FormAluno extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCpfAluno)
                     .addComponent(campoCpfAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirAluno))
         );
 
         abaAluno.addTab("Inserir", jPanel2);
@@ -121,6 +134,13 @@ public class FormAluno extends javax.swing.JDialog {
 
         labelNomeAlunoN.setText("Novo Nome:");
 
+        ButtonSalvarEditarAluno.setText("Salvar");
+        ButtonSalvarEditarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarEditarAlunoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -135,6 +155,9 @@ public class FormAluno extends javax.swing.JDialog {
                     .addComponent(campoNomeAlunoA)
                     .addComponent(campoNomeAlunoN, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarEditarAluno))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,12 +170,20 @@ public class FormAluno extends javax.swing.JDialog {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeAlunoN)
                     .addComponent(campoNomeAlunoN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarEditarAluno))
         );
 
         abaAluno.addTab("Editar", jPanel3);
 
         labelRemoverNomeAluno.setText("Nome do Aluno:");
+
+        ButtonSalvarRemoverAluno.setText("Salvar");
+        ButtonSalvarRemoverAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarRemoverAlunoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -164,6 +195,9 @@ public class FormAluno extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CampoRemoverNomeAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarRemoverAluno))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,17 +206,11 @@ public class FormAluno extends javax.swing.JDialog {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelRemoverNomeAluno)
                     .addComponent(CampoRemoverNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarRemoverAluno))
         );
 
         abaAluno.addTab("Remover", jPanel4);
-
-        ButtonSalvarAluno.setText("Salvar");
-        ButtonSalvarAluno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonSalvarAlunoActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout janelaAlunoLayout = new javax.swing.GroupLayout(janelaAluno);
         janelaAluno.setLayout(janelaAlunoLayout);
@@ -190,8 +218,6 @@ public class FormAluno extends javax.swing.JDialog {
             janelaAlunoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, janelaAlunoLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(ButtonSalvarAluno)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botaoVoltar))
             .addGroup(janelaAlunoLayout.createSequentialGroup()
                 .addContainerGap()
@@ -202,11 +228,9 @@ public class FormAluno extends javax.swing.JDialog {
             janelaAlunoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, janelaAlunoLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(abaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
+                .addComponent(abaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(janelaAlunoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoVoltar)
-                    .addComponent(ButtonSalvarAluno)))
+                .addComponent(botaoVoltar))
         );
 
         getContentPane().add(janelaAluno, java.awt.BorderLayout.CENTER);
@@ -219,7 +243,7 @@ public class FormAluno extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
 
-    private void ButtonSalvarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarAlunoActionPerformed
+    private void ButtonSalvarInserirAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarInserirAlunoActionPerformed
        
          
         //SALVAR ALUNO
@@ -263,7 +287,15 @@ public class FormAluno extends javax.swing.JDialog {
         dispose();
         
         
-    }//GEN-LAST:event_ButtonSalvarAlunoActionPerformed
+    }//GEN-LAST:event_ButtonSalvarInserirAlunoActionPerformed
+
+    private void ButtonSalvarEditarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarEditarAlunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonSalvarEditarAlunoActionPerformed
+
+    private void ButtonSalvarRemoverAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarRemoverAlunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonSalvarRemoverAlunoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -308,7 +340,9 @@ public class FormAluno extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonSalvarAluno;
+    private javax.swing.JButton ButtonSalvarEditarAluno;
+    private javax.swing.JButton ButtonSalvarInserirAluno;
+    private javax.swing.JButton ButtonSalvarRemoverAluno;
     private javax.swing.JTextField CampoRemoverNomeAluno;
     private javax.swing.JTabbedPane abaAluno;
     private javax.swing.JButton botaoVoltar;

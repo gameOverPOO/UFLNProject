@@ -56,8 +56,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="buttonSalvarAtividade" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="botaoVoltar" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
@@ -73,20 +71,12 @@
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Component id="abaAtividade" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="botaoVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="buttonSalvarAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="botaoVoltar" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="buttonSalvarAtividade">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Salvar"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="botaoVoltar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Voltar"/>
@@ -130,7 +120,8 @@
                               <Component id="campoEmentaDisciplina" alignment="0" max="32767" attributes="0"/>
                               <Component id="campoNomeDisciplina" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="75" max="32767" attributes="0"/>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarInserirAtividade" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -155,6 +146,10 @@
                               <Component id="campoValorAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarInserirAtividade" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -188,6 +183,11 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoValorAtividade">
                 </Component>
+                <Component class="javax.swing.JButton" name="buttonSalvarInserirAtividade">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="abaRemoverAtividade">
@@ -209,6 +209,10 @@
                           <Component id="CampoRemoverNomeAtividade" pref="387" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarRemoverAtividade" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -219,7 +223,8 @@
                               <Component id="labelRemoverNomeAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="CampoRemoverNomeAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="101" max="32767" attributes="0"/>
+                          <EmptySpace pref="70" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarRemoverAtividade" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -232,9 +237,14 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="CampoRemoverNomeAtividade">
                 </Component>
+                <Component class="javax.swing.JButton" name="buttonSalvarRemoverAtividade">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="abaInserirAlunoAtividade">
+            <Container class="javax.swing.JPanel" name="abaInserirAtividadeTurma">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="Inserir Aluno na Atividade">
@@ -249,69 +259,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelCpfAluno" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelNomeAtividadeAluno" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="100" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="campoNomeAtividade" alignment="1" min="-2" pref="319" max="-2" attributes="0"/>
-                              <Component id="campoCpfAluno" alignment="1" min="-2" pref="319" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelCpfAluno" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoCpfAluno" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelNomeAtividadeAluno" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoNomeAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="59" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelCpfAluno">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="CPF do Aluno:"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="campoCpfAluno">
-                </Component>
-                <Component class="javax.swing.JLabel" name="labelNomeAtividadeAluno">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Nome da Atividade:"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="campoNomeAtividade">
-                </Component>
-              </SubComponents>
-            </Container>
-            <Container class="javax.swing.JPanel" name="abaRemoverAlunoAtividade1">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Inserir Aluno na Atividade">
-                    <Property name="tabTitle" type="java.lang.String" value="Inserir Aluno na Atividade"/>
-                  </JTabbedPaneConstraints>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelCpfAluno1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCodTurma" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="labelNomeAtividadeAluno1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="100" max="32767" attributes="0"/>
@@ -321,6 +269,10 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarInserirAlunoAtividade" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -328,7 +280,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelCpfAluno1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCodTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoCpfAluno1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -336,15 +288,16 @@
                               <Component id="labelNomeAtividadeAluno1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoNomeAtividade1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="59" max="32767" attributes="0"/>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                          <Component id="buttonSalvarInserirAlunoAtividade" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelCpfAluno1">
+                <Component class="javax.swing.JLabel" name="labelCodTurma">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="CPF do Aluno:"/>
+                    <Property name="text" type="java.lang.String" value="C&#xf3;digo da Turma:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoCpfAluno1">
@@ -355,6 +308,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoNomeAtividade1">
+                </Component>
+                <Component class="javax.swing.JButton" name="buttonSalvarInserirAlunoAtividade">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>

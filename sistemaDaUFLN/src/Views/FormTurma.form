@@ -62,8 +62,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="ButtonSalvarTurma" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="botaoVoltar" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
@@ -79,10 +77,7 @@
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Component id="abaTurma" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="botaoVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ButtonSalvarTurma" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="botaoVoltar" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -147,6 +142,10 @@
                           </Group>
                           <EmptySpace pref="397" max="32767" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarInserirTurma" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -171,7 +170,8 @@
                               <Component id="campoPeriodoTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labelPeriodoTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="349" max="32767" attributes="0"/>
+                          <EmptySpace pref="318" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarInserirTurma" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -212,6 +212,11 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoNVagasTurma">
                 </Component>
+                <Component class="javax.swing.JButton" name="ButtonSalvarInserirTurma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="abaEditarTurma">
@@ -239,6 +244,10 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarEditarTurma" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -254,7 +263,8 @@
                               <Component id="labelNomeProfessorN" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoNomeProfessorN" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="348" max="32767" attributes="0"/>
+                          <EmptySpace pref="317" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarEditarTurma" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -273,6 +283,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoNomeProfessorN">
+                </Component>
+                <Component class="javax.swing.JButton" name="ButtonSalvarEditarTurma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -295,6 +310,10 @@
                           <Component id="CampoRemoverNomeTurma" pref="646" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarRemoverTurma" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -305,7 +324,8 @@
                               <Component id="labelRemoverCodigoTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="CampoRemoverNomeTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="390" max="32767" attributes="0"/>
+                          <EmptySpace pref="359" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarRemoverTurma" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -317,6 +337,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="CampoRemoverNomeTurma">
+                </Component>
+                <Component class="javax.swing.JButton" name="ButtonSalvarRemoverTurma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -347,6 +372,10 @@
                                   <Component id="campoCpfAluno" min="-2" pref="219" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="306" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="ButtonSalvarInserirAlunoTurma" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -364,7 +393,8 @@
                               <Component id="labelCodigoTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="CampoCodigoTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="358" max="32767" attributes="0"/>
+                          <EmptySpace pref="327" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarInserirAlunoTurma" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -383,6 +413,11 @@
                 <Component class="javax.swing.JTextField" name="campoCpfAluno">
                 </Component>
                 <Component class="javax.swing.JTextField" name="CampoCodigoTurma">
+                </Component>
+                <Component class="javax.swing.JButton" name="ButtonSalvarInserirAlunoTurma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -411,6 +446,10 @@
                           </Group>
                           <EmptySpace pref="473" max="32767" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarInserirProfessorTurma" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -426,7 +465,8 @@
                               <Component id="labelCodigoDaTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoCodigoDaTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="362" max="32767" attributes="0"/>
+                          <EmptySpace pref="331" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarInserirProfessorTurma" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -445,6 +485,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoCodigoDaTurma">
+                </Component>
+                <Component class="javax.swing.JButton" name="ButtonSalvarInserirProfessorTurma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -473,6 +518,10 @@
                           </Group>
                           <EmptySpace pref="446" max="32767" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarInserirAtividadeTurma" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -488,7 +537,8 @@
                               <Component id="labelNomeAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoNomeAtividade" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="287" max="32767" attributes="0"/>
+                          <EmptySpace pref="256" max="32767" attributes="0"/>
+                          <Component id="ButtonSalvarInserirAtividadeTurma" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -507,6 +557,11 @@
                 <Component class="javax.swing.JTextField" name="campoCodigTurma">
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoNomeAtividade">
+                </Component>
+                <Component class="javax.swing.JButton" name="ButtonSalvarInserirAtividadeTurma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -674,11 +729,6 @@
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="ButtonSalvarTurma">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Salvar"/>
-          </Properties>
-        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

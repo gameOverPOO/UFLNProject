@@ -29,7 +29,6 @@ public class FormDisciplina extends javax.swing.JDialog {
     private void initComponents() {
 
         janelaDisciplina = new javax.swing.JPanel();
-        buttonSalvarDisciplina = new javax.swing.JButton();
         botaoVoltar = new javax.swing.JButton();
         abaDisciplina = new javax.swing.JTabbedPane();
         abaInserirDisciplina = new javax.swing.JPanel();
@@ -39,6 +38,7 @@ public class FormDisciplina extends javax.swing.JDialog {
         campoEmentaDisciplina = new javax.swing.JTextField();
         labelCargaDisciplina = new javax.swing.JLabel();
         campoCargaDisciplina = new javax.swing.JTextField();
+        buttonSalvarInserirDisciplina = new javax.swing.JButton();
         abaListarDisciplina = new javax.swing.JScrollPane();
         tblObjetos = new javax.swing.JTable();
         abaEditarDisciplina = new javax.swing.JPanel();
@@ -46,16 +46,16 @@ public class FormDisciplina extends javax.swing.JDialog {
         campoNomeDisciplinaA = new javax.swing.JTextField();
         labelNomeDisciplinaN = new javax.swing.JLabel();
         campoNomeDisciplinaN = new javax.swing.JTextField();
+        buttonSalvarEditarDisciplina = new javax.swing.JButton();
         abaRemoverDisciplina = new javax.swing.JPanel();
         labelRemoverNomeDisciplina = new javax.swing.JLabel();
         CampoRemoverNomeDisciplina = new javax.swing.JTextField();
+        buttonSalvarRemoverDisciplina = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         janelaDisciplina.setBorder(javax.swing.BorderFactory.createTitledBorder("Disciplina"));
         janelaDisciplina.setToolTipText("");
-
-        buttonSalvarDisciplina.setText("Salvar");
 
         botaoVoltar.setText("Voltar");
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -69,6 +69,8 @@ public class FormDisciplina extends javax.swing.JDialog {
         labelEmentaDisciplina.setText("Ementa:");
 
         labelCargaDisciplina.setText("Carga Horária:");
+
+        buttonSalvarInserirDisciplina.setText("Salvar");
 
         javax.swing.GroupLayout abaInserirDisciplinaLayout = new javax.swing.GroupLayout(abaInserirDisciplina);
         abaInserirDisciplina.setLayout(abaInserirDisciplinaLayout);
@@ -85,7 +87,8 @@ public class FormDisciplina extends javax.swing.JDialog {
                     .addComponent(campoNomeDisciplina, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
                     .addComponent(campoEmentaDisciplina)
                     .addComponent(campoCargaDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addComponent(buttonSalvarInserirDisciplina))
         );
         abaInserirDisciplinaLayout.setVerticalGroup(
             abaInserirDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,6 +106,9 @@ public class FormDisciplina extends javax.swing.JDialog {
                     .addComponent(labelCargaDisciplina)
                     .addComponent(campoCargaDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaInserirDisciplinaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(buttonSalvarInserirDisciplina))
         );
 
         abaDisciplina.addTab("Inserir", abaInserirDisciplina);
@@ -126,6 +132,8 @@ public class FormDisciplina extends javax.swing.JDialog {
 
         labelNomeDisciplinaN.setText("Novo Nome:");
 
+        buttonSalvarEditarDisciplina.setText("Salvar");
+
         javax.swing.GroupLayout abaEditarDisciplinaLayout = new javax.swing.GroupLayout(abaEditarDisciplina);
         abaEditarDisciplina.setLayout(abaEditarDisciplinaLayout);
         abaEditarDisciplinaLayout.setHorizontalGroup(
@@ -140,6 +148,9 @@ public class FormDisciplina extends javax.swing.JDialog {
                     .addComponent(campoNomeDisciplinaN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoNomeDisciplinaA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaEditarDisciplinaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(buttonSalvarEditarDisciplina))
         );
         abaEditarDisciplinaLayout.setVerticalGroup(
             abaEditarDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,12 +163,15 @@ public class FormDisciplina extends javax.swing.JDialog {
                 .addGroup(abaEditarDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeDisciplinaN)
                     .addComponent(campoNomeDisciplinaN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(buttonSalvarEditarDisciplina))
         );
 
         abaDisciplina.addTab("Editar", abaEditarDisciplina);
 
         labelRemoverNomeDisciplina.setText("Nome da Disciplina:");
+
+        buttonSalvarRemoverDisciplina.setText("Salvar");
 
         javax.swing.GroupLayout abaRemoverDisciplinaLayout = new javax.swing.GroupLayout(abaRemoverDisciplina);
         abaRemoverDisciplina.setLayout(abaRemoverDisciplinaLayout);
@@ -169,6 +183,9 @@ public class FormDisciplina extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addComponent(CampoRemoverNomeDisciplina, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
                 .addGap(26, 26, 26))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaRemoverDisciplinaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(buttonSalvarRemoverDisciplina))
         );
         abaRemoverDisciplinaLayout.setVerticalGroup(
             abaRemoverDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,7 +194,8 @@ public class FormDisciplina extends javax.swing.JDialog {
                 .addGroup(abaRemoverDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelRemoverNomeDisciplina)
                     .addComponent(CampoRemoverNomeDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addComponent(buttonSalvarRemoverDisciplina))
         );
 
         abaDisciplina.addTab("Remover", abaRemoverDisciplina);
@@ -188,8 +206,6 @@ public class FormDisciplina extends javax.swing.JDialog {
             janelaDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, janelaDisciplinaLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(buttonSalvarDisciplina)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botaoVoltar))
             .addGroup(janelaDisciplinaLayout.createSequentialGroup()
                 .addContainerGap()
@@ -202,9 +218,7 @@ public class FormDisciplina extends javax.swing.JDialog {
                 .addGap(14, 14, 14)
                 .addComponent(abaDisciplina, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(janelaDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoVoltar)
-                    .addComponent(buttonSalvarDisciplina)))
+                .addComponent(botaoVoltar))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -282,7 +296,9 @@ public class FormDisciplina extends javax.swing.JDialog {
     private javax.swing.JScrollPane abaListarDisciplina;
     private javax.swing.JPanel abaRemoverDisciplina;
     private javax.swing.JButton botaoVoltar;
-    private javax.swing.JButton buttonSalvarDisciplina;
+    private javax.swing.JButton buttonSalvarEditarDisciplina;
+    private javax.swing.JButton buttonSalvarInserirDisciplina;
+    private javax.swing.JButton buttonSalvarRemoverDisciplina;
     private javax.swing.JTextField campoCargaDisciplina;
     private javax.swing.JTextField campoEmentaDisciplina;
     private javax.swing.JTextField campoNomeDisciplina;

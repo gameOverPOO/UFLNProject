@@ -3,10 +3,7 @@ package DAOsImpl;
 
 import DAOs.AtividadeDao;
 import POJOs.Atividade;
-
 import POJOs.Aluno;
-
-
 import java.util.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -30,24 +27,20 @@ public class AtividadeDaoImpl implements AtividadeDao{
     public boolean salvar(Atividade atividade){
         
         Aluno a = new Aluno();
-        a.setCpf("43545534534534");
-        a.setNome("mARIANA2222");
+        a.setCpf(14638431780L);
         
-        
-       
         Session session;
         session = conexao.openSession();
         Transaction tx = session.beginTransaction();
-        atividade.setNome("PROVA DE IN");
+        atividade.setNome("PROVA DE tele");
         atividade.setValorAtividade(20);
-        atividade.setData("27/08");
+        atividade.setData("26/08k");
         atividade.getAlunos().add(a);
         
         
-        AlunoDaoImpl aaa = new AlunoDaoImpl();
+        AlunoDaoImpl aaa = new AlunoDaoImpl();        
         a.getAtividades().add(atividade);
-        //aaa.salvar(a); se salvar fica com dados duplicados
-       
+       // aaa.salvar(a); //se salvar fica com dados duplicados       
         session.save(atividade);
         tx.commit();
         session.close();
@@ -121,7 +114,7 @@ public class AtividadeDaoImpl implements AtividadeDao{
             
             
             session.merge(atividaded);
-            session.merge(alunod); //VER SE NO ATUALIZA SOZINHO
+            session.merge(alunod); //VER SE NaO ATUALIZA SOZINHO
             return true;
         }
         catch(Exception ex){

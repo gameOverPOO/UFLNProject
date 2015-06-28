@@ -31,33 +31,73 @@ public class MenuPrincipal {
    //teste commit
     public static void main(String[] args) throws IOException {
      
-        Aluno alun = new Aluno();
-        AlunoDaoImpl ad = new AlunoDaoImpl();
-        
-        Atividade attt = new Atividade();
-        AtividadeDaoImpl at = new AtividadeDaoImpl();
-        attt.setNome("h");
-        at.salvar(attt);
-        
-        Turma turn = new Turma();
-        TurmaDaoImpl aturr = new TurmaDaoImpl();        
-        aturr.salvar(turn);
         
         
-        Disciplina disc = new Disciplina();
-        DisciplinaDaoImpl discd = new DisciplinaDaoImpl();        
-        discd.salvar(disc);
+      //  Atividade attt = new Atividade();
+       // AtividadeDaoImpl at = new AtividadeDaoImpl();
+       // attt.setNome("rabalhao");
+       // at.salvar(attt);
+        
+        //Turma turn = new Turma();
+        //TurmaDaoImpl aturr = new TurmaDaoImpl();        
+        //aturr.salvar(turn);
         
         
-        alun.setCpf("14638431780");
-        alun.setNome("Leandro2");
-        ad.salvar(alun);
+        //Disciplina disc = new Disciplina();
+        //DisciplinaDaoImpl discd = new DisciplinaDaoImpl();        
+       // discd.salvar(disc);
         
         
+       // alun.setCpf(14638431781L);
+        //alun.setNome("Leandro2");
+        //ad.salvar(alun);
+        
+        //Aluno aluna = new Aluno();
+        //aluna.setNome("Leandro2");
+        //aluna.setCpf("14638431780");
+       // aluna.setMatricula(5);
+        
+        //Aluno alunoN = new Aluno();
+       // alunoN.setCpf("7777");
+       // alunoN.setNome("joea");
+        
+       // System.out.println("TNEE---------------------------------EJE ");
+       // ad.atualizar(aluna, alunoN);
         
         Professor profs = new Professor();
         ProfessorDaoImpl profed = new ProfessorDaoImpl();        
         profed.salvar(profs);
+        
+        
+        
+        
+        Aluno alunoA = new Aluno();
+        Aluno alunoN = new Aluno();
+        AlunoDaoImpl ad = new AlunoDaoImpl();
+        
+       //chamar atualizar
+       /* alunoN.setNome("tiGOS");
+        alunoN.setCpf(14638431784L);
+        
+        alunoA.setCpf(14638431780L);
+        alunoA.setNome(alunoN.getNome()); okay
+        ad.atualizar(alunoA, alunoN);
+        */
+        
+         //chamar deletar
+        /*alunoN.setCpf(14638431784L);        
+        ad.deletar(alunoN);*/
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
        int sair=0;     

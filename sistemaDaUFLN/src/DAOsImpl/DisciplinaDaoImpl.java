@@ -15,8 +15,6 @@ import org.hibernate.cfg.Configuration;
 
 public class DisciplinaDaoImpl implements DisciplinaDao{
     
-    public static List<Disciplina> disciplinal = new ArrayList<Disciplina>(); 
-   
     private SessionFactory conexao; 
     
     public DisciplinaDaoImpl(){
@@ -25,14 +23,25 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     
     @Override
     public boolean salvar(Disciplina disciplina){
+        
+        
+        try{
         Session session;
+       // Atividade disc = new Atividade();
+        //disc.setNome("poo dos infernos");
+       
+        
+        //aluno.getAtividades().add(disc);
         session = conexao.openSession();
         Transaction tx = session.beginTransaction();
         session.save(disciplina);
         tx.commit();
         session.close();
         return true;
-       
+        }catch(Exception ex)
+        {
+            return false;
+        }
         
     }
 

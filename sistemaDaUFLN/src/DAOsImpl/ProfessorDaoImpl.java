@@ -33,14 +33,12 @@ public class ProfessorDaoImpl implements ProfessorDao{
         session.close();
         return true;
         
-        
     }
     
     
     @Override
     public boolean atualizar(Professor professorA,Professor professorN){
         
-       
         return false;
     }
    
@@ -49,7 +47,16 @@ public class ProfessorDaoImpl implements ProfessorDao{
     public boolean deletar(Professor professor){
         
        
-        return false;
+        try{ // tenta deletar no banco
+            Session session;
+            session = conexao.openSession();
+            Transaction tx = session.beginTransaction(); 
+            session.delete(professor);
+            return true;
+        }
+        catch(Exception ex){
+            return false;//no existe
+        }
         
     }
     

@@ -12,11 +12,12 @@ import javax.persistence.OneToMany;
 
 public class Aluno {
     
+  //  @Id
+   // @GeneratedValue
+   // private int matricula;
     @Id
-    @GeneratedValue
-    private int matricula;    
-    private String nome;
-    private String cpf;
+    private Long cpf;
+    private String nome;    
     @OneToMany(cascade = CascadeType.ALL) //Estudar para a entrevista
     private List<Turma> turmas = new ArrayList<>();
     @OneToMany(cascade = CascadeType.ALL)
@@ -31,14 +32,7 @@ public class Aluno {
        return turmas;
     }
 
-    public int getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(int matricula) {
-        this.matricula = matricula;
-    }
-    
+   
 
     public Aluno() {
     }
@@ -55,18 +49,19 @@ public class Aluno {
        
     }
 
-    public String getCpf() {
+    public Long getCpf() {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(Long cpf) {
         this.cpf = cpf;
     }
 
 
 
 
-public Aluno(String nome, String cpf) {
+public Aluno(String nome, Long cpf) {
+   
     if(validarCPF(cpf)) //Só cria um aluno se o cpf for valido.
     {
         this.nome = nome;
@@ -78,8 +73,8 @@ public Aluno(String nome, String cpf) {
 }
 
 
-public boolean validarCPF(String CPF) {
-    
+public boolean validarCPF(Long CPFi) {
+   String CPF= Long.toString(CPFi);
      // considera-se erro CPF's formados por uma sequencia de numeros iguais
     if (CPF.equals("00000000000") || CPF.equals("11111111111") ||
         CPF.equals("22222222222") || CPF.equals("33333333333") ||

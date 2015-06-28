@@ -1,6 +1,7 @@
 
 package POJOs;
 import java.util.*;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,9 +17,9 @@ public class Professor {
     private String nome;
     private String cpf;
     private String departamento;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Turma> turmas = new ArrayList<>();
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Disciplina> disciplinas = new ArrayList<>();
 
     public Professor() {

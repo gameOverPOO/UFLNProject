@@ -3,6 +3,7 @@ package POJOs;
 
 import java.util.*;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -28,6 +29,7 @@ public class Turma {
     
     //Atributos
     @Id
+    @GeneratedValue
     private int codigo;
     private int ano;
     private int periodo;

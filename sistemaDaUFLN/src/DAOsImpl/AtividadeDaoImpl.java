@@ -3,7 +3,7 @@ package DAOsImpl;
 
 import DAOs.AtividadeDao;
 import POJOs.Atividade;
-import static DAOsImpl.AtividadeDaoImpl.atividadel;
+
 import POJOs.Aluno;
 
 
@@ -17,8 +17,8 @@ import org.hibernate.cfg.Configuration;
 public class AtividadeDaoImpl implements AtividadeDao{
     
     public static List<Atividade> atividadel = new ArrayList<>(); 
-    private Object atividade;
-    
+   
+    ///CRIAR FUNCAO Q BUSCA NO BANCO?
     
      private SessionFactory conexao; 
     
@@ -30,15 +30,15 @@ public class AtividadeDaoImpl implements AtividadeDao{
     public boolean salvar(Atividade atividade){
         
         Aluno a = new Aluno();
-        a.setCpf("1234562712");
-        a.setNome("Tiago");
+        a.setCpf("43545534534534");
+        a.setNome("mARIANA2222");
         
         
        
         Session session;
         session = conexao.openSession();
         Transaction tx = session.beginTransaction();
-        atividade.setNome("trabaho");
+        atividade.setNome("PROVA DE IN");
         atividade.setValorAtividade(20);
         atividade.setData("27/08");
         atividade.getAlunos().add(a);
@@ -46,7 +46,7 @@ public class AtividadeDaoImpl implements AtividadeDao{
         
         AlunoDaoImpl aaa = new AlunoDaoImpl();
         a.getAtividades().add(atividade);
-        aaa.salvar(a);
+        //aaa.salvar(a); se salvar fica com dados duplicados
        
         session.save(atividade);
         tx.commit();
@@ -58,24 +58,52 @@ public class AtividadeDaoImpl implements AtividadeDao{
     
     @Override
     public boolean deletar(Atividade atividade){
-        String nome = atividade.getNome();
         
-        
-        for(int i=0;i<atividadel.size();i++){
-            
-            Atividade a = atividadel.get(i);
-            if(a.getNome().equals(nome))
-                atividadel.remove(a);
-                return true;
+        try{ // tenta deletar no banco
+            Session session;
+            session = conexao.openSession();
+            Transaction tx = session.beginTransaction(); 
+            session.delete(atividade);
+            return true;
         }
-        return false;
+        catch(Exception ex){
+            return false;//no existe
+        }
+        
+        
     }
     
     @Override
-    public boolean cadastrarAluno(Aluno alunob,Atividade atividade){
-        String cpf = alunob.getCpf();
-      
-        return false;
+    public boolean cadastrarAluno(Aluno aluno,Atividade atividade){
+       
+       try{ // tenta cadastrar no banco
+            Session session;
+            session = conexao.openSession();
+             Transaction tx = session.beginTransaction();
+        //atividade.setNome("trabaho");
+        //atividade.setValorAtividade(20);
+        //atividade.setData("27/08");
+        
+             atividade.getAlunos().add(aluno);//adiciona atividade na lista do aluno
+             aluno.getAtividades().add(atividade);//adiciona aluno na lista de atividade
+        
+        //AlunoDaoImpl aaa = new AlunoDaoImpl();
+        
+            session.merge(aluno); //atualiza aluno
+            session.merge(atividade);//atualiza atividade
+       
+        //session.save(atividade);
+                tx.commit();
+                session.close();
+                return true;
+        
+        
+       }catch(Exception ex) //se atividade ou aluno nao existirem
+       {
+           return false;
+       }
+        
+        
         
         
     }
@@ -83,11 +111,34 @@ public class AtividadeDaoImpl implements AtividadeDao{
     @Override //VERIFICAR
     public boolean excluirAluno(Aluno alunod,Atividade atividaded){
       
-      return false; 
+        try{ // tenta deletar no banco
+            Session session;
+            session = conexao.openSession();
+            Transaction tx = session.beginTransaction(); 
+            alunod.getAtividades().remove(atividaded);
+            atividaded.getAlunos().remove(alunod);
+            
+            
+            
+            session.merge(atividaded);
+            session.merge(alunod); //VER SE NO ATUALIZA SOZINHO
+            return true;
+        }
+        catch(Exception ex){
+            return false;//no existe
+        }
+        
+        
     }
     
     @Override
     public void imprimirAlunos(Atividade atividade){
+        
+        
+        
+        
+        
+        
         
             
         }

@@ -17,9 +17,9 @@ public class Aluno {
     private int matricula;    
     private String nome;
     private String cpf;
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) //Estudar para a entrevista
+    @OneToMany(cascade = CascadeType.ALL) //Estudar para a entrevista
     private List<Turma> turmas = new ArrayList<>();
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Atividade> atividades = new ArrayList<>();
    
 

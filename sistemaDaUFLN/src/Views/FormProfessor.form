@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
-  <NonVisualComponents>
-    <Component class="javax.swing.JTextField" name="jTextField3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField3"/>
-      </Properties>
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
@@ -25,38 +18,57 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,20,0,0,1,-14"/>
   </AuxValues>
 
-  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <EmptySpace min="0" pref="564" max="32767" attributes="0"/>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="janelaProfessor" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <EmptySpace min="0" pref="307" max="32767" attributes="0"/>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="janelaProfessor" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="janelaAluno">
+    <Container class="javax.swing.JPanel" name="janelaProfessor">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Aluno"/>
+            <TitledBorder title="Professor"/>
           </Border>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-          <BorderConstraints direction="Center"/>
-        </Constraint>
-      </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="ButtonSalvarAluno" min="-2" max="-2" attributes="0"/>
+                  <Component id="ButtonSalvarProfessor" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="botaoVoltar" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="abaAluno" max="32767" attributes="0"/>
+                  <Component id="abaProfessor" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -65,11 +77,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Component id="abaAluno" pref="201" max="32767" attributes="0"/>
+                  <Component id="abaProfessor" pref="203" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="botaoVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ButtonSalvarAluno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ButtonSalvarProfessor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -84,11 +96,11 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoVoltarActionPerformed"/>
           </Events>
         </Component>
-        <Container class="javax.swing.JTabbedPane" name="abaAluno">
+        <Container class="javax.swing.JTabbedPane" name="abaProfessor">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel2">
+            <Container class="javax.swing.JPanel" name="abaInserirProfessor">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="Inserir">
@@ -100,16 +112,16 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelCpfAluno" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelNomeAluno" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCpfProfessor" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelNomeProfessor" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="campoCpfAluno" pref="332" max="32767" attributes="0"/>
-                              <Component id="campoNomeAluno" max="32767" attributes="0"/>
+                              <Component id="campoCpfProfessor" alignment="0" pref="376" max="32767" attributes="0"/>
+                              <Component id="campoNomeProfessor" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -120,37 +132,37 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelNomeAluno" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoNomeAluno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelNomeProfessor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNomeProfessor" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelCpfAluno" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoCpfAluno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCpfProfessor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoCpfProfessor" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="44" max="32767" attributes="0"/>
+                          <EmptySpace pref="46" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelNomeAluno">
+                <Component class="javax.swing.JLabel" name="labelNomeProfessor">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Nome do Aluno: "/>
+                    <Property name="text" type="java.lang.String" value="Nome do Professor: "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="labelCpfAluno">
+                <Component class="javax.swing.JLabel" name="labelCpfProfessor">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="CPF do Aluno:"/>
+                    <Property name="text" type="java.lang.String" value="CPF do Professor:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoNomeAluno">
+                <Component class="javax.swing.JTextField" name="campoNomeProfessor">
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoCpfAluno">
+                <Component class="javax.swing.JTextField" name="campoCpfProfessor">
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+            <Container class="javax.swing.JScrollPane" name="abaListarProfessor">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
@@ -174,30 +186,6 @@
                         <Column editable="true" title="Title 4" type="java.lang.Object"/>
                       </Table>
                     </Property>
-                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                      <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                      </TableColumnModel>
-                    </Property>
                     <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
@@ -205,7 +193,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel3">
+            <Container class="javax.swing.JPanel" name="abaEditarProfessor">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="Editar">
@@ -217,16 +205,16 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelNomeAlunoA" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelNomeAlunoN" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelNomeProfessorA" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelNomeProfessorN" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="campoNomeAlunoA" max="32767" attributes="0"/>
-                              <Component id="campoNomeAlunoN" pref="327" max="32767" attributes="0"/>
+                              <Component id="campoNomeProfessorA" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoNomeProfessorN" alignment="0" pref="371" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -237,37 +225,37 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelNomeAlunoA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoNomeAlunoA" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelNomeProfessorA" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNomeProfessorA" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelNomeAlunoN" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoNomeAlunoN" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelNomeProfessorN" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNomeProfessorN" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="52" max="32767" attributes="0"/>
+                          <EmptySpace pref="54" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelNomeAlunoA">
+                <Component class="javax.swing.JLabel" name="labelNomeProfessorA">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Nome do Aluno:"/>
+                    <Property name="text" type="java.lang.String" value="Nome do Professor:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoNomeAlunoA">
+                <Component class="javax.swing.JTextField" name="campoNomeProfessorA">
                 </Component>
-                <Component class="javax.swing.JLabel" name="labelNomeAlunoN">
+                <Component class="javax.swing.JLabel" name="labelNomeProfessorN">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Novo Nome:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoNomeAlunoN">
+                <Component class="javax.swing.JTextField" name="campoNomeProfessorN">
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel4">
+            <Container class="javax.swing.JPanel" name="abaRemoverProfessor">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="Remover">
@@ -279,11 +267,11 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelRemoverNomeAluno" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelRemoverNomeProfessor" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="CampoRemoverNomeAluno" pref="327" max="32767" attributes="0"/>
+                          <Component id="CampoRemoverNomeProfessor" pref="371" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -293,27 +281,27 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelRemoverNomeAluno" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="CampoRemoverNomeAluno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelRemoverNomeProfessor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CampoRemoverNomeProfessor" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="94" max="32767" attributes="0"/>
+                          <EmptySpace pref="96" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelRemoverNomeAluno">
+                <Component class="javax.swing.JLabel" name="labelRemoverNomeProfessor">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Nome do Aluno:"/>
+                    <Property name="text" type="java.lang.String" value="Nome do Professor:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="CampoRemoverNomeAluno">
+                <Component class="javax.swing.JTextField" name="CampoRemoverNomeProfessor">
                 </Component>
               </SubComponents>
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="ButtonSalvarAluno">
+        <Component class="javax.swing.JButton" name="ButtonSalvarProfessor">
           <Properties>
             <Property name="text" type="java.lang.String" value="Salvar"/>
           </Properties>

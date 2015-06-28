@@ -86,15 +86,35 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         menuInserir.add(menuInserirAluno);
 
         menuInserirAtividade.setText("Atividade");
+        menuInserirAtividade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuInserirAtividadeActionPerformed(evt);
+            }
+        });
         menuInserir.add(menuInserirAtividade);
 
         menuInserirDisciplina.setText("Disciplina");
+        menuInserirDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuInserirDisciplinaActionPerformed(evt);
+            }
+        });
         menuInserir.add(menuInserirDisciplina);
 
         menuInserirProfessor.setText("Professor");
+        menuInserirProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuInserirProfessorActionPerformed(evt);
+            }
+        });
         menuInserir.add(menuInserirProfessor);
 
         menuInserirTurma.setText("Turma");
+        menuInserirTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuInserirTurmaActionPerformed(evt);
+            }
+        });
         menuInserir.add(menuInserirTurma);
 
         barraMenu.add(menuInserir);
@@ -110,15 +130,35 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         menuEditar.add(menuEditarAluno);
 
         menuEditarAtividade.setText("Atividade");
+        menuEditarAtividade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuEditarAtividadeActionPerformed(evt);
+            }
+        });
         menuEditar.add(menuEditarAtividade);
 
         MenuEditarDisciplina.setText("Disciplina");
+        MenuEditarDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuEditarDisciplinaActionPerformed(evt);
+            }
+        });
         menuEditar.add(MenuEditarDisciplina);
 
         menuEditarProfessor.setText("Professor");
+        menuEditarProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuEditarProfessorActionPerformed(evt);
+            }
+        });
         menuEditar.add(menuEditarProfessor);
 
         menuEditarTurma.setText("Turma");
+        menuEditarTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuEditarTurmaActionPerformed(evt);
+            }
+        });
         menuEditar.add(menuEditarTurma);
 
         barraMenu.add(menuEditar);
@@ -134,15 +174,35 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         menuRemover.add(MenuRemoverAluno);
 
         MenuRemoverAtividade.setText("Atividade");
+        MenuRemoverAtividade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuRemoverAtividadeActionPerformed(evt);
+            }
+        });
         menuRemover.add(MenuRemoverAtividade);
 
         MenuRemoverDisciplina.setText("Disciplina");
+        MenuRemoverDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuRemoverDisciplinaActionPerformed(evt);
+            }
+        });
         menuRemover.add(MenuRemoverDisciplina);
 
         MenuRemoverProfessor.setText("Professor");
+        MenuRemoverProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuRemoverProfessorActionPerformed(evt);
+            }
+        });
         menuRemover.add(MenuRemoverProfessor);
 
         MenuRemoverTurma.setText("Turma");
+        MenuRemoverTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuRemoverTurmaActionPerformed(evt);
+            }
+        });
         menuRemover.add(MenuRemoverTurma);
 
         barraMenu.add(menuRemover);
@@ -204,7 +264,7 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         FormAluno form=new FormAluno(this,true);
         form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
-        form.setTitle("Inserir Aluno");
+        form.setTitle(" Aluno");
         form.setLocationRelativeTo(null);
         form.setResizable(false);
         form.setVisible(true);
@@ -214,7 +274,7 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         FormAluno form=new FormAluno(this,true);
         form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
-        form.setTitle("Inserir Aluno");
+        form.setTitle(" Aluno");
         form.setLocationRelativeTo(null);
         form.setResizable(false);
         form.setVisible(true);
@@ -224,11 +284,131 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         FormAluno form=new FormAluno(this,true);
         form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
-        form.setTitle("Inserir Aluno");
+        form.setTitle(" Aluno");
         form.setLocationRelativeTo(null);
         form.setResizable(false);
         form.setVisible(true);
     }//GEN-LAST:event_MenuRemoverAlunoActionPerformed
+
+    private void menuInserirProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuInserirProfessorActionPerformed
+        // TODO add your handling code here:
+        FormProfessor form=new FormProfessor(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle(" Professor");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_menuInserirProfessorActionPerformed
+
+    private void menuEditarProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditarProfessorActionPerformed
+        // TODO add your handling code here:
+        FormProfessor form=new FormProfessor(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle(" Professor");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_menuEditarProfessorActionPerformed
+
+    private void MenuRemoverProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuRemoverProfessorActionPerformed
+        // TODO add your handling code here:
+        FormProfessor form=new FormProfessor(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle(" Professor");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_MenuRemoverProfessorActionPerformed
+
+    private void menuInserirAtividadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuInserirAtividadeActionPerformed
+        // TODO add your handling code here:
+        FormAtividade form=new FormAtividade(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle(" Atividade");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_menuInserirAtividadeActionPerformed
+
+    private void menuInserirDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuInserirDisciplinaActionPerformed
+        // TODO add your handling code here:
+        FormDisciplina form=new FormDisciplina(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Disciplina");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_menuInserirDisciplinaActionPerformed
+
+    private void menuInserirTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuInserirTurmaActionPerformed
+        // TODO add your handling code here:
+        FormTurma form=new FormTurma(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Turma");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_menuInserirTurmaActionPerformed
+
+    private void menuEditarAtividadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditarAtividadeActionPerformed
+        // TODO add your handling code here:
+        FormAtividade form=new FormAtividade(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle(" Atividade");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_menuEditarAtividadeActionPerformed
+
+    private void MenuEditarDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuEditarDisciplinaActionPerformed
+        // TODO add your handling code here:
+        FormDisciplina form=new FormDisciplina(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Disciplina");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_MenuEditarDisciplinaActionPerformed
+
+    private void menuEditarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditarTurmaActionPerformed
+        // TODO add your handling code here:
+        FormTurma form=new FormTurma(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Turma");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_menuEditarTurmaActionPerformed
+
+    private void MenuRemoverAtividadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuRemoverAtividadeActionPerformed
+        // TODO add your handling code here:
+        FormAtividade form=new FormAtividade(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle(" Atividade");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_MenuRemoverAtividadeActionPerformed
+
+    private void MenuRemoverDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuRemoverDisciplinaActionPerformed
+        // TODO add your handling code here:
+        FormDisciplina form=new FormDisciplina(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Disciplina");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_MenuRemoverDisciplinaActionPerformed
+
+    private void MenuRemoverTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuRemoverTurmaActionPerformed
+        // TODO add your handling code here:
+        FormTurma form=new FormTurma(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Turma");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_MenuRemoverTurmaActionPerformed
 
     /**
      * @param args the command line arguments

@@ -63,7 +63,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Component id="abaAluno" pref="250" max="32767" attributes="0"/>
+                  <Component id="abaAluno" pref="252" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="botaoVoltar" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -127,7 +127,7 @@
                               <Component id="labelCpfAluno" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoCpfAluno" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="62" max="32767" attributes="0"/>
+                          <EmptySpace pref="64" max="32767" attributes="0"/>
                           <Component id="ButtonSalvarInserirAluno" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -228,13 +228,13 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelNomeAlunoA" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCPFAluno" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="labelNomeAlunoN" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="campoNomeAlunoA" max="32767" attributes="0"/>
-                              <Component id="campoNomeAlunoN" pref="327" max="32767" attributes="0"/>
+                              <Component id="campoEditarCpfAluno" max="32767" attributes="0"/>
+                              <Component id="campoNomeAlunoN" pref="340" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -249,27 +249,27 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelNomeAlunoA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoNomeAlunoA" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCPFAluno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoEditarCpfAluno" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelNomeAlunoN" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoNomeAlunoN" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="70" max="32767" attributes="0"/>
+                          <EmptySpace pref="72" max="32767" attributes="0"/>
                           <Component id="ButtonSalvarEditarAluno" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelNomeAlunoA">
+                <Component class="javax.swing.JLabel" name="labelCPFAluno">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Nome do Aluno:"/>
+                    <Property name="text" type="java.lang.String" value="CPF do Aluno:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoNomeAlunoA">
+                <Component class="javax.swing.JTextField" name="campoEditarCpfAluno">
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelNomeAlunoN">
                   <Properties>
@@ -302,9 +302,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelRemoverNomeAluno" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelRemoverCpfAluno" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="CampoRemoverNomeAluno" pref="327" max="32767" attributes="0"/>
+                          <Component id="CampoRemoverCpfAluno" pref="340" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -318,22 +318,22 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelRemoverNomeAluno" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="CampoRemoverNomeAluno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelRemoverCpfAluno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CampoRemoverCpfAluno" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="112" max="32767" attributes="0"/>
+                          <EmptySpace pref="114" max="32767" attributes="0"/>
                           <Component id="ButtonSalvarRemoverAluno" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelRemoverNomeAluno">
+                <Component class="javax.swing.JLabel" name="labelRemoverCpfAluno">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Nome do Aluno:"/>
+                    <Property name="text" type="java.lang.String" value="CPF do Aluno:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="CampoRemoverNomeAluno">
+                <Component class="javax.swing.JTextField" name="CampoRemoverCpfAluno">
                 </Component>
                 <Component class="javax.swing.JButton" name="ButtonSalvarRemoverAluno">
                   <Properties>

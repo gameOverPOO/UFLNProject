@@ -45,14 +45,14 @@ public class FormAluno extends javax.swing.JDialog {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblObjetos = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
-        labelNomeAlunoA = new javax.swing.JLabel();
-        campoNomeAlunoA = new javax.swing.JTextField();
+        labelCPFAluno = new javax.swing.JLabel();
+        campoEditarCpfAluno = new javax.swing.JTextField();
         labelNomeAlunoN = new javax.swing.JLabel();
         campoNomeAlunoN = new javax.swing.JTextField();
         ButtonSalvarEditarAluno = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        labelRemoverNomeAluno = new javax.swing.JLabel();
-        CampoRemoverNomeAluno = new javax.swing.JTextField();
+        labelRemoverCpfAluno = new javax.swing.JLabel();
+        CampoRemoverCpfAluno = new javax.swing.JTextField();
         ButtonSalvarRemoverAluno = new javax.swing.JButton();
 
         jTextField3.setText("jTextField3");
@@ -109,7 +109,7 @@ public class FormAluno extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCpfAluno)
                     .addComponent(campoCpfAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarInserirAluno))
         );
 
@@ -130,7 +130,7 @@ public class FormAluno extends javax.swing.JDialog {
 
         abaAluno.addTab("Listar", jScrollPane1);
 
-        labelNomeAlunoA.setText("Nome do Aluno:");
+        labelCPFAluno.setText("CPF do Aluno:");
 
         labelNomeAlunoN.setText("Novo Nome:");
 
@@ -148,12 +148,12 @@ public class FormAluno extends javax.swing.JDialog {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelNomeAlunoA)
+                    .addComponent(labelCPFAluno)
                     .addComponent(labelNomeAlunoN))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(campoNomeAlunoA)
-                    .addComponent(campoNomeAlunoN, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE))
+                    .addComponent(campoEditarCpfAluno)
+                    .addComponent(campoNomeAlunoN, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -164,19 +164,19 @@ public class FormAluno extends javax.swing.JDialog {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNomeAlunoA)
-                    .addComponent(campoNomeAlunoA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelCPFAluno)
+                    .addComponent(campoEditarCpfAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeAlunoN)
                     .addComponent(campoNomeAlunoN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarEditarAluno))
         );
 
         abaAluno.addTab("Editar", jPanel3);
 
-        labelRemoverNomeAluno.setText("Nome do Aluno:");
+        labelRemoverCpfAluno.setText("CPF do Aluno:");
 
         ButtonSalvarRemoverAluno.setText("Salvar");
         ButtonSalvarRemoverAluno.addActionListener(new java.awt.event.ActionListener() {
@@ -191,9 +191,9 @@ public class FormAluno extends javax.swing.JDialog {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelRemoverNomeAluno)
+                .addComponent(labelRemoverCpfAluno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoRemoverNomeAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                .addComponent(CampoRemoverCpfAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -204,9 +204,9 @@ public class FormAluno extends javax.swing.JDialog {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelRemoverNomeAluno)
-                    .addComponent(CampoRemoverNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                    .addComponent(labelRemoverCpfAluno)
+                    .addComponent(CampoRemoverCpfAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarRemoverAluno))
         );
 
@@ -228,7 +228,7 @@ public class FormAluno extends javax.swing.JDialog {
             janelaAlunoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, janelaAlunoLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(abaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                .addComponent(abaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botaoVoltar))
         );
@@ -290,7 +290,34 @@ public class FormAluno extends javax.swing.JDialog {
     }//GEN-LAST:event_ButtonSalvarInserirAlunoActionPerformed
 
     private void ButtonSalvarEditarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarEditarAlunoActionPerformed
-        // TODO add your handling code here:
+       //chamar atualizar
+       /* alunoN.setNome("tiGOS");
+        alunoN.setCpf(14638431784L);
+        
+        alunoA.setCpf(14638431780L);
+        alunoA.setNome(alunoN.getNome()); okay
+        ad.atualizar(alunoA, alunoN);
+        */
+        
+        Aluno alunoN = new Aluno();
+        Aluno alunoA = new Aluno();
+        AlunoDaoImpl alunodao = new AlunoDaoImpl();
+        
+        alunoN.setNome(campoNomeAlunoN.getText());
+        try{
+            alunoA.setCpf(Long.parseLong(campoEditarCpfAluno.getText()));
+            alunoA.setNome(alunoN.getNome());
+            alunodao.atualizar(alunoA, alunoN);
+            
+            
+        }catch(Exception ex){
+            
+            
+             JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        
+        
     }//GEN-LAST:event_ButtonSalvarEditarAlunoActionPerformed
 
     private void ButtonSalvarRemoverAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarRemoverAlunoActionPerformed
@@ -343,12 +370,12 @@ public class FormAluno extends javax.swing.JDialog {
     private javax.swing.JButton ButtonSalvarEditarAluno;
     private javax.swing.JButton ButtonSalvarInserirAluno;
     private javax.swing.JButton ButtonSalvarRemoverAluno;
-    private javax.swing.JTextField CampoRemoverNomeAluno;
+    private javax.swing.JTextField CampoRemoverCpfAluno;
     private javax.swing.JTabbedPane abaAluno;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JTextField campoCpfAluno;
+    private javax.swing.JTextField campoEditarCpfAluno;
     private javax.swing.JTextField campoNomeAluno;
-    private javax.swing.JTextField campoNomeAlunoA;
     private javax.swing.JTextField campoNomeAlunoN;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -356,11 +383,11 @@ public class FormAluno extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JPanel janelaAluno;
+    private javax.swing.JLabel labelCPFAluno;
     private javax.swing.JLabel labelCpfAluno;
     private javax.swing.JLabel labelNomeAluno;
-    private javax.swing.JLabel labelNomeAlunoA;
     private javax.swing.JLabel labelNomeAlunoN;
-    private javax.swing.JLabel labelRemoverNomeAluno;
+    private javax.swing.JLabel labelRemoverCpfAluno;
     private javax.swing.JTable tblObjetos;
     // End of variables declaration//GEN-END:variables
 }

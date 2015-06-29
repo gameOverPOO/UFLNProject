@@ -42,12 +42,12 @@ public class AlunoDaoImpl implements AlunoDao{
         
         
         
-          try{ 
+          
             Session session;
             session = conexao.openSession();
             Transaction tx = session.beginTransaction(); 
            // tenta deletar no banco
-            alunoA.setNome(alunoN.getNome());
+            //alunoA.setNome(alunoN.getNome());
             //alunoA.setCpf(alunoN.getCpf());
             session.merge(alunoA);
            // alunoA.setCpf(alunoN.getCpf());
@@ -55,16 +55,12 @@ public class AlunoDaoImpl implements AlunoDao{
            
             
             
-             System.out.println("1. Agsdgsdfds");
+            
             tx.commit();
             
             return true;
-        }
-        catch(Exception ex){
-            System.out.println("1. Adicionar uma disciplina");
-            
-            return false;//no existe
-        }
+        
+        
         
        /* MyEntity e = //entidade criada em algum outro lugar (JSF, Spring, etc.)
         MyEntity e2 = em.find(MyEntity.class, idEntidade);

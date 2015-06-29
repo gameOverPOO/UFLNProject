@@ -10,7 +10,7 @@ import java.util.*;
 
 
 
-public class DisciplinaView {
+public class DisciplinaView {/*
     DisciplinaDao d = new DisciplinaDaoImpl(); 
     
     public void subMenu() throws IOException{
@@ -221,6 +221,6 @@ public class DisciplinaView {
                 
         Disciplina disciplina = new Disciplina();
         d.ImprimirTurmas(disciplina);
-    }
+    }*/
 }
 

@@ -9,7 +9,7 @@ import java.util.*;
 import POJOs.Professor;
 
 
-public class ProfessorView {
+public class ProfessorView {/*
     
     ProfessorDao p = new ProfessorDaoImpl();
     
@@ -117,5 +117,5 @@ public class ProfessorView {
         String nomeD = new String();                
         nomeD = leitura.nextLine();
         //p.deletar(nomeD);
-    }
+    }*/
 }

@@ -546,6 +546,7 @@ public class FormTurma extends javax.swing.JDialog {
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, "Codigo invalido!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
         }
+        dispose();
         
     }//GEN-LAST:event_ButtonSalvarInserirTurmaActionPerformed
 

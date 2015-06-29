@@ -167,11 +167,17 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoCargaDisciplina">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter(&quot;##&quot;); campoCargaDisciplina = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JButton" name="buttonSalvarInserirDisciplina">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Salvar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonSalvarInserirDisciplinaActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

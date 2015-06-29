@@ -5,6 +5,10 @@
  */
 package Views;
 
+import DAOsImpl.DisciplinaDaoImpl;
+import POJOs.Disciplina;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author john
@@ -70,7 +74,14 @@ public class FormDisciplina extends javax.swing.JDialog {
 
         labelCargaDisciplina.setText("Carga Horária:");
 
+        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("##"); campoCargaDisciplina = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
+
         buttonSalvarInserirDisciplina.setText("Salvar");
+        buttonSalvarInserirDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSalvarInserirDisciplinaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaInserirDisciplinaLayout = new javax.swing.GroupLayout(abaInserirDisciplina);
         abaInserirDisciplina.setLayout(abaInserirDisciplinaLayout);
@@ -245,6 +256,29 @@ public class FormDisciplina extends javax.swing.JDialog {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void buttonSalvarInserirDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarInserirDisciplinaActionPerformed
+       
+        Disciplina disciplina = new Disciplina();
+        
+        disciplina.setEmenta(campoEmentaDisciplina.getText());
+        disciplina.setNome(campoNomeDisciplina.getText());
+        disciplina.setCargaHorariaDisciplina(Integer.parseInt(campoCargaDisciplina.getText()));
+        
+        
+        DisciplinaDaoImpl disciplinadao = new DisciplinaDaoImpl();
+        
+        try{
+           disciplinadao.salvar(disciplina);
+        }catch(Exception ex)
+        {
+              JOptionPane.showMessageDialog(null, "Erro!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        
+        
+        
+    }//GEN-LAST:event_buttonSalvarInserirDisciplinaActionPerformed
 
     /**
      * @param args the command line arguments

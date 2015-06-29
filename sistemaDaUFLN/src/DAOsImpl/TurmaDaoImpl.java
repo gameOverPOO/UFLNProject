@@ -72,7 +72,7 @@ public class TurmaDaoImpl implements TurmaDao{
         
        }catch(Exception ex) //se atividade ou aluno nao existirem
        {
-           JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+          
            
            
            return false;

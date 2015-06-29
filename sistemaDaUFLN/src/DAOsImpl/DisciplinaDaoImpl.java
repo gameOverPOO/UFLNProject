@@ -49,7 +49,22 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     public boolean atualizar(Disciplina disciplinaA, Disciplina disciplinaN){
      
         
-        return false;
+        Session session;
+            session = conexao.openSession();
+            Transaction tx = session.beginTransaction(); 
+           // tenta deletar no banco
+            //alunoA.setNome(alunoN.getNome());
+            //alunoA.setCpf(alunoN.getCpf());
+            session.merge(disciplinaA);
+           // alunoA.setCpf(alunoN.getCpf());
+           
+           
+            
+            
+            
+            tx.commit();
+            
+            return true;
     }
     
     
@@ -57,8 +72,18 @@ public class DisciplinaDaoImpl implements DisciplinaDao{
     @Override 
     public boolean deletar(Disciplina disciplina){
         
+        try{ // tenta deletar no banco
+            Session session;
+            session = conexao.openSession();
+            Transaction tx = session.beginTransaction(); 
+            session.delete(disciplina);
+            tx.commit();
+            return true;
+        }
+        catch(Exception ex){
+            return false;//no existe
+        }
         
-        return false;
     }
     
     @Override

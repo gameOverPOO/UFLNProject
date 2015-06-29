@@ -13,7 +13,7 @@ public class Disciplina {
    //Atributos
    @Id
    @GeneratedValue
-   private int id;
+   private Long id;
    private String nome;
    private String ementa;
    private int cargaHoraria;
@@ -52,6 +52,13 @@ public class Disciplina {
     
     public String getEmenta() {
         return ementa;
+    }
+    
+    public Long getId(){
+        return id;
+    }
+    public void setId(Long id){
+        this.id=id;
     }
 
     

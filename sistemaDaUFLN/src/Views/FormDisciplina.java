@@ -46,14 +46,14 @@ public class FormDisciplina extends javax.swing.JDialog {
         abaListarDisciplina = new javax.swing.JScrollPane();
         tblObjetos = new javax.swing.JTable();
         abaEditarDisciplina = new javax.swing.JPanel();
-        labelNomeDisciplinaA = new javax.swing.JLabel();
-        campoNomeDisciplinaA = new javax.swing.JTextField();
+        labelIdDisciplina = new javax.swing.JLabel();
+        campoCodigoDisciplina = new javax.swing.JTextField();
         labelNomeDisciplinaN = new javax.swing.JLabel();
         campoNomeDisciplinaN = new javax.swing.JTextField();
         buttonSalvarEditarDisciplina = new javax.swing.JButton();
         abaRemoverDisciplina = new javax.swing.JPanel();
-        labelRemoverNomeDisciplina = new javax.swing.JLabel();
-        CampoRemoverNomeDisciplina = new javax.swing.JTextField();
+        labelRemoverCodigoDisciplina = new javax.swing.JLabel();
+        CampoRemoverCodigoDisciplina = new javax.swing.JTextField();
         buttonSalvarRemoverDisciplina = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -98,7 +98,7 @@ public class FormDisciplina extends javax.swing.JDialog {
                     .addComponent(campoNomeDisciplina, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
                     .addComponent(campoEmentaDisciplina)
                     .addComponent(campoCargaDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(buttonSalvarInserirDisciplina))
         );
         abaInserirDisciplinaLayout.setVerticalGroup(
@@ -139,11 +139,16 @@ public class FormDisciplina extends javax.swing.JDialog {
 
         abaDisciplina.addTab("Listar", abaListarDisciplina);
 
-        labelNomeDisciplinaA.setText("Nome da Disciplina:");
+        labelIdDisciplina.setText("Código da Disciplina:");
 
         labelNomeDisciplinaN.setText("Novo Nome:");
 
         buttonSalvarEditarDisciplina.setText("Salvar");
+        buttonSalvarEditarDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSalvarEditarDisciplinaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaEditarDisciplinaLayout = new javax.swing.GroupLayout(abaEditarDisciplina);
         abaEditarDisciplina.setLayout(abaEditarDisciplinaLayout);
@@ -152,12 +157,12 @@ public class FormDisciplina extends javax.swing.JDialog {
             .addGroup(abaEditarDisciplinaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(abaEditarDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelNomeDisciplinaA)
+                    .addComponent(labelIdDisciplina)
                     .addComponent(labelNomeDisciplinaN))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(abaEditarDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(campoNomeDisciplinaN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoNomeDisciplinaA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoCodigoDisciplina, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaEditarDisciplinaLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -168,8 +173,8 @@ public class FormDisciplina extends javax.swing.JDialog {
             .addGroup(abaEditarDisciplinaLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(abaEditarDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNomeDisciplinaA)
-                    .addComponent(campoNomeDisciplinaA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelIdDisciplina)
+                    .addComponent(campoCodigoDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(abaEditarDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeDisciplinaN)
@@ -180,9 +185,14 @@ public class FormDisciplina extends javax.swing.JDialog {
 
         abaDisciplina.addTab("Editar", abaEditarDisciplina);
 
-        labelRemoverNomeDisciplina.setText("Nome da Disciplina:");
+        labelRemoverCodigoDisciplina.setText("Código da Disciplina:");
 
         buttonSalvarRemoverDisciplina.setText("Salvar");
+        buttonSalvarRemoverDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSalvarRemoverDisciplinaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaRemoverDisciplinaLayout = new javax.swing.GroupLayout(abaRemoverDisciplina);
         abaRemoverDisciplina.setLayout(abaRemoverDisciplinaLayout);
@@ -190,9 +200,9 @@ public class FormDisciplina extends javax.swing.JDialog {
             abaRemoverDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaRemoverDisciplinaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelRemoverNomeDisciplina)
+                .addComponent(labelRemoverCodigoDisciplina)
                 .addGap(18, 18, 18)
-                .addComponent(CampoRemoverNomeDisciplina, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
+                .addComponent(CampoRemoverCodigoDisciplina, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)
                 .addGap(26, 26, 26))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaRemoverDisciplinaLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -203,8 +213,8 @@ public class FormDisciplina extends javax.swing.JDialog {
             .addGroup(abaRemoverDisciplinaLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(abaRemoverDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelRemoverNomeDisciplina)
-                    .addComponent(CampoRemoverNomeDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelRemoverCodigoDisciplina)
+                    .addComponent(CampoRemoverCodigoDisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addComponent(buttonSalvarRemoverDisciplina))
         );
@@ -280,6 +290,69 @@ public class FormDisciplina extends javax.swing.JDialog {
         
     }//GEN-LAST:event_buttonSalvarInserirDisciplinaActionPerformed
 
+    private void buttonSalvarEditarDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarEditarDisciplinaActionPerformed
+        // TODO add your handling code here:
+        //dssdss
+        
+        Disciplina disciplinaN=new Disciplina();
+        Disciplina disciplinaA=new Disciplina();
+        DisciplinaDaoImpl disciplinaDao =new DisciplinaDaoImpl();
+        
+        disciplinaN.setNome(campoNomeDisciplinaN.getText());
+        
+        try{
+            disciplinaA.setId(Long.parseLong(campoCodigoDisciplina.getText()));
+            disciplinaA.setNome(disciplinaN.getNome());
+            disciplinaDao.atualizar(disciplinaA, disciplinaN);
+            
+            JOptionPane.showMessageDialog(null, "Atualizado!", "Atualização!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+           
+        }catch(Exception ex){
+            
+            
+             JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        dispose();
+        /**
+          alunoN.setNome(campoNomeAlunoN.getText());
+        try{
+            alunoA.setCpf(Long.parseLong(campoEditarCpfAluno.getText()));
+            alunoA.setNome(alunoN.getNome());
+            alunodao.atualizar(alunoA, alunoN);
+            JOptionPane.showMessageDialog(null, "Atualizado!", "Atualização!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+           
+        }catch(Exception ex){
+            
+            
+             JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        dispose();
+         */
+    }//GEN-LAST:event_buttonSalvarEditarDisciplinaActionPerformed
+
+    private void buttonSalvarRemoverDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarRemoverDisciplinaActionPerformed
+        // TODO add your handling code here:
+        
+        Disciplina disciplina=new Disciplina();
+        DisciplinaDaoImpl disciplinaDao=new DisciplinaDaoImpl();
+        
+        try{
+            disciplina.setId(Long.parseLong(CampoRemoverCodigoDisciplina.getText()));
+            disciplinaDao.deletar(disciplina);
+            
+            JOptionPane.showMessageDialog(null, "Removido!", "Remoção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }catch(Exception ex){
+            
+             JOptionPane.showMessageDialog(null, "CPF invalido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        
+        dispose();
+    }//GEN-LAST:event_buttonSalvarRemoverDisciplinaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -323,7 +396,7 @@ public class FormDisciplina extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CampoRemoverNomeDisciplina;
+    private javax.swing.JTextField CampoRemoverCodigoDisciplina;
     private javax.swing.JTabbedPane abaDisciplina;
     private javax.swing.JPanel abaEditarDisciplina;
     private javax.swing.JPanel abaInserirDisciplina;
@@ -334,17 +407,17 @@ public class FormDisciplina extends javax.swing.JDialog {
     private javax.swing.JButton buttonSalvarInserirDisciplina;
     private javax.swing.JButton buttonSalvarRemoverDisciplina;
     private javax.swing.JTextField campoCargaDisciplina;
+    private javax.swing.JTextField campoCodigoDisciplina;
     private javax.swing.JTextField campoEmentaDisciplina;
     private javax.swing.JTextField campoNomeDisciplina;
-    private javax.swing.JTextField campoNomeDisciplinaA;
     private javax.swing.JTextField campoNomeDisciplinaN;
     private javax.swing.JPanel janelaDisciplina;
     private javax.swing.JLabel labelCargaDisciplina;
     private javax.swing.JLabel labelEmentaDisciplina;
+    private javax.swing.JLabel labelIdDisciplina;
     private javax.swing.JLabel labelNomeDisciplina;
-    private javax.swing.JLabel labelNomeDisciplinaA;
     private javax.swing.JLabel labelNomeDisciplinaN;
-    private javax.swing.JLabel labelRemoverNomeDisciplina;
+    private javax.swing.JLabel labelRemoverCodigoDisciplina;
     private javax.swing.JTable tblObjetos;
     // End of variables declaration//GEN-END:variables
 }

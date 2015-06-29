@@ -114,7 +114,7 @@
                               <Component id="campoEmentaDisciplina" max="32767" attributes="0"/>
                               <Component id="campoCargaDisciplina" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="21" max="32767" attributes="0"/>
+                          <EmptySpace pref="31" max="32767" attributes="0"/>
                           <Component id="buttonSalvarInserirDisciplina" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -227,13 +227,13 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelNomeDisciplinaA" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelIdDisciplina" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="labelNomeDisciplinaN" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="65" max="32767" attributes="0"/>
+                          <EmptySpace pref="70" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="campoNomeDisciplinaN" alignment="1" min="-2" pref="319" max="-2" attributes="0"/>
-                              <Component id="campoNomeDisciplinaA" alignment="1" min="-2" pref="319" max="-2" attributes="0"/>
+                              <Component id="campoCodigoDisciplina" alignment="1" min="-2" pref="319" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -248,8 +248,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelNomeDisciplinaA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoNomeDisciplinaA" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelIdDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoCodigoDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -263,12 +263,12 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelNomeDisciplinaA">
+                <Component class="javax.swing.JLabel" name="labelIdDisciplina">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Nome da Disciplina:"/>
+                    <Property name="text" type="java.lang.String" value="C&#xf3;digo da Disciplina:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoNomeDisciplinaA">
+                <Component class="javax.swing.JTextField" name="campoCodigoDisciplina">
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelNomeDisciplinaN">
                   <Properties>
@@ -281,6 +281,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Salvar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonSalvarEditarDisciplinaActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -298,9 +301,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelRemoverNomeDisciplina" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelRemoverCodigoDisciplina" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="CampoRemoverNomeDisciplina" pref="352" max="32767" attributes="0"/>
+                          <Component id="CampoRemoverCodigoDisciplina" pref="357" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -314,8 +317,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelRemoverNomeDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="CampoRemoverNomeDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelRemoverCodigoDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CampoRemoverCodigoDisciplina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="70" max="32767" attributes="0"/>
                           <Component id="buttonSalvarRemoverDisciplina" min="-2" max="-2" attributes="0"/>
@@ -324,17 +327,20 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelRemoverNomeDisciplina">
+                <Component class="javax.swing.JLabel" name="labelRemoverCodigoDisciplina">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Nome da Disciplina:"/>
+                    <Property name="text" type="java.lang.String" value="C&#xf3;digo da Disciplina:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="CampoRemoverNomeDisciplina">
+                <Component class="javax.swing.JTextField" name="CampoRemoverCodigoDisciplina">
                 </Component>
                 <Component class="javax.swing.JButton" name="buttonSalvarRemoverDisciplina">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Salvar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonSalvarRemoverDisciplinaActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

@@ -4,9 +4,8 @@ package DAOsImpl;
 
 import DAOs.TurmaDao;
 import POJOs.Aluno;
-import java.util.*;
+import POJOs.Professor;
 import POJOs.Turma;
-import javax.swing.JOptionPane;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -92,10 +91,34 @@ public class TurmaDaoImpl implements TurmaDao{
     }
     
     @Override
-    public boolean cadastrarProfessor(String cpf, Integer codigo){
+    public boolean cadastrarProfessor(Professor professor, Turma turma){
+         try{ // tenta cadastrar no banco
+            Session session;
+            session = conexao.openSession();
+             Transaction tx = session.beginTransaction();
+       
+             turma.setProfessor(professor);//adiciona atividade na lista do aluno
+             professor.getTurmas().add(turma);
+         
+            session.merge(professor); //atualiza aluno
+            session.merge(turma);//atualiza atividade
+       
+        
+                tx.commit();
+                session.close();
+                return true;
+        
+        
+       }catch(Exception ex) 
+       {
+          
+           
+           
+           return false;
+       }
         
           
-        return false;
+        
         
     }
     
@@ -107,11 +130,32 @@ public class TurmaDaoImpl implements TurmaDao{
     }
     
  
-     @Override
-    public boolean atividade(String nome, Integer codigo){
+     
+   
+
+    @Override
+    public boolean atualizar(Turma turmaA, Turma turmaN) {
+        
+        Session session;
+            session = conexao.openSession();
+            Transaction tx = session.beginTransaction(); 
+           // tenta deletar no banco
+            //alunoA.setNome(alunoN.getNome());
+            //alunoA.setCpf(alunoN.getCpf());
+            session.merge(turmaA);
+           // alunoA.setCpf(alunoN.getCpf());
+           
+           
+            
+            
+            
+            tx.commit();
+            
+            return true;
         
         
-        return false;
+        
+        
     }
     
 }

@@ -303,6 +303,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Salvar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonSalvarEditarTurmaActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -375,21 +378,26 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="labelCodigoTurma" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="CampoCodigoTurma" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="451" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="labelCpfAluno" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="168" max="32767" attributes="0"/>
-                                  <Component id="campoCpfAluno" min="-2" pref="219" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="306" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="ButtonSalvarInserirAlunoTurma" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelCodigoTurma" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelCpfAluno" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="campoCpfAluno" min="-2" pref="219" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="CampoCodigoTurma" pref="201" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="451" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -408,7 +416,7 @@
                               <Component id="labelCodigoTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="CampoCodigoTurma" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="327" max="32767" attributes="0"/>
+                          <EmptySpace pref="329" max="32767" attributes="0"/>
                           <Component id="ButtonSalvarInserirAlunoTurma" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -508,6 +516,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Salvar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonSalvarInserirProfessorTurmaActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

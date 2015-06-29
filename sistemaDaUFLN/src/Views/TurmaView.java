@@ -184,7 +184,7 @@ public class TurmaView {
                      
         Integer codigo = Integer.valueOf(codigoTurma);
                  
-        turmaDao.cadastrarProfessor(cpf, codigo);        
+             
     }
     public void imprimirAlunoTurma(){
         Scanner leitura= new Scanner(System.in);

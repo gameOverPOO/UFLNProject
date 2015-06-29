@@ -5,9 +5,11 @@
  */
 package Views;
 
-import DAOs.TurmaDao;
+import DAOsImpl.DisciplinaDaoImpl;
 import DAOsImpl.TurmaDaoImpl;
 import POJOs.Aluno;
+import POJOs.Disciplina;
+import POJOs.Professor;
 import POJOs.Turma;
 import javax.swing.JOptionPane;
 
@@ -187,6 +189,11 @@ public class FormTurma extends javax.swing.JDialog {
         labelNomeProfessorN.setText("Novo Nome:");
 
         ButtonSalvarEditarTurma.setText("Salvar");
+        ButtonSalvarEditarTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarEditarTurmaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaEditarTurmaLayout = new javax.swing.GroupLayout(abaEditarTurma);
         abaEditarTurma.setLayout(abaEditarTurmaLayout);
@@ -272,19 +279,21 @@ public class FormTurma extends javax.swing.JDialog {
             .addGroup(abaInserirAlunoTurmaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(abaInserirAlunoTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(abaInserirAlunoTurmaLayout.createSequentialGroup()
-                        .addComponent(labelCodigoTurma)
-                        .addGap(18, 18, 18)
-                        .addComponent(CampoCodigoTurma)
-                        .addGap(451, 451, 451))
-                    .addGroup(abaInserirAlunoTurmaLayout.createSequentialGroup()
-                        .addComponent(labelCpfAluno)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                        .addComponent(campoCpfAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(306, 306, 306))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaInserirAlunoTurmaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(ButtonSalvarInserirAlunoTurma))))
+                        .addComponent(ButtonSalvarInserirAlunoTurma))
+                    .addGroup(abaInserirAlunoTurmaLayout.createSequentialGroup()
+                        .addGroup(abaInserirAlunoTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelCodigoTurma)
+                            .addComponent(labelCpfAluno))
+                        .addGap(18, 18, 18)
+                        .addGroup(abaInserirAlunoTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(abaInserirAlunoTurmaLayout.createSequentialGroup()
+                                .addComponent(campoCpfAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(abaInserirAlunoTurmaLayout.createSequentialGroup()
+                                .addComponent(CampoCodigoTurma, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
+                                .addGap(451, 451, 451))))))
         );
         abaInserirAlunoTurmaLayout.setVerticalGroup(
             abaInserirAlunoTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -297,7 +306,7 @@ public class FormTurma extends javax.swing.JDialog {
                 .addGroup(abaInserirAlunoTurmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCodigoTurma)
                     .addComponent(CampoCodigoTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 327, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 329, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarInserirAlunoTurma))
         );
 
@@ -308,6 +317,11 @@ public class FormTurma extends javax.swing.JDialog {
         labelCodigoDaTurma.setText("Código:");
 
         ButtonSalvarInserirProfessorTurma.setText("Salvar");
+        ButtonSalvarInserirProfessorTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarInserirProfessorTurmaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaInserirProfessorTurmaLayout = new javax.swing.GroupLayout(abaInserirProfessorTurma);
         abaInserirProfessorTurma.setLayout(abaInserirProfessorTurmaLayout);
@@ -558,7 +572,8 @@ public class FormTurma extends javax.swing.JDialog {
 
     private void ButtonSalvarInserirAlunoTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarInserirAlunoTurmaActionPerformed
         
-        
+                
+
                 Turma turma= new Turma();
                 Aluno aluno = new Aluno();
                 
@@ -587,6 +602,66 @@ public class FormTurma extends javax.swing.JDialog {
                 
                 
     }//GEN-LAST:event_ButtonSalvarInserirAlunoTurmaActionPerformed
+
+    private void ButtonSalvarInserirProfessorTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarInserirProfessorTurmaActionPerformed
+        
+
+                Turma turma= new Turma();
+                Professor professor = new Professor();
+                
+                
+                try{
+                
+                    turma.setCodigo(Integer.parseInt(campoCodigoDaTurma.getText()));
+                    professor.setCpf(Long.parseLong(campoCpfProfessor.getText()));
+                    if (professor.validarCPF(professor.getCpf())==false){
+                        //invalido
+                    }
+                    TurmaDaoImpl turmadao = new TurmaDaoImpl();
+                    turmadao.cadastrarProfessor(professor, turma);
+                        
+                }catch(Exception ex){
+                    
+                    
+                    
+                    
+                }
+        
+                
+                dispose();
+        
+        
+    }//GEN-LAST:event_ButtonSalvarInserirProfessorTurmaActionPerformed
+
+    private void ButtonSalvarEditarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarEditarTurmaActionPerformed
+       
+        /*
+         Disciplina disciplinaN=new Disciplina();
+        Disciplina disciplinaA=new Disciplina();
+        DisciplinaDaoImpl disciplinaDao =new DisciplinaDaoImpl();
+        
+        disciplinaN.setNome(campoNomeDisciplinaN.getText());
+        
+        try{
+            disciplinaA.setId(Long.parseLong(campoCodigoDisciplina.getText()));
+            disciplinaA.setNome(disciplinaN.getNome());
+            disciplinaDao.atualizar(disciplinaA, disciplinaN);
+            
+            JOptionPane.showMessageDialog(null, "Atualizado!", "Atualização!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+           
+        }catch(Exception ex){
+            
+            
+             JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        dispose();
+        
+        */
+        
+        
+        
+    }//GEN-LAST:event_ButtonSalvarEditarTurmaActionPerformed
 
     /**
      * @param args the command line arguments

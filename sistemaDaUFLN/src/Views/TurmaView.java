@@ -165,7 +165,7 @@ public class TurmaView {
                      
         Integer codigo = Integer.valueOf(codigoTurma);
                  
-        turmaDao.cadastrarAluno(cpf, codigo);
+        
                      
     }
     public void adicionarProfessorTurma(){

@@ -109,7 +109,7 @@ public class FormAluno extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCpfAluno)
                     .addComponent(campoCpfAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarInserirAluno))
         );
 
@@ -170,7 +170,7 @@ public class FormAluno extends javax.swing.JDialog {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeAlunoN)
                     .addComponent(campoNomeAlunoN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarEditarAluno))
         );
 
@@ -178,7 +178,7 @@ public class FormAluno extends javax.swing.JDialog {
 
         labelRemoverCpfAluno.setText("CPF do Aluno:");
 
-        ButtonSalvarRemoverAluno.setText("Salvar");
+        ButtonSalvarRemoverAluno.setText("Remover");
         ButtonSalvarRemoverAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonSalvarRemoverAlunoActionPerformed(evt);
@@ -206,7 +206,7 @@ public class FormAluno extends javax.swing.JDialog {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelRemoverCpfAluno)
                     .addComponent(CampoRemoverCpfAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarRemoverAluno))
         );
 
@@ -228,7 +228,7 @@ public class FormAluno extends javax.swing.JDialog {
             janelaAlunoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, janelaAlunoLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(abaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                .addComponent(abaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botaoVoltar))
         );
@@ -261,7 +261,7 @@ public class FormAluno extends javax.swing.JDialog {
             if (aluno.validarCPF(aluno.getCpf())==false)
             {
               JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
-            
+             
             
             }
             
@@ -269,6 +269,7 @@ public class FormAluno extends javax.swing.JDialog {
                          try{
                         AlunoDaoImpl alunodao = new AlunoDaoImpl();
                         alunodao.salvar(aluno);
+                         JOptionPane.showMessageDialog(null, "Salvo!", "Inserção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
             
             
             
@@ -308,20 +309,41 @@ public class FormAluno extends javax.swing.JDialog {
             alunoA.setCpf(Long.parseLong(campoEditarCpfAluno.getText()));
             alunoA.setNome(alunoN.getNome());
             alunodao.atualizar(alunoA, alunoN);
-            
-            
+            JOptionPane.showMessageDialog(null, "Atualizado!", "Atualização!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+           
         }catch(Exception ex){
             
             
              JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
             
         }
-        
+        dispose();
         
     }//GEN-LAST:event_ButtonSalvarEditarAlunoActionPerformed
 
     private void ButtonSalvarRemoverAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarRemoverAlunoActionPerformed
-        // TODO add your handling code here:
+        
+        Aluno aluno = new Aluno();
+        
+        AlunoDaoImpl alunodao = new AlunoDaoImpl();
+        
+        try{
+            
+            aluno.setCpf(Long.parseLong(CampoRemoverCpfAluno.getText()));
+            alunodao.deletar(aluno);
+            JOptionPane.showMessageDialog(null, "Removido!", "Remoção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }catch(Exception ex){
+            
+             JOptionPane.showMessageDialog(null, "CPF invalido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        
+        dispose();
+        
+        
+        
+        
     }//GEN-LAST:event_ButtonSalvarRemoverAlunoActionPerformed
 
     /**

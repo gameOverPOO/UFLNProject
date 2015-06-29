@@ -230,13 +230,13 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelNomeProfessorA" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCpfProfessorA" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="labelNomeProfessorN" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="campoNomeProfessorA" alignment="0" max="32767" attributes="0"/>
-                              <Component id="campoNomeProfessorN" alignment="0" pref="385" max="32767" attributes="0"/>
+                              <Component id="campoCpfProfessorA" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoNomeProfessorN" alignment="0" pref="398" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -251,8 +251,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelNomeProfessorA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoNomeProfessorA" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelCpfProfessorA" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoCpfProfessorA" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -266,12 +266,12 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelNomeProfessorA">
+                <Component class="javax.swing.JLabel" name="labelCpfProfessorA">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Nome do Professor:"/>
+                    <Property name="text" type="java.lang.String" value="CPF do Professor:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="campoNomeProfessorA">
+                <Component class="javax.swing.JTextField" name="campoCpfProfessorA">
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelNomeProfessorN">
                   <Properties>
@@ -284,6 +284,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Salvar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonSalvarEditarProfessorActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -336,8 +339,11 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="ButtonSalvarRemoverProfessor">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Salvar"/>
+                    <Property name="text" type="java.lang.String" value="Remover"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonSalvarRemoverProfessorActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

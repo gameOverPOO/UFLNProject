@@ -48,8 +48,8 @@ public class FormProfessor extends javax.swing.JDialog {
         abaListarProfessor = new javax.swing.JScrollPane();
         tblObjetos = new javax.swing.JTable();
         abaEditarProfessor = new javax.swing.JPanel();
-        labelNomeProfessorA = new javax.swing.JLabel();
-        campoNomeProfessorA = new javax.swing.JTextField();
+        labelCpfProfessorA = new javax.swing.JLabel();
+        campoCpfProfessorA = new javax.swing.JTextField();
         labelNomeProfessorN = new javax.swing.JLabel();
         campoNomeProfessorN = new javax.swing.JTextField();
         ButtonSalvarEditarProfessor = new javax.swing.JButton();
@@ -139,11 +139,16 @@ public class FormProfessor extends javax.swing.JDialog {
 
         abaProfessor.addTab("Listar", abaListarProfessor);
 
-        labelNomeProfessorA.setText("Nome do Professor:");
+        labelCpfProfessorA.setText("CPF do Professor:");
 
         labelNomeProfessorN.setText("Novo Nome:");
 
         ButtonSalvarEditarProfessor.setText("Salvar");
+        ButtonSalvarEditarProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarEditarProfessorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaEditarProfessorLayout = new javax.swing.GroupLayout(abaEditarProfessor);
         abaEditarProfessor.setLayout(abaEditarProfessorLayout);
@@ -152,12 +157,12 @@ public class FormProfessor extends javax.swing.JDialog {
             .addGroup(abaEditarProfessorLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(abaEditarProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelNomeProfessorA)
+                    .addComponent(labelCpfProfessorA)
                     .addComponent(labelNomeProfessorN))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(abaEditarProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(campoNomeProfessorA)
-                    .addComponent(campoNomeProfessorN, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE))
+                    .addComponent(campoCpfProfessorA)
+                    .addComponent(campoNomeProfessorN, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaEditarProfessorLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -168,8 +173,8 @@ public class FormProfessor extends javax.swing.JDialog {
             .addGroup(abaEditarProfessorLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(abaEditarProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNomeProfessorA)
-                    .addComponent(campoNomeProfessorA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelCpfProfessorA)
+                    .addComponent(campoCpfProfessorA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(abaEditarProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeProfessorN)
@@ -182,7 +187,12 @@ public class FormProfessor extends javax.swing.JDialog {
 
         labelRemoverNomeProfessor.setText("Nome do Professor:");
 
-        ButtonSalvarRemoverProfessor.setText("Salvar");
+        ButtonSalvarRemoverProfessor.setText("Remover");
+        ButtonSalvarRemoverProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarRemoverProfessorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaRemoverProfessorLayout = new javax.swing.GroupLayout(abaRemoverProfessor);
         abaRemoverProfessor.setLayout(abaRemoverProfessorLayout);
@@ -309,6 +319,54 @@ public class FormProfessor extends javax.swing.JDialog {
                                          
     }//GEN-LAST:event_ButtonSalvarInserirProfessorActionPerformed
 
+    private void ButtonSalvarEditarProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarEditarProfessorActionPerformed
+        // TODO add your handling code here:
+        
+        
+        Professor professorN= new Professor();
+        Professor professorA = new Professor();
+        ProfessorDaoImpl professorDao = new ProfessorDaoImpl();
+        professorN.setNome(campoNomeProfessorN.getText());       
+        try{
+            professorA.setCpf(Long.parseLong(campoCpfProfessorA.getText()));
+            professorA.setNome(professorN.getNome());
+            
+            professorDao.atualizar(professorA, professorN);
+                        
+            JOptionPane.showMessageDialog(null, "Atualizado!", "Atualização!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+           
+        }catch(Exception ex){
+            
+            
+             JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        dispose();
+        
+       
+    }//GEN-LAST:event_ButtonSalvarEditarProfessorActionPerformed
+
+    private void ButtonSalvarRemoverProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarRemoverProfessorActionPerformed
+        // TODO add your handling code here:
+             
+        Professor professor=new Professor();
+        ProfessorDaoImpl professorDao=new ProfessorDaoImpl();
+        
+        try{
+            professor.setCpf(Long.parseLong(CampoRemoverNomeProfessor.getText()));
+            professorDao.deletar(professor);
+            
+            JOptionPane.showMessageDialog(null, "Removido!", "Remoção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }catch(Exception ex){
+            
+             JOptionPane.showMessageDialog(null, "CPF invalido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        
+        dispose();
+    }//GEN-LAST:event_ButtonSalvarRemoverProfessorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -363,15 +421,15 @@ public class FormProfessor extends javax.swing.JDialog {
     private javax.swing.JPanel abaRemoverProfessor;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JTextField campoCpfProfessor;
+    private javax.swing.JTextField campoCpfProfessorA;
     private javax.swing.JTextField campoDepartamentoProfessor;
     private javax.swing.JTextField campoNomeProfessor;
-    private javax.swing.JTextField campoNomeProfessorA;
     private javax.swing.JTextField campoNomeProfessorN;
     private javax.swing.JPanel janelaProfessor;
     private javax.swing.JLabel labelCpfProfessor;
+    private javax.swing.JLabel labelCpfProfessorA;
     private javax.swing.JLabel labelDepartamentoProfessor;
     private javax.swing.JLabel labelNomeProfessor;
-    private javax.swing.JLabel labelNomeProfessorA;
     private javax.swing.JLabel labelNomeProfessorN;
     private javax.swing.JLabel labelRemoverNomeProfessor;
     private javax.swing.JTable tblObjetos;

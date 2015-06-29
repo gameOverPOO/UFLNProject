@@ -38,15 +38,40 @@ public class ProfessorDaoImpl implements ProfessorDao{
     
     @Override
     public boolean atualizar(Professor professorA,Professor professorN){
+        Session session;
+            session = conexao.openSession();
+            Transaction tx = session.beginTransaction(); 
+           // tenta deletar no banco
+            //alunoA.setNome(alunoN.getNome());
+            //alunoA.setCpf(alunoN.getCpf());
+            session.merge(professorA);
+           // alunoA.setCpf(alunoN.getCpf());
+           
+           
+            
+            
+            
+            tx.commit();
+            
+            return true;
         
-        return false;
     }
    
     
     @Override
     public boolean deletar(Professor professor){
         
-       
+        try{ // tenta deletar no banco
+            Session session;
+            session = conexao.openSession();
+            Transaction tx = session.beginTransaction(); 
+            session.delete(professor);
+            tx.commit();
+            return true;
+        }
+        catch(Exception ex){
+            return false;//no existe
+        }/*
         try{ // tenta deletar no banco
             Session session;
             session = conexao.openSession();
@@ -56,7 +81,7 @@ public class ProfessorDaoImpl implements ProfessorDao{
         }
         catch(Exception ex){
             return false;//no existe
-        }
+        }*/
         
     }
     

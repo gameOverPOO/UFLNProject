@@ -5,7 +5,10 @@
  */
 package Views;
 
+import DAOs.TurmaDao;
+import DAOsImpl.TurmaDaoImpl;
 import POJOs.Turma;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -37,17 +40,17 @@ public class FormTurma extends javax.swing.JDialog {
         labelCodigo = new javax.swing.JLabel();
         labelAnoTurma = new javax.swing.JLabel();
         campoCodigoTurma = new javax.swing.JTextField();
-        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("#####"); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
+        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("#####"); campoCodigoTurma = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
         campoAnoTurma = new javax.swing.JTextField();
-        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("####"); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
+        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("####"); campoAnoTurma = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
         labelPeriodoTurma = new javax.swing.JLabel();
         campoPeriodoTurma = new javax.swing.JTextField();
-        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("##"); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
+        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("##"); campoPeriodoTurma = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
         labelHorarioAulasTurma = new javax.swing.JLabel();
         campoHorarioAulasTurma = new javax.swing.JTextField();
         labelNVagasTurma = new javax.swing.JLabel();
         campoNVagasTurma = new javax.swing.JTextField();
-        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("###"); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
+        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("###"); campoNVagasTurma = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
         ButtonSalvarInserirTurma = new javax.swing.JButton();
         abaEditarTurma = new javax.swing.JPanel();
         labelNomeProfessorA = new javax.swing.JLabel();
@@ -536,11 +539,13 @@ public class FormTurma extends javax.swing.JDialog {
         
         
         
+        TurmaDaoImpl turmadao = new TurmaDaoImpl();
+        try{
+                turmadao.salvar(turma);
         
-        
-        
-        
-        
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, "Codigo invalido!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+        }
         
     }//GEN-LAST:event_ButtonSalvarInserirTurmaActionPerformed
 

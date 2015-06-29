@@ -189,12 +189,12 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoCodigoTurma">
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter(&quot;#####&quot;); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter(&quot;#####&quot;); campoCodigoTurma = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }"/>
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoAnoTurma">
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter(&quot;####&quot;); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter(&quot;####&quot;); campoAnoTurma = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }"/>
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelPeriodoTurma">
@@ -204,7 +204,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoPeriodoTurma">
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter(&quot;##&quot;); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter(&quot;##&quot;); campoPeriodoTurma = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }"/>
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelHorarioAulasTurma">
@@ -221,7 +221,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoNVagasTurma">
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter(&quot;###&quot;); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter(&quot;###&quot;); campoNVagasTurma = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }"/>
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JButton" name="ButtonSalvarInserirTurma">

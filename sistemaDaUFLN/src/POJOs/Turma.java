@@ -29,7 +29,7 @@ public class Turma {
     
     //Atributos
     @Id
-    @GeneratedValue
+    
     private int codigo;
     private int ano;
     private int periodo;

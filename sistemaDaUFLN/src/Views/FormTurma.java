@@ -7,6 +7,7 @@ package Views;
 
 import DAOs.TurmaDao;
 import DAOsImpl.TurmaDaoImpl;
+import POJOs.Aluno;
 import POJOs.Turma;
 import javax.swing.JOptionPane;
 
@@ -258,6 +259,11 @@ public class FormTurma extends javax.swing.JDialog {
         labelCodigoTurma.setText("Código da Turma:");
 
         ButtonSalvarInserirAlunoTurma.setText("Salvar");
+        ButtonSalvarInserirAlunoTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarInserirAlunoTurmaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaInserirAlunoTurmaLayout = new javax.swing.GroupLayout(abaInserirAlunoTurma);
         abaInserirAlunoTurma.setLayout(abaInserirAlunoTurmaLayout);
@@ -549,6 +555,38 @@ public class FormTurma extends javax.swing.JDialog {
         dispose();
         
     }//GEN-LAST:event_ButtonSalvarInserirTurmaActionPerformed
+
+    private void ButtonSalvarInserirAlunoTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarInserirAlunoTurmaActionPerformed
+        
+        
+                Turma turma= new Turma();
+                Aluno aluno = new Aluno();
+                
+                
+                try{
+                    
+                
+                
+                    turma.setCodigo(Integer.parseInt(CampoCodigoTurma.getText()));
+                    aluno.setCpf(Long.parseLong(campoCpfAluno.getText()));
+                    if (aluno.validarCPF(aluno.getCpf())==false){
+                        //invalido
+                    }
+                    TurmaDaoImpl turmadao = new TurmaDaoImpl();
+                    turmadao.cadastrarAluno(aluno, turma);
+                        
+                }catch(Exception ex){
+                    
+                    
+                    
+                    
+                    
+                    
+                }
+                
+                
+                
+    }//GEN-LAST:event_ButtonSalvarInserirAlunoTurmaActionPerformed
 
     /**
      * @param args the command line arguments

@@ -6,6 +6,7 @@ import DAOs.TurmaDao;
 import POJOs.Aluno;
 import java.util.*;
 import POJOs.Turma;
+import javax.swing.JOptionPane;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -71,6 +72,9 @@ public class TurmaDaoImpl implements TurmaDao{
         
        }catch(Exception ex) //se atividade ou aluno nao existirem
        {
+           JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+           
+           
            return false;
        }
         

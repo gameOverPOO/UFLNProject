@@ -5,6 +5,8 @@
  */
 package Views;
 
+import POJOs.Turma;
+
 /**
  *
  * @author john
@@ -35,13 +37,17 @@ public class FormTurma extends javax.swing.JDialog {
         labelCodigo = new javax.swing.JLabel();
         labelAnoTurma = new javax.swing.JLabel();
         campoCodigoTurma = new javax.swing.JTextField();
+        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("#####"); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
         campoAnoTurma = new javax.swing.JTextField();
+        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("####"); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
         labelPeriodoTurma = new javax.swing.JLabel();
         campoPeriodoTurma = new javax.swing.JTextField();
+        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("##"); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
         labelHorarioAulasTurma = new javax.swing.JLabel();
         campoHorarioAulasTurma = new javax.swing.JTextField();
         labelNVagasTurma = new javax.swing.JLabel();
         campoNVagasTurma = new javax.swing.JTextField();
+        try{ javax.swing.text.MaskFormatter data= new javax.swing.text.MaskFormatter("###"); campoCpfAluno = new javax.swing.JFormattedTextField(data); } catch (Exception e){ }
         ButtonSalvarInserirTurma = new javax.swing.JButton();
         abaEditarTurma = new javax.swing.JPanel();
         labelNomeProfessorA = new javax.swing.JLabel();
@@ -107,6 +113,11 @@ public class FormTurma extends javax.swing.JDialog {
         labelNVagasTurma.setText("Número de Vagas:");
 
         ButtonSalvarInserirTurma.setText("Salvar");
+        ButtonSalvarInserirTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarInserirTurmaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout abaInserirTurmaLayout = new javax.swing.GroupLayout(abaInserirTurma);
         abaInserirTurma.setLayout(abaInserirTurmaLayout);
@@ -512,6 +523,26 @@ public class FormTurma extends javax.swing.JDialog {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void ButtonSalvarInserirTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarInserirTurmaActionPerformed
+        
+        
+        Turma turma = new Turma();
+        turma.setAno(Integer.parseInt(campoAnoTurma.getText()));
+        turma.setHorario(campoHorarioAulasTurma.getText());
+        turma.setVagas(Integer.parseInt(campoNVagasTurma.getText()));
+        turma.setPeriodo(Integer.parseInt(campoPeriodoTurma.getText()));
+        turma.setCodigo(Integer.parseInt(campoCodigoTurma.getText()));
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_ButtonSalvarInserirTurmaActionPerformed
 
     /**
      * @param args the command line arguments

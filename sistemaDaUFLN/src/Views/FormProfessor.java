@@ -5,6 +5,12 @@
  */
 package Views;
 
+import DAOsImpl.AlunoDaoImpl;
+import DAOsImpl.ProfessorDaoImpl;
+import POJOs.Aluno;
+import POJOs.Professor;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author john
@@ -37,6 +43,8 @@ public class FormProfessor extends javax.swing.JDialog {
         campoNomeProfessor = new javax.swing.JTextField();
         campoCpfProfessor = new javax.swing.JTextField();
         ButtonSalvarInserirProfessor = new javax.swing.JButton();
+        campoDepartamentoProfessor = new javax.swing.JTextField();
+        labelDepartamentoProfessor = new javax.swing.JLabel();
         abaListarProfessor = new javax.swing.JScrollPane();
         tblObjetos = new javax.swing.JTable();
         abaEditarProfessor = new javax.swing.JPanel();
@@ -67,24 +75,33 @@ public class FormProfessor extends javax.swing.JDialog {
         labelCpfProfessor.setText("CPF do Professor:");
 
         ButtonSalvarInserirProfessor.setText("Salvar");
+        ButtonSalvarInserirProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSalvarInserirProfessorActionPerformed(evt);
+            }
+        });
+
+        labelDepartamentoProfessor.setText("Departamento:");
 
         javax.swing.GroupLayout abaInserirProfessorLayout = new javax.swing.GroupLayout(abaInserirProfessor);
         abaInserirProfessor.setLayout(abaInserirProfessorLayout);
         abaInserirProfessorLayout.setHorizontalGroup(
             abaInserirProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaInserirProfessorLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonSalvarInserirProfessor))
             .addGroup(abaInserirProfessorLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(abaInserirProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelCpfProfessor)
-                    .addComponent(labelNomeProfessor))
+                    .addComponent(labelNomeProfessor)
+                    .addComponent(labelDepartamentoProfessor))
                 .addGap(4, 4, 4)
                 .addGroup(abaInserirProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(campoCpfProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
-                    .addComponent(campoNomeProfessor))
+                    .addComponent(campoDepartamentoProfessor)
+                    .addComponent(campoNomeProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
+                    .addComponent(campoCpfProfessor))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaInserirProfessorLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(ButtonSalvarInserirProfessor))
         );
         abaInserirProfessorLayout.setVerticalGroup(
             abaInserirProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,11 +110,15 @@ public class FormProfessor extends javax.swing.JDialog {
                 .addGroup(abaInserirProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeProfessor)
                     .addComponent(campoNomeProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(abaInserirProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelCpfProfessor)
-                    .addComponent(campoCpfProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                    .addComponent(campoCpfProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCpfProfessor))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(abaInserirProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoDepartamentoProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelDepartamentoProfessor))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarInserirProfessor))
         );
 
@@ -136,7 +157,7 @@ public class FormProfessor extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(abaEditarProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(campoNomeProfessorA)
-                    .addComponent(campoNomeProfessorN, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE))
+                    .addComponent(campoNomeProfessorN, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaEditarProfessorLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -153,7 +174,7 @@ public class FormProfessor extends javax.swing.JDialog {
                 .addGroup(abaEditarProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeProfessorN)
                     .addComponent(campoNomeProfessorN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarEditarProfessor))
         );
 
@@ -171,7 +192,7 @@ public class FormProfessor extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(labelRemoverNomeProfessor)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoRemoverNomeProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
+                .addComponent(CampoRemoverNomeProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaRemoverProfessorLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -184,7 +205,7 @@ public class FormProfessor extends javax.swing.JDialog {
                 .addGroup(abaRemoverProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelRemoverNomeProfessor)
                     .addComponent(CampoRemoverNomeProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
                 .addComponent(ButtonSalvarRemoverProfessor))
         );
 
@@ -206,7 +227,7 @@ public class FormProfessor extends javax.swing.JDialog {
             janelaProfessorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, janelaProfessorLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(abaProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
+                .addComponent(abaProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botaoVoltar))
         );
@@ -215,7 +236,7 @@ public class FormProfessor extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 564, Short.MAX_VALUE)
+            .addGap(0, 578, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -224,7 +245,7 @@ public class FormProfessor extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 307, Short.MAX_VALUE)
+            .addGap(0, 331, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -239,6 +260,54 @@ public class FormProfessor extends javax.swing.JDialog {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void ButtonSalvarInserirProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalvarInserirProfessorActionPerformed
+          
+        //SALVAR ALUNO
+       // botaoVoltar.setText( campoCpfAluno.getText());
+        //VERIICAR CPF
+        //TENTAR SALVAR 
+        
+        
+        Professor professor = new Professor();
+        
+        professor.setNome(campoNomeProfessor.getText());
+        professor.setDepartamento(campoDepartamentoProfessor.getText());
+        String CPF = campoCpfProfessor.getText();
+        try{
+            Long cpf = Long.parseLong(CPF);
+            professor.setCpf(cpf);
+            if (professor.validarCPF(professor.getCpf())==false)
+            {
+              JOptionPane.showMessageDialog(null, "CPF Inválido!!!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+            
+            
+            }
+            
+            else{
+                         try{
+                        ProfessorDaoImpl professordao = new ProfessorDaoImpl();
+                        professordao.salvar(professor);
+            
+            
+            
+                        }catch(Exception ex){
+            
+                       JOptionPane.showMessageDialog(null, "Professor já existente!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+                    
+                    
+                 }
+           }
+            
+        }catch(Exception ex)
+        {
+            JOptionPane.showMessageDialog(null, "Parametro invalido!", "Atenção!!: " + "", JOptionPane.INFORMATION_MESSAGE);
+        }
+        dispose();
+        
+        
+                                         
+    }//GEN-LAST:event_ButtonSalvarInserirProfessorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -294,11 +363,13 @@ public class FormProfessor extends javax.swing.JDialog {
     private javax.swing.JPanel abaRemoverProfessor;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JTextField campoCpfProfessor;
+    private javax.swing.JTextField campoDepartamentoProfessor;
     private javax.swing.JTextField campoNomeProfessor;
     private javax.swing.JTextField campoNomeProfessorA;
     private javax.swing.JTextField campoNomeProfessorN;
     private javax.swing.JPanel janelaProfessor;
     private javax.swing.JLabel labelCpfProfessor;
+    private javax.swing.JLabel labelDepartamentoProfessor;
     private javax.swing.JLabel labelNomeProfessor;
     private javax.swing.JLabel labelNomeProfessorA;
     private javax.swing.JLabel labelNomeProfessorN;

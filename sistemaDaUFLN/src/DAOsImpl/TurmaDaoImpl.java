@@ -46,12 +46,38 @@ public class TurmaDaoImpl implements TurmaDao{
     }
     
     @Override
-    public boolean cadastrarAluno(String cpf, Integer codigo){
+    public boolean cadastrarAluno(Aluno aluno, Turma turma){
+        try{ // tenta cadastrar no banco
+            Session session;
+            session = conexao.openSession();
+             Transaction tx = session.beginTransaction();
+        //atividade.setNome("trabaho");
+        //atividade.setValorAtividade(20);
+        //atividade.setData("27/08");
+        
+             turma.getAlunos().add(aluno);//adiciona atividade na lista do aluno
+             aluno.getTurmas().add(turma);//adiciona aluno na lista de atividade
+        
+        //AlunoDaoImpl aaa = new AlunoDaoImpl();
+        
+            session.merge(aluno); //atualiza aluno
+            session.merge(turma);//atualiza atividade
+       
+        //session.save(atividade);
+                tx.commit();
+                session.close();
+                return true;
+        
+        
+       }catch(Exception ex) //se atividade ou aluno nao existirem
+       {
+           return false;
+       }
         
        
      
         
-        return false;
+        
     }
     
     @Override

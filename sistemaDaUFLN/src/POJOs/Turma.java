@@ -2,6 +2,7 @@
 package POJOs;
 
 import java.util.*;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -40,8 +41,10 @@ public class Turma {
     private Professor professor;
     @OneToOne
     private Disciplina disciplina;
-    @OneToMany
-    public List<Atividade> atividades = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Atividade> atividades = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Aluno> alunos = new ArrayList<>();
 
     
     //Métodos
@@ -111,6 +114,14 @@ public class Turma {
 
     public void setAtividades(List<Atividade> atividades) {
         this.atividades = atividades;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
     }
     
     
